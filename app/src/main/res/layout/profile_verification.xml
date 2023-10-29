@@ -14,4 +14,12 @@
         android:text="REturn"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="22dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="182dp"
+        android:layout_height="233dp"
+        app:srcCompat="@drawable/the_sitter_3"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="38dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,4 +51,21 @@
         android:text="Button"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         tools:layout_editor_absoluteX="106dp" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:text="Register"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="652dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Your Password?"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:layout_editor_absoluteX="133dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

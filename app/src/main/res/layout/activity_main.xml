@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/Beige"
+        android:text="PARENT"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="100dp" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -19,9 +30,9 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/Beige"
-        android:text="PARENT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:text="SITTER"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:layout_editor_absoluteX="100dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

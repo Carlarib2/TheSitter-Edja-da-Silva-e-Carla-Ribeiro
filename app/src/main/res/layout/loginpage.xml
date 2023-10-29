@@ -22,4 +22,11 @@
         android:text="Return"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="272dp"
+        android:layout_height="57dp"
+        android:hint="Username"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="377dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

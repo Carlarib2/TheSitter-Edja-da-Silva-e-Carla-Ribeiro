@@ -41,4 +41,14 @@
         app:srcCompat="@android:drawable/alert_dark_frame"
         tools:layout_editor_absoluteX="110dp" />
 
+    <Button
+        android:id="@+id/button10"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:text="SAVE"
+        app:layout_constraintTop_toBottomOf="@+id/imageFilterButton"
+        tools:layout_editor_absoluteX="161dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

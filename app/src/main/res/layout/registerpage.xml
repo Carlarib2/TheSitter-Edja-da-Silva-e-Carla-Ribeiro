@@ -44,14 +44,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="417dp">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputEditText
         android:layout_width="374dp"
         android:layout_height="42dp"
@@ -65,5 +57,14 @@
         android:hint="Gender"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="352dp" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="219dp"
+        android:layout_height="31dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="392dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

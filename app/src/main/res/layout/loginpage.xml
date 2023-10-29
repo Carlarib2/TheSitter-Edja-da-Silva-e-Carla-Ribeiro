@@ -29,7 +29,7 @@
         android:layout_height="60dp"
         android:hint="Username"
         tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="349dp" />
+        tools:layout_editor_absoluteY="325dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -41,4 +41,14 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
         app:layout_constraintStart_toStartOf="@+id/textInputEditText"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="201dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        tools:layout_editor_absoluteX="106dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

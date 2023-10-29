@@ -33,7 +33,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="379dp"
             android:layout_height="38dp"
-            android:hint="Name" />
+            android:hint="First Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -42,10 +42,6 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="341dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Last Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,10 +50,20 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="417dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Gender" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="374dp"
+        android:layout_height="42dp"
+        android:hint="Last Name"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="380dp"
+        android:layout_height="37dp"
+        android:hint="Gender"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="352dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

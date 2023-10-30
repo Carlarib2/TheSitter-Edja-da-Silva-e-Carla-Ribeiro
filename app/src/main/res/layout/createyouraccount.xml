@@ -74,4 +74,13 @@
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="515dp" />
 
+    <Button
+        android:id="@+id/button13"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="152dp"
+        android:layout_height="44dp"
+        android:text="REGISTER"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="633dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

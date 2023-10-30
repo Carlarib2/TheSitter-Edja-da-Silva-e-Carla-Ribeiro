@@ -7,30 +7,38 @@
     android:background="@color/FUNDO"
     tools:context=".LoginAndRegisterchoice">
 
+    <Button
+        android:id="@+id/button13"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/REGISTER"
+        app:layout_constraintTop_toBottomOf="@+id/button12"
+        tools:layout_editor_absoluteX="98dp" />
+
+    <Button
+        android:id="@+id/button12"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/login"
+        app:layout_constraintBottom_toTopOf="@+id/button13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/the_sitter_3"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp" />
+        tools:layout_editor_absoluteY="0dp" />
 
-    <Button
-        android:id="@+id/button9"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="144dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="52dp"
-        android:text="Login"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        tools:layout_editor_absoluteX="133dp" />
-
-    <Button
-        android:id="@+id/button11"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
-        android:text="Register"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="617dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@
             android:backgroundTint="#EAE6E6"
             android:text="@string/Messages"
             tools:layout_editor_absoluteX="211dp"
-            tools:layout_editor_absoluteY="232dp" />
+            tools:layout_editor_absoluteY="225dp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -94,7 +94,7 @@
             android:backgroundTint="#EAE6E6"
             android:text="@string/requests"
             tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="232dp" />
+            tools:layout_editor_absoluteY="225dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,5 +13,6 @@
     <string name= "EMAIL">Email</string>
     <string name= "Messages">Messages</string>
     <string name= "requests">Requests</string>
+    <string name= "login">LOGIN</string>
 
 </resources>

@@ -4,35 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FUNDO"
+    android:backgroundTint="#F1EBFB"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/Beige"
-        android:text="PARENT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="100dp" />
+        android:layout_marginTop="70dp"
+        android:background="@color/white"
+        android:backgroundTint="#EAE6E6"
+        android:text="@string/Parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/the_sitter_3"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="6dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/the_sitter_3" />
 
     <Button
         android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="210dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:background="@color/white"
         android:backgroundTint="@color/Beige"
-        android:text="SITTER"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:layout_editor_absoluteX="100dp" />
+        android:text="@string/sitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

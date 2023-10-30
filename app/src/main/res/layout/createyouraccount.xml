@@ -4,83 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FUNDO"
     tools:context=".CreateYourAccount">
 
     <Button
-        android:id="@+id/button12"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RETURN"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="23dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="113dp"
-        android:layout_height="34dp"
-        android:text="THE SITTER "
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="94dp" />
+        android:id="@+id/button19"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/REGISTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword5"
+        app:layout_constraintVertical_bias="0.464" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Your Account "
+        android:text="@string/CREATE_YOUR"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="137dp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="248dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="399dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="334dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="399dp"
-        android:layout_height="53dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="415dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword3"
-        android:layout_width="402dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="515dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        tools:layout_editor_absoluteX="108dp" />
 
     <Button
-        android:id="@+id/button13"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="152dp"
-        android:layout_height="44dp"
-        android:text="REGISTER"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="633dp" />
+        android:id="@+id/button20"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:background="@color/white"
+        android:backgroundTint="#EAE6E6"
+        android:text="@string/Return"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="390dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/Username"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress2"
+        android:layout_width="390dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/EMAIL"
+        android:inputType="@string/EMAIL"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword4"
+        android:layout_width="390dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/PASSWORD"
+        android:inputType="@string/PASSWORD"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword5"
+        android:layout_width="390dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="@string/CONFIRMAR_PASS"
+        android:inputType="@string/CONFIRMAR_PASS"
+        app:layout_constraintEnd_toEndOf="@+id/button19"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/button19"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="184dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button20"
+        app:srcCompat="@drawable/the_sitter_3"
+        tools:layout_editor_absoluteY="124dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

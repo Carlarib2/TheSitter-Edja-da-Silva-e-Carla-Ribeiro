@@ -14,5 +14,6 @@
     <string name= "Messages">Messages</string>
     <string name= "requests">Requests</string>
     <string name= "login">LOGIN</string>
-
+    <string name= "Save">Save</string>
+    <string name= "profile_verification">Profile Verification</string>
 </resources>

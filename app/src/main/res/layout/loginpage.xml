@@ -73,6 +73,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Your Password?"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="580dp" />
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="581dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

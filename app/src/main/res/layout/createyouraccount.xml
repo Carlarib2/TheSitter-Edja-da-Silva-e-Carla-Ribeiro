@@ -47,4 +47,13 @@
             android:hint="Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="399dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="334dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

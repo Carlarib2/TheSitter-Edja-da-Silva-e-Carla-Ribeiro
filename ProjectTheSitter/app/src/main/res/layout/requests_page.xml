@@ -4,6 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="128dp"
+        android:layout_height="37dp"
+        android:text="DECLINED"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="545dp" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -58,6 +68,15 @@
         android:layout_height="63dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="463dp"></LinearLayout>
+        tools:layout_editor_absoluteY="463dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="601dp"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

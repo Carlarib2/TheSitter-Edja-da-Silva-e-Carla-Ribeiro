@@ -23,4 +23,13 @@
         android:text="Login"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         tools:layout_editor_absoluteX="133dp" />
+
+    <Button
+        android:id="@+id/button11"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:text="Register"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="617dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

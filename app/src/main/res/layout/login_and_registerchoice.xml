@@ -12,24 +12,27 @@
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="196dp"
         android:layout_height="39dp"
-        android:layout_marginTop="20dp"
         android:background="@color/white"
         android:backgroundTint="@color/Beige"
         android:text="@string/REGISTER"
-        app:layout_constraintTop_toBottomOf="@+id/button12"
-        tools:layout_editor_absoluteX="98dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
 
     <Button
         android:id="@+id/button12"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="196dp"
         android:layout_height="39dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:background="@color/white"
         android:backgroundTint="@color/Beige"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/button13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 

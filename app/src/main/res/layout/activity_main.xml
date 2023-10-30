@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FUNDO"
+    android:backgroundTint="#F1EBFB"
     tools:context=".MainActivity">
 
     <Button
@@ -12,7 +14,8 @@
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/Beige"
+        android:background="@color/white"
+        android:backgroundTint="#F4D2A0"
         android:text="PARENT"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:layout_editor_absoluteX="100dp" />
@@ -31,6 +34,7 @@
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:background="@color/white"
         android:backgroundTint="@color/Beige"
         android:text="SITTER"
         app:layout_constraintTop_toBottomOf="@+id/button2"

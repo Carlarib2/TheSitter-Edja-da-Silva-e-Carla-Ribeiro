@@ -79,4 +79,12 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="601dp"></LinearLayout>
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="723dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

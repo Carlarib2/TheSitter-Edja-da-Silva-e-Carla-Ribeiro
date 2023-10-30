@@ -11,4 +11,7 @@
     <string name= "CONFIRMAR_PASS">Confirm your password</string>
     <string name= "PASSWORD">Password</string>
     <string name= "EMAIL">Email</string>
+    <string name= "Messages">Messages</string>
+    <string name= "requests">Requests</string>
+
 </resources>

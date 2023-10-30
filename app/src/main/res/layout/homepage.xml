@@ -10,7 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/FUNDO"
-        tools:context=".HomePage">
+        tools:context=".HomePage"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="38dp">
+
+        <Button
+            android:id="@+id/button18"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="146dp"
+            android:layout_height="38dp"
+            android:background="@color/white"
+            android:backgroundTint="#EAE6E6"
+            android:text="@string/Messages"
+            tools:layout_editor_absoluteX="211dp"
+            tools:layout_editor_absoluteY="232dp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -31,24 +44,6 @@
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="91dp" />
 
-        <Button
-            android:id="@+id/button15"
-            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-            android:layout_width="166dp"
-            android:layout_height="52dp"
-            android:text="Requests"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="222dp" />
-
-        <Button
-            android:id="@+id/button16"
-            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-            android:layout_width="166dp"
-            android:layout_height="52dp"
-            android:text="Messages"
-            tools:layout_editor_absoluteX="218dp"
-            tools:layout_editor_absoluteY="222dp" />
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="89dp"
@@ -66,29 +61,6 @@
             tools:layout_editor_absoluteX="155dp"
             tools:layout_editor_absoluteY="125dp" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="294dp"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="374dp"
-            android:layout_height="80dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="392dp">
-
-            <LinearLayout
-                android:layout_width="371dp"
-                android:layout_height="83dp"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-        </LinearLayout>
-
         <com.google.android.material.chip.Chip
             android:id="@+id/chip"
             android:layout_width="47dp"
@@ -96,6 +68,33 @@
             android:layout_weight="1"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="505dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="391dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="391dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="279dp" />
+
+        <Button
+            android:id="@+id/button17"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="146dp"
+            android:layout_height="38dp"
+            android:background="@color/white"
+            android:backgroundTint="#EAE6E6"
+            android:text="@string/requests"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="232dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -118,24 +117,6 @@
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="91dp" />
 
-    <Button
-        android:id="@+id/button15"
-        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-        android:layout_width="166dp"
-        android:layout_height="52dp"
-        android:text="Requests"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="222dp" />
-
-    <Button
-        android:id="@+id/button16"
-        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-        android:layout_width="166dp"
-        android:layout_height="52dp"
-        android:text="Messages"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="222dp" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="89dp"
@@ -152,14 +133,6 @@
         android:text="Advance : $15/hr"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="125dp" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="410dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="294dp"></LinearLayout>
 
     <com.google.android.material.chip.Chip
         android:id="@+id/chip"

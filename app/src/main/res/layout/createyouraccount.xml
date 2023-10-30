@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FUNDO"
     tools:context=".CreateYourAccount">
 
     <Button
@@ -11,7 +12,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RETURN"
+        android:text="@string/Return"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="23dp" />
 
@@ -19,7 +20,7 @@
         android:id="@+id/textView3"
         android:layout_width="113dp"
         android:layout_height="34dp"
-        android:text="THE SITTER "
+        android:text="@string/ThSitter"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="94dp" />
@@ -28,7 +29,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Your Account "
+        android:text="@string/CREATE_YOUR"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -44,7 +45,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="@string/Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText

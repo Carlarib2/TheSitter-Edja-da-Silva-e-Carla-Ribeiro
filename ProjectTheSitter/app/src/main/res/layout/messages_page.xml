@@ -10,11 +10,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THE SITTER"
+        android:text="Messages"
         android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="53dp" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar2"
@@ -23,4 +23,13 @@
         android:layout_gravity="bottom"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="723dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="391dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="113dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

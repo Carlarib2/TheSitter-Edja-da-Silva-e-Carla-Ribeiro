@@ -13,4 +13,20 @@
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="36dp"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jane Doe"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisbon, PT"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="83dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

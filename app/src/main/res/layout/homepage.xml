@@ -33,4 +33,13 @@
         android:text="Requests"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="222dp" />
+
+    <Button
+        android:id="@+id/button16"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:layout_width="166dp"
+        android:layout_height="52dp"
+        android:text="Messages"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="222dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

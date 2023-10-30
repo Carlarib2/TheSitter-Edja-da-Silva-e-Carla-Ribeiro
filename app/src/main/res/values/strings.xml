@@ -25,7 +25,14 @@
     <string name= "About_me">About me:</string>
     <string name= "Experience">Experience:</string>
     <string name= "Date_of_Birth">Date of Birth:</string>
-
+    <string name= "total_bookings">Total Bookings:</string>
+    <string name= "Response_time">Response Time:</string>
+    <string name= "Response_Rate">Response Rate:</string>
+    <string name= "NA">N/A</string>
+    <string name= "Cancels">cancels</string>
+    <string name= "responses">responses</string>
+    <string name= "rate">rate</string>
+    <string name= "Reliability">Reliability:</string>
 
 
 

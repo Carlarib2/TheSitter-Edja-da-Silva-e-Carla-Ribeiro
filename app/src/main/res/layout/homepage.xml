@@ -11,76 +11,60 @@
         android:layout_height="match_parent"
         android:background="@color/FUNDO"
         tools:context=".HomePage"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="38dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/button18"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="146dp"
             android:layout_height="38dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
             android:background="@color/white"
             android:backgroundTint="#EAE6E6"
             android:text="@string/Messages"
-            tools:layout_editor_absoluteX="211dp"
-            tools:layout_editor_absoluteY="225dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button17" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="@string/ThSitter"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="38dp" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:layout_editor_absoluteX="13dp"
-            tools:layout_editor_absoluteY="91dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="89dp"
             android:layout_height="24dp"
+            android:layout_marginBottom="350dp"
             android:text="Jane Doe"
             android:textSize="16sp"
-            tools:layout_editor_absoluteX="153dp"
-            tools:layout_editor_absoluteY="96dp" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Advance : $15/hr"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="125dp" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="47dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="74dp"
-            tools:layout_editor_absoluteY="505dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_editor_absoluteX="155dp" />
 
         <View
             android:id="@+id/divider"
             android:layout_width="391dp"
-            android:layout_height="1dp"
+            android:layout_height="4dp"
             android:background="?android:attr/listDivider"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="210dp" />
+            tools:layout_editor_absoluteY="379dp" />
 
         <View
             android:id="@+id/divider2"
             android:layout_width="391dp"
-            android:layout_height="1dp"
+            android:layout_height="4dp"
             android:background="?android:attr/listDivider"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="279dp" />
@@ -90,24 +74,188 @@
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="146dp"
             android:layout_height="38dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="30dp"
             android:background="@color/white"
             android:backgroundTint="#EAE6E6"
             android:text="@string/requests"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="5dp"
+            android:layout_height="100dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="5dp"
+            android:layout_height="100dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="259dp"
+            tools:layout_editor_absoluteY="279dp" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="391dp"
+            android:layout_height="4dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="413dp" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="391dp"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="450dp" />
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="391dp"
+            android:layout_height="4dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="490dp" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="308dp"
+            android:layout_height="34dp"
+            android:ems="10"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="414dp" />
+
+        <EditText
+            android:id="@+id/editTextDate2"
+            android:layout_width="308dp"
+            android:layout_height="34dp"
+            android:ems="10"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="453dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="61dp"
+            android:layout_height="26dp"
+            tools:layout_editor_absoluteX="316dp"
+            tools:layout_editor_absoluteY="423dp" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="61dp"
+            android:layout_height="26dp"
+            tools:layout_editor_absoluteX="316dp"
+            tools:layout_editor_absoluteY="453dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_bookings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="526dp" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="502dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Reliability"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="295dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Response_time"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Response_Rate"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NA"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="47dp"
+            android:layout_height="20dp"
+            android:text="@string/Cancels"
             tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="225dp" />
+            tools:layout_editor_absoluteY="351dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NA"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/responses"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="352dp" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NA"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="45dp"
+            android:layout_height="23dp"
+            android:text="@string/rate"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="352dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="530dp"
+            android:text="Advance : $15/hr"
+            app:layout_constraintBottom_toTopOf="@+id/divider7"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:layout_editor_absoluteX="155dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="THE SITTER"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="38dp" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -116,30 +264,5 @@
         app:srcCompat="@drawable/ic_launcher_foreground"
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="91dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="89dp"
-        android:layout_height="24dp"
-        android:text="Jane Doe"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="96dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Advance : $15/hr"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="125dp" />
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip"
-        android:layout_width="47dp"
-        android:layout_height="44dp"
-        android:layout_weight="1"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="506dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

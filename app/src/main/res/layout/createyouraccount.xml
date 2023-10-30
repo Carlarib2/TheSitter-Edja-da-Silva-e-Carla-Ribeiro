@@ -56,36 +56,36 @@
         tools:layout_editor_absoluteY="248dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+            android:layout_width="386dp"
             android:layout_height="wrap_content"
             android:hint="@string/Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="399dp"
+        android:layout_width="387dp"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="334dp" />
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="326dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
-        android:layout_width="399dp"
-        android:layout_height="53dp"
+        android:layout_width="387dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="415dp" />
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="403dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword3"
-        android:layout_width="402dp"
-        android:layout_height="48dp"
+        android:layout_width="387dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="515dp" />
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="473dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

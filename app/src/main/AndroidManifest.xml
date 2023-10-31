@@ -13,6 +13,33 @@
         android:theme="@style/Theme.FirstPage"
         tools:targetApi="31">
         <activity
+            android:name=".profile_page"
+            android:exported="false" />
+        <activity
+            android:name=".profile_settings"
+            android:exported="false" />
+        <activity
+            android:name=".requests_page"
+            android:exported="false" />
+        <activity
+            android:name=".MayaActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".requests_activity_Activity2"
+            android:exported="false"
+            android:label="@string/title_activity_requests_activity2"
+            android:theme="@style/Theme.FirstPage" />
+        <activity
+            android:name=".request_page_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_request_page"
+            android:theme="@style/Theme.FirstPage" />
+        <activity
+            android:name=".Requests_page_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_requests_page"
+            android:theme="@style/Theme.FirstPage" />
+        <activity
             android:name=".MessagePageActivity"
             android:exported="false" />
         <activity

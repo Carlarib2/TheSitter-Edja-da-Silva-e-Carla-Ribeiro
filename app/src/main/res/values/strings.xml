@@ -33,6 +33,9 @@
     <string name="responses">responses</string>
     <string name="rate">rate</string>
     <string name="Reliability">Reliability:</string>
+    <string name="title_activity_requests_page">Requests_page_Activity</string>
+    <string name="title_activity_request_page">request_page_Activity</string>
+    <string name="title_activity_requests_activity2">requests_activity_Activity2</string>
 
 
 </resources>

@@ -16,14 +16,6 @@
         tools:layout_editor_absoluteX="118dp"
         tools:layout_editor_absoluteY="53dp" />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar2"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="723dp" />
-
     <View
         android:id="@+id/divider"
         android:layout_width="391dp"

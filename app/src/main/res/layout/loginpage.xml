@@ -19,17 +19,6 @@
         tools:layout_editor_absoluteY="534dp" />
 
     <Button
-        android:id="@+id/button11"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="196dp"
-        android:layout_height="39dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/Beige"
-        android:text="@string/REGISTER"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="736dp" />
-
-    <Button
         android:id="@+id/button9"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="160dp"

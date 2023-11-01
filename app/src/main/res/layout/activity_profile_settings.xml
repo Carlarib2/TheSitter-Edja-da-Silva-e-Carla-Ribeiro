@@ -4,7 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileSettings">
+    android:background="@drawable/gradient"
+    tools:context=".ProfileSettings"
+    tools:layout_editor_absoluteX="-37dp"
+    tools:layout_editor_absoluteY="-248dp">
+
+    <Button
+        android:id="@+id/button10"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/logout"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="513dp" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/my_experience"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="440dp" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/my_Rate"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/my_Calendar"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="321dp" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -71,16 +118,6 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="304dp" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Calendar"
-        android:textAlignment="viewStart"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="321dp" />
-
     <View
         android:id="@+id/divider5"
         android:layout_width="391dp"
@@ -97,28 +134,6 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="439dp" />
 
-    <Button
-        android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="143dp"
-        android:layout_height="42dp"
-        android:text="My Rate"
-        android:textAlignment="viewStart"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="382dp" />
-
-    <Button
-        android:id="@+id/button4"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="156dp"
-        android:layout_height="43dp"
-        android:text="MY EXPERIENCE "
-        android:textAlignment="viewStart"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="452dp" />
-
     <View
         android:id="@+id/divider7"
         android:layout_width="391dp"
@@ -126,15 +141,5 @@
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="499dp" />
-
-    <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="146dp"
-        android:layout_height="41dp"
-        android:text="LOGOUT"
-        android:textAlignment="viewStart"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="511dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,5 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Beige">#AC8562</color>
     <color name="FUNDO">#FFF3E9EC</color>
-
+    <color name= "degrade">#daa520 #cfa750 #c1aa74 #afac96 #97afb7 #71b2d8 #00b5fa</color>
 </resources>

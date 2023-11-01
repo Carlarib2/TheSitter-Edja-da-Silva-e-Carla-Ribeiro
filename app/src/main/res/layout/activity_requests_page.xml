@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
 
     <TextView
         android:id="@+id/textView4"
@@ -70,14 +71,6 @@
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="601dp"></LinearLayout>
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="723dp" />
 
     <TextView
         android:id="@+id/textView5"

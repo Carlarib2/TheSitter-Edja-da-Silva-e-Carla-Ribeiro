@@ -2,13 +2,14 @@
     <string name="app_name">First Page</string>
 
     <string name="Parent">PARENT</string>
-    <string name="sitter"> SITTER</string>
+    <string name="button_1_sitter"> SITTER</string>
+    <string name="button_2_sitter"> SITTER</string>
     <string name="Return">RETURN</string>
     <string name="Username">Username:</string>
     <string name="ThSitter">THE SITTER</string>
     <string name="CREATE_YOUR">Create Your Account</string>
     <string name="REGISTER">REGISTER</string>
-    <string name="CONFIRMAR_PASS">Confirm your password</string>
+    <string name="CONFIRM_PASS">Confirm your password</string>
     <string name="PASSWORD">Password</string>
     <string name="EMAIL">Email</string>
     <string name="Messages">MESSAGES</string>
@@ -18,7 +19,7 @@
     <string name="profile_verification">Profile Verification</string>
     <string name="first_name">First Name:</string>
     <string name="Address">Address:</string>
-    <string name="Telefone_number">Telefone Number:</string>
+    <string name="phone_number">phone Number:</string>
     <string name="Last_name">Last Name:</string>
     <string name="Gender">Gender:</string>
     <string name="Education">Education:</string>
@@ -41,5 +42,5 @@
     <string name="my_Rate">My Rate</string>
     <string name="my_experience">My Experience</string>
     <string name="logout">Logout</string>
-
+    <string name="main_image">Main image, The sitter</string>
 </resources>

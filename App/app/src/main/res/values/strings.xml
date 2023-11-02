@@ -7,4 +7,9 @@
     <string name="app_button_sitter">SITTER</string>
     <string name="app_button_login">LOGIN</string>
     <string name="app_button_register">REGISTER</string>
+    <string name="app_text">Forgot your password?</string>
+    <string name="app_user">Username</string>
+    <string name="app_password">Password</string>
+    <string name="app_contentDescription">Password</string>
+    <string name="app_contentDescription1">Username</string>
 </resources>

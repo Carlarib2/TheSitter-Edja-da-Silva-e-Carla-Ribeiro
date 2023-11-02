@@ -16,7 +16,16 @@
             android:name=".login"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".second"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".secondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

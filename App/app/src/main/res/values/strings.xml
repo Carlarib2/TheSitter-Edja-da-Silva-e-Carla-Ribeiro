@@ -1,46 +1,8 @@
 <resources>
-    <string name="app_name">First Page</string>
-
-    <string name="Parent">PARENT</string>
-    <string name="button_1_sitter"> SITTER</string>
-    <string name="button_2_sitter"> SITTER</string>
-    <string name="Return">RETURN</string>
-    <string name="Username">Username:</string>
-    <string name="ThSitter">THE SITTER</string>
-    <string name="CREATE_YOUR">Create Your Account</string>
-    <string name="REGISTER">REGISTER</string>
-    <string name="CONFIRM_PASS">Confirm your password</string>
-    <string name="PASSWORD">Password</string>
-    <string name="EMAIL">Email</string>
-    <string name="Messages">MESSAGES</string>
-    <string name="requests">REQUESTS</string>
-    <string name="login">LOGIN</string>
-    <string name="Save">SAVE</string>
-    <string name="profile_verification">Profile Verification</string>
-    <string name="first_name">First Name:</string>
-    <string name="Address">Address:</string>
-    <string name="phone_number">phone Number:</string>
-    <string name="Last_name">Last Name:</string>
-    <string name="Gender">Gender:</string>
-    <string name="Education">Education:</string>
-    <string name="About_me">About me:</string>
-    <string name="Experience">Experience:</string>
-    <string name="Date_of_Birth">Date of Birth:</string>
-    <string name="total_bookings">Total Bookings:</string>
-    <string name="Response_time">Response Time:</string>
-    <string name="Response_Rate">Response Rate:</string>
-    <string name="NA">N/A</string>
-    <string name="Cancels">cancels</string>
-    <string name="responses">responses</string>
-    <string name="rate">rate</string>
-    <string name="Reliability">Reliability:</string>
-    <string name="title_activity_requests_page">Requests_page_Activity</string>
-    <string name="title_activity_request_page">request_page_Activity</string>
-    <string name="title_activity_requests_activity2">requests_activity_Activity2</string>
-
-    <string name="my_Calendar">My Calendar</string>
-    <string name="my_Rate">My Rate</string>
-    <string name="my_experience">My Experience</string>
-    <string name="logout">Logout</string>
-    <string name="main_image">Main image, The sitter</string>
+    <string name="app_name">TheSitter_Project</string>
+    <string name="app_image">App Image</string>
+    <string name="app_button">Parent button</string>
+    <string name="app_button_parent">PARENT</string>
+    <string name="app_button_1">Sitter button</string>
+    <string name="app_button_sitter">SITTER</string>
 </resources>

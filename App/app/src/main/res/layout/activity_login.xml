@@ -13,6 +13,7 @@
         android:layout_width="391dp"
         android:layout_height="492dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,23 +24,28 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="40dp"
         android:background="#FFFFFF"
-        app:backgroundTint="#FFFFFF"
+        android:text="Button"
         android:textColor="#1a436e"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="549dp" />
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
 
     <Button
 
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="32dp"
         android:background="#FFFFFF"
-        app:backgroundTint="#FFFFFF"
+        android:text="Button"
         android:textColor="#1a436e"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="648dp" />
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

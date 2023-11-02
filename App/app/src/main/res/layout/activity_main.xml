@@ -5,25 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Hello World!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <Button
+        android:id="@+id/parent_button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/white"
+        android:backgroundTint="#EAE6E6"
+        android:contentDescription="@string/Parent"
+        android:text="@string/Parent"
+        app:layout_constraintEnd_toEndOf="@+id/main_image"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/main_image"
+        app:layout_constraintTop_toBottomOf="@+id/main_image" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="204dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="50dp"
+        android:id="@+id/main_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/main_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_dialog" />
+        app:srcCompat="@drawable/the_sitter_3" />
 
+    <Button
+        android:id="@+id/button_2_sitter"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:contentDescription="@string/button_2_sitter"
+        android:text="@string/button_2_sitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/parent_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/parent_button"
+        app:layout_constraintTop_toBottomOf="@+id/parent_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

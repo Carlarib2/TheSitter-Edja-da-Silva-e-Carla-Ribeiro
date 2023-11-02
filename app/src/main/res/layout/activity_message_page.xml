@@ -47,13 +47,18 @@
 
     <Button
         android:id="@+id/button"
-        style="@style/Widget.Material3.Button.ElevatedButton"
+        style="@style/Widget.Material3.Button.TextButton.Snackbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/Beige"
+        android:backgroundTintMode="multiply"
         android:text="Button"
         android:textColor="@color/black"
-        app:iconTint="@color/FUNDO"
+        app:iconTint="@color/Beige"
+        app:iconTintMode="multiply"
         app:rippleColor="@color/black"
+        app:strokeColor="@color/Beige"
         tools:layout_editor_absoluteX="168dp"
         tools:layout_editor_absoluteY="281dp" />
 

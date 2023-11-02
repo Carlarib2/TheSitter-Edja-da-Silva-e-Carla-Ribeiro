@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/FUNDO"
+    android:background="@drawable/gradient"
     tools:context=".LogInPageActivity">
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/Beige"
+        android:text="@string/REGISTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
 
     <Button
         android:id="@+id/button14"
@@ -17,28 +32,6 @@
         android:text="@string/login"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="534dp" />
-
-    <Button
-        android:id="@+id/button11"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="196dp"
-        android:layout_height="39dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/Beige"
-        android:text="@string/REGISTER"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="736dp" />
-
-    <Button
-        android:id="@+id/button9"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="160dp"
-        android:layout_height="35dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/Beige"
-        android:text="@string/Return"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="27dp" />
 
     <ImageView
         android:id="@+id/imageView2"

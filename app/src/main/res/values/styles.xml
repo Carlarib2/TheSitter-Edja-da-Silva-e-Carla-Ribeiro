@@ -1,0 +1,8 @@
+
+<resources>
+
+    <style name="MyGradientStyle">
+        <item name="android:background">@drawable/gradient</item>
+    </style>
+
+</resources>

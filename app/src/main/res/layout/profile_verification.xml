@@ -4,30 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/FUNDO"
+    android:background="@drawable/gradient"
     tools:context=".ProfileVerification">
-
-    <Button
-        android:id="@+id/button4"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="119dp"
-        android:layout_height="45dp"
-        android:background="@color/white"
-        android:backgroundTint="#EAE6E6"
-        android:text="@string/Return"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="37dp" />
 
     <Button
         android:id="@+id/button3"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="146dp"
         android:layout_height="38dp"
-        android:background="@color/white"
+        android:background="@drawable/gradient"
         android:backgroundTint="#EAE6E6"
         android:text="@string/Save"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="691dp" />
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="677dp" />
 
     <ImageView
         android:id="@+id/imageView3"

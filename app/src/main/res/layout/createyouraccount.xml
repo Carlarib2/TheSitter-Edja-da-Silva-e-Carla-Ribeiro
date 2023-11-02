@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/FUNDO"
+    android:background="@drawable/gradient"
     tools:context=".CreateYourAccount">
 
     <Button
@@ -19,7 +19,7 @@
         android:backgroundTint="@color/Beige"
         android:text="@string/REGISTER"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/parent_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword5"
         app:layout_constraintVertical_bias="0.464" />
@@ -35,22 +35,6 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         tools:layout_editor_absoluteX="108dp" />
-
-    <Button
-        android:id="@+id/button20"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="146dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="200dp"
-        android:background="@color/white"
-        android:backgroundTint="#EAE6E6"
-        android:text="@string/Return"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -96,20 +80,16 @@
         android:hint="@string/CONFIRMAR_PASS"
         android:inputType="@string/CONFIRMAR_PASS"
         app:layout_constraintEnd_toEndOf="@+id/button19"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="@+id/button19"
-        tools:layout_editor_absoluteY="580dp" />
+        tools:layout_editor_absoluteY="583dp" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="184dp"
         android:layout_height="190dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/button20"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button20"
         app:srcCompat="@drawable/the_sitter_3"
+        tools:layout_editor_absoluteX="112dp"
         tools:layout_editor_absoluteY="124dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

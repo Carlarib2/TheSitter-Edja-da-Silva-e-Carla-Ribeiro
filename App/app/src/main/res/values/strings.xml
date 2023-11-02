@@ -12,4 +12,8 @@
     <string name="app_password">Password</string>
     <string name="app_contentDescription">Password</string>
     <string name="app_contentDescription1">Username</string>
+    <string name="app_logo">The Sitter</string>
+    <string name="app_text1">Create your account</string>
+    <string name="app_user_email">Email</string>
+    <string name="app_user_confirm">Confirm your password?</string>
 </resources>

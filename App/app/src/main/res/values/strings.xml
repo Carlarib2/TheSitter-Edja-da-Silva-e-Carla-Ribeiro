@@ -16,4 +16,17 @@
     <string name="app_text1">Create your account</string>
     <string name="app_user_email">Email</string>
     <string name="app_user_confirm">Confirm your password?</string>
+
+    <string name="first_name">First Name:</string>
+    <string name="Address">Address:</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="Last_name">Last Name:</string>
+    <string name="Gender">Gender:</string>
+    <string name="Education">Education:</string>
+    <string name="About_me">About me:</string>
+    <string name="Experience">Experience:</string>
+    <string name="Date_of_Birth">Date of Birth:</string>
+    <string name="Save">SAVE</string>
+    <string name="profile_verification">Profile Verification</string>
+    <string name="upload">Upload a Photo of your Document</string>
 </resources>

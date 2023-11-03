@@ -20,6 +20,7 @@
     <string name="requests">REQUESTS</string>
     <string name="pending">Pending</string>
     <string name="accepted">Accepted</string>
+    <string name="profile_settings">Profile Settings</string>
     <string name="declined">Declined</string>
     <string name="total_bookings">Total Bookings:</string>
     <string name="Response_time">Response Time</string>
@@ -37,4 +38,10 @@
     <string name="Save">SAVE</string>
     <string name="profile_verification">Profile Verification</string>
     <string name="upload">Upload a Photo of your Document</string>
+    <string name="my_Calendar">My Calendar</string>
+    <string name="my_Rate">My Rate</string>
+    <string name="my_experience">My Experience</string>
+    <string name="logout">Logout</string>
+    <string name="profile_is_on">Profile is On</string>
+
 </resources>

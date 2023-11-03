@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+<style>
 
     <style name="MyGradientStyle">
         <item name="android:background">@drawable/gradient</item>
     </style>
+
+    <style name="containersComponents">
+    <item name= "android:layout_width">match_parent</item>
+    <item name="android:layout_height">250dp</item>
+    <item name="android:background">@drawable/container_components</item>
+    </style>
+    
+    <style name="Edit_Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
 
 </resources>

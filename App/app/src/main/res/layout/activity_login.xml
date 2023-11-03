@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:autofillHints="@string/app_password"
     android:background="@drawable/gradient"
-    android:contentDescription="@string/app_password"
+    android:contentDescription="@string/app_user"
     tools:context=".login">
 
     <ImageView
@@ -14,52 +14,15 @@
         android:layout_width="393dp"
         android:layout_height="262dp"
         android:contentDescription="@string/app_image"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/the_sitter_3" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="52dp"
-        android:layout_height="46dp"
-        android:contentDescription="@string/app_contentDescription"
-        app:srcCompat="@drawable/person_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="391dp" />
-
-    <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="52dp"
-        android:layout_height="46dp"
-        android:contentDescription="@string/app_contentDescription1"
-        app:srcCompat="@drawable/lock_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="445dp" />
-
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonshape"
-        android:contentDescription="@string/app_button_login"
-        android:text="@string/app_button_login"
-        android:textColor="#1a436e"
-        android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="529dp"
-        android:shadowColor="#D78FFE"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="2"
-        />
 
     <Button
         android:id="@+id/register_button"
@@ -67,17 +30,59 @@
         android:layout_height="50dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
-        android:text="@string/app_button_register"
-        android:textColor="#1a436e"
-        android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="714dp"
         android:shadowColor="#D78FFE"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
-        />
+        android:text="@string/app_button_register"
+        android:textColor="#1a436e"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="729dp" />
+
+    <View
+        style="@style/containersComponents"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button2"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape_gradient"
+        android:contentDescription="@string/app_button_login"
+        android:shadowColor="#D78FFE"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/app_button_login"
+        android:textColor="#1a436e"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:hint="@string/app_user"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:hint="@string/app_contentDescription"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="383dp" />
 
     <TextView
         android:id="@+id/text_pass"
@@ -90,32 +95,21 @@
         tools:layout_editor_absoluteX="124dp"
         tools:layout_editor_absoluteY="598dp" />
 
-    <EditText
-        android:id="@+id/Password_text"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/app_contentDescription"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="455dp" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/person_icon"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="312dp" />
 
-    <EditText
-        android:id="@+id/user_text"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:autofillHints="@string/app_contentDescription1"
-        android:ems="10"
-        android:hint="@string/app_contentDescription1"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColor="#1a436e"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="395dp" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lock_icon"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="412dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

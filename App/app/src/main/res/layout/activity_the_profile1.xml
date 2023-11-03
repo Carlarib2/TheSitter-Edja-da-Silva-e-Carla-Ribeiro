@@ -8,76 +8,28 @@
     tools:context=".the_profile_1">
 
     <View
-        android:id="@+id/view3"
-        style="@style/containersComponents"
-        android:layout_width="392dp"
-        android:layout_height="54dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="568dp" />
-
-    <View
         android:id="@+id/view2"
         style="@style/containersComponents"
-        android:layout_width="404dp"
-        android:layout_height="55dp"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="413dp" />
+        android:layout_width="445dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <View
+        android:id="@+id/view3"
+        style="@style/containersComponents"
+        android:layout_width="445dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="425dp" />
 
     <View
         android:id="@+id/view"
         style="@style/containersComponents"
-        android:layout_width="404dp"
+        android:layout_width="445dp"
         android:layout_height="51dp"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="277dp" />
-
-    <View
-        android:id="@+id/divider16"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="619dp" />
-
-    <View
-        android:id="@+id/divider15"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="567dp" />
-
-    <View
-        android:id="@+id/divider13"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="413dp" />
-
-    <View
-        android:id="@+id/divider14"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="469dp" />
-
-    <View
-        android:id="@+id/divider12"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="328dp" />
-
-    <View
-        android:id="@+id/divider11"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="273dp" />
+        tools:layout_editor_absoluteY="552dp" />
 
     <TextView
         android:id="@+id/textView34"
@@ -87,7 +39,7 @@
         android:textAlignment="textStart"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteX="183dp"
         tools:layout_editor_absoluteY="520dp" />
 
     <TextView
@@ -101,8 +53,8 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="127dp" />
+        tools:layout_editor_absoluteX="377dp"
+        tools:layout_editor_absoluteY="123dp" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -122,24 +74,24 @@
 
     <View
         android:id="@+id/divider10"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
+        android:layout_width="444dp"
+        android:layout_height="7dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteY="161dp" />
 
     <View
         android:id="@+id/divider9"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
+        android:layout_width="444dp"
+        android:layout_height="7dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="112dp" />
+        tools:layout_editor_absoluteY="110dp" />
 
     <View
         android:id="@+id/divider8"
-        android:layout_width="391dp"
-        android:layout_height="5dp"
+        android:layout_width="444dp"
+        android:layout_height="7dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="64dp" />
@@ -148,7 +100,7 @@
         android:id="@+id/switch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteX="377dp"
         tools:layout_editor_absoluteY="78dp" />
 
     <TextView
@@ -167,8 +119,8 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="229dp" />
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="261dp" />
 
     <TextView
         android:id="@+id/textView33"
@@ -178,6 +130,6 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="364dp" />
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="391dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

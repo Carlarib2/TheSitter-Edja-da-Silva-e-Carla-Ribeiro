@@ -16,7 +16,15 @@
     <string name="app_text1">Create your account</string>
     <string name="app_user_email">Email</string>
     <string name="app_user_confirm">Confirm your password?</string>
-
+    <string name="Messages">MESSAGES</string>
+    <string name="requests">REQUESTS</string>
+    <string name="pending">Pending</string>
+    <string name="accepted">Accepted</string>
+    <string name="declined">Declined</string>
+    <string name="total_bookings">Total Bookings:</string>
+    <string name="Response_time">Response Time</string>
+    <string name="Response_Rate">Response Rate</string>
+    <string name="Reliability">Reliability</string>
     <string name="first_name">First Name:</string>
     <string name="Address">Address:</string>
     <string name="phone_number">Phone Number:</string>

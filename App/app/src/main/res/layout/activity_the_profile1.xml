@@ -10,24 +10,24 @@
     <View
         android:id="@+id/view2"
         style="@style/containersComponents"
-        android:layout_width="445dp"
-        android:layout_height="51dp"
+        android:layout_width="389dp"
+        android:layout_height="50dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="293dp" />
 
     <View
         android:id="@+id/view3"
         style="@style/containersComponents"
-        android:layout_width="445dp"
-        android:layout_height="51dp"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="425dp" />
 
     <View
         android:id="@+id/view"
         style="@style/containersComponents"
-        android:layout_width="445dp"
-        android:layout_height="51dp"
+        android:layout_width="393dp"
+        android:layout_height="50dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="552dp" />
 
@@ -39,7 +39,7 @@
         android:textAlignment="textStart"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="520dp" />
 
     <TextView
@@ -53,8 +53,8 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="377dp"
-        tools:layout_editor_absoluteY="123dp" />
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="127dp" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -100,7 +100,7 @@
         android:id="@+id/switch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="377dp"
+        tools:layout_editor_absoluteX="330dp"
         tools:layout_editor_absoluteY="78dp" />
 
     <TextView
@@ -119,7 +119,7 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="261dp" />
 
     <TextView
@@ -130,6 +130,6 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="391dp" />
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="393dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

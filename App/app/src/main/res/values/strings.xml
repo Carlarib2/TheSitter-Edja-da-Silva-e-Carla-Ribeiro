@@ -42,6 +42,7 @@
     <string name="my_Rate">My Rate</string>
     <string name="my_experience">My Experience</string>
     <string name="logout">Logout</string>
+    <string name="mobile">Mobile:</string>
     <string name="profile_is_on">Profile is On</string>
 
 </resources>

@@ -7,6 +7,14 @@
     android:background="@drawable/gradient"
     tools:context=".TheProfile">
 
+    <View
+        android:id="@+id/divider24"
+        android:layout_width="5dp"
+        android:layout_height="99dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="285dp" />
+
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
@@ -71,8 +79,12 @@
         android:id="@+id/register_button6"
         android:layout_width="141dp"
         android:layout_height="52dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
+        android:shadowColor="#D78FFE"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
         android:text="@string/Messages"
         android:textColor="#1a436e"
         android:textStyle="bold"
@@ -84,8 +96,12 @@
         android:id="@+id/register_button5"
         android:layout_width="141dp"
         android:layout_height="52dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
+        android:shadowColor="#D78FFE"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
         android:text="@string/requests"
         android:textColor="#1a436e"
         android:textStyle="bold"
@@ -124,14 +140,6 @@
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="282dp" />
-
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="5dp"
-        android:layout_height="99dp"
-        android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="285dp" />
 
     <View
         android:id="@+id/divider4"
@@ -246,4 +254,5 @@
         android:text="TextView"
         tools:layout_editor_absoluteX="294dp"
         tools:layout_editor_absoluteY="353dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

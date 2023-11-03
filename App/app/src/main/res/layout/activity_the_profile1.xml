@@ -8,6 +8,30 @@
     tools:context=".the_profile_1">
 
     <View
+        android:id="@+id/view3"
+        style="@style/containersComponents"
+        android:layout_width="392dp"
+        android:layout_height="54dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/containersComponents"
+        android:layout_width="404dp"
+        android:layout_height="55dp"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="413dp" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/containersComponents"
+        android:layout_width="404dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <View
         android:id="@+id/divider16"
         android:layout_width="391dp"
         android:layout_height="5dp"

@@ -46,7 +46,7 @@
         android:layout_width="370dp"
         android:layout_height="300dp"
         tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="244dp" />
+        tools:layout_editor_absoluteY="242dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_button2"

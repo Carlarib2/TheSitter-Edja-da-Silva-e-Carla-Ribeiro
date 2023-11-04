@@ -7,6 +7,18 @@
     android:background="@drawable/gradient"
     tools:context=".profileVerification">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/photo"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="315dp" />
+
     <Button
         android:id="@+id/register_button4"
         android:layout_width="120dp"
@@ -28,11 +40,12 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:text="@string/upload"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="539dp" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="504dp" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -44,14 +57,15 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="304dp"
-        android:layout_height="78dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:text="@string/profile_verification"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="295dp" />
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="262dp" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -59,5 +73,13 @@
         android:layout_height="100dp"
         app:srcCompat="@drawable/upload_icon"
         tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="390dp" />
+        tools:layout_editor_absoluteY="564dp" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="81dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/circle_icon"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="378dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

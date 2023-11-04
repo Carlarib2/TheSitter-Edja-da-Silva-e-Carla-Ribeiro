@@ -9,7 +9,7 @@
 
     <View
         android:id="@+id/divider23"
-        android:layout_width="405dp"
+        android:layout_width="391dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="3dp"
@@ -17,7 +17,7 @@
 
     <View
         android:id="@+id/divider22"
-        android:layout_width="405dp"
+        android:layout_width="391dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="3dp"
@@ -25,7 +25,7 @@
 
     <View
         android:id="@+id/divider21"
-        android:layout_width="405dp"
+        android:layout_width="391dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="3dp"
@@ -33,7 +33,7 @@
 
     <View
         android:id="@+id/divider20"
-        android:layout_width="405dp"
+        android:layout_width="391dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="3dp"
@@ -41,7 +41,7 @@
 
     <View
         android:id="@+id/divider19"
-        android:layout_width="405dp"
+        android:layout_width="391dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="3dp"

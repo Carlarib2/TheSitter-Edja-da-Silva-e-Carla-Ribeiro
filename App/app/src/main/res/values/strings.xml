@@ -51,5 +51,6 @@
     <string name="month">Month</string>
     <string name="year">Year</string>
     <string name="other">Other</string>
+    <string name="photo">Take a picture of your face</string>
     <string name="profile">Profile</string>
 </resources>

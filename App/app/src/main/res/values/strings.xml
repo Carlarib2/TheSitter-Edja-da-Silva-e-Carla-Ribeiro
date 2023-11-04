@@ -27,14 +27,14 @@
     <string name="Response_Rate">Response Rate</string>
     <string name="Reliability">Reliability</string>
     <string name="first_name">First Name:</string>
-    <string name="Address">Address:</string>
+    <string name="Address">Address</string>
     <string name="phone_number">Phone Number:</string>
     <string name="Last_name">Last Name:</string>
-    <string name="Gender">Gender:</string>
-    <string name="Education">Education:</string>
-    <string name="About_me">About me:</string>
-    <string name="Experience">Experience:</string>
-    <string name="Date_of_Birth">Date of Birth:</string>
+    <string name="Gender">Gender</string>
+    <string name="Education">Education</string>
+    <string name="About_me">About me</string>
+    <string name="Experience">Experience</string>
+    <string name="Date_of_Birth">Date of Birth</string>
     <string name="Save">SAVE</string>
     <string name="profile_verification">Profile Verification</string>
     <string name="upload">Upload a Photo of your Document</string>
@@ -42,7 +42,14 @@
     <string name="my_Rate">My Rate</string>
     <string name="my_experience">My Experience</string>
     <string name="logout">Logout</string>
-    <string name="mobile">Mobile:</string>
+    <string name="mobile">Mobile</string>
+    <string name="full_name">Full Name</string>
     <string name="profile_is_on">Profile is On</string>
+    <string name="female">F</string>
+    <string name="male">M</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="other">Other</string>
 
 </resources>

@@ -54,4 +54,6 @@
     <string name="other">Other</string>
     <string name="photo">Take a picture of your face</string>
     <string name="profile">Profile</string>
+    <string name="person_icon">Person Icon</string>
+    <string name="lock_icon">Lock Icon</string>
 </resources>

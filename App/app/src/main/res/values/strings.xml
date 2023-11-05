@@ -48,6 +48,7 @@
     <string name="female">F</string>
     <string name="male">M</string>
     <string name="day">Day</string>
+    <string name="NA">N/A</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
     <string name="other">Other</string>

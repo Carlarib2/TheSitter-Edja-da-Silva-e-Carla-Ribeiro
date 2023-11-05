@@ -19,9 +19,9 @@
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="327dp" />
+        android:text="@string/NA"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="325dp" />
 
     <TextView
         android:id="@+id/textView19"
@@ -219,16 +219,16 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="330dp" />
+        android:text="@string/NA"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="325dp" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="24dp"
+        android:text="@string/NA"
+        tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="325dp" />
 
     <TextView

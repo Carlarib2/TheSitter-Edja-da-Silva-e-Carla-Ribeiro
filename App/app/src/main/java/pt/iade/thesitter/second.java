@@ -18,4 +18,9 @@ public class second extends AppCompatActivity {
         Intent intent = new Intent(this, register.class);
         startActivity(intent);
     }
+
+    public void startRegister(View view){
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
 }

@@ -14,7 +14,7 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
     public void startRegister2(View view){
-        Intent intent = new Intent(this, register.class);
+        Intent intent = new Intent(this, profile.class);
         startActivity(intent);
     }
 }

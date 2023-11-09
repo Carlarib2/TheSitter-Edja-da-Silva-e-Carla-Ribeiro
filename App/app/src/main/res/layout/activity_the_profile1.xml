@@ -135,7 +135,7 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="391dp"
+        android:layout_width="410dp"
         android:layout_height="5dp"
         android:background="?android:attr/listDivider"
         tools:layout_editor_absoluteX="1dp"

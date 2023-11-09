@@ -9,6 +9,6 @@ public class TheProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_the_profile);
+        setContentView(R.layout.activity_the_profile1);
     }
 }

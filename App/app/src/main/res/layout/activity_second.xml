@@ -28,6 +28,7 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_login"
+        android:onClick="startLogin"
         android:shadowColor="#D78FFE"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -39,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@+id/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/imageView"/>
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
 
     <Button
 
@@ -49,6 +50,7 @@
         android:layout_marginBottom="152dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
+        android:onClick="startRegister"
         android:shadowColor="#D78FFE"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -60,7 +62,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_button"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/login_button"
-        android:onClick="startRegister"/>
+        app:layout_constraintStart_toStartOf="@+id/login_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

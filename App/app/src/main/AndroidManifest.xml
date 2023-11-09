@@ -20,13 +20,13 @@
             android:name=".messages"
             android:exported="false" />
         <activity
+            android:name=".the_profile_2"
+            android:exported="false" />
+        <activity
             android:name=".the_profile_1"
             android:exported="false" />
         <activity
-            android:name=".TheProfile"
-            android:exported="false" />
-        <activity
-            android:name=".profileVerification"
+            android:name=".profile_verification"
             android:exported="false" />
         <activity
             android:name=".profile"

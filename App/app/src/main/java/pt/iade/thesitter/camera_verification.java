@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CameraVerificationActivity extends AppCompatActivity {
+public class camera_verification extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

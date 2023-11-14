@@ -18,4 +18,9 @@ public class profile_verification extends AppCompatActivity {
         Intent intent = new Intent(this, camera_verification.class);
         startActivity(intent);
     }
+
+    public void startDocument(View view){
+        Intent intent = new Intent(this, document_upload.class);
+        startActivity(intent);
+    }
 }

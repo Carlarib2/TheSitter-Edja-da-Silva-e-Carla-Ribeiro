@@ -44,14 +44,12 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:background="@color/white"
         android:text="@string/upload"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView32"
-        app:layout_constraintStart_toStartOf="@+id/imageView32"
-        app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="555dp" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -85,13 +83,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:srcCompat="@drawable/upload_icon" />
 
-    <ImageView
-        android:id="@+id/imageView32"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="157dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="40dp"
+        android:onClick="startCamera"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/circle_icon" />
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

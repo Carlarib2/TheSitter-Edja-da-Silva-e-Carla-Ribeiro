@@ -20,4 +20,9 @@ public class parent_client_choice extends AppCompatActivity {
         Intent intent = new Intent(this, second.class);
         startActivity(intent);
     }
+
+    public void startParent(View view){
+        Intent intent = new Intent(this, second.class);
+        startActivity(intent);
+    }
 }

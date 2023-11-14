@@ -18,4 +18,9 @@ public class the_profile_1 extends AppCompatActivity {
         Intent intent = new Intent(this, the_profile_2.class);
         startActivity(intent);
     }
+
+    public void startMessages(View view){
+        Intent intent = new Intent(this, messages.class);
+        startActivity(intent);
+    }
 }

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/allerta_stencil"
-        android:text="My Children"
+        android:text="My Family"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +32,25 @@
         android:layout_width="69dp"
         android:layout_height="61dp"
         app:srcCompat="@drawable/person_icon"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="245dp" />
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ava"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 years"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="300dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

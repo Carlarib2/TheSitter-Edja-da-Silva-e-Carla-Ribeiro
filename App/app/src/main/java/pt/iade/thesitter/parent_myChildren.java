@@ -9,6 +9,6 @@ public class parent_myChildren extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_my_children);
+        setContentView(R.layout.activity_parent_my_family);
     }
 }

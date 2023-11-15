@@ -1,13 +1,14 @@
 package pt.iade.thesitter;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class parent_home extends AppCompatActivity {
+public class parent_createChildProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_home);
+        setContentView(R.layout.activity_parent_create_child_profile);
     }
 }

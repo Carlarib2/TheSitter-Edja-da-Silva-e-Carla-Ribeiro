@@ -208,6 +208,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="startHome"
         app:layout_constraintStart_toStartOf="@+id/divider18"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/home_icon" />
@@ -246,6 +247,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
+        android:onClick="startMessages2"
         app:layout_constraintStart_toStartOf="@+id/divider28"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/mail_icon" />
@@ -265,6 +267,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:onClick="startProfile"
         app:layout_constraintStart_toStartOf="@+id/divider29"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/person_icon" />

@@ -69,6 +69,6 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="848dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="846dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

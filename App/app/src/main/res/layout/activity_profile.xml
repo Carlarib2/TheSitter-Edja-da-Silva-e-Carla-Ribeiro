@@ -318,4 +318,12 @@
         app:layout_constraintTop_toTopOf="@+id/editText20"
         app:srcCompat="@drawable/call_icon" />
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="81dp"
+        android:layout_height="43dp"
+        android:entries="@array/months"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="388dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

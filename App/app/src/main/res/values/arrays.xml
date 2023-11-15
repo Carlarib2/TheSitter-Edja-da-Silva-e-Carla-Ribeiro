@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
 <string-array name="Month">
     <item>January</item>
     <item>February</item>
@@ -89,4 +90,10 @@
         <item>2007</item>
 
     </string-array>
+=======
+    <array name="months">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+    </array>
+>>>>>>> b4fa6a27e72d5bda66a5f49438035f17c2c9e227
 </resources>

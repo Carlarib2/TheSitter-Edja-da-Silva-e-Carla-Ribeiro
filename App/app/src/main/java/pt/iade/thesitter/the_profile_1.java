@@ -28,4 +28,14 @@ public class the_profile_1 extends AppCompatActivity {
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
+
+    public void startProfile2(View view){
+        Intent intent = new Intent(this, profile_settings.class);
+        startActivity(intent);
+    }
+
+    public void startRequests2(View view){
+        Intent intent = new Intent(this, the_profile_2.class);
+        startActivity(intent);
+    }
 }

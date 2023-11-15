@@ -148,4 +148,81 @@
         app:layout_constraintStart_toStartOf="@+id/divider16"
         app:layout_constraintTop_toBottomOf="@+id/divider16"
         app:srcCompat="@drawable/circle_icon" />
+
+    <View
+        android:id="@+id/divider30"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="250dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider26" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/divider30"
+        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:srcCompat="@drawable/home_icon" />
+
+    <View
+        android:id="@+id/divider31"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toEndOf="@+id/imageButton7"
+        app:layout_constraintTop_toBottomOf="@+id/divider30" />
+
+    <View
+        android:id="@+id/divider32"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintTop_toBottomOf="@+id/divider30" />
+
+    <View
+        android:id="@+id/divider33"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:layout_constraintTop_toBottomOf="@+id/divider30" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/divider31"
+        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/divider32"
+        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/divider33"
+        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:srcCompat="@drawable/person_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,12 +15,7 @@ public class messages extends AppCompatActivity {
     }
 
     public void startHome3(View view){
-        Intent intent = new Intent(this, messages.class);
-        startActivity(intent);
-    }
-
-    public void startMessages4(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
@@ -30,7 +25,7 @@ public class messages extends AppCompatActivity {
     }
 
     public void startRequests3(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+        Intent intent = new Intent(this, the_profile_2.class);
         startActivity(intent);
     }
 }

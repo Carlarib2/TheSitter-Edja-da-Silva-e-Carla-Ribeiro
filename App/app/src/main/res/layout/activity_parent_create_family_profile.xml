@@ -12,6 +12,7 @@
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="Allergies"
@@ -19,14 +20,16 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText13"
+        app:layout_constraintStart_toStartOf="@+id/editText13"
+        app:layout_constraintTop_toBottomOf="@+id/editText13" />
 
     <EditText
         android:id="@+id/editText29"
         style="@style/Edit_Text_Profile"
-        android:layout_width="384dp"
-        android:layout_height="65dp"
+        android:layout_width="382dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="Important notes"
@@ -34,28 +37,16 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="553dp" />
-
-    <EditText
-        android:id="@+id/editText30"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="384dp"
-        android:layout_height="85dp"
-        android:autofillHints="@string/Address"
-        android:firstBaselineToTopHeight="5dp"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="639dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText28"
+        app:layout_constraintStart_toStartOf="@+id/editText28"
+        app:layout_constraintTop_toBottomOf="@+id/editText28" />
 
     <EditText
         android:id="@+id/editText14"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="Birthday"
@@ -63,14 +54,16 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="291dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText27"
+        app:layout_constraintStart_toStartOf="@+id/editText27"
+        app:layout_constraintTop_toBottomOf="@+id/editText27" />
 
     <EditText
         android:id="@+id/editText13"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="school *"
@@ -78,14 +71,16 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="370dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText14"
+        app:layout_constraintStart_toStartOf="@+id/editText14"
+        app:layout_constraintTop_toBottomOf="@+id/editText14" />
 
     <EditText
         android:id="@+id/editText27"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
+        android:layout_marginTop="50dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="Name"
@@ -93,14 +88,15 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="208dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="Create Family Profile"
         android:textSize="34sp"
@@ -112,41 +108,52 @@
         android:id="@+id/imageButton30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:onClick="startProfile2"
         android:src="@drawable/person_icon"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton29"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <ImageButton
         android:id="@+id/imageButton29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton28"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <ImageButton
         android:id="@+id/imageButton28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton27"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <ImageButton
         android:id="@+id/imageButton27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/home_icon"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:shadowColor="#D78FFE"
@@ -157,6 +164,8 @@
         android:textColor="#1a436e"
         android:textStyle="bold"
         app:backgroundTint="#FFFFFF"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="772dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText29"
+        app:layout_constraintStart_toStartOf="@+id/editText29"
+        app:layout_constraintTop_toBottomOf="@+id/editText29" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

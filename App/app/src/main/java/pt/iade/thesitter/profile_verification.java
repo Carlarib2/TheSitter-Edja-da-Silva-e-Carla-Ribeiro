@@ -16,7 +16,7 @@ public class profile_verification extends AppCompatActivity {
 
     public void startCamera(View view){
         Intent intent = new Intent(this, camera_verification.class);
-        startActivity(intent);
+
     }
 
     public void startDocument(View view){
@@ -28,4 +28,6 @@ public class profile_verification extends AppCompatActivity {
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
+
+
 }

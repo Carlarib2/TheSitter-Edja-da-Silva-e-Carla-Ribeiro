@@ -15,7 +15,7 @@ public class the_profile_1 extends AppCompatActivity {
     }
 
     public void startRequests(View view){
-        Intent intent = new Intent(this, the_profile_2.class);
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 
@@ -35,7 +35,7 @@ public class the_profile_1 extends AppCompatActivity {
     }
 
     public void startRequests2(View view){
-        Intent intent = new Intent(this, the_profile_2.class);
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 }

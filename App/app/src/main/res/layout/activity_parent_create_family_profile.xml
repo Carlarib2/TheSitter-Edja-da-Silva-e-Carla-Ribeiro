@@ -90,7 +90,7 @@
         android:firstBaselineToTopHeight="5dp"
         android:hint="Name"
         android:inputType="text"
-        android:textAlignment="center"
+        android:paddingLeft="50dp"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         tools:layout_editor_absoluteX="11dp"
@@ -168,4 +168,11 @@
         app:backgroundTint="#FFFFFF"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="772dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="28dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

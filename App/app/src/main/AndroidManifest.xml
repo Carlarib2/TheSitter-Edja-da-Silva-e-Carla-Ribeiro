@@ -19,9 +19,6 @@
             android:name=".parent_home"
             android:exported="false" />
         <activity
-            android:name=".parent_childProfile"
-            android:exported="false" />
-        <activity
             android:name=".parent_selectSitters"
             android:exported="false" />
         <activity

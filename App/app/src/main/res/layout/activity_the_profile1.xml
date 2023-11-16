@@ -100,12 +100,11 @@
         android:id="@+id/divider2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="28dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="@+id/divider7"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/divider7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        tools:layout_editor_absoluteY="272dp" />
 
     <Button
         android:id="@+id/register_button6"
@@ -130,9 +129,9 @@
         android:id="@+id/register_button5"
         android:layout_width="141dp"
         android:layout_height="0dp"
-        android:layout_marginTop="60dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
+        android:onClick="startRequests"
         android:shadowColor="#D78FFE"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -141,36 +140,24 @@
         android:textColor="#1a436e"
         android:textStyle="bold"
         app:backgroundTint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        android:onClick="startRequests"/>
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:srcCompat="@drawable/photo_camera_icon" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="304dp" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/divider12" />
+        android:text="Mário Igreja"
+        app:layout_constraintTop_toBottomOf="@+id/divider12"
+        tools:layout_editor_absoluteX="160dp" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:text="Advance: $15/hr"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -260,11 +247,11 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="70dp"
-        android:layout_height="0dp"
+        android:layout_width="161dp"
+        android:layout_height="30dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:text="TextView"
+        android:text="Friday, November 30th"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
@@ -274,7 +261,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:text="TextView"
+        android:text="Saturday, December 20th"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
@@ -298,18 +285,18 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="0dp"
-        android:text="TextView"
+        android:hint="0 cancels of 0"
         app:layout_constraintEnd_toEndOf="@+id/textView25"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="70dp"
-        android:layout_height="0dp"
-        android:text="TextView"
+        android:layout_width="78dp"
+        android:layout_height="39dp"
+        android:hint="0 responses"
         app:layout_constraintEnd_toEndOf="@+id/textView23"
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -318,8 +305,11 @@
         android:id="@+id/textView28"
         android:layout_width="70dp"
         android:layout_height="0dp"
-        android:text="TextView"
+        android:layout_marginTop="4dp"
+        android:hint="0 of 1"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/textView24"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
@@ -412,5 +402,21 @@
         app:layout_constraintStart_toEndOf="@+id/divider41"
         app:layout_constraintTop_toBottomOf="@+id/divider38"
         android:onClick="startProfile2"/>
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="133dp"
+        android:layout_height="115dp"
+        app:srcCompat="@drawable/drake"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 / $301.12"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="626dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

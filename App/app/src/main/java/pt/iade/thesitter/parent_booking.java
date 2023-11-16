@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class parent_bookingRequest extends AppCompatActivity {
+public class parent_booking extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_booking_request);
+        setContentView(R.layout.activity_parent_booking);
     }
 }

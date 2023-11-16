@@ -22,13 +22,13 @@
             android:name=".parent_home"
             android:exported="false" />
         <activity
-            android:name=".parent_childProfile"
+            android:name=".parent_child_profile"
             android:exported="false" />
         <activity
             android:name=".parent_selectSitters"
             android:exported="false" />
         <activity
-            android:name=".parent_bookingRequest"
+            android:name=".parent_booking"
             android:exported="false" />
         <activity
             android:name=".parent_myChildren"

@@ -273,10 +273,10 @@
         android:id="@+id/imageButton20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests3"
-        app:layout_constraintStart_toEndOf="@+id/divider43"
+        app:layout_constraintStart_toEndOf="@+id/imageButton19"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/event_icon" />
 
@@ -284,10 +284,10 @@
         android:id="@+id/imageButton21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages4"
-        app:layout_constraintStart_toEndOf="@+id/divider45"
+        app:layout_constraintStart_toEndOf="@+id/imageButton20"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/mail_icon" />
 
@@ -295,39 +295,12 @@
         android:id="@+id/imageButton22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:onClick="startProfile3"
-        app:layout_constraintStart_toEndOf="@+id/divider46"
+        app:layout_constraintStart_toEndOf="@+id/imageButton21"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/person_icon" />
-
-    <View
-        android:id="@+id/divider43"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton19"
-        app:layout_constraintTop_toBottomOf="@+id/divider34" />
-
-    <View
-        android:id="@+id/divider45"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton20"
-        app:layout_constraintTop_toBottomOf="@+id/divider34" />
-
-    <View
-        android:id="@+id/divider46"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton21"
-        app:layout_constraintTop_toBottomOf="@+id/divider34" />
 
     <Switch
         android:id="@+id/switch4"

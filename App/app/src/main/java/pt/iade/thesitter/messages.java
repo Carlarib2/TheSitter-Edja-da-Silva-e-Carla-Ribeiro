@@ -25,7 +25,7 @@ public class messages extends AppCompatActivity {
     }
 
     public void startRequests3(View view){
-        Intent intent = new Intent(this, the_profile_2.class);
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 }

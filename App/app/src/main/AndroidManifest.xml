@@ -55,7 +55,7 @@
             android:name=".messages"
             android:exported="false" />
         <activity
-            android:name=".the_profile_2"
+            android:name=".requests_view"
             android:exported="false" />
         <activity
             android:name=".the_profile_1"

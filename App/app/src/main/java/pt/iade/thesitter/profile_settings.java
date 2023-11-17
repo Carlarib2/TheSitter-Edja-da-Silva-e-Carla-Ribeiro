@@ -43,4 +43,9 @@ public class profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, my_rate.class);
         startActivity(intent);
     }
+
+    public void startExperience(View view){
+        Intent intent = new Intent(this, my_experience.class);
+        startActivity(intent);
+    }
 }

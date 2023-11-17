@@ -38,4 +38,9 @@ public class profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, calendar.class);
         startActivity(intent);
     }
+
+    public void startRate(View view){
+        Intent intent = new Intent(this, my_rate.class);
+        startActivity(intent);
+    }
 }

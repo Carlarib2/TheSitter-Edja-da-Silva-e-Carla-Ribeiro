@@ -22,7 +22,7 @@
             android:name=".parent_settings"
             android:exported="false" />
         <activity
-            android:name=".parent_createChildProfile"
+            android:name=".parent_create_family_profile"
             android:exported="false" />
         <activity
             android:name=".parent_home"

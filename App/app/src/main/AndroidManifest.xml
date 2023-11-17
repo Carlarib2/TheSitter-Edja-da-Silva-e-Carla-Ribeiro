@@ -34,7 +34,7 @@
             android:name=".parent_myChildren"
             android:exported="false" />
         <activity
-            android:name=".parent_calendar"
+            android:name=".calendar"
             android:exported="false" />
         <activity
             android:name=".parent_first_page"

@@ -33,4 +33,9 @@ public class profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
+
+    public void startCalendar(View view){
+        Intent intent = new Intent(this, calendar.class);
+        startActivity(intent);
+    }
 }

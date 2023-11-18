@@ -29,4 +29,24 @@ public class parent_settings extends AppCompatActivity {
         Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
+
+    public void startLogout2(View view){
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
+
+    public void startCalendar2(View view){
+        Intent intent = new Intent(this, calendar.class);
+        startActivity(intent);
+    }
+
+    public void startMyFamily(View view){
+        Intent intent = new Intent(this, my_fa.class);
+        startActivity(intent);
+    }
+
+    public void startExperience(View view){
+        Intent intent = new Intent(this, my_experience.class);
+        startActivity(intent);
+    }
 }

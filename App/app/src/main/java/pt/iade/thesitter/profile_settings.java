@@ -48,4 +48,9 @@ public class profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, my_experience.class);
         startActivity(intent);
     }
+
+    public void startLogout(View view){
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
 }

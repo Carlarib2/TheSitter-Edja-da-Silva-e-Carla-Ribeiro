@@ -15,7 +15,7 @@ public class profile_settings extends AppCompatActivity {
     }
 
     public void startHome2(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
@@ -30,7 +30,7 @@ public class profile_settings extends AppCompatActivity {
     }
 
     public void startRequests3(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 

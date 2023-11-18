@@ -118,7 +118,7 @@
             android:id="@+id/constraintLayout6"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:onClick="startLogout"
+            android:onClick="startLogout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -161,10 +161,10 @@
             android:id="@+id/constraintLayout3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:onClick="startCalendar2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider19"
-            android:onClick="startCalendar">
+            app:layout_constraintTop_toBottomOf="@+id/divider19">
 
                 <TextView
                     android:id="@+id/textView44"
@@ -195,7 +195,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:onClick="startRate"
+            android:onClick="startMyFamily"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -263,7 +263,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
-            android:onClick="startHome2"
+            android:onClick="startHome4"
             app:layout_constraintStart_toStartOf="@+id/divider34"
             app:layout_constraintTop_toBottomOf="@+id/divider34"
             app:srcCompat="@drawable/home_icon" />
@@ -274,7 +274,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
-            android:onClick="startRequests3"
+            android:onClick="startRequests5"
             app:layout_constraintStart_toEndOf="@+id/imageButton19"
             app:layout_constraintTop_toBottomOf="@+id/divider34"
             app:srcCompat="@drawable/event_icon" />
@@ -285,7 +285,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
-            android:onClick="startMessages4"
+            android:onClick="startMessages5"
             app:layout_constraintStart_toEndOf="@+id/imageButton20"
             app:layout_constraintTop_toBottomOf="@+id/divider34"
             app:srcCompat="@drawable/mail_icon" />
@@ -296,7 +296,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
-            android:onClick="startProfile3"
             app:layout_constraintStart_toEndOf="@+id/imageButton21"
             app:layout_constraintTop_toBottomOf="@+id/divider34"
             app:srcCompat="@drawable/person_icon" />

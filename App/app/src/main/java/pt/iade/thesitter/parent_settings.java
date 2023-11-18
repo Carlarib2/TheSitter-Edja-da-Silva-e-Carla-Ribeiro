@@ -41,12 +41,12 @@ public class parent_settings extends AppCompatActivity {
     }
 
     public void startMyFamily(View view){
-        Intent intent = new Intent(this, my_fa.class);
+        Intent intent = new Intent(this, class);
         startActivity(intent);
     }
 
     public void startExperience(View view){
-        Intent intent = new Intent(this, my_experience.class);
+        Intent intent = new Intent(this, class);
         startActivity(intent);
     }
 }

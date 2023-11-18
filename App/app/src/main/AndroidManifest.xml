@@ -40,7 +40,7 @@
             android:name=".parent_booking"
             android:exported="false" />
         <activity
-            android:name=".parent_myChildren"
+            android:name=".parent_my_family"
             android:exported="false" />
         <activity
             android:name=".calendar"

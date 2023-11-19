@@ -44,6 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <TextView
+        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
         android:text="@string/declined"
         android:textAlignment="textStart"
         android:textSize="24sp"
-        android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editText6"
         app:layout_constraintTop_toBottomOf="@+id/editText6" />
@@ -145,6 +146,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider8" />
 
     <TextView
+        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -152,7 +154,6 @@
         android:text="@string/pending"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/divider10"
         app:layout_constraintTop_toBottomOf="@+id/divider10" />
@@ -163,19 +164,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/accepted"
+        android:fontFamily="@font/pacifico_regular"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editText5"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
     <TextView
+        android:fontFamily="@font/frederickathegreat_regular"
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/allerta_stencil"
         android:text="THE SITTER"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".parent_calendar"
+    tools:context=".calendar"
     tools:layout_editor_absoluteX="117dp"
     tools:layout_editor_absoluteY="855dp">
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/allerta_stencil"
-        android:text="SelectDates"
+        android:text="Select Dates"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,50 +25,65 @@
         android:id="@+id/imageButton14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
         android:onClick="startProfile2"
         android:src="@drawable/person_icon"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton13"
+        app:layout_constraintTop_toBottomOf="@+id/divider31" />
 
     <ImageButton
         android:id="@+id/imageButton13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton12"
+        app:layout_constraintTop_toBottomOf="@+id/divider31" />
 
     <ImageButton
         android:id="@+id/imageButton12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton11"
+        app:layout_constraintTop_toBottomOf="@+id/divider31" />
 
     <ImageButton
         android:id="@+id/imageButton11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/home_icon"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider31" />
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="413dp"
         android:layout_height="494dp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="262dp" />
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <View
+        android:id="@+id/divider31"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="846dp" />
+        android:layout_height="1dp"
+        android:layout_marginTop="130dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

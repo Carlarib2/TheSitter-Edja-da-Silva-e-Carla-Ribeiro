@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".parent_myChildren">
+    tools:context=".parent_my_family">
 
     <TextView
         android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="My Family"
         android:textSize="34sp"
@@ -40,53 +40,55 @@
         android:id="@+id/imageView4"
         android:layout_width="69dp"
         android:layout_height="61dp"
-        app:srcCompat="@drawable/person_icon"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="260dp" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider35"
+        app:srcCompat="@drawable/person_icon" />
 
     <TextView
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:text="Ava"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="260dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/divider35" />
 
     <TextView
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:text="5 years"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
     <View
         android:id="@+id/divider35"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginTop="7dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="359dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="36dp"
-        android:layout_height="41dp"
-        app:srcCompat="@drawable/edit_pen_icon"
-        tools:layout_editor_absoluteX="313dp"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <TextView
-        android:id="@+id/textView52"
-        android:layout_width="99dp"
-        android:layout_height="25dp"
-        android:text="Add Family"
-        android:textSize="17dp"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="394dp" />
+    <View
+        android:id="@+id/divider27"
+        android:layout_width="409dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView51" />
 
     <ImageButton
         android:id="@+id/imageButton38"
@@ -122,4 +124,25 @@
         android:src="@drawable/home_icon"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="855dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/divider35"
+        app:layout_constraintTop_toBottomOf="@+id/divider35"
+        app:srcCompat="@drawable/edit_pen_icon" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider27"
+        app:layout_constraintTop_toBottomOf="@+id/divider27"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 </androidx.constraintlayout.widget.ConstraintLayout>

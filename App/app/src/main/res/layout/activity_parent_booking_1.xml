@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".parent_booking_1">
+
+        <EditText
+            android:id="@+id/editText12"
+            style="@style/Edit_Text_Profile"
+            android:layout_width="384dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="40dp"
+            android:autofillHints="@string/Address"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/editText9"
+            app:layout_constraintStart_toStartOf="@+id/editText10"
+            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+
+        <EditText
+            android:id="@+id/editText11"
+            style="@style/Edit_Text_Profile"
+            android:layout_width="384dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="40dp"
+            android:autofillHints="@string/Address"
+            android:hint="Date"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/editText8"
+            app:layout_constraintStart_toStartOf="@+id/editText8"
+            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+        <EditText
+            android:id="@+id/editText10"
+            style="@style/Edit_Text_Profile"
+            android:layout_width="170dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="40dp"
+            android:autofillHints="@string/Address"
+            android:hint="Starts"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/editText11"
+            app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+        <EditText
+            android:id="@+id/editText9"
+            style="@style/Edit_Text_Profile"
+            android:layout_width="170dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="40dp"
+            android:autofillHints="@string/Address"
+            android:hint="Ends"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/editText11"
+            app:layout_constraintStart_toEndOf="@+id/editText10"
+            app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+        <EditText
+            android:id="@+id/editText8"
+            style="@style/Edit_Text_Profile"
+            android:layout_width="384dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="50dp"
+            android:autofillHints="@string/Address"
+            android:firstBaselineToTopHeight="5dp"
+            android:hint="@string/Address"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider28" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/allerta_stencil"
+            android:text="Select Request Details"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="startProfile2"
+            android:src="@drawable/person_icon"
+            app:layout_constraintEnd_toEndOf="@+id/divider29"
+            app:layout_constraintStart_toEndOf="@+id/imageButton25"
+            app:layout_constraintTop_toBottomOf="@+id/divider29" />
+
+        <ImageButton
+            android:id="@+id/imageButton25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="startMessages3"
+            android:src="@drawable/mail_icon"
+            app:layout_constraintStart_toEndOf="@+id/imageButton24"
+            app:layout_constraintTop_toBottomOf="@+id/divider29" />
+
+        <ImageButton
+            android:id="@+id/imageButton24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="startRequests2"
+            android:src="@drawable/event_icon"
+            app:layout_constraintStart_toEndOf="@+id/imageButton23"
+            app:layout_constraintTop_toBottomOf="@+id/divider29" />
+
+        <ImageButton
+            android:id="@+id/imageButton23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/home_icon"
+            app:layout_constraintStart_toStartOf="@+id/divider29"
+            app:layout_constraintTop_toBottomOf="@+id/divider29" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="188dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/white"
+            android:text="SEND TO MY SITTERS NOW"
+            android:textColor="#1a436e"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/editText12"
+            app:layout_constraintTop_toBottomOf="@+id/editText12" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="188dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="30dp"
+            android:text="SELECT SITTERS"
+            android:textColor="#1a436e"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/editText12"
+            app:layout_constraintTop_toBottomOf="@+id/editText12" />
+
+        <View
+            android:id="@+id/divider28"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

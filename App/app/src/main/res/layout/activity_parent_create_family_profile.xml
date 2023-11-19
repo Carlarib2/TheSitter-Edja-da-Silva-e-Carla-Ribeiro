@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".parent_createChildProfile">
+    tools:context=".parent_create_family_profile">
 
     <EditText
         android:id="@+id/editText28"
@@ -17,7 +17,8 @@
         android:firstBaselineToTopHeight="5dp"
         android:hint="Allergies"
         android:inputType="text"
-        android:textAlignment="center"
+        android:paddingStart="40dp"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/editText13"
@@ -34,7 +35,8 @@
         android:firstBaselineToTopHeight="5dp"
         android:hint="Important notes"
         android:inputType="text"
-        android:textAlignment="center"
+        android:paddingStart="40dp"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/editText28"
@@ -51,7 +53,8 @@
         android:firstBaselineToTopHeight="5dp"
         android:hint="Birthday"
         android:inputType="text"
-        android:textAlignment="center"
+        android:paddingStart="40dp"
+        android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/editText27"
@@ -68,7 +71,9 @@
         android:firstBaselineToTopHeight="5dp"
         android:hint="school *"
         android:inputType="text"
-        android:textAlignment="center"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/editText14"
@@ -153,7 +158,7 @@
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:shadowColor="#D78FFE"
@@ -164,6 +169,7 @@
         android:textColor="#1a436e"
         android:textStyle="bold"
         app:backgroundTint="#FFFFFF"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="772dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editText29"
+        app:layout_constraintStart_toStartOf="@+id/editText29"
+        app:layout_constraintTop_toBottomOf="@+id/editText29" />
 </androidx.constraintlayout.widget.ConstraintLayout>

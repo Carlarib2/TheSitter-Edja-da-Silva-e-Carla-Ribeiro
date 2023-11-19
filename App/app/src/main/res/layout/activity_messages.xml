@@ -51,52 +51,54 @@
         android:id="@+id/divider16"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
     <View
         android:id="@+id/divider25"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
     <View
         android:id="@+id/divider26"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="405dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="112dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="Nathan Campos"
-        app:layout_constraintTop_toBottomOf="@+id/divider17"
-        tools:layout_editor_absoluteX="123dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/divider17" />
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="84dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="André Sabino"
-        app:layout_constraintTop_toBottomOf="@+id/divider16"
-        tools:layout_editor_absoluteX="123dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/divider16" />
 
     <TextView
         android:id="@+id/textView37"
@@ -111,16 +113,17 @@
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="Alexandra Fidalgo"
-        app:layout_constraintTop_toBottomOf="@+id/divider25"
-        tools:layout_editor_absoluteX="123dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/divider25" />
 
     <View
         android:id="@+id/divider30"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="280dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -131,48 +134,21 @@
         android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startHome3"
-        app:layout_constraintStart_toStartOf="@+id/divider30"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider30"
         app:srcCompat="@drawable/home_icon" />
-
-    <View
-        android:id="@+id/divider31"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/divider30" />
-
-    <View
-        android:id="@+id/divider32"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton8"
-        app:layout_constraintTop_toBottomOf="@+id/divider30" />
-
-    <View
-        android:id="@+id/divider33"
-        android:layout_width="1dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
-        app:layout_constraintTop_toBottomOf="@+id/divider30" />
 
     <ImageButton
         android:id="@+id/imageButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests3"
-        app:layout_constraintStart_toEndOf="@+id/divider31"
+        app:layout_constraintStart_toEndOf="@+id/imageButton7"
         app:layout_constraintTop_toBottomOf="@+id/divider30"
         app:srcCompat="@drawable/event_icon" />
 
@@ -180,9 +156,9 @@
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/divider32"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toBottomOf="@+id/divider30"
         app:srcCompat="@drawable/mail_icon" />
 
@@ -190,34 +166,39 @@
         android:id="@+id/imageButton10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:onClick="startProfile3"
-        app:layout_constraintStart_toEndOf="@+id/divider33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
         app:layout_constraintTop_toBottomOf="@+id/divider30"
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="99dp"
-        android:layout_height="139dp"
-        app:srcCompat="@drawable/pai_e_c_ozinho"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="100dp" />
+        android:layout_width="113dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider17"
+        app:srcCompat="@drawable/pai_e_c_ozinho" />
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="99dp"
-        android:layout_height="139dp"
-        app:srcCompat="@drawable/pai_e_filho"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="239dp" />
+        android:layout_width="121dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/divider16"
+        app:layout_constraintTop_toBottomOf="@+id/divider16"
+        app:srcCompat="@drawable/pai_e_filho" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="99dp"
-        android:layout_height="139dp"
-        app:srcCompat="@drawable/filha_e_m_e_de_100_anos"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="378dp" />
+        android:layout_width="121dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/divider25"
+        app:layout_constraintTop_toBottomOf="@+id/divider25"
+        app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
 </androidx.constraintlayout.widget.ConstraintLayout>

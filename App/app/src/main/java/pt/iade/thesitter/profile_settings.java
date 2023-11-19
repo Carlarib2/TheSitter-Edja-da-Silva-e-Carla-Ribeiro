@@ -15,7 +15,7 @@ public class profile_settings extends AppCompatActivity {
     }
 
     public void startHome2(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
@@ -30,7 +30,27 @@ public class profile_settings extends AppCompatActivity {
     }
 
     public void startRequests3(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+        Intent intent = new Intent(this, requests_view.class);
+        startActivity(intent);
+    }
+
+    public void startCalendar(View view){
+        Intent intent = new Intent(this, calendar.class);
+        startActivity(intent);
+    }
+
+    public void startRate(View view){
+        Intent intent = new Intent(this, my_rate.class);
+        startActivity(intent);
+    }
+
+    public void startExperience(View view){
+        Intent intent = new Intent(this, my_experience.class);
+        startActivity(intent);
+    }
+
+    public void startLogout(View view){
+        Intent intent = new Intent(this, login.class);
         startActivity(intent);
     }
 }

@@ -13,10 +13,19 @@
         android:theme="@style/Theme.TheSitter"
         tools:targetApi="31">
         <activity
+            android:name=".parent_booking_1"
+            android:exported="false" />
+        <activity
+            android:name=".my_experience"
+            android:exported="false" />
+        <activity
+            android:name=".my_rate"
+            android:exported="false" />
+        <activity
             android:name=".parent_settings"
             android:exported="false" />
         <activity
-            android:name=".parent_createChildProfile"
+            android:name=".parent_create_family_profile"
             android:exported="false" />
         <activity
             android:name=".parent_home"
@@ -29,10 +38,10 @@
             android:name=".parent_booking"
             android:exported="false" />
         <activity
-            android:name=".parent_myChildren"
+            android:name=".parent_my_family"
             android:exported="false" />
         <activity
-            android:name=".parent_calendar"
+            android:name=".calendar"
             android:exported="false" />
         <activity
             android:name=".parent_first_page"

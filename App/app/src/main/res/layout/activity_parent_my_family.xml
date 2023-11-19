@@ -25,16 +25,16 @@
         android:layout_height="wrap_content"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
-        android:shadowColor="#D78FFE"
+        android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/Save"
-        android:textColor="#1a436e"
+        android:textColor="#0C0C0C"
         android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="730dp" />
+        app:backgroundTint="#12FFFFFF"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="728dp" />
 
     <ImageView
         android:id="@+id/imageView4"

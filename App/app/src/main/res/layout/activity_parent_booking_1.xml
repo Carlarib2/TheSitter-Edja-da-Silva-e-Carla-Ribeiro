@@ -154,7 +154,7 @@
             android:text="SEND TO MY SITTERS NOW"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:backgroundTint="#524342"
+            app:backgroundTint="#1e1e1e"
             app:layout_constraintStart_toStartOf="@+id/editText12"
             app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
@@ -171,7 +171,7 @@
             android:text="SELECT SITTERS"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:backgroundTint="#524342"
+            app:backgroundTint="#1e1e1e"
             app:layout_constraintEnd_toEndOf="@+id/editText12"
             app:layout_constraintTop_toBottomOf="@+id/editText12" />
 

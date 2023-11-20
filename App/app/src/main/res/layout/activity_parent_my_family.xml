@@ -30,10 +30,10 @@
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/Save"
-        android:textColor="#0C0C0C"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:backgroundTint="#12FFFFFF"
-        tools:layout_editor_absoluteX="138dp"
+        app:backgroundTint="#1e1e1e"
+        tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="728dp" />
 
     <ImageView

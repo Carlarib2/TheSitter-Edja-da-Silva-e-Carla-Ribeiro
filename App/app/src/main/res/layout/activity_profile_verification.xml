@@ -34,9 +34,9 @@
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/Save"
-        android:textColor="#0C0C0C"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:backgroundTint="#12FFFFFF"
+        app:backgroundTint="#1e1e1e"
         app:layout_constraintEnd_toEndOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />

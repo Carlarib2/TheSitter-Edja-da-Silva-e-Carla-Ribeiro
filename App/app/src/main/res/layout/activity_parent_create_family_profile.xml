@@ -166,9 +166,9 @@
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="save"
-        android:textColor="#0E0E0E"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:backgroundTint="#12FFFFFF"
+        app:backgroundTint="#1e1e1e"
         app:layout_constraintEnd_toEndOf="@+id/editText29"
         app:layout_constraintStart_toStartOf="@+id/editText29"
         app:layout_constraintTop_toBottomOf="@+id/editText29" />

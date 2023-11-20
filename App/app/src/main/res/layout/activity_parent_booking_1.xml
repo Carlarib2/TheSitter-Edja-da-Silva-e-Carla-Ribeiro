@@ -143,7 +143,7 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="188dp"
-            android:layout_height="69dp"
+            android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/buttonshape"
             android:backgroundTint="@color/white"
@@ -161,7 +161,7 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="188dp"
-            android:layout_height="69dp"
+            android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/buttonshape"
             android:shadowColor="#F3E5F5"

@@ -8,7 +8,7 @@
     tools:context=".messages">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -45,7 +45,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/text_message" />
 
     <View
         android:id="@+id/divider16"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintTop_toBottomOf="@+id/image_pai_dog" />
 
     <View
         android:id="@+id/divider25"
@@ -67,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toBottomOf="@+id/image_man" />
 
     <View
         android:id="@+id/divider26"
@@ -78,26 +78,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintTop_toBottomOf="@+id/image_lady" />
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="112dp"
-        android:layout_height="22dp"
+        android:layout_width="116dp"
+        android:layout_height="28dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/pacifico_regular"
         android:text="Nathan Campos"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toEndOf="@+id/image_pai_dog"
         app:layout_constraintTop_toBottomOf="@+id/divider17" />
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="84dp"
-        android:layout_height="19dp"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/pacifico_regular"
         android:text="André Sabino"
-        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/image_man"
         app:layout_constraintTop_toBottomOf="@+id/divider16" />
 
     <TextView
@@ -116,7 +118,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:text="Alexandra Fidalgo"
-        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        android:fontFamily="@font/pacifico_regular"
+        app:layout_constraintStart_toEndOf="@+id/image_lady"
         app:layout_constraintTop_toBottomOf="@+id/divider25" />
 
     <View
@@ -176,7 +179,7 @@
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/image_pai_dog"
         android:layout_width="113dp"
         android:layout_height="113dp"
         android:layout_marginStart="20dp"
@@ -185,7 +188,7 @@
         app:srcCompat="@drawable/pai_e_c_ozinho" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/image_man"
         android:layout_width="121dp"
         android:layout_height="124dp"
         android:layout_marginStart="20dp"
@@ -194,7 +197,7 @@
         app:srcCompat="@drawable/pai_e_filho" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/image_lady"
         android:layout_width="121dp"
         android:layout_height="130dp"
         android:layout_marginStart="20dp"

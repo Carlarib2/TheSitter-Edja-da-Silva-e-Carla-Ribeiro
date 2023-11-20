@@ -10,7 +10,7 @@
     tools:context=".login">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo_image1"
         android:layout_width="398dp"
         android:layout_height="243dp"
         android:layout_marginTop="25dp"
@@ -23,8 +23,8 @@
 
     <Button
         android:id="@+id/register_button"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
@@ -49,15 +49,15 @@
         android:layout_height="300dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="#1e1e1e"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/logo_image1"
         app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/logo_image1"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_button2"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/buttonshape_gradient"
         android:backgroundTint="#e1d9d9"

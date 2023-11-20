@@ -69,4 +69,5 @@
     <string name="workspace_icon">Workspace Icon</string>
     <string name="home_icon">Home Icon</string>
     <string name="description_icon">Description Icon</string>
+    <string name="Message">Messages</string>
 </resources>

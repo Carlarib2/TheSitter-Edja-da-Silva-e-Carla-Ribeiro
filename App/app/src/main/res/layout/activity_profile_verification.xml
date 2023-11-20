@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/register_button4"
         android:layout_width="341dp"
-        android:layout_height="55dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"

@@ -70,4 +70,8 @@
     <string name="home_icon">Home Icon</string>
     <string name="description_icon">Description Icon</string>
     <string name="Message">Messages</string>
+    <string name="event_icon">Event Icon</string>
+    <string name="Alex">Alexandra Fidalgo image</string>
+    <string name="Nathan">Nathan Campos image</string>
+    <string name="Andre">Andre Sabino image</string>
 </resources>

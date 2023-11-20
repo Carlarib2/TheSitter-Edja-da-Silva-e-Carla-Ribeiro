@@ -77,15 +77,15 @@
         app:layout_constraintStart_toStartOf="@+id/edit_text_password" />
 
     <EditText
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/edit_text_username"
         style="@style/Edit_Text"
         android:layout_width="315dp"
         android:layout_height="74dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
-        android:autofillHints="@string/app_contentDescription1"
+        android:autofillHints="Enter your user name"
         android:backgroundTint="#e1d9d9"
+        android:fontFamily="@font/fingerpaint_regular"
         android:hint="@string/app_user"
         android:inputType="text"
         android:textAlignment="center"
@@ -93,7 +93,8 @@
         app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
         app:layout_constraintEnd_toEndOf="@+id/edit_text_password"
         app:layout_constraintStart_toStartOf="@+id/edit_text_password"
-        app:layout_constraintTop_toTopOf="@+id/container_view" />
+        app:layout_constraintTop_toTopOf="@+id/container_view"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <EditText
         android:fontFamily="@font/fingerpaint_regular"

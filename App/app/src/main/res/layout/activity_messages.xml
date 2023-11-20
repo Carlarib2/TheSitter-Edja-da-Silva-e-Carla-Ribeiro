@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
+    android:contentDescription="@string/Image_lady"
     tools:context=".messages">
 
     <TextView
@@ -91,7 +92,7 @@
         android:layout_marginTop="30dp"
         android:contentDescription="@string/Nathan"
         android:fontFamily="@font/pacifico_regular"
-        android:text="Nathan Campos"
+        android:text="@string/Nathan_"
         app:layout_constraintStart_toEndOf="@+id/image_pai_dog"
         app:layout_constraintTop_toBottomOf="@+id/divider17" />
 
@@ -103,7 +104,7 @@
         android:layout_marginTop="30dp"
         android:contentDescription="@string/Andre"
         android:fontFamily="@font/pacifico_regular"
-        android:text="André Sabino"
+        android:text="@string/Andre_"
         app:layout_constraintStart_toEndOf="@+id/image_man"
         app:layout_constraintTop_toBottomOf="@+id/divider16" />
 
@@ -123,8 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:text="Alexandra Fidalgo"
         android:fontFamily="@font/pacifico_regular"
+        android:text="@string/Alexa"
         app:layout_constraintStart_toEndOf="@+id/image_lady"
         app:layout_constraintTop_toBottomOf="@+id/divider25" />
 
@@ -193,6 +194,7 @@
         android:layout_width="113dp"
         android:layout_height="113dp"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/Image_pai_dog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider17"
         app:srcCompat="@drawable/pai_e_c_ozinho" />
@@ -202,6 +204,7 @@
         android:layout_width="121dp"
         android:layout_height="124dp"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/image_man"
         app:layout_constraintStart_toStartOf="@+id/divider16"
         app:layout_constraintTop_toBottomOf="@+id/divider16"
         app:srcCompat="@drawable/pai_e_filho" />
@@ -211,7 +214,7 @@
         android:layout_width="121dp"
         android:layout_height="130dp"
         android:layout_marginStart="20dp"
-        android:contentDescription="@string/Alex"
+        android:contentDescription="@string/Image_lady"
         app:layout_constraintStart_toStartOf="@+id/divider25"
         app:layout_constraintTop_toBottomOf="@+id/divider25"
         app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />

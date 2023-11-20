@@ -72,6 +72,12 @@
     <string name="Message">Messages</string>
     <string name="event_icon">Event Icon</string>
     <string name="Alex">Alexandra Fidalgo image</string>
+    <string name="Alexa">Alexandra Fidalgo </string>
     <string name="Nathan">Nathan Campos image</string>
+    <string name="Nathan_">Nathan Campos</string>
     <string name="Andre">Andre Sabino image</string>
+    <string name="Andre_">André Sabino</string>
+    <string name="image_man">Image man</string>
+    <string name="Image_pai_dog">Image pai de dog</string>
+    <string name="Image_lady">Image Lady</string>
 </resources>

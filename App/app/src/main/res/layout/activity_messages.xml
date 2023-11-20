@@ -20,24 +20,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/textView_resposta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="Olá, a Sandra já fez a medicação? "
-        app:layout_constraintStart_toStartOf="@+id/textView38"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+        app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
+        app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/textView_resposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="O meu bebezinho está bem?"
-        app:layout_constraintStart_toStartOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintStart_toStartOf="@+id/textView_nathan"
+        app:layout_constraintTop_toBottomOf="@+id/textView_nathan" />
 
     <View
         android:id="@+id/divider17"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/image_lady" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/textView_nathan"
         android:layout_width="116dp"
         android:layout_height="28dp"
         android:layout_marginStart="20dp"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider17" />
 
     <TextView
-        android:id="@+id/textView36"
+        android:id="@+id/textView_andre"
         android:layout_width="94dp"
         android:layout_height="26dp"
         android:layout_marginStart="20dp"
@@ -105,17 +105,17 @@
         app:layout_constraintTop_toBottomOf="@+id/divider16" />
 
     <TextView
-        android:id="@+id/textView37"
+        android:id="@+id/textView_resposta1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="O Henry já dormiu?"
-        app:layout_constraintStart_toStartOf="@+id/textView36"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        app:layout_constraintStart_toStartOf="@+id/textView_andre"
+        app:layout_constraintTop_toBottomOf="@+id/textView_andre" />
 
     <TextView
-        android:id="@+id/textView38"
+        android:id="@+id/textView_alexandra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

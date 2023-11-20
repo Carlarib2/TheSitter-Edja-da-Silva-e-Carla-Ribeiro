@@ -200,6 +200,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/register_button3"
         android:layout_width="0dp"
         android:layout_height="50dp"

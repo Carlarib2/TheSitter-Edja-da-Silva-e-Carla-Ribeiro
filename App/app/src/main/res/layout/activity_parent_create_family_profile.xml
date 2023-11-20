@@ -166,6 +166,7 @@
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="save"
+        android:fontFamily="@font/fingerpaint_regular"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"

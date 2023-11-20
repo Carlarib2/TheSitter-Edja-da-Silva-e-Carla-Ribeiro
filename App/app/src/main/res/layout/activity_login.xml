@@ -22,6 +22,7 @@
         app:srcCompat="@drawable/the_sitter_3" />
 
     <Button
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/register_button"
         android:layout_width="160dp"
         android:layout_height="60dp"
@@ -62,8 +63,9 @@
         android:background="@drawable/buttonshape_gradient"
         android:backgroundTint="#e1d9d9"
         android:contentDescription="@string/app_button_login"
+        android:fontFamily="@font/fingerpaint_regular"
         android:onClick="startLogin2"
-        android:shadowColor="#FCE4EC"
+        android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"

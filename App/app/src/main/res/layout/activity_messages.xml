@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="Olá, a Sandra já fez a medicação? "
+        android:text="@string/message2"
         app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
         app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
 
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="O meu bebezinho está bem?"
+        android:text="@string/message0"
         app:layout_constraintStart_toStartOf="@+id/textView_nathan"
         app:layout_constraintTop_toBottomOf="@+id/textView_nathan" />
 
@@ -94,7 +94,8 @@
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/Nathan_"
         app:layout_constraintStart_toEndOf="@+id/image_pai_dog"
-        app:layout_constraintTop_toBottomOf="@+id/divider17" />
+        app:layout_constraintTop_toBottomOf="@+id/divider17"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/textView_andre"
@@ -106,7 +107,8 @@
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/Andre_"
         app:layout_constraintStart_toEndOf="@+id/image_man"
-        app:layout_constraintTop_toBottomOf="@+id/divider16" />
+        app:layout_constraintTop_toBottomOf="@+id/divider16"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/textView_resposta1"
@@ -114,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="O Henry já dormiu?"
+        android:text="@string/message1"
         app:layout_constraintStart_toStartOf="@+id/textView_andre"
         app:layout_constraintTop_toBottomOf="@+id/textView_andre" />
 
@@ -133,7 +135,7 @@
         android:id="@+id/divider30"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="164dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

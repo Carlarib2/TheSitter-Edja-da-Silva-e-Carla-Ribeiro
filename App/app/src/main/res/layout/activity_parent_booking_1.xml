@@ -22,6 +22,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
         <EditText
+            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/editText11"
             style="@style/Edit_Text_Profile"
             android:layout_width="384dp"
@@ -37,6 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
         <EditText
+            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/editText10"
             style="@style/Edit_Text_Profile"
             android:layout_width="170dp"
@@ -51,6 +53,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
         <EditText
+            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/editText9"
             style="@style/Edit_Text_Profile"
             android:layout_width="170dp"
@@ -67,6 +70,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
         <EditText
+            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/editText8"
             style="@style/Edit_Text_Profile"
             android:layout_width="384dp"

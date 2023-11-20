@@ -48,6 +48,7 @@
         app:srcCompat="@drawable/person_icon" />
 
     <TextView
+        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider35" />
 
     <TextView
+        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -8,6 +8,7 @@
     tools:context=".parent_create_family_profile">
 
     <EditText
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/editText28"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
@@ -33,9 +34,11 @@
         android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
+        android:fontFamily="@font/fingerpaint_regular"
         android:hint="Important notes"
         android:inputType="text"
         android:paddingStart="40dp"
+        android:paddingTop="0dp"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
@@ -44,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText28" />
 
     <EditText
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/editText14"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
@@ -62,6 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText27" />
 
     <EditText
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/editText13"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
@@ -88,9 +93,10 @@
         android:layout_marginTop="50dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
+        android:fontFamily="@font/fingerpaint_regular"
         android:hint="Name"
         android:inputType="text"
-        android:paddingLeft="50dp"
+        android:paddingLeft="40dp"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"

@@ -70,7 +70,6 @@
             app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
         <EditText
-            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/editText8"
             style="@style/Edit_Text_Profile"
             android:layout_width="384dp"
@@ -78,8 +77,10 @@
             android:layout_marginTop="50dp"
             android:autofillHints="@string/Address"
             android:firstBaselineToTopHeight="5dp"
+            android:fontFamily="@font/fingerpaint_regular"
             android:hint="@string/Address"
             android:inputType="text"
+            android:paddingStart="0dp"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textStyle="bold|italic"

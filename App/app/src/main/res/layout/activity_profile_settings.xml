@@ -7,6 +7,14 @@
     android:background="@drawable/gradient"
     tools:context=".profile_settings">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="133dp"
+        android:layout_height="115dp"
+        app:srcCompat="@drawable/drake"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="142dp" />
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
@@ -67,47 +75,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="98dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/divider13"
-        app:layout_constraintTop_toBottomOf="@+id/divider13"
-        app:srcCompat="@drawable/sentiment_neutral_icon" />
-
     <TextView
         android:id="@+id/textView40"
+        android:fontFamily="@font/pacifico_regular"
+        android:text="Mário Igreja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/divider13" />
+        app:layout_constraintTop_toBottomOf="@+id/divider13"
+        tools:layout_editor_absoluteX="158dp" />
 
     <TextView
+        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintTop_toBottomOf="@+id/textView40"
+        tools:layout_editor_absoluteX="158dp" />
 
     <TextView
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="@string/profile_settings"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="315dp" />
 
     <TextView
         android:id="@+id/textView43"

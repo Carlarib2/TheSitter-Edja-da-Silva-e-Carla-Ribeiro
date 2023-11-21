@@ -11,10 +11,11 @@
         android:id="@+id/imageView2"
         android:layout_width="133dp"
         android:layout_height="115dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:srcCompat="@drawable/drake"
-        tools:layout_editor_absoluteX="16dp" />
+        app:srcCompat="@drawable/drake" />
 
     <TextView
         android:id="@+id/textView8"
@@ -78,34 +79,36 @@
 
     <TextView
         android:id="@+id/textView40"
-        android:fontFamily="@font/pacifico_regular"
-        android:text="Mário Igreja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/divider13"
-        tools:layout_editor_absoluteX="158dp" />
+        android:fontFamily="@font/pacifico_regular"
+        android:text="Mário Igreja"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/divider13" />
 
     <TextView
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/fingerpaint_regular"
         android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/textView40"
-        tools:layout_editor_absoluteX="158dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <TextView
         android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="@string/profile_settings"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="315dp" />
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView43"
@@ -159,9 +162,10 @@
         android:id="@+id/imageView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textView42"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/divider14"
+        app:layout_constraintTop_toBottomOf="@+id/divider14"
         app:srcCompat="@drawable/person_icon" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -280,12 +284,12 @@
         android:id="@+id/divider14"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="7dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <View
         android:id="@+id/divider34"

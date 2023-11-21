@@ -14,16 +14,6 @@ public class profile_verification extends AppCompatActivity {
         setContentView(R.layout.activity_profile_verification);
     }
 
-    public void startCamera(View view){
-        Intent intent = new Intent(this, camera_verification.class);
-
-    }
-
-    public void startDocument(View view){
-        Intent intent = new Intent(this, document_upload.class);
-        startActivity(intent);
-    }
-
     public void startSave2(View view){
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);

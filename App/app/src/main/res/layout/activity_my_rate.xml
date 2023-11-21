@@ -29,4 +29,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_message" />
 
+    <View
+        android:id="@+id/divider39"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="100dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider32" />
+
+    <View
+        android:id="@+id/divider40"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="70dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider41" />
+
+    <View
+        android:id="@+id/divider41"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="70dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider39" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

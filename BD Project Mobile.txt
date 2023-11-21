@@ -1,0 +1,168 @@
+create table place(
+			pla_id int not null auto_increment primary key,
+			pla_address VARCHAR(255),
+			pla_latitude DOUBLE,
+			pla_altitude DOUBLE
+);
+
+
+
+create table agenda(
+			age_id not null auto_increment primary key,
+			age_data date, 
+			age_sit_id int,
+			age_clifa_id int,
+			age_startTime time,
+			age_endTime time, 
+			age_sta_id int,
+			age_pla_id int
+
+
+
+);
+
+
+create table sitter(
+			sit_id not null auto_increment primary key,
+			sit_name VARCHAR(60) not null,
+			sit_bdate date not null,
+			sit_experience TEXT,
+			sit_address VARCHAR(255),
+			sit_education VARCHAR(255)
+			sit_mobile VARCHAR(20)
+			sit_gender CHAR(1) NOT NULL,
+			sit_aboutMe TEXT,
+			sit_password VARCHAR(255),
+			sit_email VARCHAR(255) NOT NULL
+			 
+
+);
+
+
+creaate table booking(
+			boo_id not null auto_increment primary key,
+			boo_age_id INT,
+			boo_sit_id INT,
+			boo_clifa_id INT, 
+			boo_sta_id INT
+
+);
+
+
+create table booking status (
+
+				bsta_id not null auto_increment primary key,
+				bsta_boo_id INT,
+				bsta_sta_id INT
+
+);
+
+create table status(
+			sta_id not null auto_increment primary key,
+			sta_name VARCHAR(255) NOT NULL
+);
+
+
+create table client(
+			cli_id INT not null auto_increment primary key,
+			cli_clifa_id INT,
+			cli_name VARCHAR(60) not null,
+			cli_bdate date not null,
+			cli_address VARCHAR(255),
+			cli_mobile VARCHAR(20),
+			cli_email VARCHAR(255),
+			cli_password VARCHAR(255),
+			cli_gender CHAR(1) not null, 
+			
+
+);
+
+
+create table client family(
+				clifa_id not null auto_increment primary key,
+				clifa_cli_id INT
+
+);
+
+
+create table family member(
+				fa_id INT not null auto_increment primary key,
+				fa_name VARCHAR(60) not null,
+				fa_clifa_id INT,
+				fa_bdate date not null,
+				fa_school VARCHAR(255),
+				fa_allergies VARCHAR(255),
+				fa_aboutMe TEXT,
+				fa_gender CHAR(1) not null, 
+
+);
+
+
+PASSWORD
+
+
+alter table agenda
+add constraint agenda_fk_sitter
+FOREIGN KEY (age_sit_id) REFERENCES sitter(sit_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+ALTER TABLE agenda
+ADD CONSTRAINT agenda_fk_cliente_family
+FOREIGN KEY (age_clifa_id) REFERENCES cliente_family(clifa_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+ALTER TABLE agenda
+ADD CONSTRAINT agenda_fk_place
+FOREIGN KEY (age_pla_id) REFERENCES place(pla_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_agenda
+FOREIGN KEY (boo_age_id) REFERENCES agenda(age_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_sitter
+FOREIGN KEY (boo_sit_id) REFERENCES sitter(sit_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_cliente_family
+FOREIGN KEY (boo_clifa_id) REFERENCES cliente_family(clifa_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_status
+FOREIGN KEY (boo_sta_id) REFERENCES status(sta_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+ALTER TABLE booking_status
+ADD CONSTRAINT booking_status_fk_booking
+FOREIGN KEY (bsta_boo_id) REFERENCES booking(boo_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE booking_status
+ADD CONSTRAINT booking_status_fk_status
+FOREIGN KEY (bsta_sta_id) REFERENCES status(sta_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE client
+ADD CONSTRAINT client_fk_cliente_family
+FOREIGN KEY (cli_clifa_id) REFERENCES cliente_family(clifa_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE client_family
+ADD CONSTRAINT client_family_fk_client
+FOREIGN KEY (clifa_cli_id) REFERENCES client(cli_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE family_member
+ADD CONSTRAINT family_member_fk_client_family
+FOREIGN KEY (fa_clifa_id) REFERENCES client_family(clifa_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;

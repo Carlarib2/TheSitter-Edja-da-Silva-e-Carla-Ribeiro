@@ -44,11 +44,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <TextView
-        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/declined"
         android:textAlignment="textStart"
         android:textSize="24sp"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="9dp"
-        android:fontFamily="@font/pacifico_regular"
+        android:fontFamily="sans-serif-medium"
         android:text="Friday, November 29th"
         app:layout_constraintStart_toEndOf="@+id/imageView18"
         app:layout_constraintTop_toBottomOf="@+id/divider9" />
@@ -142,17 +142,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="9dp"
-        android:fontFamily="@font/pacifico_regular"
+        android:fontFamily="sans-serif-medium"
         android:text="Friday, September 22th"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
         app:layout_constraintTop_toBottomOf="@+id/divider8" />
 
     <TextView
-        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/pending"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -165,8 +165,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/accepted"
-        android:fontFamily="@font/pacifico_regular"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -178,7 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/justanotherhand_regular"
+        android:fontFamily="sans-serif-medium"
         android:text="THE SITTER"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

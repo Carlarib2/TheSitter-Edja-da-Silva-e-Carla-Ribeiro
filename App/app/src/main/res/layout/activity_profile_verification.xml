@@ -70,8 +70,8 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="203dp"
-        android:layout_height="0dp"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="@string/profile_verification"
         android:textAlignment="center"

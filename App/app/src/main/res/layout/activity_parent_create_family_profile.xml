@@ -111,9 +111,9 @@
 
     <ImageButton
         android:id="@+id/imageButton30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:onClick="startProfile2"
@@ -124,9 +124,9 @@
 
     <ImageButton
         android:id="@+id/imageButton29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
@@ -135,9 +135,9 @@
 
     <ImageButton
         android:id="@+id/imageButton28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
@@ -146,8 +146,8 @@
 
     <ImageButton
         android:id="@+id/imageButton27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/home_icon"

@@ -88,4 +88,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
+
+    <Button
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+
+        android:layout_marginBottom="30dp"
+
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/fingerpaint_regular"
+        android:shadowColor="#FCE4EC"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/Save"
+
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#1e1e1e"
+        app:layout_constraintBottom_toBottomOf="@+id/divider31"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

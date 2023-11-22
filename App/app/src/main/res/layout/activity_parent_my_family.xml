@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
         android:layout_marginTop="325dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"

@@ -72,13 +72,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/register_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
+        android:fontFamily="@font/fingerpaint_regular"
         android:onClick="startRegister2"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"

@@ -132,13 +132,13 @@
             app:layout_constraintTop_toBottomOf="@+id/divider29" />
 
         <Button
-            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/button3"
             android:layout_width="188dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/buttonshape"
             android:backgroundTint="@color/white"
+            android:fontFamily="@font/allerta_stencil"
             android:shadowColor="#F3E5F5"
             android:shadowDx="2"
             android:shadowDy="2"
@@ -151,12 +151,12 @@
             app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
         <Button
-            android:fontFamily="@font/fingerpaint_regular"
             android:id="@+id/button4"
             android:layout_width="188dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/buttonshape"
+            android:fontFamily="@font/allerta_stencil"
             android:shadowColor="#F3E5F5"
             android:shadowDx="2"
             android:shadowDy="2"

@@ -97,7 +97,7 @@
         android:layout_marginBottom="30dp"
 
         android:background="@drawable/buttonshape"
-        android:fontFamily="@font/fingerpaint_regular"
+        android:fontFamily="@font/allerta_stencil"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"

@@ -22,13 +22,13 @@
         app:srcCompat="@drawable/the_sitter_3" />
 
     <Button
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/register_button"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
+        android:fontFamily="@font/allerta_stencil"
         android:onClick="startRegister3"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
@@ -63,7 +63,7 @@
         android:background="@drawable/buttonshape_gradient"
         android:backgroundTint="#e1d9d9"
         android:contentDescription="@string/app_button_login"
-        android:fontFamily="@font/fingerpaint_regular"
+        android:fontFamily="@font/allerta_stencil"
         android:onClick="startLogin2"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -85,7 +85,7 @@
         android:layout_marginBottom="25dp"
         android:autofillHints="Enter your user name"
         android:backgroundTint="#e1d9d9"
-        android:fontFamily="@font/fingerpaint_regular"
+        android:fontFamily="sans-serif"
         android:hint="@string/app_user"
         android:inputType="text"
         android:textAlignment="center"
@@ -97,7 +97,6 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <EditText
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/edit_text_password"
         style="@style/Edit_Text"
         android:layout_width="315dp"
@@ -105,6 +104,7 @@
         android:layout_marginBottom="25dp"
         android:autofillHints="@string/app_contentDescription"
         android:backgroundTint="#e1d9d9"
+        android:fontFamily="sans-serif"
         android:hint="@string/app_contentDescription"
         android:inputType="text|textVisiblePassword"
         android:textAlignment="center"

@@ -80,26 +80,15 @@
       app:layout_constraintStart_toStartOf="@+id/register_button5"
       app:layout_constraintTop_toBottomOf="@+id/register_button5" />
 
-  <ImageView
-      android:id="@+id/imageView32"
-      android:layout_width="133dp"
-      android:layout_height="115dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="40dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider12"
-      app:srcCompat="@drawable/drake" />
-
   <TextView
       android:id="@+id/textView14"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="20dp"
       android:layout_marginTop="50dp"
       android:fontFamily="sans-serif-medium"
       android:text="Mário Igreja"
-      app:layout_constraintStart_toEndOf="@+id/imageView32"
-      app:layout_constraintTop_toBottomOf="@+id/divider12" />
+      app:layout_constraintTop_toBottomOf="@+id/divider12"
+      tools:layout_editor_absoluteX="183dp" />
 
   <TextView
       android:id="@+id/textView15"
@@ -115,11 +104,10 @@
       android:id="@+id/divider2"
       android:layout_width="0dp"
       android:layout_height="2dp"
-      android:layout_marginTop="20dp"
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+      tools:layout_editor_absoluteY="279dp" />
 
   <ImageButton
       android:id="@+id/imageButton34"
@@ -177,5 +165,15 @@
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       tools:ignore="MissingConstraints" />
+
+  <ImageView
+      android:id="@+id/imageView12"
+      android:layout_width="150dp"
+      android:layout_height="132dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/divider12"
+      app:srcCompat="@drawable/pai_e_filho" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

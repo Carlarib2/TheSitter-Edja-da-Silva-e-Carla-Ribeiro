@@ -28,8 +28,8 @@ create table sitter(
 			sit_bdate date not null,
 			sit_experience TEXT,
 			sit_address VARCHAR(255),
-			sit_education VARCHAR(255)
-			sit_mobile VARCHAR(20)
+			sit_education VARCHAR(255),
+			sit_mobile VARCHAR(20),
 			sit_gender CHAR(1) NOT NULL,
 			sit_aboutMe TEXT,
 			sit_password VARCHAR(255),
@@ -98,10 +98,9 @@ create table family member(
 );
 
 
-PASSWORD
 
 
-alter table agenda
+ALTER TABLE agenda
 add constraint agenda_fk_sitter
 FOREIGN KEY (age_sit_id) REFERENCES sitter(sit_id)
 ON DELETE NO ACTION ON UPDATE NO ACTION;

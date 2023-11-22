@@ -83,4 +83,5 @@
     <string name="message0"> O meu bebezinho está bem??</string>
     <string name="message1"> O Henry já dormiu?</string>
     <string name="message2">Olá, a Sandra já fez a medicação? </string>
+    <string name="contentDescription_register">Register button</string>
 </resources>

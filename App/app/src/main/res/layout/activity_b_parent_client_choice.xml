@@ -42,7 +42,7 @@
         android:layout_marginTop="150dp"
         android:background="@drawable/buttonshape"
         android:backgroundTint="#1e1e1e"
-        android:contentDescription="@string/app_button_register"
+        android:contentDescription="@string/contentDescription_register"
         android:fontFamily="@font/fingerpaint_regular"
         android:onClick="startParent"
         android:shadowColor="#FCE4EC"
@@ -54,7 +54,7 @@
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -65,6 +65,7 @@
         android:layout_width="415dp"
         android:layout_height="555dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="@string/app_logo"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

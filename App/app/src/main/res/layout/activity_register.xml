@@ -76,6 +76,7 @@
         android:layout_width="341dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
+        android:layout_marginBottom="23dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
         android:fontFamily="@font/allerta_stencil"
@@ -88,6 +89,7 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />

@@ -84,4 +84,8 @@
     <string name="message1"> O Henry já dormiu?</string>
     <string name="message2">Olá, a Sandra já fez a medicação? </string>
     <string name="contentDescription_register">Register button</string>
+    <string name="parent"> PARENT</string>
+    <string name="sitter"> SITTER</string>
+    <string name="contentDescription_parent"> Parent button</string>
+    <string name="contentDescription_sitter"> Sitter button</string>
 </resources>

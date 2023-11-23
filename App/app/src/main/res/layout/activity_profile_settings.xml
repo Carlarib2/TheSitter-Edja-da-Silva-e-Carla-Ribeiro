@@ -71,11 +71,12 @@
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
         android:text="Jane Doe"
-        app:layout_constraintTop_toBottomOf="@+id/divider13"
-        tools:layout_editor_absoluteX="178dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/divider13" />
 
     <TextView
         android:id="@+id/textView41"
@@ -346,10 +347,12 @@
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sitter"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="147dp" />
+        android:layout_width="144dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/divider13"
+        app:layout_constraintTop_toBottomOf="@+id/divider13"
+        app:srcCompat="@drawable/sitter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

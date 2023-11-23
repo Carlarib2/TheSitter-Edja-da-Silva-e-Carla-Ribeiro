@@ -89,13 +89,15 @@
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="45dp"
+        android:layout_marginTop="15dp"
         android:autofillHints="@string/mobile"
         android:hint="@string/mobile"
         android:inputType="number"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editText23"
-        tools:layout_editor_absoluteY="546dp" />
+        app:layout_constraintStart_toStartOf="@+id/editText23"
+        app:layout_constraintTop_toBottomOf="@+id/editText23" />
 
     <EditText
         android:id="@+id/editText19"
@@ -177,6 +179,7 @@
         android:id="@+id/register_button3"
         android:layout_width="341dp"
         android:layout_height="60dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -189,7 +192,6 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText17"
         app:layout_constraintStart_toStartOf="@+id/editText17"
         app:layout_constraintTop_toBottomOf="@+id/editText17" />

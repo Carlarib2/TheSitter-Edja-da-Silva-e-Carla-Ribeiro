@@ -27,6 +27,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
         android:autofillHints="@string/day"
+        android:entries="@array/Day"
         android:hint="@string/day"
         android:inputType="number"
         android:textAlignment="center"

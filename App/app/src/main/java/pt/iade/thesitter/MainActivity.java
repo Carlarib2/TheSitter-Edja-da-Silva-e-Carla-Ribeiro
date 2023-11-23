@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                             originalClipBounds   // Rect final (toda a imagem)
                     );
 
-                    clipAnimator.setDuration(1000);  // Define a duração desejada em milissegundos
+                    clipAnimator.setDuration(3000);  // Define a duração desejada em milissegundos
                     clipAnimator.start();
                 }
             }

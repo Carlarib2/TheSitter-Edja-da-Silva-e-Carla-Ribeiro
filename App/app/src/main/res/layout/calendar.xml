@@ -69,46 +69,44 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="413dp"
-        android:layout_height="494dp"
+        android:layout_width="425dp"
+        android:layout_height="426dp"
         android:layout_marginTop="70dp"
+        android:dateTextAppearance="@style/CalendarText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        android:dateTextAppearance="@style/CalendarText" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 
     <View
         android:id="@+id/divider31"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
 
     <Button
+        android:id="@+id/button7"
         android:layout_width="341dp"
         android:layout_height="60dp"
+
         android:layout_marginTop="80dp"
-
-        android:layout_marginBottom="30dp"
-
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/allerta_stencil"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/Save"
 
+        android:text="@string/Save"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toBottomOf="@+id/divider31"
         app:layout_constraintEnd_toEndOf="@+id/calendarView"
         app:layout_constraintStart_toStartOf="@+id/calendarView"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />

@@ -2,9 +2,9 @@ USE TheSitter;
 
 CREATE TABLE place (
     pla_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    pla_address VARCHAR(255),
-    pla_latitude DOUBLE,
-    pla_altitude DOUBLE
+    pla_address VARCHAR(255) NOT NULL,
+    pla_latitude DOUBLE NOT NULL,
+    pla_altitude DOUBLE NOT NULL
 );
 
 CREATE TABLE agenda (
@@ -23,12 +23,12 @@ CREATE TABLE sitter (
     sit_name VARCHAR(60) NOT NULL,
     sit_bdate DATE NOT NULL,
     sit_experience TEXT,
-    sit_address VARCHAR(255),
+    sit_address VARCHAR(255) NOT NULL,
     sit_education VARCHAR(255),
     sit_mobile VARCHAR(20),
     sit_gender CHAR(1) NOT NULL,
     sit_aboutMe TEXT,
-    sit_password VARCHAR(255),
+    sit_password VARCHAR(255) NOT NULL,
     sit_email VARCHAR(255) NOT NULL
 );
 
@@ -56,16 +56,16 @@ CREATE TABLE client (
     cli_clifa_id INT,
     cli_name VARCHAR(60) NOT NULL,
     cli_bdate DATE NOT NULL,
-    cli_address VARCHAR(255),
+    cli_address VARCHAR(255) NOT NULL,
     cli_mobile VARCHAR(20),
     cli_email VARCHAR(255),
-    cli_password VARCHAR(255),
+    cli_password VARCHAR(255) NOT NULL,
     cli_gender CHAR(1) NOT NULL
 );
 
 CREATE TABLE client_family (
     clifa_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    clifa_cli_id INT
+    clifa_cli_id INT 
 );
 
 CREATE TABLE family_member (

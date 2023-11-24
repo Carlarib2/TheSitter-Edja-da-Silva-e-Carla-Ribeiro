@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="160dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="150dp"
         android:background="@drawable/buttonshape"
@@ -47,7 +47,7 @@
 
     <Button
         android:id="@+id/register_button"
-        android:layout_width="160dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="76dp"

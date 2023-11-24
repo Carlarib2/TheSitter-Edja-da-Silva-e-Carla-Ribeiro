@@ -23,4 +23,5 @@ public class login extends AppCompatActivity {
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
+
 }

@@ -387,7 +387,6 @@ O nosso aplicativo tem 9 tabelas:
 | clifa_id     | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
 | clifa_cli_id | INT  |                                      |
 
-### Tabela `client_family`
 
 A tabela `client_family` foi implementada para mapear relacionamentos familiares entre clientes.
 
@@ -417,7 +416,6 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
 | fa_aboutMe  | TEXT         |                                      |
 | fa_gender   | CHAR(1)      | NOT NULL                             |
 
-### Tabela `family_member`
 
 A tabela `family_member` foi implementada para armazenar informações sobre membros de uma família associados a uma família de clientes.
 

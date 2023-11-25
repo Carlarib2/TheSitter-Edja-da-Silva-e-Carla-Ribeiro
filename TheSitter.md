@@ -84,7 +84,7 @@ O nosso aplicativo tem 9 tabelas:
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
 | pla_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| pla_address   | VARCHAR(255)  |                                      |
+| pla_address   | VARCHAR(255)  | NOT NULL                             |
 | pla_latitude  | DOUBLE        | NOT NULL                             |
 | pla_altitude  | DOUBLE        | NOT NULL                             |
 
@@ -171,7 +171,7 @@ O nosso aplicativo tem 9 tabelas:
 | sit_name       | VARCHAR(60)  | NOT NULL                             |
 | sit_bdate      | DATE         | NOT NULL                             |
 | sit_experience | TEXT         |                                      |
-| sit_address    | VARCHAR(255) |                                      |
+| sit_address    | VARCHAR(255) |  NOT NULL                            |
 | sit_education  | VARCHAR(255) |                                      |
 | sit_mobile     | VARCHAR(20)  |                                      |
 | sit_gender     | CHAR(1)      | NOT NULL                             |

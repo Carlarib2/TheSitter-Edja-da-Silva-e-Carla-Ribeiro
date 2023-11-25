@@ -420,7 +420,7 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
 A tabela `family_member` foi implementada para armazenar informações sobre membros de uma família associados a uma família de clientes.
 
 - **fa_id:**
-   - *Definição:* Identificador único para cada membro da família na tabela.
+  - *Definição:* Identificador único para cada membro da família na tabela.
    - *Tipo de dados:* Número inteiro.
    - *Restrições:* Não pode ser nulo (**NOT NULL**).
   - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
@@ -432,7 +432,7 @@ A tabela `family_member` foi implementada para armazenar informações sobre mem
    - *Restrições:* Não pode ser nulo (**NOT NULL**).
 
 - **fa_clifa_id:**
-   - *Definição:* Identificador relacionado à família de clientes associada ao membro da família.
+  - *Definição:* Identificador relacionado à família de clientes associada ao membro da família.
    - *Tipo de dados:* Número inteiro.
    - *Restrições:* Chave estrangeira.
 

@@ -79,7 +79,7 @@
 ## Base de Dados
 O nosso aplicativo tem 9 tabelas:
 
-**Tabela place:**
+## Tabela `place`
 
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
@@ -112,7 +112,7 @@ O nosso aplicativo tem 9 tabelas:
 *A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
 
 
-**Tabela agenda:**
+## Tabela `agenda`
 
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
@@ -163,7 +163,7 @@ O nosso aplicativo tem 9 tabelas:
     - Tipo de dados: Número inteiro.
     - Propriedade especial: Chave estrangeira.
 
-**Tabela sitter:**
+## Tabela `sitter`
 
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
@@ -233,7 +233,7 @@ O nosso aplicativo tem 9 tabelas:
     - Restrições: Não pode ser nulo (NOT NULL).
 
   
-**Tabela booking:**
+## Tabela `booking`
 
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
@@ -270,7 +270,7 @@ O nosso aplicativo tem 9 tabelas:
     - Tipo de dados: Número inteiro.
     - Restrições: Chave estrangeira.
 
-**Tabela booking_status:**
+## Tabela `booking_status`
 
 | Column     | Type | Constraints                          |
 | ---------- | ---- | ------------------------------------ |
@@ -297,7 +297,7 @@ O nosso aplicativo tem 9 tabelas:
     - Restrições: Chave estrangeira.
 
 
-**Tabela status:**
+## Tabela `status`
 
 | Column  | Type         | Constraints                          |
 | ------- | ------------ | ------------------------------------ |
@@ -318,7 +318,7 @@ O nosso aplicativo tem 9 tabelas:
     - Restrições: Não pode ser nulo (NOT NULL).
 
 
-**Tabela client:**
+## Tabela `client`
 
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
@@ -332,7 +332,6 @@ O nosso aplicativo tem 9 tabelas:
 | cli_password   | VARCHAR(255) | NOT NULL                             |
 | cli_gender     | CHAR(1)      | NOT NULL                             |
 
-## Tabela `client`
 
 - **cli_id:**
     - Definição: Identificador único para cada cliente na tabela.
@@ -379,7 +378,7 @@ O nosso aplicativo tem 9 tabelas:
     - Restrições: Não pode ser nulo (NOT NULL).
 
 
-**Tabela Client_family:**
+## Tabela `client_family`
 
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
@@ -402,7 +401,7 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
     - Restrições: Chave estrangeira.
 
 
-**Tabela family_member:**
+## Tabela `family_member`
 
 | Column      | Type         | Constraints                          |
 | ----------- | ------------ | ------------------------------------ |

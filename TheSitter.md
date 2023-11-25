@@ -168,6 +168,60 @@ O nosso aplicativo tem 9 tabelas:
 
 **Tabela sitter**
 
+### sit_id
+- **Definição:** Identificador único para cada sitter na tabela.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+- **Propriedade especial:** Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+
+### sit_name
+- **Definição:** Armazena o nome da sitter(babá).
+- **Tipo de dados:** String de até 60 caracteres.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+### sit_bdate
+- **Definição:** Armazena a data de nascimento da sitter(babá).
+- **Tipo de dados:** Data (no formato DATE).
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+### sit_experience
+- **Definição:** Armazena informações sobre a experiência da sitter(babá).
+- **Tipo de dados:** Texto longo (TEXT).
+
+### sit_address
+- **Definição:** Armazena o endereço da sitter(babá).
+- **Tipo de dados:** String de até 255 caracteres.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+### sit_education
+- **Definição:** Armazena informações sobre a educação da sitter(babá).
+- **Tipo de dados:** String de até 255 caracteres.
+
+### sit_mobile
+- **Definição:** Armazena o número de telefone celular da sitter(babá).
+- **Tipo de dados:** String de até 20 caracteres.
+
+### sit_gender
+- **Definição:** Armazena o gênero da sitter(babá).
+- **Tipo de dados:** Caractere (CHAR) de comprimento 1.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+### sit_aboutMe
+- **Definição:** Armazena informações adicionais sobre a sitter(babá).
+- **Tipo de dados:** Texto longo (TEXT).
+
+### sit_email
+- **Definição:** Armazena o endereço de e-mail da sitter(babá).
+- **Tipo de dados:** String de até 255 caracteres.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+### sit_password
+- **Definição:** Armazena a senha da sitter(babá).
+- **Tipo de dados:** String de até 255 caracteres.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+
+
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
 | sit_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |

@@ -158,7 +158,7 @@ O nosso aplicativo tem 9 tabelas:
     - Definição: Identificador relacionado ao status da entrada na agenda.
     - Tipo de dados: Número inteiro.
     - Propriedade especial: Chave estrangeira.
- - 
+   
 - **age_pla_id:**
     - Definição: Identificador relacionado ao local associado à entrada na agenda.
     - Tipo de dados: Número inteiro.
@@ -233,7 +233,7 @@ O nosso aplicativo tem 9 tabelas:
     - Tipo de dados: String de até 255 caracteres.
     - Restrições: Não pode ser nulo (NOT NULL).
 
-- 
+  
 **Tabela booking:**
 
 | Column       | Type | Constraints                          |
@@ -252,24 +252,24 @@ O nosso aplicativo tem 9 tabelas:
     - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **boo_age_id:**
- - *Definição:* Identificador relacionado à entrada na agenda associada à reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado à entrada na agenda associada à reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 - **boo_sit_id:**
- - *Definição:* Identificador relacionado à babá associada à reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado à babá associada à reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 - **boo_clifa_id:**
- - *Definição:* Identificador relacionado ao cliente/fornecedor associado à reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado ao cliente/fornecedor associado à reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 - **boo_sta_id:**
- - *Definição:* Identificador relacionado ao status da reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado ao status da reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 **Tabela booking_status:**
 
@@ -281,21 +281,21 @@ O nosso aplicativo tem 9 tabelas:
 
 
 - **bsta_id:**
- - *Definição:* Identificador único para cada registro de status de reserva na tabela de status de reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada registro de status de reserva na tabela de status de reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **bsta_boo_id:**
- - *Definição:* Identificador relacionado à reserva associada ao status.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado à reserva associada ao status.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 - **bsta_sta_id:**
- - *Definição:** Identificador relacionado ao status da reserva.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado ao status da reserva.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 
 **Tabela status:**
@@ -307,16 +307,16 @@ O nosso aplicativo tem 9 tabelas:
 
 
 - **sta_id:**
- - *Definição:* Identificador único para cada status na tabela de status.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada status na tabela de status.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **sta_name:**
- - *Definição:* Armazena o nome do status.
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o nome do status.
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 
 **Tabela client:**
@@ -336,48 +336,48 @@ O nosso aplicativo tem 9 tabelas:
 ## Tabela `client`
 
 - **cli_id:**
- - *Definição:* Identificador único para cada cliente na tabela.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada cliente na tabela.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **cli_clifa_id:**
- - *Definição:* Identificador relacionado ao cliente/fornecedor associado ao cliente.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Chave estrangeira.
+    - Definição: Identificador relacionado ao cliente/fornecedor associado ao cliente.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 - **cli_name:**
- - *Definição:* Armazena o nome do cliente.
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o nome do cliente.
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **cli_bdate:**
- - *Definição:* Armazena a data de nascimento do cliente.
- - *Tipo de dados:* Data (no formato DATE).
- - *Restrições:* Não pode ser nulo (NOT NULL).
-
+    - Definição: Armazena a data de nascimento do cliente.
+    - Tipo de dados: Data (no formato DATE).
+    - Restrições: Não pode ser nulo (NOT NULL).
+ 
 - **cli_address:**
- - *Definição:* Armazena o endereço do cliente.
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o endereço do cliente.
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **cli_mobile:**
- - *Definição:* Armazena o número de telefone celular do cliente.
- - *Tipo de dados:* String de até 20 caracteres.
+    - Definição: Armazena o número de telefone celular do cliente.
+    - Tipo de dados: String de até 20 caracteres.
 
 - **cli_email:**
- - *Definição:* Armazena o endereço de e-mail do cliente.
- - *Tipo de dados:* String de até 255 caracteres.
+    - Definição: Armazena o endereço de e-mail do cliente.
+    - Tipo de dados: String de até 255 caracteres.
 
 - **cli_gender:**
- - *Definição:* Armazena o gênero do cliente.
- - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o gênero do cliente.
+    - Tipo de dados: Caractere (CHAR) de comprimento 1.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **cli_password:**
- - *Definição:* Armazena a senha do cliente.
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena a senha do cliente.
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 
 **Tabela Client_family:**
@@ -391,16 +391,16 @@ O nosso aplicativo tem 9 tabelas:
 A tabela `client_family` foi implementada para mapear relacionamentos familiares entre clientes.
 
 - **clifa_id:**
-   - *Definição:* Identificador único para cada entrada na tabela de família de clientes.
-   - *Tipo de dados:* Número inteiro.
-   - *Restrições:* Não pode ser nulo (**NOT NULL**).
-    - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
-   - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição:* Identificador único para cada entrada na tabela de família de clientes.
+    - Tipo de dados:* Número inteiro.
+    - Restrições:* Não pode ser nulo (**NOT NULL**).
+    - Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
+    - Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **clifa_cli_id:**
-    - *Definição:* Identificador do relacionamento ao cliente na tabela `client`.
-   - *Tipo de dados:* Número inteiro.
-   - *Restrições:* Chave estrangeira.
+    - Definição: Identificador do relacionamento ao cliente na tabela `client`.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Chave estrangeira.
 
 
 **Tabela family_member:**
@@ -420,43 +420,43 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
 A tabela `family_member` foi implementada para armazenar informações sobre membros de uma família associados a uma família de clientes.
 
 - **fa_id:**
-  - *Definição:* Identificador único para cada membro da família na tabela.
-   - *Tipo de dados:* Número inteiro.
-   - *Restrições:* Não pode ser nulo (**NOT NULL**).
-  - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
-  - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+   - Definição: Identificador único para cada membro da família na tabela.
+   - Tipo de dados: Número inteiro.
+   - Restrições: Não pode ser nulo (**NOT NULL**).
+   - Propriedade especial: Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
+   - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **fa_name:**
-   - *Definição:* Armazena o nome do membro da família.
-  - *Tipo de dados:* String de até 60 caracteres.
-   - *Restrições:* Não pode ser nulo (**NOT NULL**).
+   - Definição: Armazena o nome do membro da família.
+   - Tipo de dados: String de até 60 caracteres.
+   - Restrições: Não pode ser nulo (**NOT NULL**).
 
 - **fa_clifa_id:**
-  - *Definição:* Identificador relacionado à família de clientes associada ao membro da família.
-   - *Tipo de dados:* Número inteiro.
-   - *Restrições:* Chave estrangeira.
+   - Definição: Identificador relacionado à família de clientes associada ao membro da família.
+   - Tipo de dados: Número inteiro.
+   - Restrições: Chave estrangeira.
 
 - **fa_bdate:**
-  - *Definição:* Armazena a data de nascimento do membro da família.
-   - *Tipo de dados:* Data (no formato DATE).
-   - *Restrições:* Não pode ser nulo (**NOT NULL**).
+   - Definição: Armazena a data de nascimento do membro da família.
+   - Tipo de dados:Data (no formato DATE).
+   - Restrições: Não pode ser nulo (**NOT NULL**).
 
 - **fa_school:**
- - *Definição:* Armazena o nome da escola do membro da família.
- - *Tipo de dados:* String de até 255 caracteres.
+   - Definição: Armazena o nome da escola do membro da família.
+   - Tipo de dados: String de até 255 caracteres.
 
 - **fa_allergies:**
- - *Definição:* Armazena informações sobre alergias do membro da família.
- - *Tipo de dados:* String de até 255 caracteres.
+    - Definição: Armazena informações sobre alergias do membro da família.
+    - Tipo de dados: String de até 255 caracteres.
 
 - **fa_aboutMe:**
- - *Definição:* Armazena informações adicionais sobre o membro da família.
-  - *Tipo de dados:* Texto longo (TEXT).
+    - Definição: Armazena informações adicionais sobre o membro da família.
+    - Tipo de dados: Texto longo (TEXT).
 
 - **fa_gender:**
- - *Definição:* Armazena o gênero do membro da família.
-  - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
- - *Restrições:* Não pode ser nulo (**NOT NULL**).
+    - Definição: Armazena o gênero do membro da família.
+    - Tipo de dados: Caractere (CHAR) de comprimento 1.
+    - Restrições: Não pode ser nulo (**NOT NULL**).
 
 
 

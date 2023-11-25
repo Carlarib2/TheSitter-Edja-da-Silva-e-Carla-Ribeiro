@@ -127,42 +127,42 @@ O nosso aplicativo tem 9 tabelas:
 | age_pla_id    | INT           |                                      |
 
 - **age_id:**
- - *Definição:* Identificador único para cada entrada na tabela de agenda.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada entrada na tabela de agenda.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **age_data:**
- - *Definição:* Armazena a data da entrada na agenda.
- - *Tipo de dados:* Data (no formato DATE).
+    - Definição: Armazena a data da entrada na agenda.
+    - Tipo de dados: Data (no formato DATE).
 
 - **age_sit_id:**
- - *Definição:* Identificador relacionado ao status da entrada na agenda.
- - *Tipo de dados:* Número inteiro.
+    - Definição: Identificador relacionado ao status da entrada na agenda.
+    - Tipo de dados: Número inteiro.
 
 - **age_clifa_id:**
- - *Definição:* Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
- - *Tipo de dados:* Número inteiro.
- - *Propriedade especial:* Chave estrangeira.
+    - Definição: Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
+    - Tipo de dados: Número inteiro.
+    - Propriedade especial: Chave estrangeira.
 
 - **age_startTime:**
- - *Definição:* Armazena a hora de início da entrada na agenda.
- - *Tipo de dados:* Hora (no formato TIME).
+    - Definição: Armazena a hora de início da entrada na agenda.
+    - Tipo de dados: Hora (no formato TIME).
 
 - **age_endTime:**
- - *Definição:* Armazena a hora de término da entrada na agenda.
- - *Tipo de dados:* Hora (no formato TIME).
+    - Definição: Armazena a hora de término da entrada na agenda.
+    - Tipo de dados: Hora (no formato TIME).
 
 - **age_sta_id:**
- - *Definição:* Identificador relacionado ao status da entrada na agenda.
- - *Tipo de dados:* Número inteiro.
- - *Propriedade especial:* Chave estrangeira.
+    - Definição: Identificador relacionado ao status da entrada na agenda.
+    - Tipo de dados: Número inteiro.
+    - Propriedade especial: Chave estrangeira.
  - 
 - **age_pla_id:**
- - *Definição:* Identificador relacionado ao local associado à entrada na agenda.
- - *Tipo de dados:* Número inteiro.
- - *Propriedade especial:* Chave estrangeira.
+    - Definição: Identificador relacionado ao local associado à entrada na agenda.
+    - Tipo de dados: Número inteiro.
+    - Propriedade especial: Chave estrangeira.
 
 **Tabela sitter:**
 
@@ -181,57 +181,57 @@ O nosso aplicativo tem 9 tabelas:
 | sit_email      | VARCHAR(255) | NOT NULL                             |
 
 - **sit_id:**
- - *Definição:* Identificador único para cada sitter na tabela.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada sitter na tabela.
+    - Tipo de dados: Número inteiro.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+    - Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **sit_name:**
- - *Definição:* Armazena o nome da sitter(babá).
- - *Tipo de dados:* String de até 60 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o nome da sitter(babá).
+    - Tipo de dados: String de até 60 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_bdate:**
- - *Definição:* Armazena a data de nascimento da sitter(babá).
- - *Tipo de dados:* Data (no formato DATE).
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena a data de nascimento da sitter(babá).
+    - Tipo de dados: Data (no formato DATE).
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_experience:**
- - *Definição:* Armazena informações sobre a experiência da sitter(babá).
- - *Tipo de dados:* Texto longo (TEXT).
+    - Definição: Armazena informações sobre a experiência da sitter(babá).
+    - Tipo de dados: Texto longo (TEXT).
 
 - **sit_address:**
- - *Definição:* Armazena o endereço da sitter(babá).
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o endereço da sitter(babá).
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_education:**
- - *Definição:* Armazena informações sobre a educação da sitter(babá).
- - *Tipo de dados:* String de até 255 caracteres.
+    - Definição: Armazena informações sobre a educação da sitter(babá).
+    - Tipo de dados: String de até 255 caracteres.
 
 ### sit_mobile
- - *Definição:* Armazena o número de telefone celular da sitter(babá).
- - *Tipo de dados:* String de até 20 caracteres.
+    - Definição: Armazena o número de telefone celular da sitter(babá).
+    - Tipo de dados: String de até 20 caracteres.
 
 - **sit_gender:**
- - *Definição:* Armazena o gênero da sitter(babá).
- - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o gênero da sitter(babá).
+    - Tipo de dados: Caractere (CHAR) de comprimento 1.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_aboutMe:**
- - *Definição:* Armazena informações adicionais sobre a sitter(babá).
- - *Tipo de dados:* Texto longo (TEXT).
+    - Definição: Armazena informações adicionais sobre a sitter(babá).
+    - Tipo de dados: Texto longo (TEXT).
 
 - **sit_email:**
- - *Definição:* Armazena o endereço de e-mail da sitter(babá).
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena o endereço de e-mail da sitter(babá).
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_password:**
- - *Definição:* Armazena a senha da sitter(babá).
- - *Tipo de dados:* String de até 255 caracteres.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+    - Definição: Armazena a senha da sitter(babá).
+    - Tipo de dados: String de até 255 caracteres.
+    - Restrições: Não pode ser nulo (NOT NULL).
 
 - 
 **Tabela booking:**
@@ -245,11 +245,11 @@ O nosso aplicativo tem 9 tabelas:
 | boo_sta_id   | INT  |                                      |
 
 - **boo_id:**
- - *Definição:* Identificador único para cada reserva na tabela de reservas (booking).
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+    - Definição: Identificador único para cada reserva na tabela de reservas (booking).
+    - Tipo de dados: Número inteiro.
+    - Restrições: Não pode ser nulo (NOT NULL).
+    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **boo_age_id:**
  - *Definição:* Identificador relacionado à entrada na agenda associada à reserva.

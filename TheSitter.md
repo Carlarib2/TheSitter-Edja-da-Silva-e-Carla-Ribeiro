@@ -90,25 +90,25 @@ O nosso aplicativo tem 9 tabelas:
 | pla_altitude  | DOUBLE        | NOT NULL                             |
 
 - **pla_id:**
- - *Definição:* Identificador único da localização.
- - *Tipo de dados:* Número inteiro.
- - *Restrições:* Não pode ser nulo (NOT NULL).
- - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
- - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+   - Definição: Identificador único da localização.
+   - Tipo de dados: Número inteiro.
+   - Restrições: Não pode ser nulo (NOT NULL).
+   - Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+   - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **pla_address:**
- - *Definição:* Armazena o endereço do local.
- - *Tipo de dados:* String de comprimento variável, até 255 caracteres.
+   - Definição: Armazena o endereço do local.
+   - Tipo de dados: String de comprimento variável, até 255 caracteres.
 
 - **pla_latitude:**
- - *Definição:* Armazena a latitude do local.
- - *Tipo de dados:* Número de ponto flutuante de precisão dupla.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+   - Definição: Armazena a latitude do local.
+   - Tipo de dados: Número de ponto flutuante de precisão dupla.
+   - Restrições: Não pode ser nulo (NOT NULL).
 
 - **pla_altitude:**
- - *Definição:* Armazena a altitude do local.
- - *Tipo de dados:* Número de ponto flutuante de precisão dupla.
- - *Restrições:* Não pode ser nulo (NOT NULL).
+   - Definição: Armazena a altitude do local.
+   - Tipo de dados: Número de ponto flutuante de precisão dupla.
+   - Restrições: Não pode ser nulo (NOT NULL).
 
 *A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
 

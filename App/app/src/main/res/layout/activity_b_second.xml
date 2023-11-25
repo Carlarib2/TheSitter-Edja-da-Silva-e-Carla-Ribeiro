@@ -39,18 +39,18 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toTopOf="@+id/register_button"
+        app:layout_constraintBottom_toTopOf="@+id/button_register1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/button_register1"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="110dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
         android:fontFamily="@font/allerta_stencil"

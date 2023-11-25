@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_a_main);
 
         // Referência à ImageView no layout pelo ID
-        final ImageView myImageView = findViewById(R.id.logo_image);
+        final ImageView myImageView = findViewById(R.id.image_logoMain);
 
         Handler handler = new Handler();
 

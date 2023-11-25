@@ -8,12 +8,12 @@
     tools:context=".parent_client_choice">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_sitterPCC"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="110dp"
         android:background="@drawable/buttonshape"
         android:backgroundTint="#F3E5F5"
         android:contentDescription="@string/contentDescription_sitter"
@@ -28,14 +28,14 @@
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/button_parentPCC"
+        app:layout_constraintStart_toStartOf="@+id/button_parentPCC"
+        app:layout_constraintTop_toBottomOf="@+id/button_parentPCC" />
         />
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_parentPCC"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="320dp"
         android:layout_height="60dp"
@@ -53,20 +53,19 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintBottom_toTopOf="@+id/button_sitterPCC"
+        app:layout_constraintEnd_toEndOf="@+id/image_logoPCC"
+        app:layout_constraintStart_toStartOf="@+id/image_logoPCC"
+        app:layout_constraintTop_toBottomOf="@+id/image_logoPCC" />
 
         />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="415dp"
-        android:layout_height="555dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/image_logoPCC"
+        android:layout_width="match_parent"
+        android:layout_height="534dp"
         android:contentDescription="@string/app_logo"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_parentPCC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

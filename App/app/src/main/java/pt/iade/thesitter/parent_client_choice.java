@@ -11,7 +11,7 @@ public class parent_client_choice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_b_parent_client_choice);
+        setContentView(R.layout.activity_c_parent_client_choice);
 
     }
 

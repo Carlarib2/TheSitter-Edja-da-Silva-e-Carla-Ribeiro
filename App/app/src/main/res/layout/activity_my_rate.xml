@@ -8,7 +8,7 @@
     tools:context=".my_rate">
 
     <TextView
-        android:id="@+id/text_message"
+        android:id="@+id/text_message1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -27,7 +27,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_message" />
+        app:layout_constraintTop_toBottomOf="@+id/text_message1" />
 
     <View
         android:id="@+id/divider39"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider39" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/textView_setYour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider39" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/editTextNumber_"
         android:layout_width="96dp"
         android:layout_height="60dp"
         android:layout_marginEnd="30dp"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider39" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/textView_parentsAre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider41" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/editTextNumber_"
         android:layout_width="96dp"
         android:layout_height="60dp"
         android:layout_marginEnd="30dp"
@@ -104,10 +104,10 @@
         app:layout_constraintTop_toBottomOf="@+id/divider41" />
 
     <Button
-        android:id="@+id/register_button4"
+        android:id="@+id/button_savePB"
         android:layout_width="341dp"
         android:layout_height="60dp"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="275dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -175,9 +175,13 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="85dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button_savePB"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

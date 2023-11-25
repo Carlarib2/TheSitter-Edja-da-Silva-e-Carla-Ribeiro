@@ -22,11 +22,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
-        android:id="@+id/register_button4"
+        android:id="@+id/button_savePB"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"

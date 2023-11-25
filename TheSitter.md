@@ -76,5 +76,5 @@
 3. Aguardar solicitações de ajuda.
 4. Entrar em contato com solicitadores para combinar detalhes.
 
-Este projeto visa oferecer uma solução completa e flexível para cuidados com pessoas e animais de estimação.
+
 

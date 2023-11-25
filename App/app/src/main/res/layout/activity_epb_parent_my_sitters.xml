@@ -35,6 +35,7 @@
         android:id="@+id/sae_button_epb"
         android:layout_width="320dp"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
         android:fontFamily="@font/allerta_stencil"
@@ -53,12 +54,68 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
-        android:layout_width="408dp"
-        android:layout_height="621dp"
+        android:layout_width="414dp"
+        android:layout_height="514dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider36" />
+
+    <View
+        android:id="@+id/my_sitter_divider45_ep"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="17dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sae_button_epb" />
+
+    <ImageButton
+        android:id="@+id/my_sitters_home_imageButton_ep"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:onClick="startHomeP2"
+        app:layout_constraintStart_toStartOf="@+id/my_sitter_divider45_ep"
+        app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/my_sittersR_imageButton2_ep"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:onClick="startRequestsP2"
+        app:layout_constraintStart_toEndOf="@+id/my_sitters_home_imageButton_ep"
+        app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/my_sittersM_imageButton3_ep"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:onClick="startMessagesP4"
+        app:layout_constraintStart_toEndOf="@+id/my_sittersR_imageButton2_ep"
+        app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/my_sittersP_imageButton5_ep"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="startProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/my_sittersM_imageButton3_ep"
+        app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
+        app:srcCompat="@drawable/person_icon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

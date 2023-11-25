@@ -81,6 +81,14 @@ O nosso aplicativo tem 9 tabelas:
 
 **Tabela place:**
 
+
+| Column        | Type          | Constraints                          |
+| ------------- | ------------- | ------------------------------------ |
+| pla_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| pla_address   | VARCHAR(255)  |                                      |
+| pla_latitude  | DOUBLE        | NOT NULL                             |
+| pla_altitude  | DOUBLE        | NOT NULL                             |
+
 ### pla_id
 - **Definição:** Identificador único da localização.
 - **Tipo de dados:** Número inteiro.
@@ -103,17 +111,19 @@ O nosso aplicativo tem 9 tabelas:
 - **Restrições:** Não pode ser nulo (NOT NULL).
 
 *A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
+**Tabela agenda**
 
 
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
-| pla_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| pla_address   | VARCHAR(255)  |                                      |
-| pla_latitude  | DOUBLE        | NOT NULL                             |
-| pla_altitude  | DOUBLE        | NOT NULL                             |
-
-**Tabela agenda**
-
+| age_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| age_data      | DATE          |                                      |
+| age_sit_id    | INT           |                                      |
+| age_clifa_id  | INT           |                                      |
+| age_startTime | TIME          |                                      |
+| age_endTime   | TIME          |                                      |
+| age_sta_id    | INT           |                                      |
+| age_pla_id    | INT           |                                      |
 
 ### age_id
 - **Definição:** Identificador único para cada entrada na tabela de agenda.
@@ -152,21 +162,22 @@ O nosso aplicativo tem 9 tabelas:
 - **Definição:** Identificador relacionado ao local associado à entrada na agenda.
 - **Tipo de dados:** Número inteiro.
 - **Propriedade especial:** Chave estrangeira.
-
-
-| Column        | Type          | Constraints                          |
-| ------------- | ------------- | ------------------------------------ |
-| age_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| age_data      | DATE          |                                      |
-| age_sit_id    | INT           |                                      |
-| age_clifa_id  | INT           |                                      |
-| age_startTime | TIME          |                                      |
-| age_endTime   | TIME          |                                      |
-| age_sta_id    | INT           |                                      |
-| age_pla_id    | INT           |                                      |
-
-
 **Tabela sitter**
+
+
+| Column         | Type         | Constraints                          |
+| -------------- | ------------ | ------------------------------------ |
+| sit_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| sit_name       | VARCHAR(60)  | NOT NULL                             |
+| sit_bdate      | DATE         | NOT NULL                             |
+| sit_experience | TEXT         |                                      |
+| sit_address    | VARCHAR(255) |                                      |
+| sit_education  | VARCHAR(255) |                                      |
+| sit_mobile     | VARCHAR(20)  |                                      |
+| sit_gender     | CHAR(1)      | NOT NULL                             |
+| sit_aboutMe    | TEXT         |                                      |
+| sit_password   | VARCHAR(255) | NOT NULL                             |
+| sit_email      | VARCHAR(255) | NOT NULL                             |
 
 ### sit_id
 - **Definição:** Identificador único para cada sitter na tabela.
@@ -220,24 +231,15 @@ O nosso aplicativo tem 9 tabelas:
 - **Definição:** Armazena a senha da sitter(babá).
 - **Tipo de dados:** String de até 255 caracteres.
 - **Restrições:** Não pode ser nulo (NOT NULL).
-
-
-| Column         | Type         | Constraints                          |
-| -------------- | ------------ | ------------------------------------ |
-| sit_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| sit_name       | VARCHAR(60)  | NOT NULL                             |
-| sit_bdate      | DATE         | NOT NULL                             |
-| sit_experience | TEXT         |                                      |
-| sit_address    | VARCHAR(255) |                                      |
-| sit_education  | VARCHAR(255) |                                      |
-| sit_mobile     | VARCHAR(20)  |                                      |
-| sit_gender     | CHAR(1)      | NOT NULL                             |
-| sit_aboutMe    | TEXT         |                                      |
-| sit_password   | VARCHAR(255) | NOT NULL                             |
-| sit_email      | VARCHAR(255) | NOT NULL                             |
-
-
 **Tabela booking**
+
+| Column       | Type | Constraints                          |
+| ------------ | ---- | ------------------------------------ |
+| boo_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| boo_age_id   | INT  |                                      |
+| boo_sit_id   | INT  |                                      |
+| boo_clifa_id | INT  |                                      |
+| boo_sta_id   | INT  |                                      |
 
 ### boo_id
 - **Definição:** Identificador único para cada reserva na tabela de reservas (booking).
@@ -266,15 +268,6 @@ O nosso aplicativo tem 9 tabelas:
 - **Tipo de dados:** Número inteiro.
 - **Restrições:** Chave estrangeira.
 
-| Column       | Type | Constraints                          |
-| ------------ | ---- | ------------------------------------ |
-| boo_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| boo_age_id   | INT  |                                      |
-| boo_sit_id   | INT  |                                      |
-| boo_clifa_id | INT  |                                      |
-| boo_sta_id   | INT  |                                      |
-
-
 **Tabela booking_status**
 
 | Column     | Type | Constraints                          |
@@ -282,6 +275,24 @@ O nosso aplicativo tem 9 tabelas:
 | bsta_id    | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
 | bsta_boo_id | INT  |                                      |
 | bsta_sta_id | INT  |                                      |
+
+
+### bsta_id
+- **Definição:** Identificador único para cada registro de status de reserva na tabela de status de reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+
+### bsta_boo_id
+- **Definição:** Identificador relacionado à reserva associada ao status.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
+
+### bsta_sta_id
+- **Definição:** Identificador relacionado ao status da reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
 
 
 **Tabela status**

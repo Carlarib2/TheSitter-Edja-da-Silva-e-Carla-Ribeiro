@@ -15,9 +15,7 @@ public class profile_verification extends AppCompatActivity {
     }
 
     public void startSave2(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+        Intent intent = new Intent(this, parent_client_choice.class);
         startActivity(intent);
     }
-
-
 }

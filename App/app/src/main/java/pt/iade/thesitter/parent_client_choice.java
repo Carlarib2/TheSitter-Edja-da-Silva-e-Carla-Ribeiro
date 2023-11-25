@@ -16,12 +16,12 @@ public class parent_client_choice extends AppCompatActivity {
     }
 
     public void startSitter(View view){
-        Intent intent = new Intent(this, register.class);
+        Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
     public void startParent(View view){
-        Intent intent = new Intent(this, register.class);
+        Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);
     }
 }

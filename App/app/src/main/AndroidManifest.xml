@@ -16,7 +16,7 @@
         android:theme="@style/Theme.TheSitter"
         tools:targetApi="31">
         <activity
-            android:name=".parent_login"
+            android:name=".parent_requests"
             android:exported="false" />
         <activity
             android:name=".parent_booking_1"

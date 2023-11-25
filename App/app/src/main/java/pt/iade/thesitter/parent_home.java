@@ -30,7 +30,7 @@ public class parent_home extends AppCompatActivity {
     }
 
     public void startRequests8(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+        Intent intent = new Intent(this, parent_requests.class);
         startActivity(intent);
     }
 }

@@ -77,6 +77,6 @@
 4. Entrar em contato com solicitadores para combinar detalhes.
 
    ## Base de Dados
-
+-O nosso aplicativo tem 9 tabelas:
 
 

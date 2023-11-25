@@ -15,7 +15,7 @@ public class second extends AppCompatActivity {
     }
 
     public void startRegister(View view){
-        Intent intent = new Intent(this, register.class);
+        Intent intent = new Intent(this, parent_client_choice.class);
         startActivity(intent);
     }
 

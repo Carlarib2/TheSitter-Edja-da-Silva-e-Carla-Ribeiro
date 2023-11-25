@@ -6,31 +6,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class my_rate extends AppCompatActivity {
+public class parent_requests extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_rate);
+        setContentView(R.layout.activity_parent_requests);
     }
 
-    public void startHome6(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+    public void startHome9(View view){
+        Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);
     }
 
-    public void startRequests6(View view){
-        Intent intent = new Intent(this, requests_view.class);
+    public void startRequests9(View view){
+        Intent intent = new Intent(this, parent_requests.class);
         startActivity(intent);
     }
 
-    public void startMessages7(View view){
+    public void startMessages10(View view){
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfile5(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+    public void startProfile8(View view){
+        Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }
 }

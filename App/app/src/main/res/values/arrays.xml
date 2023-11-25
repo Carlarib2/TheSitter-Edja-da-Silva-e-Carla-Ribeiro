@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<array name="Month">
+<string-array name="Month">
     <item>January</item>
     <item>February</item>
     <item>March</item>
@@ -14,9 +14,9 @@
     <item>November</item>
     <item>December</item>
 
-</array>
+</string-array>
 
-    <array name="Day">
+    <string-array name="Day">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -49,9 +49,9 @@
         <item>30</item>
         <item>31</item>
 
-    </array>
+    </string-array>
 
-    <array name="Year">
+    <string-array name="Year">
         <item>1973</item>
         <item>1974</item>
         <item>1975</item>
@@ -88,6 +88,16 @@
         <item>2006</item>
         <item>2007</item>
 
-    </array>
+    </string-array>
+
+
+
+    <string-array name="gender">
+
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+
+    </string-array>
 
 </resources>

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_a_main);
 
         // Referência à ImageView no layout pelo ID
         final ImageView myImageView = findViewById(R.id.logo_image);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, parent_client_choice.class);
+                Intent intent = new Intent(MainActivity.this, second.class);
                 startActivity(intent);
 
                 // Adiciona uma animação de transição
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                             originalClipBounds   // Rect final (toda a imagem)
                     );
 
-                    clipAnimator.setDuration(1000);  // Define a duração desejada em milissegundos
+                    clipAnimator.setDuration(3000);  // Define a duração desejada em milissegundos
                     clipAnimator.start();
                 }
             }

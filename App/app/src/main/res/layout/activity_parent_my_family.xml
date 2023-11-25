@@ -20,12 +20,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="325dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
+        android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSave3"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -34,8 +36,10 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="728dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -94,38 +98,49 @@
 
     <ImageButton
         android:id="@+id/imageButton38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startProfile2"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="startProfile6"
         android:src="@drawable/person_icon"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton37"
+        app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
         android:id="@+id/imageButton37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startMessages3"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessages8"
         android:src="@drawable/mail_icon"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton36"
+        app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
         android:id="@+id/imageButton36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startRequests2"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequests7"
         android:src="@drawable/event_icon"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton35"
+        app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
         android:id="@+id/imageButton35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHome7"
         android:src="@drawable/home_icon"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="855dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
         android:id="@+id/imageButton39"
@@ -141,12 +156,25 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginTop="10dp"
+        android:background="#0C0C0C"
         android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:onClick="startAdd"
+        app:backgroundTint="#9FA8DA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/divider27"
         app:layout_constraintTop_toBottomOf="@+id/divider27"
         app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <View
+        android:id="@+id/divider33"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="100dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,11 +8,11 @@
     tools:context=".profile_verification">
 
     <TextView
-        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/allerta_stencil"
         android:text="@string/photo"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -22,13 +22,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
-        android:fontFamily="@font/fingerpaint_regular"
         android:id="@+id/register_button4"
-        android:layout_width="341dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="45dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
+        android:fontFamily="@font/allerta_stencil"
         android:onClick="startSave2"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
@@ -38,17 +39,19 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <TextView
-        android:fontFamily="@font/pacifico_regular"
         android:id="@+id/textView13"
         android:layout_width="305dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/allerta_stencil"
         android:text="@string/upload"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
@@ -67,12 +70,12 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="203dp"
-        android:layout_height="0dp"
+        android:layout_width="265dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/allerta_stencil"
         android:text="@string/profile_verification"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:fontFamily="@font/pacifico_regular"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -82,7 +85,7 @@
         android:id="@+id/imageButton"
         android:layout_width="157dp"
         android:layout_height="116dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:onClick="startCamera"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -93,7 +96,7 @@
         android:id="@+id/imageButton2"
         android:layout_width="157dp"
         android:layout_height="116dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:onClick="startDocument"
         app:layout_constraintEnd_toEndOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/textView13"

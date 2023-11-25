@@ -32,7 +32,7 @@
   <Button
       android:id="@+id/register_button5"
       android:layout_width="141dp"
-      android:layout_height="0dp"
+      android:layout_height="52dp"
       android:layout_marginStart="30dp"
       android:layout_marginTop="20dp"
       android:background="@drawable/buttonshape"
@@ -42,8 +42,9 @@
       android:shadowDx="2"
       android:shadowDy="2"
       android:shadowRadius="2"
-      android:text="@string/requests"
+      android:text="Booking"
       android:textColor="#090909"
+      android:textSize="18sp"
       android:textStyle="bold"
       app:backgroundTint="#12FFFFFF"
       app:layout_constraintStart_toStartOf="parent"
@@ -104,10 +105,11 @@
       android:id="@+id/divider2"
       android:layout_width="0dp"
       android:layout_height="2dp"
+      android:layout_marginTop="20dp"
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      tools:layout_editor_absoluteY="279dp" />
+      app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
   <ImageButton
       android:id="@+id/imageButton34"
@@ -158,12 +160,12 @@
       android:id="@+id/divider37"
       android:layout_width="409dp"
       android:layout_height="1dp"
-      android:layout_marginBottom="100dp"
+      android:layout_marginTop="400dp"
       android:background="?android:attr/listDivider"
-      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/divider"
       tools:ignore="MissingConstraints" />
 
   <ImageView

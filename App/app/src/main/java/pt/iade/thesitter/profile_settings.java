@@ -11,7 +11,7 @@ public class profile_settings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_settings);
+        setContentView(R.layout.activity_esc_profile_settings);
     }
 
     public void startHome2(View view){

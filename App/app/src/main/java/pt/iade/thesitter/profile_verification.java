@@ -11,7 +11,7 @@ public class profile_verification extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_verification);
+        setContentView(R.layout.activity_de_profile_verification);
     }
 
     public void startSave2(View view){

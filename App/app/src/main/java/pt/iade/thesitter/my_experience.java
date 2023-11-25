@@ -11,7 +11,7 @@ public class my_experience extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_experience);
+        setContentView(R.layout.activity_ese_my_experience);
     }
 
     public void startSave4(View view){

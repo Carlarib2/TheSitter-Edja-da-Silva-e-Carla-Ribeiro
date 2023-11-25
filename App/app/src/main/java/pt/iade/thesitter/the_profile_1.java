@@ -11,7 +11,7 @@ public class the_profile_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_the_profile1);
+        setContentView(R.layout.activity_es_the_profile1);
     }
 
     public void startRequests(View view){

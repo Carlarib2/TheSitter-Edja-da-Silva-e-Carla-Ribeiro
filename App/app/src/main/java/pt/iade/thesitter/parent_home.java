@@ -11,7 +11,7 @@ public class parent_home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_home);
+        setContentView(R.layout.activity_ep_parent_home);
     }
 
     public void startBooking(View view){

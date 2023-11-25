@@ -11,7 +11,7 @@ public class parent_my_sitters extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_my_sitters);
+        setContentView(R.layout.activity_epb_parent_my_sitters);
     }
 
     public void startSave5(View view){

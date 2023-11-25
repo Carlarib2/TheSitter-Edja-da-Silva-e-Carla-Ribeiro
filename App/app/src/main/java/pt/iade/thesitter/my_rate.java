@@ -11,7 +11,7 @@ public class my_rate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_rate);
+        setContentView(R.layout.activity_esd_my_rate);
     }
 
     public void startHome6(View view){

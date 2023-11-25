@@ -79,4 +79,10 @@
 ## Base de Dados
 O nosso aplicativo tem 9 tabelas:
 
+| Column        | Type          | Constraints                          |
+| ------------- | ------------- | ------------------------------------ |
+| pla_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| pla_address   | VARCHAR(255)  |                                      |
+| pla_latitude  | DOUBLE        | NOT NULL                             |
+| pla_altitude  | DOUBLE        | NOT NULL                             |
 

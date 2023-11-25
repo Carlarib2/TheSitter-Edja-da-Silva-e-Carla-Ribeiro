@@ -84,11 +84,12 @@
       android:id="@+id/message_imageButton_ep"
       android:layout_width="64dp"
       android:layout_height="52dp"
+      android:layout_marginStart="30dp"
       android:layout_marginTop="10dp"
       android:onClick="startMessages9"
       android:src="@drawable/mail_icon"
-      app:layout_constraintTop_toBottomOf="@+id/divider37"
-      tools:layout_editor_absoluteX="218dp" />
+      app:layout_constraintStart_toEndOf="@+id/imageButton"
+      app:layout_constraintTop_toBottomOf="@+id/divider37" />
 
   <ImageButton
       android:id="@+id/home_imageButton_ep"
@@ -131,5 +132,15 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+  <ImageButton
+      android:id="@+id/imageButton"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="10dp"
+      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/divider37"
+      app:srcCompat="@drawable/event_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,54 @@
-# Projeto "The Sitter"
+# "The Sitter" - Aplicativo Inovador de Babysitting
 
-O projeto "The Sitter" é um aplicativo inovador de babysitting, abrangendo todas as idades, necessidades especiais e cuidados com animais de estimação. A proposta visa fornecer uma solução versátil para cuidar de familiares e animais de estimação, especialmente para pessoas ocupadas sem uma rede de apoio.
+O **"The Sitter"** é um aplicativo inovador de babysitting dedicado a atender pessoas de todas as idades, incluindo aquelas com necessidades especiais, além de oferecer cuidados para cães e gatos. O projeto visa preencher uma lacuna para indivíduos ocupados sem uma rede de apoio para cuidar de familiares, animais de estimação ou ambos simultaneamente.
+
+## Pesquisa de Concorrentes
+A pesquisa de concorrentes inclui nomes como:
+- Komae
+- Zum
+- Sittercity
+
+## Recursos do Backend
+O backend do aplicativo inclui recursos como:
+- Perfis universais de cuidadores
+- Agendamento flexível
+- Avaliações
+- Verificações de antecedentes
+- Serviços personalizados
+
+## Recursos do Frontend
+O frontend possui telas para:
+- Login
+- Criação de perfil
+- Verificação
+
+Os passos de uso envolvem:
+1. Registro
+2. Edição de perfil
+3. Acesso às principais funcionalidades
+
+## Plano de Trabalho
+O plano de trabalho inclui o desenvolvimento do:
+- Frontend
+- Base de dados
+- Backend
+
+Estas etapas serão realizadas em semanas específicas.
+
+## Cenários de Uso
+Os cenários de uso abrangem:
+- Donos de animais de estimação
+- Pais
+- Usuários com familiares com necessidades especiais
+
+## Unidades Curriculares
+As unidades curriculares envolvidas são:
+- Matemática discreta
+- Base de dados
+- Programação orientada a objetos
+- Competências comunicacionais
+- Programação de dispositivos móveis
+
 
 ## Organização do Backend
 O backend do aplicativo terá várias funcionalidades, incluindo:

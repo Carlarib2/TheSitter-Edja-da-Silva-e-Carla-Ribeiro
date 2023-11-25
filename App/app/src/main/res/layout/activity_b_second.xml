@@ -9,12 +9,12 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo_image_b"
         android:layout_width="415dp"
         android:layout_height="555dp"
         android:layout_marginTop="4dp"
         android:contentDescription="@string/app_image"
-        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintBottom_toTopOf="@+id/login_button_b"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         tools:ignore="VisualLintBounds" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/login_button_b"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="150dp"
@@ -39,14 +39,14 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toTopOf="@+id/button_register1"
+        app:layout_constraintBottom_toTopOf="@+id/sae_button_epb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/logo_image_b"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image_b" />
 
     <Button
-        android:id="@+id/button_register1"
+        android:id="@+id/sae_button_epb"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
@@ -64,10 +64,10 @@
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="@+id/login_button_b"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/login_button"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintStart_toStartOf="@+id/login_button_b"
+        app:layout_constraintTop_toBottomOf="@+id/login_button_b"
         tools:ignore="VisualLintBounds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

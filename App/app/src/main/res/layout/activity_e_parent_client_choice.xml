@@ -8,7 +8,7 @@
     tools:context=".parent_client_choice">
 
     <Button
-        android:id="@+id/button_sitterPCC"
+        android:id="@+id/sitter_burtton_e"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="320dp"
         android:layout_height="60dp"
@@ -28,14 +28,14 @@
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_parentPCC"
-        app:layout_constraintStart_toStartOf="@+id/button_parentPCC"
-        app:layout_constraintTop_toBottomOf="@+id/button_parentPCC" />
+        app:layout_constraintEnd_toEndOf="@+id/parent_button_e"
+        app:layout_constraintStart_toStartOf="@+id/parent_button_e"
+        app:layout_constraintTop_toBottomOf="@+id/parent_button_e" />
         />
 
 
     <Button
-        android:id="@+id/button_parentPCC"
+        android:id="@+id/parent_button_e"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="320dp"
         android:layout_height="60dp"
@@ -53,19 +53,19 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toTopOf="@+id/button_sitterPCC"
-        app:layout_constraintEnd_toEndOf="@+id/image_logoPCC"
-        app:layout_constraintStart_toStartOf="@+id/image_logoPCC"
-        app:layout_constraintTop_toBottomOf="@+id/image_logoPCC" />
+        app:layout_constraintBottom_toTopOf="@+id/sitter_burtton_e"
+        app:layout_constraintEnd_toEndOf="@+id/logo_image_e"
+        app:layout_constraintStart_toStartOf="@+id/logo_image_e"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image_e" />
 
         />
 
     <ImageView
-        android:id="@+id/image_logoPCC"
+        android:id="@+id/logo_image_e"
         android:layout_width="match_parent"
         android:layout_height="534dp"
         android:contentDescription="@string/app_logo"
-        app:layout_constraintBottom_toTopOf="@+id/button_parentPCC"
+        app:layout_constraintBottom_toTopOf="@+id/parent_button_e"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

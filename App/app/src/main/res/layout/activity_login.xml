@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/the_sitter_3" />
 
     <Button
-        android:id="@+id/button_register1"
+        android:id="@+id/sae_button_epb"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login1"
+        android:id="@+id/login_button_c"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginBottom="25dp"
@@ -68,11 +68,11 @@
         android:textColor="#1a436e"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/container_view"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_password"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_password" />
+        app:layout_constraintEnd_toEndOf="@+id/pass_editText_c"
+        app:layout_constraintStart_toStartOf="@+id/pass_editText_c" />
 
     <EditText
-        android:id="@+id/edit_text_username"
+        android:id="@+id/user_editText_c"
         style="@style/Edit_Text"
         android:layout_width="315dp"
         android:layout_height="74dp"
@@ -83,13 +83,13 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_password"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_password"
+        app:layout_constraintBottom_toTopOf="@+id/pass_editText_c"
+        app:layout_constraintEnd_toEndOf="@+id/pass_editText_c"
+        app:layout_constraintStart_toStartOf="@+id/pass_editText_c"
         app:layout_constraintTop_toTopOf="@+id/container_view" />
 
     <EditText
-        android:id="@+id/edit_text_password"
+        android:id="@+id/pass_editText_c"
         style="@style/Edit_Text"
         android:layout_width="315dp"
         android:layout_height="74dp"
@@ -99,7 +99,7 @@
         android:inputType="text|textVisiblePassword"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_login1"
+        app:layout_constraintBottom_toTopOf="@+id/login_button_c"
         app:layout_constraintEnd_toEndOf="@+id/container_view"
         app:layout_constraintStart_toStartOf="@+id/container_view" />
 
@@ -109,11 +109,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/person_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_text_username"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_username"
+        app:layout_constraintBottom_toBottomOf="@+id/user_editText_c"
+        app:layout_constraintEnd_toEndOf="@+id/user_editText_c"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_username"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_username"
+        app:layout_constraintStart_toStartOf="@+id/user_editText_c"
+        app:layout_constraintTop_toTopOf="@+id/user_editText_c"
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
@@ -122,10 +122,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/lock_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_text_password"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_password"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_password"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_password"
+        app:layout_constraintBottom_toBottomOf="@+id/pass_editText_c"
+        app:layout_constraintEnd_toEndOf="@+id/pass_editText_c"
+        app:layout_constraintStart_toStartOf="@+id/pass_editText_c"
+        app:layout_constraintTop_toTopOf="@+id/pass_editText_c"
         app:srcCompat="@drawable/lock_icon" />
 
 

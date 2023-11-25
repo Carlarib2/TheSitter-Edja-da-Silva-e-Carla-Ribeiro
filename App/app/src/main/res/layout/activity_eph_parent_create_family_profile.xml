@@ -8,7 +8,7 @@
     tools:context=".parent_create_family_profile">
 
     <EditText
-        android:id="@+id/editText_allergiesCPF"
+        android:id="@+id/allergies_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
@@ -21,12 +21,12 @@
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/editText_schoolCPF"
-        app:layout_constraintStart_toStartOf="@+id/editText_schoolCPF"
-        app:layout_constraintTop_toBottomOf="@+id/editText_schoolCPF" />
+        app:layout_constraintEnd_toEndOf="@+id/school_editTex_eph"
+        app:layout_constraintStart_toStartOf="@+id/school_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/school_editTex_eph" />
 
     <EditText
-        android:id="@+id/editText_importantNotesCPF"
+        android:id="@+id/notes_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="382dp"
         android:layout_height="110dp"
@@ -39,12 +39,12 @@
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/editText_allergiesCPF"
-        app:layout_constraintStart_toStartOf="@+id/editText_allergiesCPF"
-        app:layout_constraintTop_toBottomOf="@+id/editText_allergiesCPF" />
+        app:layout_constraintEnd_toEndOf="@+id/allergies_editTex_eph"
+        app:layout_constraintStart_toStartOf="@+id/allergies_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/allergies_editTex_eph" />
 
     <EditText
-        android:id="@+id/editText_birthdayCFP"
+        android:id="@+id/birthady_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
@@ -57,12 +57,12 @@
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/editText_nameCFP"
-        app:layout_constraintStart_toStartOf="@+id/editText_nameCFP"
-        app:layout_constraintTop_toBottomOf="@+id/editText_nameCFP" />
+        app:layout_constraintEnd_toEndOf="@+id/name_editTex_eph"
+        app:layout_constraintStart_toStartOf="@+id/name_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/name_editTex_eph" />
 
     <EditText
-        android:id="@+id/editText_schoolCPF"
+        android:id="@+id/school_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
@@ -76,12 +76,12 @@
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/editText_birthdayCFP"
-        app:layout_constraintStart_toStartOf="@+id/editText_birthdayCFP"
-        app:layout_constraintTop_toBottomOf="@+id/editText_birthdayCFP" />
+        app:layout_constraintEnd_toEndOf="@+id/birthady_editTex_eph"
+        app:layout_constraintStart_toStartOf="@+id/birthady_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/birthady_editTex_eph" />
 
     <EditText
-        android:id="@+id/editText_nameCFP"
+        android:id="@+id/name_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
@@ -95,10 +95,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_messageCFP" />
+        app:layout_constraintTop_toBottomOf="@+id/Family_textView_eph" />
 
     <TextView
-        android:id="@+id/text_messageCFP"
+        android:id="@+id/Family_textView_eph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton30"
+        android:id="@+id/profile_imageButton_eph"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -119,33 +119,33 @@
         android:onClick="startProfile2"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton29"
+        app:layout_constraintStart_toEndOf="@+id/message_imageButton_eph"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
 
     <ImageButton
-        android:id="@+id/imageButton29"
+        android:id="@+id/message_imageButton_eph"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton28"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_eph"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
 
     <ImageButton
-        android:id="@+id/imageButton28"
+        android:id="@+id/requests_imageBfutton_eph"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton27"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_eph"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
 
     <ImageButton
-        android:id="@+id/imageButton27"
+        android:id="@+id/home_imageButton_eph"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -155,7 +155,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
 
     <Button
-        android:id="@+id/button_saveCPF"
+        android:id="@+id/save_button_eph"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -170,9 +170,9 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintEnd_toEndOf="@+id/editText_importantNotesCPF"
-        app:layout_constraintStart_toStartOf="@+id/editText_importantNotesCPF"
-        app:layout_constraintTop_toBottomOf="@+id/editText_importantNotesCPF" />
+        app:layout_constraintEnd_toEndOf="@+id/notes_editTex_eph"
+        app:layout_constraintStart_toStartOf="@+id/notes_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/notes_editTex_eph" />
 
     <View
         android:id="@+id/divider43"
@@ -184,5 +184,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_saveCPF" />
+        app:layout_constraintTop_toBottomOf="@+id/save_button_eph" />
 </androidx.constraintlayout.widget.ConstraintLayout>

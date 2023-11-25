@@ -112,8 +112,9 @@ O nosso aplicativo tem 9 tabelas:
 - **Restrições:** Não pode ser nulo (NOT NULL).
 
 *A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
-**Tabela agenda**
 
+
+**Tabela agenda:**
 
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
@@ -165,6 +166,7 @@ O nosso aplicativo tem 9 tabelas:
 - **Propriedade especial:** Chave estrangeira.
 **Tabela sitter**
 
+**Tabela sitter:**
 
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
@@ -232,7 +234,9 @@ O nosso aplicativo tem 9 tabelas:
 - **Definição:** Armazena a senha da sitter(babá).
 - **Tipo de dados:** String de até 255 caracteres.
 - **Restrições:** Não pode ser nulo (NOT NULL).
-**Tabela booking**
+
+- 
+**Tabela booking:**
 
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
@@ -269,7 +273,7 @@ O nosso aplicativo tem 9 tabelas:
 - **Tipo de dados:** Número inteiro.
 - **Restrições:** Chave estrangeira.
 
-**Tabela booking_status**
+**Tabela booking_status:**
 
 | Column     | Type | Constraints                          |
 | ---------- | ---- | ------------------------------------ |
@@ -296,7 +300,7 @@ O nosso aplicativo tem 9 tabelas:
 - **Restrições:** Chave estrangeira.
 
 
-**Tabela status**
+**Tabela status:**
 
 | Column  | Type         | Constraints                          |
 | ------- | ------------ | ------------------------------------ |
@@ -304,7 +308,7 @@ O nosso aplicativo tem 9 tabelas:
 | sta_name | VARCHAR(255) | NOT NULL                             |
 
 
-**Tabela client**
+**Tabela client:**
 
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
@@ -319,7 +323,7 @@ O nosso aplicativo tem 9 tabelas:
 | cli_gender     | CHAR(1)      | NOT NULL                             |
 
 
-**Tabela Client_family**
+**Tabela Client_family:**
 
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
@@ -327,7 +331,7 @@ O nosso aplicativo tem 9 tabelas:
 | clifa_cli_id | INT  |                                      |
 
 
-**Tabela family_member**
+**Tabela family_member:**
 
 | Column      | Type         | Constraints                          |
 | ----------- | ------------ | ------------------------------------ |

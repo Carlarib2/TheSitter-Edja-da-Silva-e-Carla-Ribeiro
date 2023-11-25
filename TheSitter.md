@@ -76,7 +76,7 @@
 3. Aguardar solicitações de ajuda.
 4. Entrar em contato com solicitadores para combinar detalhes.
 
-   ## Base de Dados
-O nosso aplicativo tem 9 tabelas:
+## Base de Dados
+   O nosso aplicativo tem 9 tabelas:
 
 

@@ -90,25 +90,25 @@ O nosso aplicativo tem 9 tabelas:
 | pla_altitude  | DOUBLE        | NOT NULL                             |
 
 ### pla_id
-- **Definição:** Identificador único da localização.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único da localização.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### pla_address
-- **Definição:** Armazena o endereço do local.
-- **Tipo de dados:** String de comprimento variável, até 255 caracteres.
+ - *Definição:* Armazena o endereço do local.
+ - *Tipo de dados:* String de comprimento variável, até 255 caracteres.
 
 ### pla_latitude
-- **Definição:** Armazena a latitude do local.
-- **Tipo de dados:** Número de ponto flutuante de precisão dupla.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a latitude do local.
+ - *Tipo de dados:* Número de ponto flutuante de precisão dupla.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### pla_altitude
-- **Definição:** Armazena a altitude do local.
-- **Tipo de dados:** Número de ponto flutuante de precisão dupla.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a altitude do local.
+ - *Tipo de dados:* Número de ponto flutuante de precisão dupla.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 *A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
 
@@ -127,43 +127,42 @@ O nosso aplicativo tem 9 tabelas:
 | age_pla_id    | INT           |                                      |
 
 ### age_id
-- **Definição:** Identificador único para cada entrada na tabela de agenda.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada entrada na tabela de agenda.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### age_data
-- **Definição:** Armazena a data da entrada na agenda.
-- **Tipo de dados:** Data (no formato DATE).
+ - *Definição:* Armazena a data da entrada na agenda.
+ - *Tipo de dados:* Data (no formato DATE).
 
 ### age_sit_id
-- **Definição:** Identificador relacionado ao status da entrada na agenda.
-- **Tipo de dados:** Número inteiro.
+ - *Definição:* Identificador relacionado ao status da entrada na agenda.
+ - *Tipo de dados:* Número inteiro.
 
 ### age_clifa_id
-- **Definição:** Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
-- **Tipo de dados:** Número inteiro.
-- **Propriedade especial:** Chave estrangeira.
+ - *Definição:* Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
+ - *Tipo de dados:* Número inteiro.
+ - *Propriedade especial:* Chave estrangeira.
 
 ### age_startTime
-- **Definição:** Armazena a hora de início da entrada na agenda.
-- **Tipo de dados:** Hora (no formato TIME).
+ - *Definição:* Armazena a hora de início da entrada na agenda.
+ - *Tipo de dados:* Hora (no formato TIME).
 
 ### age_endTime
-- **Definição:** Armazena a hora de término da entrada na agenda.
-- **Tipo de dados:** Hora (no formato TIME).
+ - *Definição:* Armazena a hora de término da entrada na agenda.
+ - *Tipo de dados:* Hora (no formato TIME).
 
 ### age_sta_id
-- **Definição:** Identificador relacionado ao status da entrada na agenda.
-- **Tipo de dados:** Número inteiro.
-- **Propriedade especial:** Chave estrangeira.
+ - *Definição:* Identificador relacionado ao status da entrada na agenda.
+ - *Tipo de dados:* Número inteiro.
+ - *Propriedade especial:* Chave estrangeira.
 
 ### age_pla_id
-- **Definição:** Identificador relacionado ao local associado à entrada na agenda.
-- **Tipo de dados:** Número inteiro.
-- **Propriedade especial:** Chave estrangeira.
-**Tabela sitter**
+ - *Definição:* Identificador relacionado ao local associado à entrada na agenda.
+ - *Tipo de dados:* Número inteiro.
+ - *Propriedade especial:* Chave estrangeira.
 
 **Tabela sitter:**
 
@@ -182,57 +181,57 @@ O nosso aplicativo tem 9 tabelas:
 | sit_email      | VARCHAR(255) | NOT NULL                             |
 
 ### sit_id
-- **Definição:** Identificador único para cada sitter na tabela.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada sitter na tabela.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### sit_name
-- **Definição:** Armazena o nome da sitter(babá).
-- **Tipo de dados:** String de até 60 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o nome da sitter(babá).
+ - *Tipo de dados:* String de até 60 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### sit_bdate
-- **Definição:** Armazena a data de nascimento da sitter(babá).
-- **Tipo de dados:** Data (no formato DATE).
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a data de nascimento da sitter(babá).
+ - *Tipo de dados:* Data (no formato DATE).
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### sit_experience
-- **Definição:** Armazena informações sobre a experiência da sitter(babá).
-- **Tipo de dados:** Texto longo (TEXT).
+ - *Definição:* Armazena informações sobre a experiência da sitter(babá).
+ - *Tipo de dados:* Texto longo (TEXT).
 
 ### sit_address
-- **Definição:** Armazena o endereço da sitter(babá).
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o endereço da sitter(babá).
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### sit_education
-- **Definição:** Armazena informações sobre a educação da sitter(babá).
-- **Tipo de dados:** String de até 255 caracteres.
+ - *Definição:* Armazena informações sobre a educação da sitter(babá).
+ - *Tipo de dados:* String de até 255 caracteres.
 
 ### sit_mobile
-- **Definição:** Armazena o número de telefone celular da sitter(babá).
-- **Tipo de dados:** String de até 20 caracteres.
+ - *Definição:* Armazena o número de telefone celular da sitter(babá).
+ - *Tipo de dados:* String de até 20 caracteres.
 
 ### sit_gender
-- **Definição:** Armazena o gênero da sitter(babá).
-- **Tipo de dados:** Caractere (CHAR) de comprimento 1.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o gênero da sitter(babá).
+ - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### sit_aboutMe
-- **Definição:** Armazena informações adicionais sobre a sitter(babá).
-- **Tipo de dados:** Texto longo (TEXT).
+ - *Definição:* Armazena informações adicionais sobre a sitter(babá).
+ - *Tipo de dados:* Texto longo (TEXT).
 
 ### sit_email
-- **Definição:** Armazena o endereço de e-mail da sitter(babá).
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o endereço de e-mail da sitter(babá).
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### sit_password
-- **Definição:** Armazena a senha da sitter(babá).
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a senha da sitter(babá).
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 - 
 **Tabela booking:**
@@ -246,31 +245,31 @@ O nosso aplicativo tem 9 tabelas:
 | boo_sta_id   | INT  |                                      |
 
 ### boo_id
-- **Definição:** Identificador único para cada reserva na tabela de reservas (booking).
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada reserva na tabela de reservas (booking).
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### boo_age_id
-- **Definição:** Identificador relacionado à entrada na agenda associada à reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado à entrada na agenda associada à reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 ### boo_sit_id
-- **Definição:** Identificador relacionado à babá associada à reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado à babá associada à reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 ### boo_clifa_id
-- **Definição:** Identificador relacionado ao cliente/fornecedor associado à reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado ao cliente/fornecedor associado à reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 ### boo_sta_id
-- **Definição:** Identificador relacionado ao status da reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado ao status da reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 **Tabela booking_status:**
 
@@ -282,21 +281,21 @@ O nosso aplicativo tem 9 tabelas:
 
 
 ### bsta_id
-- **Definição:** Identificador único para cada registro de status de reserva na tabela de status de reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada registro de status de reserva na tabela de status de reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### bsta_boo_id
-- **Definição:** Identificador relacionado à reserva associada ao status.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado à reserva associada ao status.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 ### bsta_sta_id
-- **Definição:** Identificador relacionado ao status da reserva.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:** Identificador relacionado ao status da reserva.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 
 **Tabela status:**
@@ -308,16 +307,16 @@ O nosso aplicativo tem 9 tabelas:
 
 
 ### sta_id
-- **Definição:** Identificador único para cada status na tabela de status.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada status na tabela de status.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### sta_name
-- **Definição:** Armazena o nome do status.
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o nome do status.
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 
 **Tabela client:**
@@ -337,49 +336,48 @@ O nosso aplicativo tem 9 tabelas:
 ## Tabela `client`
 
 ### cli_id
-- **Definição:** Identificador único para cada cliente na tabela.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Não pode ser nulo (NOT NULL).
-- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+ - *Definição:* Identificador único para cada cliente na tabela.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
+ - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+ - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 ### cli_clifa_id
-- **Definição:** Identificador relacionado ao cliente/fornecedor associado ao cliente.
-- **Tipo de dados:** Número inteiro.
-- **Restrições:** Chave estrangeira.
+ - *Definição:* Identificador relacionado ao cliente/fornecedor associado ao cliente.
+ - *Tipo de dados:* Número inteiro.
+ - *Restrições:* Chave estrangeira.
 
 ### cli_name
-- **Definição:** Armazena o nome do cliente.
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o nome do cliente.
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### cli_bdate
-- **Definição:** Armazena a data de nascimento do cliente.
-- **Tipo de dados:** Data (no formato DATE).
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a data de nascimento do cliente.
+ - *Tipo de dados:* Data (no formato DATE).
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### cli_address
-- **Definição:** Armazena o endereço do cliente.
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o endereço do cliente.
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### cli_mobile
-- **Definição:** Armazena o número de telefone celular do cliente.
-- **Tipo de dados:** String de até 20 caracteres.
+ - *Definição:* Armazena o número de telefone celular do cliente.
+ - *Tipo de dados:* String de até 20 caracteres.
 
 ### cli_email
-- **Definição:** Armazena o endereço de e-mail do cliente.
-- **Tipo de dados:** String de até 255 caracteres.
+ - *Definição:* Armazena o endereço de e-mail do cliente.
+ - *Tipo de dados:* String de até 255 caracteres.
 
 ### cli_gender
-- **Definição:** Armazena o gênero do cliente.
-- **Tipo de dados:** Caractere (CHAR) de comprimento 1.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena o gênero do cliente.
+ - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 ### cli_password
-- **Definição:** Armazena a senha do cliente.
-- **Tipo de dados:** String de até 255 caracteres.
-- **Restrições:** Não pode ser nulo (NOT NULL).
+ - *Definição:* Armazena a senha do cliente.
+ - *Tipo de dados:* String de até 255 caracteres.
+ - *Restrições:* Não pode ser nulo (NOT NULL).
 
 
 **Tabela Client_family:**

@@ -79,6 +79,8 @@
 ## Base de Dados
 O nosso aplicativo tem 9 tabelas:
 
+**Tabela place**
+
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
 | pla_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |

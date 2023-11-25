@@ -88,3 +88,18 @@ O nosso aplicativo tem 9 tabelas:
 | pla_latitude  | DOUBLE        | NOT NULL                             |
 | pla_altitude  | DOUBLE        | NOT NULL                             |
 
+**Tabela agenda**
+
+
+| Column        | Type          | Constraints                          |
+| ------------- | ------------- | ------------------------------------ |
+| age_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| age_data      | DATE          |                                      |
+| age_sit_id    | INT           |                                      |
+| age_clifa_id  | INT           |                                      |
+| age_startTime | TIME          |                                      |
+| age_endTime   | TIME          |                                      |
+| age_sta_id    | INT           |                                      |
+| age_pla_id    | INT           |                                      |
+
+

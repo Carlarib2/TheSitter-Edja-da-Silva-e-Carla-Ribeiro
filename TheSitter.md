@@ -453,7 +453,7 @@ A tabela `family_member` foi implementada para armazenar informações sobre mem
 
 - **fa_aboutMe:**
  - *Definição:* Armazena informações adicionais sobre o membro da família.
- - *Tipo de dados:* Texto longo (TEXT).
+  - *Tipo de dados:* Texto longo (TEXT).
 
 - **fa_gender:**
  - *Definição:* Armazena o gênero do membro da família.

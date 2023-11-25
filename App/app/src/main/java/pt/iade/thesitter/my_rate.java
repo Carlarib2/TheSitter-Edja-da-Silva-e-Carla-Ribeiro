@@ -14,23 +14,23 @@ public class my_rate extends AppCompatActivity {
         setContentView(R.layout.activity_my_rate);
     }
 
-    public void startRegister3(View view){
-        Intent intent = new Intent(this, register.class);
-        startActivity(intent);
-    }
-
-    public void startLogin2(View view){
+    public void startHome6(View view){
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
-    public void startRegister3(View view){
-        Intent intent = new Intent(this, register.class);
+    public void startRequests6(View view){
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 
-    public void startLogin2(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+    public void startMessages7(View view){
+        Intent intent = new Intent(this, messages.class);
+        startActivity(intent);
+    }
+
+    public void startProfile5(View view){
+        Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }
 }

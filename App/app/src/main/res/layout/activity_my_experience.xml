@@ -31,10 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/text_message" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,14 +67,15 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="15dp"
                     android:text="EXPERIENCE"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +89,8 @@
                 <TextView
                     android:id="@+id/textView61"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="How long have you been sitter?"
                     android:inputType="number"
@@ -94,8 +98,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.014"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -105,17 +111,19 @@
                 <TextView
                     android:id="@+id/textView62"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
-                    android:hint="what ages have you sat for?"
+                    android:hint="What ages have you sat for?"
                     android:inputType="number"
                     android:paddingStart="10dp"
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.07"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -125,8 +133,8 @@
                 <TextView
                     android:id="@+id/textView63"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="What is the most number of children you are willing to sit for?"
                     android:inputType="number"
@@ -134,8 +142,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.042"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -161,8 +171,8 @@
                 <TextView
                     android:id="@+id/textView65"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Have you ever completed a CPR course? "
                     android:inputType="text"
@@ -170,8 +180,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -181,8 +193,8 @@
                 <TextView
                     android:id="@+id/textView66"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Have you ever completed a babysitting course?"
                     android:inputType="text"
@@ -190,8 +202,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -218,8 +232,8 @@
                     android:id="@+id/textView68"
                     style="@style/Edit_Text_Profile"
 
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Do you have a means of transportation to and from your sitting appointment?"
                     android:inputType="text"
@@ -227,9 +241,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintHorizontal_bias="0.126"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -239,8 +254,8 @@
                 <TextView
                     android:id="@+id/textView70"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Are you comfrtable with pets?"
                     android:inputType="text"
@@ -248,8 +263,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -259,8 +276,8 @@
                 <TextView
                     android:id="@+id/textView71"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Are you able to prepare simple meals for kids while sitting?"
                     android:inputType="text"
@@ -268,8 +285,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.028"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -295,8 +314,8 @@
                 <TextView
                     android:id="@+id/textView73"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:hint="Have you been convicted of a crime?"
                     android:inputType="text"
@@ -304,8 +323,10 @@
                     android:paddingTop="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -331,8 +352,8 @@
                 <TextView
                     android:id="@+id/textView75"
                     style="@style/Edit_Text_Profile"
-                    android:layout_width="482dp"
-                    android:layout_height="62dp"
+                    android:layout_width="410dp"
+                    android:layout_height="58dp"
                     android:layout_marginTop="24dp"
                     android:inputType="text"
                     android:paddingStart="10dp"
@@ -343,26 +364,20 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:text="SAVE"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
         android:layout_height="wrap_content" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="32dp"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

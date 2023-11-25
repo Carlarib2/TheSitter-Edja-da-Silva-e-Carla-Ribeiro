@@ -21,12 +21,13 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="341dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="325dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSave3"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -102,7 +103,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:onClick="startProfile2"
+        android:onClick="startProfile6"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton37"
@@ -114,7 +115,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startMessages3"
+        android:onClick="startMessages8"
         android:src="@drawable/mail_icon"
         app:layout_constraintStart_toEndOf="@+id/imageButton36"
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
@@ -125,7 +126,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startRequests2"
+        android:onClick="startRequests7"
         android:src="@drawable/event_icon"
         app:layout_constraintStart_toEndOf="@+id/imageButton35"
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
@@ -136,6 +137,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:onClick="startHome7"
         android:src="@drawable/home_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
@@ -157,6 +159,7 @@
         android:layout_marginTop="10dp"
         android:background="#0C0C0C"
         android:clickable="true"
+        android:onClick="startAdd"
         app:backgroundTint="#9FA8DA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/divider27"

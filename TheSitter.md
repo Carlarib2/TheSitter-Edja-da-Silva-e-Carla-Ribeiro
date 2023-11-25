@@ -239,6 +239,33 @@ O nosso aplicativo tem 9 tabelas:
 
 **Tabela booking**
 
+### boo_id
+- **Definição:** Identificador único para cada reserva na tabela de reservas (booking).
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Não pode ser nulo (NOT NULL).
+- **Propriedade especial:** Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+- **Chave primária:** Utilizada para identificar exclusivamente cada registro na tabela.
+
+### boo_age_id
+- **Definição:** Identificador relacionado à entrada na agenda associada à reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
+
+### boo_sit_id
+- **Definição:** Identificador relacionado à babá associada à reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
+
+### boo_clifa_id
+- **Definição:** Identificador relacionado ao cliente/fornecedor associado à reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
+
+### boo_sta_id
+- **Definição:** Identificador relacionado ao status da reserva.
+- **Tipo de dados:** Número inteiro.
+- **Restrições:** Chave estrangeira.
+
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
 | boo_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |

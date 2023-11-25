@@ -2,6 +2,7 @@
 
 **"The Sitter"** é um aplicativo revolucionário de babysitting, atendendo a todas as faixas etárias, inclusive pessoas com necessidades especiais, e oferecendo cuidados para cães e gatos. O projeto visa preencher a lacuna para indivíduos ocupados sem uma rede de apoio para cuidar de familiares, animais de estimação ou ambos simultaneamente.
 
+
 ## Pesquisa de Concorrentes
 - Komae
 - Zum

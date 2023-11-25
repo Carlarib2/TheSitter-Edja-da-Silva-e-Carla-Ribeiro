@@ -444,21 +444,21 @@ A tabela `family_member` foi implementada para armazenar informações sobre mem
   - *Restrições:* Não pode ser nulo (**NOT NULL**).
 
 - **fa_school:**
-  - *Definição:* Armazena o nome da escola do membro da família.
-  - *Tipo de dados:* String de até 255 caracteres.
+ - *Definição:* Armazena o nome da escola do membro da família.
+ - *Tipo de dados:* String de até 255 caracteres.
 
 - **fa_allergies:**
-  - *Definição:* Armazena informações sobre alergias do membro da família.
-  - *Tipo de dados:* String de até 255 caracteres.
+ - *Definição:* Armazena informações sobre alergias do membro da família.
+ - *Tipo de dados:* String de até 255 caracteres.
 
 - **fa_aboutMe:**
-  - *Definição:* Armazena informações adicionais sobre o membro da família.
-  - *Tipo de dados:* Texto longo (TEXT).
+ - *Definição:* Armazena informações adicionais sobre o membro da família.
+ - *Tipo de dados:* Texto longo (TEXT).
 
 - **fa_gender:**
-  - *Definição:* Armazena o gênero do membro da família.
+ - *Definição:* Armazena o gênero do membro da família.
   - *Tipo de dados:* Caractere (CHAR) de comprimento 1.
-  - *Restrições:* Não pode ser nulo (**NOT NULL**).
+ - *Restrições:* Não pode ser nulo (**NOT NULL**).
 
 
 

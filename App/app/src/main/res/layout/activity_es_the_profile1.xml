@@ -8,7 +8,7 @@
     tools:context=".the_profile_1">
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/parent_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:id="@+id/register_button6"
+        android:id="@+id/message_button_ep"
         android:layout_width="141dp"
         android:layout_height="52dp"
         android:layout_marginStart="50dp"
@@ -125,11 +125,11 @@
         android:textStyle="bold"
         app:backgroundTint="#12FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/register_button5"
-        app:layout_constraintTop_toTopOf="@+id/register_button5" />
+        app:layout_constraintStart_toEndOf="@+id/requests_button_es"
+        app:layout_constraintTop_toTopOf="@+id/requests_button_es" />
 
     <Button
-        android:id="@+id/register_button5"
+        android:id="@+id/requests_button_es"
         android:layout_width="141dp"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -149,7 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/name_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -160,14 +160,14 @@
         app:layout_constraintTop_toBottomOf="@+id/divider12" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/adv_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
         android:text="Advance: $15/hr"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
+        app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
     <View
         android:id="@+id/divider"
@@ -175,10 +175,10 @@
         android:layout_height="5dp"
         android:layout_marginTop="16dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="@+id/register_button6"
+        app:layout_constraintEnd_toEndOf="@+id/message_button_ep"
         app:layout_constraintHorizontal_bias="0.367"
-        app:layout_constraintStart_toStartOf="@+id/register_button5"
-        app:layout_constraintTop_toBottomOf="@+id/register_button5" />
+        app:layout_constraintStart_toStartOf="@+id/requests_button_es"
+        app:layout_constraintTop_toBottomOf="@+id/requests_button_es" />
 
     <View
         android:id="@+id/divider4"
@@ -338,20 +338,22 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep" />
 
     <View
         android:id="@+id/divider38"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="130dp"
+        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/home_imageButton_es"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -361,29 +363,29 @@
         app:layout_constraintTop_toBottomOf="@+id/divider38" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/requests_imageBfutton_es"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton15"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_es"
         app:layout_constraintTop_toBottomOf="@+id/divider38" />
 
     <ImageButton
-        android:id="@+id/imageButton17"
+        android:id="@+id/message_imageButton_es"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton16"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_es"
         app:layout_constraintTop_toBottomOf="@+id/divider38" />
 
     <ImageButton
-        android:id="@+id/imageButton18"
+        android:id="@+id/profile_imageButton_es"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -392,7 +394,7 @@
         android:onClick="startProfile2"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton17"
+        app:layout_constraintStart_toEndOf="@+id/message_imageButton_es"
         app:layout_constraintTop_toBottomOf="@+id/divider38" />
 
     <TextView

@@ -1,5 +1,3 @@
-USE TheSitter;
-
 CREATE TABLE place (
     pla_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     pla_address VARCHAR(255) NOT NULL,

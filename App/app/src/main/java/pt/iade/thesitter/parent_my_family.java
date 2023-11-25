@@ -11,7 +11,7 @@ public class parent_my_family extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_my_family);
+        setContentView(R.layout.activity_epg_parent_my_family);
     }
 
     public void startHome7(View view){

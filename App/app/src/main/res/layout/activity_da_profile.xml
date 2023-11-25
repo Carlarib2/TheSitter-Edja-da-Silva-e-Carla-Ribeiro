@@ -9,7 +9,7 @@
     tools:context=".profile">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/profile_textView_da"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/editText24"
+        android:id="@+id/day_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="70dp"
         android:layout_height="48dp"
@@ -32,11 +32,11 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/bdate_textView_da"
+        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
 
     <Spinner
-        android:id="@+id/editText23"
+        android:id="@+id/gender_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -47,12 +47,12 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintEnd_toEndOf="@+id/gender_textView_da"
+        app:layout_constraintStart_toStartOf="@+id/gender_textView_da"
+        app:layout_constraintTop_toBottomOf="@+id/gender_textView_da" />
 
     <Spinner
-        android:id="@+id/editText25"
+        android:id="@+id/month_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="120dp"
         android:layout_height="48dp"
@@ -64,11 +64,11 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/editText24"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/day_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
 
     <Spinner
-        android:id="@+id/editText26"
+        android:id="@+id/year_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="100dp"
         android:layout_height="48dp"
@@ -80,12 +80,12 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/editText25"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintEnd_toEndOf="@+id/bdate_textView_da"
+        app:layout_constraintStart_toEndOf="@+id/month_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
 
     <EditText
-        android:id="@+id/editText20"
+        android:id="@+id/mobile_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -95,12 +95,12 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText23"
-        app:layout_constraintStart_toStartOf="@+id/editText23"
-        app:layout_constraintTop_toBottomOf="@+id/editText23" />
+        app:layout_constraintEnd_toEndOf="@+id/gender_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/gender_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/gender_editText_da" />
 
     <EditText
-        android:id="@+id/editText19"
+        android:id="@+id/eaddress_ditText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -110,12 +110,12 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText16"
-        app:layout_constraintStart_toStartOf="@+id/editText16"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
+        app:layout_constraintEnd_toEndOf="@+id/education_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/education_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/education_editText_da" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/experience_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -125,12 +125,12 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText20"
-        app:layout_constraintStart_toStartOf="@+id/editText20"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
+        app:layout_constraintEnd_toEndOf="@+id/mobile_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/mobile_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_editText_da" />
 
     <EditText
-        android:id="@+id/editText17"
+        android:id="@+id/about_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -140,13 +140,13 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText18"
+        app:layout_constraintEnd_toEndOf="@+id/experience_editText_da"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText18"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintStart_toStartOf="@+id/experience_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/experience_editText_da" />
 
     <EditText
-        android:id="@+id/editText16"
+        android:id="@+id/education_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -156,12 +156,12 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText15"
-        app:layout_constraintStart_toStartOf="@+id/editText15"
-        app:layout_constraintTop_toBottomOf="@+id/editText15" />
+        app:layout_constraintEnd_toEndOf="@+id/full_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/full_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/full_editText_da" />
 
     <EditText
-        android:id="@+id/editText15"
+        android:id="@+id/full_editText_da"
         style="@style/Edit_Text_Profile"
         android:layout_width="325dp"
         android:layout_height="48dp"
@@ -173,13 +173,13 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/divider15"
         app:layout_constraintStart_toStartOf="@+id/divider15"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_textView_da" />
 
     <Button
-        android:id="@+id/register_button3"
+        android:id="@+id/save_button_da"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -192,12 +192,12 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintEnd_toEndOf="@+id/editText17"
-        app:layout_constraintStart_toStartOf="@+id/editText17"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
+        app:layout_constraintEnd_toEndOf="@+id/about_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/about_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/about_editText_da" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/bdate_textView_da"
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="10dp"
@@ -205,21 +205,21 @@
         android:textAlignment="viewStart"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText19"
-        app:layout_constraintStart_toStartOf="@+id/editText19"
-        app:layout_constraintTop_toBottomOf="@+id/editText19" />
+        app:layout_constraintEnd_toEndOf="@+id/eaddress_ditText_da"
+        app:layout_constraintStart_toStartOf="@+id/eaddress_ditText_da"
+        app:layout_constraintTop_toBottomOf="@+id/eaddress_ditText_da" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/gender_textView_da"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:text="@string/Gender"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editText26"
-        app:layout_constraintStart_toStartOf="@+id/editText24"
-        app:layout_constraintTop_toBottomOf="@+id/editText25" />
+        app:layout_constraintEnd_toEndOf="@+id/year_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/day_editText_da"
+        app:layout_constraintTop_toBottomOf="@+id/month_editText_da" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -227,10 +227,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/person_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/editText15"
-        app:layout_constraintEnd_toEndOf="@+id/editText15"
-        app:layout_constraintStart_toStartOf="@+id/editText15"
-        app:layout_constraintTop_toTopOf="@+id/editText15"
+        app:layout_constraintBottom_toBottomOf="@+id/full_editText_da"
+        app:layout_constraintEnd_toEndOf="@+id/full_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/full_editText_da"
+        app:layout_constraintTop_toTopOf="@+id/full_editText_da"
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
@@ -239,10 +239,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/home_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/editText19"
-        app:layout_constraintEnd_toEndOf="@+id/editText19"
-        app:layout_constraintStart_toStartOf="@+id/editText19"
-        app:layout_constraintTop_toTopOf="@+id/editText19"
+        app:layout_constraintBottom_toBottomOf="@+id/eaddress_ditText_da"
+        app:layout_constraintEnd_toEndOf="@+id/eaddress_ditText_da"
+        app:layout_constraintStart_toStartOf="@+id/eaddress_ditText_da"
+        app:layout_constraintTop_toTopOf="@+id/eaddress_ditText_da"
         app:srcCompat="@drawable/home_icon" />
 
     <ImageView
@@ -251,10 +251,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/description_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/editText17"
-        app:layout_constraintEnd_toEndOf="@+id/editText17"
-        app:layout_constraintStart_toStartOf="@+id/editText17"
-        app:layout_constraintTop_toTopOf="@+id/editText17"
+        app:layout_constraintBottom_toBottomOf="@+id/about_editText_da"
+        app:layout_constraintEnd_toEndOf="@+id/about_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/about_editText_da"
+        app:layout_constraintTop_toTopOf="@+id/about_editText_da"
         app:srcCompat="@drawable/description_icon" />
 
     <ImageView
@@ -263,10 +263,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/school_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/editText16"
-        app:layout_constraintEnd_toEndOf="@+id/editText16"
-        app:layout_constraintStart_toStartOf="@+id/editText16"
-        app:layout_constraintTop_toTopOf="@+id/editText16"
+        app:layout_constraintBottom_toBottomOf="@+id/education_editText_da"
+        app:layout_constraintEnd_toEndOf="@+id/education_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/education_editText_da"
+        app:layout_constraintTop_toTopOf="@+id/education_editText_da"
         app:srcCompat="@drawable/school_icon" />
 
     <ImageView
@@ -275,10 +275,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/workspace_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/editText18"
-        app:layout_constraintEnd_toEndOf="@+id/editText18"
-        app:layout_constraintStart_toStartOf="@+id/editText18"
-        app:layout_constraintTop_toTopOf="@+id/editText18"
+        app:layout_constraintBottom_toBottomOf="@+id/experience_editText_da"
+        app:layout_constraintEnd_toEndOf="@+id/experience_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/experience_editText_da"
+        app:layout_constraintTop_toTopOf="@+id/experience_editText_da"
         app:srcCompat="@drawable/workspace_icon" />
 
     <ImageView
@@ -287,10 +287,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="240dp"
         android:contentDescription="@string/mobile"
-        app:layout_constraintBottom_toBottomOf="@+id/editText20"
-        app:layout_constraintEnd_toEndOf="@+id/editText20"
-        app:layout_constraintStart_toStartOf="@+id/editText20"
-        app:layout_constraintTop_toTopOf="@+id/editText20"
+        app:layout_constraintBottom_toBottomOf="@+id/mobile_editText_da"
+        app:layout_constraintEnd_toEndOf="@+id/mobile_editText_da"
+        app:layout_constraintStart_toStartOf="@+id/mobile_editText_da"
+        app:layout_constraintTop_toTopOf="@+id/mobile_editText_da"
         app:srcCompat="@drawable/call_icon" />
 
     <View
@@ -301,5 +301,5 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_textView_da" />
 </androidx.constraintlayout.widget.ConstraintLayout>

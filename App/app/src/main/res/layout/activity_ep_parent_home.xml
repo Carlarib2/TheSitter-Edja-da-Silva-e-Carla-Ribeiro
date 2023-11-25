@@ -8,12 +8,12 @@
     tools:context=".parent_home">
 
   <TextView
-      android:id="@+id/textView9"
+      android:id="@+id/parent_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="50dp"
       android:fontFamily="sans-serif-medium"
-      android:text="THE SITTER"
+      android:text="PARENT HOME"
       android:textSize="34sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -27,80 +27,38 @@
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-  <Button
-      android:id="@+id/register_button5"
-      android:layout_width="141dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="20dp"
-      android:background="@drawable/buttonshape"
-      android:contentDescription="@string/Save"
-      android:onClick="startBooking"
-      android:shadowColor="#1e1e1e"
-      android:shadowDx="2"
-      android:shadowDy="2"
-      android:shadowRadius="2"
-      android:text="Booking"
-      android:textColor="#090909"
-      android:textSize="18sp"
-      android:textStyle="bold"
-      app:backgroundTint="#12FFFFFF"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-  <Button
-      android:id="@+id/register_button6"
-      android:layout_width="141dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="50dp"
-      android:background="@drawable/buttonshape"
-      android:contentDescription="@string/Save"
-      android:onClick="startMessages"
-      android:shadowColor="#1e1e1e"
-      android:shadowDx="2"
-      android:shadowDy="2"
-      android:shadowRadius="2"
-      android:text="@string/Messages"
-      android:textColor="#050505"
-      android:textStyle="bold"
-      app:backgroundTint="#12FFFFFF"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@+id/register_button5"
-      app:layout_constraintTop_toTopOf="@+id/register_button5" />
+      app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep" />
 
   <View
       android:id="@+id/divider"
       android:layout_width="match_parent"
       android:layout_height="2dp"
-      android:layout_marginTop="16dp"
+      android:layout_marginTop="10dp"
       android:background="?android:attr/listDivider"
-      app:layout_constraintEnd_toEndOf="@+id/register_button6"
-      app:layout_constraintHorizontal_bias="0.367"
-      app:layout_constraintStart_toStartOf="@+id/register_button5"
-      app:layout_constraintTop_toBottomOf="@+id/register_button5" />
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button_booking_p" />
 
   <TextView
-      android:id="@+id/textView14"
+      android:id="@+id/name_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="20dp"
       android:layout_marginTop="50dp"
       android:fontFamily="sans-serif-medium"
       android:text="Mário Igreja"
-      app:layout_constraintStart_toEndOf="@+id/imageView12"
+      app:layout_constraintStart_toEndOf="@+id/parent_imageView_ep"
       app:layout_constraintTop_toBottomOf="@+id/divider12" />
 
   <TextView
-      android:id="@+id/textView15"
+      android:id="@+id/adv_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
       android:fontFamily="sans-serif-medium"
       android:text="Advance: $15/hr"
-      app:layout_constraintStart_toStartOf="@+id/textView14"
-      app:layout_constraintTop_toBottomOf="@+id/textView14" />
+      app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
+      app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
   <View
       android:id="@+id/divider2"
@@ -110,45 +68,34 @@
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+      app:layout_constraintTop_toBottomOf="@+id/parent_imageView_ep" />
 
   <ImageButton
-      android:id="@+id/imageButton34"
+      android:id="@+id/profile_imageButton_ep"
       android:layout_width="64dp"
       android:layout_height="52dp"
       android:layout_marginStart="30dp"
       android:layout_marginTop="10dp"
       android:layout_marginEnd="30dp"
-      android:onClick="startProfile7"
+      android:onClick="startProfileP"
       android:src="@drawable/person_icon"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@+id/imageButton33"
+      app:layout_constraintStart_toEndOf="@+id/message_imageButton_ep"
       app:layout_constraintTop_toBottomOf="@+id/divider37" />
 
   <ImageButton
-      android:id="@+id/imageButton33"
+      android:id="@+id/message_imageButton_ep"
       android:layout_width="64dp"
       android:layout_height="52dp"
       android:layout_marginStart="30dp"
       android:layout_marginTop="10dp"
-      android:onClick="startMessages9"
+      android:onClick="startMessagesP"
       android:src="@drawable/mail_icon"
-      app:layout_constraintStart_toEndOf="@+id/imageButton32"
+      app:layout_constraintStart_toEndOf="@+id/requests_imageButton_ep"
       app:layout_constraintTop_toBottomOf="@+id/divider37" />
 
   <ImageButton
-      android:id="@+id/imageButton32"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:onClick="startRequests8"
-      android:src="@drawable/event_icon"
-      app:layout_constraintStart_toEndOf="@+id/imageButton31"
-      app:layout_constraintTop_toBottomOf="@+id/divider37" />
-
-  <ImageButton
-      android:id="@+id/imageButton31"
+      android:id="@+id/home_imageButton_ep"
       android:layout_width="64dp"
       android:layout_height="52dp"
       android:layout_marginStart="30dp"
@@ -162,7 +109,9 @@
       android:id="@+id/divider37"
       android:layout_width="409dp"
       android:layout_height="1dp"
+      android:layout_marginBottom="120dp"
       android:background="?android:attr/listDivider"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +119,7 @@
       tools:ignore="MissingConstraints" />
 
   <ImageView
-      android:id="@+id/imageView12"
+      android:id="@+id/parent_imageView_ep"
       android:layout_width="150dp"
       android:layout_height="132dp"
       android:layout_marginStart="20dp"
@@ -183,8 +132,47 @@
       android:id="@+id/recyclerView"
       android:layout_width="404dp"
       android:layout_height="395dp"
+      android:layout_marginTop="16dp"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.428"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+  <ImageButton
+      android:id="@+id/requests_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="10dp"
+      android:onClick="startRequests8"
+      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/divider37"
+      app:srcCompat="@drawable/event_icon" />
+
+  <Button
+      android:id="@+id/button_booking_p"
+      style="@style/Widget.AppCompat.Button.Borderless"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="20dp"
+      android:onClick="startBooking"
+      android:text="Booking"
+      android:textColor="@android:color/black"
+      app:layout_constraintStart_toStartOf="@+id/divider2"
+      app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+  <Button
+      android:id="@+id/button2"
+      style="@style/Widget.AppCompat.Button.Borderless"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:onClick="startMessagesP1"
+      android:text="Messages"
+      android:textColor="@color/black"
+      app:layout_constraintEnd_toEndOf="@+id/divider2"
+      app:layout_constraintStart_toEndOf="@+id/button_booking_p"
+      app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

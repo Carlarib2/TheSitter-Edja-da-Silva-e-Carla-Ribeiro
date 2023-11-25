@@ -8,7 +8,7 @@
     tools:context=".requests_view">
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/declined_editText_epe"
         style="@style/Edit_Text_Profile"
         android:layout_width="426dp"
         android:layout_height="45dp"
@@ -17,35 +17,35 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        app:layout_constraintTop_toBottomOf="@+id/declined_textView_ep" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/accepted_editText_epe"
         style="@style/Edit_Text_Profile"
         android:layout_width="418dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/textView33"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+        app:layout_constraintEnd_toEndOf="@+id/accepted_textView_ep"
+        app:layout_constraintStart_toStartOf="@+id/accepted_textView_ep"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView_ep" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/pending_editText_epe"
         style="@style/Edit_Text_Profile"
         android:layout_width="416dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/textView32"
+        app:layout_constraintEnd_toEndOf="@+id/pending_textView_epe"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/textView32"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintStart_toStartOf="@+id/pending_textView_epe"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView_epe" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/declined_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -55,11 +55,11 @@
         android:textSize="24sp"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintStart_toStartOf="@+id/accepted_editText_epe"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_editText_epe" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/pending_textView_epe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/accepted_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -81,16 +81,16 @@
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintStart_toStartOf="@+id/pending_editText_epe"
+        app:layout_constraintTop_toBottomOf="@+id/pending_editText_epe" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/parent_textView_epe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="THE SITTER"
+        android:text="PARENT"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,21 +104,23 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_textView_epe" />
 
     <View
         android:id="@+id/divider18"
         android:layout_width="413dp"
         android:layout_height="1dp"
         android:layout_marginTop="250dp"
+        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/declined_editText_epe" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/home_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -129,29 +131,29 @@
         app:srcCompat="@drawable/home_icon" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/requests_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests9"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_epe"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/event_icon" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/message_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages10"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton_epe"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/mail_icon" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/profile_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -159,7 +161,7 @@
         android:layout_marginEnd="30dp"
         android:onClick="startProfile8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/message_imageButton_epe"
         app:layout_constraintTop_toBottomOf="@+id/divider18"
         app:srcCompat="@drawable/person_icon" />
 

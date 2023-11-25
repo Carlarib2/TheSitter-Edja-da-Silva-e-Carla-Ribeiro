@@ -11,7 +11,7 @@ public class parent_home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_home);
+        setContentView(R.layout.activity_ep_parent_home);
     }
 
     public void startBooking(View view){
@@ -19,12 +19,12 @@ public class parent_home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages9(View view){
-        Intent intent = new Intent(this, messages.class);
+    public void startMessagesP(View view){
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 
-    public void startProfile7(View view){
+    public void startProfileP(View view){
         Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }
@@ -36,6 +36,11 @@ public class parent_home extends AppCompatActivity {
 
     public void startHome8(View view){
         Intent intent = new Intent(this, parent_home.class);
+        startActivity(intent);
+    }
+
+    public void startMessagesP1(View view){
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 }

@@ -11,7 +11,7 @@ public class parent_requests extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_requests);
+        setContentView(R.layout.activity_epe_parent_requests);
     }
 
     public void startHome9(View view){

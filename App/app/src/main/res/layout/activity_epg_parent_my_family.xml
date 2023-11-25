@@ -8,7 +8,7 @@
     tools:context=".parent_my_family">
 
     <TextView
-        android:id="@+id/textView48"
+        android:id="@+id/myFamily_textView_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -20,10 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/save_button_epg"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="295dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -39,10 +39,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton_epg" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/person_imageView_epg"
         android:layout_width="69dp"
         android:layout_height="61dp"
         android:layout_marginStart="30dp"
@@ -53,7 +53,7 @@
 
     <TextView
         android:fontFamily="@font/pacifico_regular"
-        android:id="@+id/textView50"
+        android:id="@+id/name_textView_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -61,19 +61,19 @@
         android:text="Ava"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
         app:layout_constraintTop_toBottomOf="@+id/divider35" />
 
     <TextView
-        android:id="@+id/textView51"
+        android:id="@+id/age_textView_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="5 years"
         android:textSize="15dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView50" />
+        app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
+        app:layout_constraintTop_toBottomOf="@+id/name_textView_epg" />
 
     <View
         android:id="@+id/divider35"
@@ -83,7 +83,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+        app:layout_constraintTop_toBottomOf="@+id/myFamily_textView_epg" />
 
     <View
         android:id="@+id/divider27"
@@ -94,45 +94,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView51" />
+        app:layout_constraintTop_toBottomOf="@+id/age_textView_epg" />
 
     <ImageButton
-        android:id="@+id/imageButton38"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:onClick="startProfile6"
-        android:src="@drawable/person_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton37"
-        app:layout_constraintTop_toBottomOf="@+id/divider33" />
-
-    <ImageButton
-        android:id="@+id/imageButton37"
+        android:id="@+id/message_imageButton_epg"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages8"
         android:src="@drawable/mail_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton36"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_epg"
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
-        android:id="@+id/imageButton36"
+        android:id="@+id/requests_imageBfutton_epg"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests7"
         android:src="@drawable/event_icon"
-        app:layout_constraintStart_toEndOf="@+id/imageButton35"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_epg"
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
-        android:id="@+id/imageButton35"
+        android:id="@+id/home_imageButton_epg"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
@@ -143,7 +130,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider33" />
 
     <ImageButton
-        android:id="@+id/imageButton39"
+        android:id="@+id/pen_imageButton_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -153,7 +140,7 @@
         app:srcCompat="@drawable/edit_pen_icon" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionButton_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -171,10 +158,10 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/save_button_epg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

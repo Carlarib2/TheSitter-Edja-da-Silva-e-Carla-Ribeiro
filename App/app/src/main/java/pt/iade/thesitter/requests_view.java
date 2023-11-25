@@ -11,7 +11,7 @@ public class requests_view extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requests_view);
+        setContentView(R.layout.activity_esa_requests_view);
     }
 
     public void startHome(View view){

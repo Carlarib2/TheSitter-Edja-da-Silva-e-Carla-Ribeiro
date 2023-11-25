@@ -8,7 +8,7 @@
     tools:context=".profile_settings">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/myAccount_textView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -27,7 +27,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+        app:layout_constraintTop_toBottomOf="@+id/logout_constraintLayout_epf" />
 
     <View
         android:id="@+id/divider22"
@@ -36,7 +36,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/myExperience_constraintLayout_esc" />
 
     <View
         android:id="@+id/divider21"
@@ -45,7 +45,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/myFamily_constraintLayout_epf" />
 
     <View
         android:id="@+id/divider20"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/myCalendar_constraintLayout_epf" />
 
     <View
         android:id="@+id/divider19"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/parent_textView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -79,17 +79,17 @@
         app:layout_constraintTop_toBottomOf="@+id/divider13" />
 
     <TextView
-        android:id="@+id/textView41"
+        android:id="@+id/parent1_textView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintStart_toStartOf="@+id/parent_textView_epf"
+        app:layout_constraintTop_toBottomOf="@+id/parent_textView_epf" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/profile_textView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -111,11 +111,11 @@
         android:textAlignment="viewStart"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintStart_toEndOf="@+id/profile_imageView_epf"
+        app:layout_constraintTop_toBottomOf="@+id/profile_textView_epf" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout6"
+        android:id="@+id/logout_constraintLayout_epf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -126,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider22">
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/logout_imageView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -136,7 +136,7 @@
             app:srcCompat="@drawable/logout_icon" />
 
         <TextView
-            android:id="@+id/textView47"
+            android:id="@+id/logout_textView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -145,12 +145,12 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView24"
+            app:layout_constraintStart_toEndOf="@+id/logout_imageView_epf"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/profile_imageView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -160,7 +160,7 @@
         app:srcCompat="@drawable/person_icon" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/myCalendar_constraintLayout_epf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,7 +169,7 @@
         android:onClick="startCalendar">
 
         <TextView
-            android:id="@+id/textView44"
+            android:id="@+id/myCalendar_textView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -178,11 +178,11 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView23"
+            app:layout_constraintStart_toEndOf="@+id/calendar_imageView_epf"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView23"
+            android:id="@+id/calendar_imageView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -193,7 +193,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
+        android:id="@+id/myFamily_constraintLayout_epf"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -201,10 +201,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/myCalendar_constraintLayout_epf">
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/monetization_imageView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -214,7 +214,7 @@
             app:srcCompat="@drawable/monetization_icon" />
 
         <TextView
-            android:id="@+id/textView45"
+            android:id="@+id/myRate_textView_esc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -223,12 +223,12 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView25"
+            app:layout_constraintStart_toEndOf="@+id/monetization_imageView_epf"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout5"
+        android:id="@+id/myExperience_constraintLayout_esc"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -269,7 +269,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/myAccount_textView_epf" />
 
     <View
         android:id="@+id/divider14"
@@ -280,65 +280,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_textView_epf" />
 
     <View
         android:id="@+id/divider34"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="120dp"
+        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/divider23"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider23" />
 
     <ImageButton
-        android:id="@+id/imageButton19"
+        android:id="@+id/requests_imageBfutton_esc"
         android:layout_width="64dp"
         android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:onClick="startHome2"
-        app:layout_constraintStart_toStartOf="@+id/divider34"
-        app:layout_constraintTop_toBottomOf="@+id/divider34"
-        app:srcCompat="@drawable/home_icon" />
-
-    <ImageButton
-        android:id="@+id/imageButton20"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton19"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
-        app:srcCompat="@drawable/event_icon" />
+        app:srcCompat="@drawable/event_icon"
+        tools:layout_editor_absoluteX="124dp" />
 
     <ImageButton
-        android:id="@+id/imageButton21"
+        android:id="@+id/message_imageButton_esc"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startMessages4"
-        app:layout_constraintStart_toEndOf="@+id/imageButton20"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_esc"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/mail_icon" />
 
     <ImageButton
-        android:id="@+id/imageButton22"
+        android:id="@+id/profile_imageButton_esc"
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startProfile3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton21"
+        app:layout_constraintStart_toEndOf="@+id/message_imageButton_esc"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/person_icon" />
 
     <Switch
-        android:id="@+id/switch4"
+        android:id="@+id/profile_switch_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

@@ -21,10 +21,10 @@ public class login extends AppCompatActivity {
     }
 
     public void startLogin2(View view){
-        EditText username_editView = (EditText) findViewById(R.id.edit_text_username);
+        EditText username_editView = (EditText) findViewById(R.id.user_editText_c);
         String username = username_editView.getText().toString();
 
-        EditText password_editView = (EditText) findViewById(R.id.edit_text_password);
+        EditText password_editView = (EditText) findViewById(R.id.pass_editText_c);
         String password = username_editView.getText().toString();
 
         if(username.equals("carla@icloud.com")){

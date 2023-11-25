@@ -79,7 +79,7 @@
 ## Base de Dados
 O nosso aplicativo tem 9 tabelas:
 
-**Tabela place**
+**Tabela place:**
 
 ### pla_id
 - **Definição:** Identificador único da localização.

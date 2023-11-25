@@ -113,6 +113,46 @@ O nosso aplicativo tem 9 tabelas:
 | pla_altitude  | DOUBLE        | NOT NULL                             |
 
 **Tabela agenda**
+ A tabela agenda foi implementada para armazenar informações sobre diferentes eventos ou entradas na agenda.
+
+age_id:
+Definição: Identificador único para cada entrada na tabela de agenda.
+Tipo de dados: Número inteiro.
+Restrições: Não pode ser nulo (NOT NULL).
+Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
+Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
+
+age_data:
+	Definição: Armazena a data da entrada na agenda.
+Tipo de dados: Data (no formato DATE).
+
+age_sit_id:
+Definição: Identificador relacionado ao status da entrada na agenda.
+Tipo de dados: Número inteiro.
+
+
+age_clifa_id:
+Definição: Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
+Tipo de dados: Número inteiro.
+Propriedade especial: Chave estrangeira.
+
+age_startTime:
+Definição: Armazena a hora de início da entrada na agenda
+Tipo de dados: Hora (no formato TIME).
+
+age_endTime:
+Definição: Armazena a hora de término da entrada na agenda
+Tipo de dados: Hora (no formato TIME).
+
+age_sta_id:
+Definição: Identificador relacionado ao status da entrada na agenda.
+Tipo de dados: Número inteiro.
+Propriedade especial: Chave estrangeira.
+
+age_pla_id:
+Definição: Identificador relacionado ao local associado à entrada na agenda.
+Tipo de dados: Número inteiro.
+Propriedade especial: Chave estrangeira.
 
 
 | Column        | Type          | Constraints                          |

@@ -33,4 +33,9 @@ public class parent_home extends AppCompatActivity {
         Intent intent = new Intent(this, parent_requests.class);
         startActivity(intent);
     }
+
+    public void startHome8(View view){
+        Intent intent = new Intent(this, parent_home.class);
+        startActivity(intent);
+    }
 }

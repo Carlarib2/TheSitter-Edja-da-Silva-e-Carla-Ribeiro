@@ -209,7 +209,7 @@ O nosso aplicativo tem 9 tabelas:
     - Definição: Armazena informações sobre a educação da sitter(babá).
     - Tipo de dados: String de até 255 caracteres.
 
--**sit_mobile:**
+- **sit_mobile:**
     - Definição: Armazena o número de telefone celular da sitter(babá).
     - Tipo de dados: String de até 20 caracteres.
 

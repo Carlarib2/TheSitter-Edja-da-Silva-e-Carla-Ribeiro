@@ -392,16 +392,16 @@ O nosso aplicativo tem 9 tabelas:
 A tabela `client_family` foi implementada para mapear relacionamentos familiares entre clientes.
 
 - **clifa_id:**
-  - *Definição:* Identificador único para cada entrada na tabela de família de clientes.
-  - *Tipo de dados:* Número inteiro.
-  - *Restrições:* Não pode ser nulo (**NOT NULL**).
-   - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
-  - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+   - *Definição:* Identificador único para cada entrada na tabela de família de clientes.
+   - *Tipo de dados:* Número inteiro.
+   - *Restrições:* Não pode ser nulo (**NOT NULL**).
+    - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
+   - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **clifa_cli_id:**
-   - *Definição:* Identificador do relacionamento ao cliente na tabela `client`.
-  - *Tipo de dados:* Número inteiro.
-  - *Restrições:* Chave estrangeira.
+    - *Definição:* Identificador do relacionamento ao cliente na tabela `client`.
+   - *Tipo de dados:* Número inteiro.
+   - *Restrições:* Chave estrangeira.
 
 
 **Tabela family_member:**
@@ -422,26 +422,26 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
 A tabela `family_member` foi implementada para armazenar informações sobre membros de uma família associados a uma família de clientes.
 
 - **fa_id:**
-  - *Definição:* Identificador único para cada membro da família na tabela.
-  - *Tipo de dados:* Número inteiro.
-  - *Restrições:* Não pode ser nulo (**NOT NULL**).
+   - *Definição:* Identificador único para cada membro da família na tabela.
+   - *Tipo de dados:* Número inteiro.
+   - *Restrições:* Não pode ser nulo (**NOT NULL**).
   - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
   - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **fa_name:**
-  - *Definição:* Armazena o nome do membro da família.
+   - *Definição:* Armazena o nome do membro da família.
   - *Tipo de dados:* String de até 60 caracteres.
-  - *Restrições:* Não pode ser nulo (**NOT NULL**).
+   - *Restrições:* Não pode ser nulo (**NOT NULL**).
 
 - **fa_clifa_id:**
-  - *Definição:* Identificador relacionado à família de clientes associada ao membro da família.
-  - *Tipo de dados:* Número inteiro.
-  - *Restrições:* Chave estrangeira.
+   - *Definição:* Identificador relacionado à família de clientes associada ao membro da família.
+   - *Tipo de dados:* Número inteiro.
+   - *Restrições:* Chave estrangeira.
 
 - **fa_bdate:**
   - *Definição:* Armazena a data de nascimento do membro da família.
-  - *Tipo de dados:* Data (no formato DATE).
-  - *Restrições:* Não pode ser nulo (**NOT NULL**).
+   - *Tipo de dados:* Data (no formato DATE).
+   - *Restrições:* Não pode ser nulo (**NOT NULL**).
 
 - **fa_school:**
  - *Definição:* Armazena o nome da escola do membro da família.

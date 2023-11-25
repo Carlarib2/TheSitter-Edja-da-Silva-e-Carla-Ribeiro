@@ -369,15 +369,23 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="32dp"
+        android:id="@+id/register_button"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:contentDescription="@string/app_button_register"
+        android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSave4"
+        android:shadowColor="#FCE4EC"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
         android:text="SAVE"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

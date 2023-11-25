@@ -14,23 +14,28 @@ public class parent_home extends AppCompatActivity {
         setContentView(R.layout.activity_parent_home);
     }
 
-    public void startHome6(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+    public void startBooking(View view){
+        Intent intent = new Intent(this, parent_booking_1.class);
         startActivity(intent);
     }
 
-    public void startRequests6(View view){
-        Intent intent = new Intent(this, requests_view.class);
-        startActivity(intent);
-    }
-
-    public void startMessages7(View view){
+    public void startMessages9(View view){
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfile5(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+    public void startProfile7(View view){
+        Intent intent = new Intent(this, parent_settings.class);
+        startActivity(intent);
+    }
+
+    public void startRequests8(View view){
+        Intent intent = new Intent(this, parent_requests.class);
+        startActivity(intent);
+    }
+
+    public void startHome8(View view){
+        Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);
     }
 }

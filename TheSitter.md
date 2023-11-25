@@ -395,11 +395,11 @@ A tabela `client_family` foi implementada para mapear relacionamentos familiares
   - *Definição:* Identificador único para cada entrada na tabela de família de clientes.
   - *Tipo de dados:* Número inteiro.
   - *Restrições:* Não pode ser nulo (**NOT NULL**).
-  - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
+   - *Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
   - *Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
 
 - **clifa_cli_id:**
-  - *Definição:* Identificador do relacionamento ao cliente na tabela `client`.
+   - *Definição:* Identificador do relacionamento ao cliente na tabela `client`.
   - *Tipo de dados:* Número inteiro.
   - *Restrições:* Chave estrangeira.
 

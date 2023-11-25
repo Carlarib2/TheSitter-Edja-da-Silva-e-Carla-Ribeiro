@@ -40,8 +40,8 @@ public class parent_booking_1 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages11(View view){
-        Intent intent = new Intent(this, messages.class);
+    public void startMessagesP2(View view){
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 

@@ -105,7 +105,7 @@
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
-            android:onClick="startMessages11"
+            android:onClick="startMessagesP2"
             android:src="@drawable/mail_icon"
             app:layout_constraintStart_toEndOf="@+id/requests_imageButton_epa"
             app:layout_constraintTop_toBottomOf="@+id/divider29" />

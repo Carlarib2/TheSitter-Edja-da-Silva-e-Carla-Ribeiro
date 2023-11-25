@@ -97,19 +97,6 @@
         app:layout_constraintTop_toBottomOf="@+id/age_textView_epg" />
 
     <ImageButton
-        android:id="@+id/profile_imageButton_esd"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:onClick="startProfile6"
-        android:src="@drawable/person_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/message_imageButton_epg"
-        app:layout_constraintTop_toBottomOf="@+id/divider33" />
-
-    <ImageButton
         android:id="@+id/message_imageButton_epg"
         android:layout_width="64dp"
         android:layout_height="52dp"

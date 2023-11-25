@@ -209,51 +209,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/declined_editText_epe" />
 
-    <ImageButton
-        android:id="@+id/home_imageButton_epe"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:onClick="startHome"
-        app:layout_constraintStart_toStartOf="@+id/divider18"
-        app:layout_constraintTop_toBottomOf="@+id/divider18"
-        app:srcCompat="@drawable/home_icon" />
-
-    <ImageButton
-        android:id="@+id/requests_imageButton_epe"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@+id/home_imageButton_epe"
-        app:layout_constraintTop_toBottomOf="@+id/divider18"
-        app:srcCompat="@drawable/event_icon" />
-
-    <ImageButton
-        android:id="@+id/message_imageButton_epe"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:onClick="startMessages2"
-        app:layout_constraintStart_toEndOf="@+id/requests_imageButton_epe"
-        app:layout_constraintTop_toBottomOf="@+id/divider18"
-        app:srcCompat="@drawable/mail_icon" />
-
-    <ImageButton
-        android:id="@+id/profile_imageButton_epe"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:onClick="startProfile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/message_imageButton_epe"
-        app:layout_constraintTop_toBottomOf="@+id/divider18"
-        app:srcCompat="@drawable/person_icon" />
-
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"

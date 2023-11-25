@@ -296,26 +296,14 @@
         app:layout_constraintTop_toBottomOf="@+id/divider23" />
 
     <ImageButton
-        android:id="@+id/home_imageButton_epf"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:onClick="startHome2"
-        app:layout_constraintStart_toStartOf="@+id/divider34"
-        app:layout_constraintTop_toBottomOf="@+id/divider34"
-        app:srcCompat="@drawable/home_icon" />
-
-    <ImageButton
         android:id="@+id/requests_imageBfutton_esc"
         android:layout_width="64dp"
         android:layout_height="52dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests3"
-        app:layout_constraintStart_toEndOf="@+id/home_imageButton_epf"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
-        app:srcCompat="@drawable/event_icon" />
+        app:srcCompat="@drawable/event_icon"
+        tools:layout_editor_absoluteX="124dp" />
 
     <ImageButton
         android:id="@+id/message_imageButton_esc"

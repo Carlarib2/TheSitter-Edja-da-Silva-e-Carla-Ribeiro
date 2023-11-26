@@ -32,22 +32,27 @@ public class calendar extends AppCompatActivity {
         });
     }
 
-    public void startHome5(View view){
+    public void startHomeS3(View view){
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
-    public void startRequests4(View view){
+    public void startRequestsS3(View view){
         Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 
-    public void startMessages6(View view){
+    public void startMessagesS3(View view){
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfile4(View view){
+    public void startProfileS3(View view){
+        Intent intent = new Intent(this, profile_settings.class);
+        startActivity(intent);
+    }
+
+    public void startSaveS3(View view){
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }

@@ -116,7 +116,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:onClick="startProfile2"
+        android:onClick="startProfileP6"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/message_imageButton_eph"
@@ -128,7 +128,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startMessages3"
+        android:onClick="startMessagesP8"
         android:src="@drawable/mail_icon"
         app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_eph"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
@@ -139,7 +139,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startRequests2"
+        android:onClick="startRequestsP5"
         android:src="@drawable/event_icon"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_eph"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
@@ -150,6 +150,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:onClick="startHomeP6"
         android:src="@drawable/home_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider43" />
@@ -162,6 +163,7 @@
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSaveP"
         android:shadowColor="#F3E5F5"
         android:shadowDx="2"
         android:shadowDy="2"

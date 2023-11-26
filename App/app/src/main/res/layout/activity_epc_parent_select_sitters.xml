@@ -42,11 +42,11 @@
         android:id="@+id/select_divider45_epb"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView3" />
+        app:layout_constraintTop_toBottomOf="@+id/send_button_epc" />
 
     <ImageButton
         android:id="@+id/select_home_imageButton_epb"
@@ -91,5 +91,16 @@
         app:layout_constraintStart_toEndOf="@+id/select_messages_imageButton3_epb"
         app:layout_constraintTop_toBottomOf="@+id/select_divider45_epb"
         app:srcCompat="@drawable/person_icon" />
+
+    <Button
+        android:id="@+id/send_button_epc"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:onClick="startSendP"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,4 +33,9 @@ public class parent_selectSitters extends AppCompatActivity {
         Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }
+
+    public void startSendP(View view){
+        Intent intent = new Intent(this, parent_pending.class);
+        startActivity(intent);
+    }
 }

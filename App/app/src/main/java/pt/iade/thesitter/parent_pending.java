@@ -13,17 +13,7 @@ public class parent_pending extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_epi_parent_pending);
     }
-
-    public void startYesP(View view){
-        Intent intent = new Intent(this, parent_accepted.class);
-        startActivity(intent);
-    }
-
-    public void startNoP(View view){
-        Intent intent = new Intent(this, parent_declined.class);
-        startActivity(intent);
-    }
-
+    
     public void startHomePe(View view){
         Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);

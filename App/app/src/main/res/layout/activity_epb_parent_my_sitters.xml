@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/divider36"
+        android:id="@+id/exp_divider36_ese"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="7dp"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider36" />
+        app:layout_constraintTop_toBottomOf="@+id/exp_divider36_ese" />
 
     <View
         android:id="@+id/my_sitter_divider45_ep"

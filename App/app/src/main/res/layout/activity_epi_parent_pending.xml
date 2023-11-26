@@ -2,8 +2,220 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pending_backgroud_epi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".parent_pending">
 
+    <TextView
+        android:id="@+id/pending_textView_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="THE SITTER"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/pending_divider_epi"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView_epi" />
+
+    <TextView
+        android:id="@+id/pending_textView5_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pending"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/pending_divider_epi"
+        app:layout_constraintStart_toStartOf="@+id/pending_divider_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider_epi" />
+
+    <View
+        android:id="@+id/pending_divider2_epi"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView5_epi" />
+
+    <ImageView
+        android:id="@+id/pending_imageView_epi"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/pending_divider2_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider2_epi"
+        app:srcCompat="@drawable/sitter" />
+
+    <TextView
+        android:id="@+id/pending_textView11_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Jane Doe"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pending_imageView_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider2_epi" />
+
+    <TextView
+        android:id="@+id/pending_textView12_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10/07 "
+        app:layout_constraintStart_toStartOf="@+id/pending_textView11_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView11_epi" />
+
+    <CheckBox
+        android:id="@+id/pending_checkBox_epi"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:onClick="startYesP"
+        android:text="Yes"
+        app:layout_constraintStart_toEndOf="@+id/pending_textView11_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider2_epi" />
+
+    <CheckBox
+        android:id="@+id/pending_checkBox2_epi"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="startNoP"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="@+id/pending_divider2_epi"
+        app:layout_constraintStart_toEndOf="@+id/pending_checkBox_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider2_epi" />
+
+    <View
+        android:id="@+id/pending_divider3_epi"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_imageView_epi" />
+
+    <TextView
+        android:id="@+id/pending_textView13_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Accepted"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider3_epi" />
+
+    <EditText
+        android:id="@+id/pending_editText_epi"
+        style="@style/Edit_Text_Profile"
+        android:layout_width="405dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView13_epi" />
+
+    <TextView
+        android:id="@+id/pending_textView14_epi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Declined"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_editText_epi" />
+
+    <EditText
+        android:id="@+id/pending_editTtext_epi"
+        style="@style/Edit_Text_Profile"
+        android:layout_width="418dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView14_epi" />
+
+    <View
+        android:id="@+id/pending_divider4_epi"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="90dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_editTtext_epi" />
+
+    <ImageButton
+        android:id="@+id/home_imageButton_epi"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHomePe"
+        app:layout_constraintStart_toStartOf="@+id/pending_divider4_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider4_epi"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/requests_imageButton2_epi"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequestsPe"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider4_epi"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/messages_imageButton3_epi"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessagesPe"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider4_epi"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/profile_imageButton5_epi"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="startProfilePe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_epi"
+        app:layout_constraintTop_toBottomOf="@+id/pending_divider4_epi"
+        app:srcCompat="@drawable/person_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

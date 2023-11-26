@@ -16,6 +16,15 @@
         android:theme="@style/Theme.TheSitter"
         tools:targetApi="31">
         <activity
+            android:name=".parent_declined"
+            android:exported="false" />
+        <activity
+            android:name=".parent_accepted"
+            android:exported="false" />
+        <activity
+            android:name=".parent_pending"
+            android:exported="false" />
+        <activity
             android:name=".ese_sitter_chat"
             android:exported="false" />
         <activity

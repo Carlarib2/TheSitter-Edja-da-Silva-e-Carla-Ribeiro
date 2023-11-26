@@ -24,8 +24,8 @@ public class parent_requests extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages10(View view){
-        Intent intent = new Intent(this, messages.class);
+    public void startMessagesP7(View view){
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 

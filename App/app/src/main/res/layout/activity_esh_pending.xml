@@ -2,8 +2,235 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sitter_pending_background_esh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".sitter_pending">
 
+    <TextView
+        android:id="@+id/sitter_pending_textView_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="THE SITTER"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sitter_declined_divider_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_textView_esh" />
+
+    <TextView
+        android:id="@+id/sitter_pending_textView5_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pending"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_declined_divider_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider3_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_textView5_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider4_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_imageView_esh" />
+
+    <ImageView
+        android:id="@+id/sitter_pending_imageView_esh"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider3_esh"
+        app:srcCompat="@drawable/pai_e_filho" />
+
+    <TextView
+        android:id="@+id/sitter_pending_textView11_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="André Sabino"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/sitter_pending_imageView_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider3_esh" />
+
+    <TextView
+        android:id="@+id/sitter_pending_textView12_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="10/07"
+        app:layout_constraintStart_toStartOf="@+id/sitter_pending_textView11_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_textView11_esh" />
+
+    <CheckBox
+        android:id="@+id/sitter_pending_checkBox_esh"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:onClick="startYesSP"
+        android:text="Yes"
+        app:layout_constraintStart_toEndOf="@+id/sitter_pending_textView11_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider3_esh" />
+
+    <CheckBox
+        android:id="@+id/sitter_pending_checkBox2_esh"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:onClick="startNoSP"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sitter_pending_checkBox_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider3_esh" />
+
+    <TextView
+        android:id="@+id/sitter_pending_textView13_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Accepted"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider4_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider5_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_textView13_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider6_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider5_esh" />
+
+    <TextView
+        android:id="@+id/sitter_pending_textView14_esh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Declined"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider6_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider8_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_textView14_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider9_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider8_esh" />
+
+    <View
+        android:id="@+id/sitter_pending_divider10_esh"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="200dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider9_esh" />
+
+    <ImageButton
+        android:id="@+id/home_imageButton_esh"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHomeSP"
+        app:layout_constraintStart_toStartOf="@+id/sitter_pending_divider10_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider10_esh"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/requests_imageButton2_esh"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequestsSP"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider10_esh"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/messages_imageButton3_esh"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessagesSP"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider10_esh"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/profile_imageButton4_esh"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="startProfileSP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_esh"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_pending_divider10_esh"
+        app:srcCompat="@drawable/person_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

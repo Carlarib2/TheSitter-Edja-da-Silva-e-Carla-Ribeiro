@@ -12,7 +12,7 @@
         android:id="@+id/take_textView_de"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="@string/photo"
         android:textAlignment="center"
@@ -49,7 +49,7 @@
         android:id="@+id/upload_textView_de"
         android:layout_width="305dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/allerta_stencil"
         android:text="@string/upload"
         android:textAlignment="center"
@@ -87,8 +87,12 @@
         android:id="@+id/imageButton_de"
         android:layout_width="157dp"
         android:layout_height="116dp"
+<<<<<<< HEAD
         android:layout_marginTop="24dp"
         android:contentDescription="@string/contentDescription_upload"
+=======
+        android:layout_marginTop="20dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startCamera"
         app:layout_constraintEnd_toEndOf="@+id/take_textView_de"
         app:layout_constraintStart_toStartOf="@+id/take_textView_de"
@@ -99,8 +103,12 @@
         android:id="@+id/upload_imageButton_de"
         android:layout_width="157dp"
         android:layout_height="116dp"
+<<<<<<< HEAD
         android:layout_marginTop="24dp"
         android:contentDescription="@string/contentDescription_uploadDocu"
+=======
+        android:layout_marginTop="20dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startDocument"
         app:layout_constraintEnd_toEndOf="@+id/upload_textView_de"
         app:layout_constraintStart_toStartOf="@+id/upload_textView_de"

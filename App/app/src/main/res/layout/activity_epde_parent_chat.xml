@@ -12,7 +12,7 @@
         android:id="@+id/chat_textView_epde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="Jane Doe"
         android:textSize="34sp"
@@ -84,10 +84,8 @@
         android:id="@+id/chat_divider46_epde"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="340dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView4_epde" />
@@ -97,8 +95,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/home_icon"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startHomeP4"
         app:layout_constraintStart_toStartOf="@+id/chat_divider46_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_divider46_epde"
@@ -109,8 +111,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/requests"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startRequestP"
         app:layout_constraintStart_toEndOf="@+id/chat_home_imageButton_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_divider46_epde"
@@ -121,8 +127,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/email_icon"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startMessagesP6"
         app:layout_constraintStart_toEndOf="@+id/chat_request_imageButton2_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_divider46_epde"
@@ -133,7 +143,7 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfileP4"

@@ -12,7 +12,7 @@
         android:id="@+id/messages_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/Message"
         android:textSize="34sp"
@@ -55,10 +55,8 @@
         android:id="@+id/message_divider46_ep"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="470dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="440dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sitter_imageView_ep" />
@@ -68,8 +66,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/home_icon"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startHomeP"
         app:layout_constraintStart_toStartOf="@+id/message_divider46_ep"
         app:layout_constraintTop_toBottomOf="@+id/message_divider46_ep"
@@ -80,8 +82,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/requests"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startRequestsP"
         app:layout_constraintStart_toEndOf="@+id/phome_imageButton_ep"
         app:layout_constraintTop_toBottomOf="@+id/message_divider46_ep"
@@ -92,8 +98,12 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:contentDescription="@string/email_icon"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> 7d7ad52163d7a9740bce6d508470f3e91f7ff83b
         android:onClick="startMessagesP3"
         app:layout_constraintStart_toEndOf="@+id/prequests_imageButton2_ep"
         app:layout_constraintTop_toBottomOf="@+id/message_divider46_ep"
@@ -104,7 +114,7 @@
         android:layout_width="64dp"
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfileP2"

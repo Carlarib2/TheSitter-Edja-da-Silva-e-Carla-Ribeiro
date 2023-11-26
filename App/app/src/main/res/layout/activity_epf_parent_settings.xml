@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/pacifico_regular"
+            android:fontFamily="sans-serif-medium"
             android:text="Mário Igreja"
             app:layout_constraintStart_toEndOf="@+id/profile1_imageView_epf"
             app:layout_constraintTop_toBottomOf="@+id/divider13" />
@@ -248,9 +248,7 @@
             android:layout_width="409dp"
             android:layout_height="1dp"
             android:layout_marginTop="200dp"
-            android:layout_marginBottom="120dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/divider23"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -261,8 +259,8 @@
             android:layout_width="64dp"
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:onClick="startHome4"
+            android:layout_marginTop="20dp"
+            android:onClick="startHomeP5"
             app:layout_constraintStart_toStartOf="@+id/divider34"
             app:layout_constraintTop_toBottomOf="@+id/divider34"
             app:srcCompat="@drawable/home_icon" />
@@ -285,5 +283,40 @@
             app:layout_constraintStart_toStartOf="@+id/divider13"
             app:layout_constraintTop_toBottomOf="@+id/divider13"
             app:srcCompat="@drawable/pai_e_filho" />
+
+        <ImageButton
+            android:id="@+id/settings_request_imageButton_epf"
+            android:layout_width="64dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:onClick="startRequestsP4"
+            app:layout_constraintStart_toEndOf="@+id/home_imageButton_epf"
+            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:srcCompat="@drawable/event_icon" />
+
+        <ImageButton
+            android:id="@+id/settings_messages_imageButton2_epf"
+            android:layout_width="64dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:onClick="startMessagesP7"
+            app:layout_constraintStart_toEndOf="@+id/settings_request_imageButton_epf"
+            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:srcCompat="@drawable/mail_icon" />
+
+        <ImageButton
+            android:id="@+id/setings_profile_imageButton3_epf"
+            android:layout_width="64dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="startProfileP5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_messages_imageButton2_epf"
+            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:srcCompat="@drawable/person_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

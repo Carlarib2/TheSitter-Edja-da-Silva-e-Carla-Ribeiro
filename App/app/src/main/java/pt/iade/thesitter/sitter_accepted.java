@@ -6,30 +6,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class parent_pending extends AppCompatActivity {
+public class parent_accepted extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_epi_parent_pending);
+        setContentView(R.layout.activity_esf_accepted);
     }
 
-    public void startHomePe(View view){
+    public void startHomeA(View view){
         Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);
     }
 
-    public void startRequestsPe(View view){
+    public void startRequestsA(View view){
         Intent intent = new Intent(this, parent_requests.class);
         startActivity(intent);
     }
 
-    public void startMessagesPe(View view){
+    public void startMessagesA(View view){
         Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 
-    public void startProfilePe(View view){
+    public void startProfileA(View view){
         Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }

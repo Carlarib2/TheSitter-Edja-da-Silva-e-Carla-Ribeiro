@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/accepted_backgroud_epj"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".parent_accepted">
+
+    <TextView
+        android:id="@+id/accepted_textView_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="THE SITTER"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/accepted_divider_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView_epj" />
+
+    <TextView
+        android:id="@+id/accepted_textView5_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pending"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider_epj" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView5_epj" />
+
+    <View
+        android:id="@+id/accepted_divider3_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/accepted_textView11_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Accepted"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider3_epj" />
+
+    <View
+        android:id="@+id/accepted_divider4_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView11_epj" />
+
+    <ImageView
+        android:id="@+id/accepted_imageView_epj"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/accepted_divider4_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider4_epj"
+        app:srcCompat="@drawable/sitter" />
+
+    <TextView
+        android:id="@+id/accepted_textView12_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Jane Doe"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/accepted_imageView_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider4_epj" />
+
+    <TextView
+        android:id="@+id/accepted_textView13_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10/07"
+        app:layout_constraintStart_toStartOf="@+id/accepted_textView12_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView12_epj" />
+
+    <View
+        android:id="@+id/accepted_divider5_epi"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_imageView_epj" />
+
+    <TextView
+        android:id="@+id/accepted_textView14_epj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Declined"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider5_epi" />
+
+    <View
+        android:id="@+id/accepted_divider6_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView14_epj" />
+
+    <View
+        android:id="@+id/accepted_divider8_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider6_epj" />
+
+    <View
+        android:id="@+id/accepted_divider9_epj"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="150dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider8_epj" />
+
+    <ImageButton
+        android:id="@+id/accepted_imageButton_epj"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHomeA"
+        app:layout_constraintStart_toStartOf="@+id/accepted_divider9_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_epj"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/requests_imageButton2_epj"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequestsA"
+        app:layout_constraintStart_toEndOf="@+id/accepted_imageButton_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_epj"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/messages_imageButton3_epj"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessagesA"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_epj"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/accepted_imageButton5_epj"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startProfileA"
+        app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_epj"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_epj"
+        app:srcCompat="@drawable/person_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

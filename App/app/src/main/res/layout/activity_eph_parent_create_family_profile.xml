@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_family_background_eph"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
@@ -116,11 +117,11 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:onClick="startProfile2"
+        android:onClick="startProfileP6"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/message_imageButton_eph"
-        app:layout_constraintTop_toBottomOf="@+id/divider43" />
+        app:layout_constraintTop_toBottomOf="@+id/create_family_divider43_eph" />
 
     <ImageButton
         android:id="@+id/message_imageButton_eph"
@@ -128,10 +129,10 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startMessages3"
+        android:onClick="startMessagesP8"
         android:src="@drawable/mail_icon"
         app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_eph"
-        app:layout_constraintTop_toBottomOf="@+id/divider43" />
+        app:layout_constraintTop_toBottomOf="@+id/create_family_divider43_eph" />
 
     <ImageButton
         android:id="@+id/requests_imageBfutton_eph"
@@ -139,10 +140,10 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startRequests2"
+        android:onClick="startRequestsP5"
         android:src="@drawable/event_icon"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_eph"
-        app:layout_constraintTop_toBottomOf="@+id/divider43" />
+        app:layout_constraintTop_toBottomOf="@+id/create_family_divider43_eph" />
 
     <ImageButton
         android:id="@+id/home_imageButton_eph"
@@ -150,18 +151,20 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:onClick="startHomeP6"
         android:src="@drawable/home_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider43" />
+        app:layout_constraintTop_toBottomOf="@+id/create_family_divider43_eph" />
 
     <Button
         android:id="@+id/save_button_eph"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSaveP"
         android:shadowColor="#F3E5F5"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -175,14 +178,22 @@
         app:layout_constraintTop_toBottomOf="@+id/notes_editTex_eph" />
 
     <View
-        android:id="@+id/divider43"
+        android:id="@+id/create_family_divider43_eph"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/save_button_eph" />
+
+    <View
+        android:id="@+id/create_family_divider_eph"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Family_textView_eph" />
 </androidx.constraintlayout.widget.ConstraintLayout>

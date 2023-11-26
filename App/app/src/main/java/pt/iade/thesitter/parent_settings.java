@@ -15,18 +15,23 @@ public class parent_settings extends AppCompatActivity {
     }
 
 
-    public void startHome4(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+    public void startHomeP5(View view){
+        Intent intent = new Intent(this, parent_home.class);
         startActivity(intent);
     }
 
-    public void startMessages5(View view){
-        Intent intent = new Intent(this, messages.class);
+    public void startMessagesP7(View view){
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 
-    public void startRequests5(View view){
-        Intent intent = new Intent(this, requests_view.class);
+    public void startRequestsP4(View view){
+        Intent intent = new Intent(this, parent_requests.class);
+        startActivity(intent);
+    }
+
+    public void startProfileP5(View view){
+        Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }
 

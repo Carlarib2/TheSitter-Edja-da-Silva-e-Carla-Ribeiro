@@ -20,12 +20,12 @@ public class parent_my_family extends AppCompatActivity {
     }
 
     public void startRequests7(View view){
-        Intent intent = new Intent(this, requests_view.class);
+        Intent intent = new Intent(this, parent_requests.class);
         startActivity(intent);
     }
 
     public void startMessages8(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
     }
 

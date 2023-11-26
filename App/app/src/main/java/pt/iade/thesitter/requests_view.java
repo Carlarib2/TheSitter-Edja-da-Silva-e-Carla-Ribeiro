@@ -14,17 +14,22 @@ public class requests_view extends AppCompatActivity {
         setContentView(R.layout.activity_esa_requests_view);
     }
 
-    public void startHome(View view){
+    public void startHomeS(View view){
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
-    public void startMessages2(View view){
+    public void startRequestsS(View view){
+        Intent intent = new Intent(this, requests_view.class);
+        startActivity(intent);
+    }
+
+    public void startMessagesS(View view){
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfile(View view){
+    public void startProfileS(View view){
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }

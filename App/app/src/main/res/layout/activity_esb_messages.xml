@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/messages_background_esb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
@@ -22,16 +23,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_resposta2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/message2"
-        app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
-        app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
-
-    <TextView
         android:id="@+id/textView_resposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_nathan" />
 
     <View
-        android:id="@+id/divider17"
+        android:id="@+id/messages_divider17_esb"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_marginTop="7dp"
@@ -52,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mysitters_textView_epb" />
 
     <View
-        android:id="@+id/divider16"
+        android:id="@+id/messages_divider16_esb"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
@@ -63,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/image_pai_dog" />
 
     <View
-        android:id="@+id/divider25"
+        android:id="@+id/messages_divider25_esb"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
@@ -74,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/image_man" />
 
     <View
-        android:id="@+id/divider26"
+        android:id="@+id/messages_divider26_esb"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
@@ -94,7 +85,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/Nathan_"
         app:layout_constraintStart_toEndOf="@+id/image_pai_dog"
-        app:layout_constraintTop_toBottomOf="@+id/divider17"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider17_esb"
         tools:ignore="TextSizeCheck" />
 
     <TextView
@@ -107,7 +98,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/Andre_"
         app:layout_constraintStart_toEndOf="@+id/image_man"
-        app:layout_constraintTop_toBottomOf="@+id/divider16"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
         tools:ignore="TextSizeCheck" />
 
     <TextView
@@ -129,20 +120,18 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/Alexa"
         app:layout_constraintStart_toEndOf="@+id/image_lady"
-        app:layout_constraintTop_toBottomOf="@+id/divider25" />
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider25_esb" />
 
     <View
-        android:id="@+id/divider30"
+        android:id="@+id/messages_divider30_esb"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="250dp"
-        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider26" />
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider26_esb" />
 
     <ImageButton
         android:id="@+id/home_imageButton_esb"
@@ -153,7 +142,7 @@
         android:contentDescription="@string/home_icon"
         android:onClick="startHome3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider30_esb"
         app:srcCompat="@drawable/home_icon" />
 
     <ImageButton
@@ -165,7 +154,7 @@
         android:contentDescription="@string/event_icon"
         android:onClick="startRequests3"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_esb"
-        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider30_esb"
         app:srcCompat="@drawable/event_icon" />
 
     <ImageButton
@@ -176,7 +165,7 @@
         android:layout_marginTop="10dp"
         android:contentDescription="@string/email_icon"
         app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_esb"
-        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider30_esb"
         app:srcCompat="@drawable/mail_icon" />
 
     <ImageButton
@@ -190,7 +179,7 @@
         android:onClick="startProfile3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/message_imageButton_esb"
-        app:layout_constraintTop_toBottomOf="@+id/divider30"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider30_esb"
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
@@ -200,7 +189,7 @@
         android:layout_marginStart="20dp"
         android:contentDescription="@string/Image_pai_dog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider17"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider17_esb"
         app:srcCompat="@drawable/pai_e_c_ozinho" />
 
     <ImageView
@@ -209,8 +198,8 @@
         android:layout_height="124dp"
         android:layout_marginStart="20dp"
         android:contentDescription="@string/image_man"
-        app:layout_constraintStart_toStartOf="@+id/divider16"
-        app:layout_constraintTop_toBottomOf="@+id/divider16"
+        app:layout_constraintStart_toStartOf="@+id/messages_divider16_esb"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
         app:srcCompat="@drawable/pai_e_filho" />
 
     <ImageView
@@ -219,8 +208,20 @@
         android:layout_height="130dp"
         android:layout_marginStart="20dp"
         android:contentDescription="@string/Image_lady"
-        app:layout_constraintStart_toStartOf="@+id/divider25"
-        app:layout_constraintTop_toBottomOf="@+id/divider25"
+        app:layout_constraintStart_toStartOf="@+id/messages_divider25_esb"
+        app:layout_constraintTop_toBottomOf="@+id/messages_divider25_esb"
         app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
+
+    <Button
+        android:id="@+id/button_esb"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:onClick="startChatS"
+        android:text="Olá, a Sandra já fez a medicação?"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
+        app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

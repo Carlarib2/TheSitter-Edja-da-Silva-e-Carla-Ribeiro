@@ -14,7 +14,7 @@ public class my_experience extends AppCompatActivity {
         setContentView(R.layout.activity_ese_my_experience);
     }
 
-    public void startSave4(View view){
+    public void startSaveS2(View view){
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }

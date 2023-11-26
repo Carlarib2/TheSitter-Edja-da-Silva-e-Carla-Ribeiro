@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_background_d"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
@@ -109,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/register_imageView6_d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -119,7 +120,7 @@
         app:srcCompat="@drawable/person_icon" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/register_imageView7_d"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -129,7 +130,7 @@
         app:srcCompat="@drawable/mail_icon" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/register_imageView8_d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -139,7 +140,7 @@
         app:srcCompat="@drawable/lock_icon" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/register_imageView10_d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -149,7 +150,7 @@
         app:srcCompat="@drawable/lock_icon" />
 
     <View
-        android:id="@+id/divider11"
+        android:id="@+id/register_divider11_d"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_marginTop="7dp"

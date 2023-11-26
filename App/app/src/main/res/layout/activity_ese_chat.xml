@@ -2,8 +2,135 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sitter_chat_ese"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".ese_sitter_chat">
 
+    <TextView
+        android:id="@+id/chat_textView_ese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/pacifico_regular"
+        android:text="André Sabino"
+        android:textSize="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider47_ese"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_textView_ese" />
+
+    <ImageView
+        android:id="@+id/chat_imageView_ese"
+        android:layout_width="63dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/divider47_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider47_ese"
+        app:srcCompat="@drawable/pai_e_filho" />
+
+    <TextView
+        android:id="@+id/chat_textView2_ese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Is Henry asleep?"
+        app:layout_constraintStart_toEndOf="@+id/chat_imageView_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider47_ese" />
+
+    <TextView
+        android:id="@+id/chat_textView3_ese"
+        android:layout_width="184dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:text="Not yet, we´re doing some exervices from his school book."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_textView2_ese" />
+
+    <ImageView
+        android:id="@+id/chat_imageView2_ese"
+        android:layout_width="63dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_textView3_ese"
+        app:srcCompat="@drawable/pai_e_filho" />
+
+    <TextView
+        android:id="@+id/chat_textView4_ese"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="That's awesome! Thank you."
+        app:layout_constraintStart_toEndOf="@+id/chat_imageView2_ese"
+        app:layout_constraintTop_toBottomOf="@+id/chat_textView3_ese" />
+
+    <View
+        android:id="@+id/divider48_ese"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="390dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_imageView2_ese" />
+
+    <ImageButton
+        android:id="@+id/home_imageButton_ese"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHomeS2"
+        app:layout_constraintStart_toStartOf="@+id/divider48_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/requests_imageButton2_ese"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequestsS2"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/messages_imageButton3_ese"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessagesS2"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/profile_imageButton5_ese"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startProfileS2"
+        app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_ese"
+        app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
+        app:srcCompat="@drawable/person_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,4 +33,9 @@ public class my_rate extends AppCompatActivity {
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }
+
+    public void startSaveS(View view){
+        Intent intent = new Intent(this, profile_settings.class);
+        startActivity(intent);
+    }
 }

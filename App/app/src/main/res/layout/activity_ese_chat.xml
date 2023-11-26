@@ -133,4 +133,43 @@
         app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
         app:srcCompat="@drawable/person_icon" />
+
+    <LinearLayout
+        android:id="@+id/inputLayout_ese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/divider48_ese"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/type_editTextMessage_ese"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type  your message" />
+
+        <Button
+            android:id="@+id/send_button_ese"
+            android:text="send"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonshape"
+            android:backgroundTint="#1e1e1e"
+            android:fontFamily="@font/allerta_stencil"
+            android:shadowColor="#FCE4EC"
+            android:shadowDx="2"
+
+            android:shadowDy="2"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#1e1e1e"/>
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

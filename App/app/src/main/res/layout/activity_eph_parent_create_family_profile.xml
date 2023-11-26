@@ -106,7 +106,7 @@
         android:id="@+id/Family_textView_eph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/create_family"
         android:textSize="34sp"
@@ -190,9 +190,7 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/save_button_eph" />

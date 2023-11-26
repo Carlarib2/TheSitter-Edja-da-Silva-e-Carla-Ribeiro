@@ -33,4 +33,9 @@ public class requests_view extends AppCompatActivity {
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }
+
+    public void startPending(View view){
+        Intent intent = new Intent(this, sitter_pending.class);
+        startActivity(intent);
+    }
 }

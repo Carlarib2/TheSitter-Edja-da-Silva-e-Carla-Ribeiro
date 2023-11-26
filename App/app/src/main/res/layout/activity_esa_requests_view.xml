@@ -201,9 +201,7 @@
         android:layout_width="413dp"
         android:layout_height="1dp"
         android:layout_marginTop="90dp"
-        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -220,4 +218,50 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/divider3"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <ImageButton
+        android:id="@+id/home_imageButton_esa"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHomeS"
+        app:layout_constraintStart_toStartOf="@+id/divider18"
+        app:layout_constraintTop_toBottomOf="@+id/divider18"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageButton
+        android:id="@+id/requests_imageButton2_esa"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startRequestsS"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_esa"
+        app:layout_constraintTop_toBottomOf="@+id/divider18"
+        app:srcCompat="@drawable/event_icon" />
+
+    <ImageButton
+        android:id="@+id/messages_imageButton3_esa"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startMessagesS"
+        app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_esa"
+        app:layout_constraintTop_toBottomOf="@+id/divider18"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageButton
+        android:id="@+id/profile_imageButton5_esa"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="startProfileS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_esa"
+        app:layout_constraintTop_toBottomOf="@+id/divider18"
+        app:srcCompat="@drawable/person_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

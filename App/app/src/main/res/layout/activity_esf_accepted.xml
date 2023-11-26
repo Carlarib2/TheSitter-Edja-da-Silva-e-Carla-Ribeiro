@@ -161,7 +161,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startHomeA"
+        android:onClick="startHomeSA"
         app:layout_constraintStart_toStartOf="@+id/accepted_divider9_esf"
         app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_esf"
         app:srcCompat="@drawable/home_icon" />
@@ -172,7 +172,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startRequestsA"
+        android:onClick="startRequestsSA"
         app:layout_constraintStart_toEndOf="@+id/accepted_imageButton_esf"
         app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_esf"
         app:srcCompat="@drawable/event_icon" />
@@ -183,7 +183,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startMessagesA"
+        android:onClick="startMessagesSA"
         app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_esf"
         app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_esf"
         app:srcCompat="@drawable/mail_icon" />
@@ -194,7 +194,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:onClick="startProfileA"
+        android:onClick="startProfileSA"
         app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_esf"
         app:layout_constraintTop_toBottomOf="@+id/accepted_divider9_esf"
         app:srcCompat="@drawable/person_icon" />

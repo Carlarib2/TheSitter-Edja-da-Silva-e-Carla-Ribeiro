@@ -16,7 +16,7 @@
         android:theme="@style/Theme.TheSitter"
         tools:targetApi="31">
         <activity
-            android:name=".parent_declined"
+            android:name=".sitter_declined"
             android:exported="false" />
         <activity
             android:name=".sitter_accepted"

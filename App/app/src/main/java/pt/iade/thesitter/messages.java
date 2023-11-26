@@ -28,4 +28,9 @@ public class messages extends AppCompatActivity {
         Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
+
+    public void startChatS(View view){
+        Intent intent = new Intent(this, ese_sitter_chat.class);
+        startActivity(intent);
+    }
 }

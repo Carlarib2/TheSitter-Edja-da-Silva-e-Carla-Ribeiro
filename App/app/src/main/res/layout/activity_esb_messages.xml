@@ -22,16 +22,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_resposta2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/message2"
-        app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
-        app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
-
-    <TextView
         android:id="@+id/textView_resposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -136,9 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="250dp"
-        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -222,5 +210,17 @@
         app:layout_constraintStart_toStartOf="@+id/divider25"
         app:layout_constraintTop_toBottomOf="@+id/divider25"
         app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
+
+    <Button
+        android:id="@+id/button_esb"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:onClick="startChatS"
+        android:text="Olá, a Sandra já fez a medicação?"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_alexandra"
+        app:layout_constraintTop_toBottomOf="@+id/textView_alexandra" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

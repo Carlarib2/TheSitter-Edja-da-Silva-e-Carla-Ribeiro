@@ -33,4 +33,9 @@ public class parent_messages extends AppCompatActivity {
         Intent intent = new Intent(this, parent_settings.class);
         startActivity(intent);
     }
+
+    public void startChatP(View view){
+        Intent intent = new Intent(this, epd_parent_chat.class);
+        startActivity(intent);
+    }
 }

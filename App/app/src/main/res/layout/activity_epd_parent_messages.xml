@@ -50,20 +50,11 @@
         app:layout_constraintStart_toEndOf="@+id/sitter_imageView_ep"
         app:layout_constraintTop_toBottomOf="@+id/message_divider45_ep" />
 
-    <TextView
-        android:id="@+id/text_message_textView3_ep"
-        android:layout_width="207dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="20dp"
-        android:text="Hi! Yes I'm available this saturday."
-        app:layout_constraintStart_toStartOf="@+id/sitter_name_textView2_ep"
-        app:layout_constraintTop_toBottomOf="@+id/sitter_name_textView2_ep" />
-
     <View
         android:id="@+id/message_divider46_ep"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="470dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,4 +105,17 @@
         app:layout_constraintStart_toEndOf="@+id/pmessages_imageButton3_ep"
         app:layout_constraintTop_toBottomOf="@+id/message_divider46_ep"
         app:srcCompat="@drawable/person_icon" />
+
+    <Button
+        android:id="@+id/messages_button_ep"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="188dp"
+        android:layout_height="90dp"
+        android:onClick="startChatP"
+        android:text="Hi! Yes I'm available this saturday."
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sitter_name_textView2_ep"
+        app:layout_constraintTop_toBottomOf="@+id/sitter_name_textView2_ep" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

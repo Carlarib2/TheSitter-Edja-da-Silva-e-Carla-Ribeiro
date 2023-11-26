@@ -303,6 +303,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:inputType="text|textAutoComplete"
                     android:text="Do you have a means of transportation to and from your sitting appointment?"
                     android:textAlignment="center"
                     android:textStyle="bold"

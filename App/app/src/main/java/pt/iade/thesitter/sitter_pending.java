@@ -6,36 +6,41 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class requests_view extends AppCompatActivity {
+public class sitter_pending extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_esa_requests_view);
+        setContentView(R.layout.activity_esh_pending);
     }
 
-    public void startHomeS(View view){
+    public void startHomeSP(View view){
         Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
-    public void startRequestsS(View view){
+    public void startRequestsSP(View view){
         Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 
-    public void startMessagesS(View view){
+    public void startMessagesSP(View view){
         Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfileS(View view){
+    public void startProfileSP(View view){
         Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }
 
-    public void startPending(View view){
-        Intent intent = new Intent(this, sitter_pending.class);
+    public void startYesSP(View view){
+        Intent intent = new Intent(this, sitter_accepted.class);
+        startActivity(intent);
+    }
+
+    public void startNoSP(View view){
+        Intent intent = new Intent(this, sitter_declined.class);
         startActivity(intent);
     }
 }

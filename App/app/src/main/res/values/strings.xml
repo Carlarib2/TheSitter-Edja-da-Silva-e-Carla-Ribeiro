@@ -12,7 +12,7 @@
     <string name="app_password">Password</string>
     <string name="app_contentDescription">Password</string>
     <string name="app_contentDescription1">Username</string>
-    <string name="app_logo">The Sitter</string>
+    <string name="app_logo">THE SITTER</string>
     <string name="app_text1">Create your account</string>
     <string name="app_user_email">Email</string>
     <string name="app_user_confirm">Confirm your password?</string>
@@ -86,6 +86,30 @@
     <string name="contentDescription_register">Register button</string>
     <string name="parent"> PARENT</string>
     <string name="sitter"> SITTER</string>
+    <string name="booking"> BOOKING</string>
+    <string name="date"> Date</string>
+
+    <string name="select_request">Select Request Details</string>
+    <string name="advance"> BOOKING</string>
+    <string name="image_mario"> image Mario</string>
+    <string name="Mario_igreja"> Advance: $15/hr</string>
     <string name="contentDescription_parent"> Parent button</string>
     <string name="contentDescription_sitter"> Sitter button</string>
+    <string name="contentDescription_upload"> Upload image</string>
+    <string name="contentDescription_uploadDoc">Upload Documents</string>
+    <string name="contentDescription_address">Address</string>
+    <string name="contentDescription_sitter_image">sitter_image</string>
+    <string name="starts"> Starts</string>
+    <string name="slect_sitters"> SELECT SITTERS</string>
+    <string name="send_to_my"> SEND TO MY SITTERS NOW</string>
+    <string name="Ends"> Ends</string>
+    <string name="Type_your_message">Type your message</string>
+    <string name="Send">Send</string>
+    <string name="text_Jane"> Hi!nYes Iamm available this saturday</string>
+    <string name="Jane_Doe"> Jane Doe</string>
+    <string name="more"> More</string>
+    <string name="message"> Message</string>
+    <string name="my_sitters"> My sitters</string>
+    <string name="Select_Sitters">Select Sitters</string>
+
 </resources>

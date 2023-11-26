@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/divider32"
+        android:id="@+id/rate_divider32_esd"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="7dp"
@@ -30,34 +30,34 @@
         app:layout_constraintTop_toBottomOf="@+id/mysitters_textView_epb" />
 
     <View
-        android:id="@+id/divider39"
+        android:id="@+id/rate_divider39_esc"
         android:layout_width="409dp"
         android:layout_height="3dp"
         android:layout_marginTop="50dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider32" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider32_esd" />
 
     <View
-        android:id="@+id/divider40"
+        android:id="@+id/rate_divider40_esd"
         android:layout_width="409dp"
         android:layout_height="3dp"
         android:layout_marginTop="70dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider41" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider41_esc" />
 
     <View
-        android:id="@+id/divider41"
+        android:id="@+id/rate_divider41_esc"
         android:layout_width="409dp"
         android:layout_height="3dp"
         android:layout_marginTop="70dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider39" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider39_esc" />
 
     <TextView
         android:id="@+id/setYour_textView_esd"
@@ -67,8 +67,8 @@
         android:layout_marginTop="25dp"
         android:text="Set your base hourly pay"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/divider39"
-        app:layout_constraintTop_toBottomOf="@+id/divider39" />
+        app:layout_constraintStart_toStartOf="@+id/rate_divider39_esc"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider39_esc" />
 
     <EditText
         android:id="@+id/editTextNumber_"
@@ -78,8 +78,8 @@
         android:ems="10"
         android:hint="$"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/divider39"
-        app:layout_constraintTop_toBottomOf="@+id/divider39" />
+        app:layout_constraintEnd_toEndOf="@+id/rate_divider39_esc"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider39_esc" />
 
     <TextView
         android:id="@+id/parentsAre_textView_esd"
@@ -89,8 +89,8 @@
         android:layout_marginTop="25dp"
         android:text="Parents are charged (hourly)"
         android:textColor="#8C8686"
-        app:layout_constraintStart_toStartOf="@+id/divider41"
-        app:layout_constraintTop_toBottomOf="@+id/divider41" />
+        app:layout_constraintStart_toStartOf="@+id/rate_divider41_esc"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider41_esc" />
 
     <EditText
         android:id="@+id/editTextNumber_"
@@ -100,8 +100,8 @@
         android:ems="10"
         android:hint="$"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/divider41"
-        app:layout_constraintTop_toBottomOf="@+id/divider41" />
+        app:layout_constraintEnd_toEndOf="@+id/rate_divider41_esc"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider41_esc" />
 
     <ImageButton
         android:id="@+id/profile_imageButton_esd"
@@ -114,10 +114,10 @@
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_esd"
-        app:layout_constraintTop_toBottomOf="@+id/divider42" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider42_esd" />
 
     <View
-        android:id="@+id/divider42"
+        android:id="@+id/rate_divider42_esd"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
@@ -135,7 +135,7 @@
         android:layout_marginTop="10dp"
         android:onClick="startHome6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider42"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider42_esd"
         app:srcCompat="@drawable/home_icon" />
 
     <ImageButton
@@ -146,7 +146,7 @@
         android:layout_marginTop="10dp"
         android:onClick="startRequests6"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_esd"
-        app:layout_constraintTop_toBottomOf="@+id/divider42"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider42_esd"
         app:srcCompat="@drawable/event_icon" />
 
     <ImageButton
@@ -157,7 +157,7 @@
         android:layout_marginTop="10dp"
         android:onClick="startMessages7"
         app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_esd"
-        app:layout_constraintTop_toBottomOf="@+id/divider42"
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider42_esd"
         app:srcCompat="@drawable/mail_icon" />
 
     <Button
@@ -176,6 +176,6 @@
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider40" />
+        app:layout_constraintTop_toBottomOf="@+id/rate_divider40_esd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

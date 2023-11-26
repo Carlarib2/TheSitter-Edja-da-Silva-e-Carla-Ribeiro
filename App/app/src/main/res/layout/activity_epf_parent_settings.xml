@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_settings_background_epf"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
@@ -22,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:id="@+id/divider23"
+            android:id="@+id/prent_settings_divider23_epf"
             android:layout_width="wrap_content"
             android:layout_height="5dp"
             android:background="?android:attr/listDivider"
@@ -31,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/logout_constraintLayout_epf" />
 
         <View
-            android:id="@+id/divider21"
+            android:id="@+id/parent_settings_divider21_epf"
             android:layout_width="wrap_content"
             android:layout_height="5dp"
             android:background="?android:attr/listDivider"
@@ -40,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/myFamily_constraintLayout_epf" />
 
         <View
-            android:id="@+id/divider20"
+            android:id="@+id/parent_settings_divider20_epf"
             android:layout_width="wrap_content"
             android:layout_height="5dp"
             android:background="?android:attr/listDivider"
@@ -50,14 +51,14 @@
             app:layout_constraintTop_toBottomOf="@+id/myCalendar_constraintLayout_epf" />
 
         <View
-            android:id="@+id/divider19"
+            android:id="@+id/parent_settings_divider19_epf"
             android:layout_width="wrap_content"
             android:layout_height="5dp"
             android:layout_marginTop="10dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView43" />
+            app:layout_constraintTop_toBottomOf="@+id/settings_textView43_esc" />
 
         <TextView
             android:id="@+id/parent_textView_epf"
@@ -68,7 +69,7 @@
             android:fontFamily="sans-serif-medium"
             android:text="Mário Igreja"
             app:layout_constraintStart_toEndOf="@+id/profile1_imageView_epf"
-            app:layout_constraintTop_toBottomOf="@+id/divider13" />
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf" />
 
         <TextView
             android:id="@+id/parent1_textView_epf"
@@ -93,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/profile1_imageView_epf" />
 
         <TextView
-            android:id="@+id/textView43"
+            android:id="@+id/settings_textView43_esc"
             android:layout_width="120dp"
             android:layout_height="28dp"
             android:layout_marginStart="20dp"
@@ -115,7 +116,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider21">
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider21_epf">
 
                 <ImageView
                     android:id="@+id/logout_imageView_epf"
@@ -148,8 +149,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintStart_toStartOf="@+id/divider14"
-            app:layout_constraintTop_toBottomOf="@+id/divider14"
+            app:layout_constraintStart_toStartOf="@+id/parent_settings_divider14_epf"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider14_epf"
             app:srcCompat="@drawable/person_icon" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -159,7 +160,7 @@
             android:onClick="startCalendar2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider19">
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider19_epf">
 
                 <TextView
                     android:id="@+id/myCalendar_textView_epf"
@@ -223,7 +224,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
-            android:id="@+id/divider13"
+            android:id="@+id/parent_settings_divider13_epf"
             android:layout_width="0dp"
             android:layout_height="2dp"
             android:layout_marginTop="7dp"
@@ -233,7 +234,7 @@
             app:layout_constraintTop_toBottomOf="@+id/myAccount_textView_epf" />
 
         <View
-            android:id="@+id/divider14"
+            android:id="@+id/parent_settings_divider14_epf"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginTop="236dp"
@@ -244,15 +245,15 @@
             app:layout_constraintTop_toBottomOf="@+id/myAccount_textView_epf" />
 
         <View
-            android:id="@+id/divider34"
+            android:id="@+id/parent_settings_divider34_epf"
             android:layout_width="409dp"
             android:layout_height="1dp"
             android:layout_marginTop="190dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="@+id/divider23"
+            app:layout_constraintEnd_toEndOf="@+id/prent_settings_divider23_epf"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider23" />
+            app:layout_constraintTop_toBottomOf="@+id/prent_settings_divider23_epf" />
 
         <ImageButton
             android:id="@+id/home_imageButton_epf"
@@ -261,8 +262,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:onClick="startHomeP5"
-            app:layout_constraintStart_toStartOf="@+id/divider34"
-            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:layout_constraintStart_toStartOf="@+id/parent_settings_divider34_epf"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
             app:srcCompat="@drawable/home_icon" />
 
         <Switch
@@ -272,7 +273,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider14" />
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider14_epf" />
 
         <ImageView
             android:id="@+id/profile1_imageView_epf"
@@ -280,8 +281,8 @@
             android:layout_height="119dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="@+id/divider13"
-            app:layout_constraintTop_toBottomOf="@+id/divider13"
+            app:layout_constraintStart_toStartOf="@+id/parent_settings_divider13_epf"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf"
             app:srcCompat="@drawable/pai_e_filho" />
 
         <ImageButton
@@ -292,7 +293,7 @@
             android:layout_marginTop="10dp"
             android:onClick="startRequestsP4"
             app:layout_constraintStart_toEndOf="@+id/home_imageButton_epf"
-            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
             app:srcCompat="@drawable/event_icon" />
 
         <ImageButton
@@ -303,7 +304,7 @@
             android:layout_marginTop="10dp"
             android:onClick="startMessagesP7"
             app:layout_constraintStart_toEndOf="@+id/settings_request_imageButton_epf"
-            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
             app:srcCompat="@drawable/mail_icon" />
 
         <ImageButton
@@ -316,7 +317,7 @@
             android:onClick="startProfileP5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/settings_messages_imageButton2_epf"
-            app:layout_constraintTop_toBottomOf="@+id/divider34"
+            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
             app:srcCompat="@drawable/person_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -287,9 +287,7 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginTop="120dp"
-        android:layout_marginBottom="120dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/divider23"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -299,11 +297,12 @@
         android:id="@+id/requests_imageBfutton_esc"
         android:layout_width="64dp"
         android:layout_height="52dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:onClick="startRequests3"
+        app:layout_constraintStart_toEndOf="@+id/home_imageButton_esc"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
-        app:srcCompat="@drawable/event_icon"
-        tools:layout_editor_absoluteX="124dp" />
+        app:srcCompat="@drawable/event_icon" />
 
     <ImageButton
         android:id="@+id/message_imageButton_esc"
@@ -322,7 +321,9 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:onClick="startProfile3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/message_imageButton_esc"
         app:layout_constraintTop_toBottomOf="@+id/divider34"
         app:srcCompat="@drawable/person_icon" />
@@ -345,5 +346,16 @@
         app:layout_constraintStart_toStartOf="@+id/divider13"
         app:layout_constraintTop_toBottomOf="@+id/divider13"
         app:srcCompat="@drawable/sitter" />
+
+    <ImageButton
+        android:id="@+id/home_imageButton_esc"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:onClick="startHome2"
+        app:layout_constraintStart_toStartOf="@+id/divider34"
+        app:layout_constraintTop_toBottomOf="@+id/divider34"
+        app:srcCompat="@drawable/home_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

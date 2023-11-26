@@ -19,7 +19,7 @@
             android:name=".parent_declined"
             android:exported="false" />
         <activity
-            android:name=".parent_accepted"
+            android:name=".sitter_accepted"
             android:exported="false" />
         <activity
             android:name=".parent_pending"

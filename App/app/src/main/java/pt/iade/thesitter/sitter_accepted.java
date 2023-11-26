@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class parent_accepted extends AppCompatActivity {
+public class sitter_accepted extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,23 +14,23 @@ public class parent_accepted extends AppCompatActivity {
         setContentView(R.layout.activity_esf_accepted);
     }
 
-    public void startHomeA(View view){
-        Intent intent = new Intent(this, parent_home.class);
+    public void startHomeSA(View view){
+        Intent intent = new Intent(this, the_profile_1.class);
         startActivity(intent);
     }
 
-    public void startRequestsA(View view){
-        Intent intent = new Intent(this, parent_requests.class);
+    public void startRequestsSA(View view){
+        Intent intent = new Intent(this, requests_view.class);
         startActivity(intent);
     }
 
-    public void startMessagesA(View view){
-        Intent intent = new Intent(this, parent_messages.class);
+    public void startMessagesSA(View view){
+        Intent intent = new Intent(this, messages.class);
         startActivity(intent);
     }
 
-    public void startProfileA(View view){
-        Intent intent = new Intent(this, parent_settings.class);
+    public void startProfileSA(View view){
+        Intent intent = new Intent(this, profile_settings.class);
         startActivity(intent);
     }
 }

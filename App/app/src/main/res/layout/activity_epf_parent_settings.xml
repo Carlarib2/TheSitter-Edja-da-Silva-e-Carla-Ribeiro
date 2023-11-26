@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:fontFamily="@font/pacifico_regular"
-            android:text="My Account"
+            android:text="@string/my_Account"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -67,7 +67,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Mário Igreja"
+            android:text="@string/mario"
             app:layout_constraintStart_toEndOf="@+id/profile1_imageView_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf" />
 
@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Classic"
+            android:text="@string/classic"
             app:layout_constraintStart_toStartOf="@+id/parent_textView_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_textView_epf" />
 
@@ -124,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
+                    android:contentDescription="@string/logout_icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/logout_icon" />
@@ -149,6 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
+            android:contentDescription="@string/person_icon"
             app:layout_constraintStart_toStartOf="@+id/parent_settings_divider14_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider14_epf"
             app:srcCompat="@drawable/person_icon" />
@@ -181,6 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
+                    android:contentDescription="@string/my_Calendar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -204,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
+                    android:contentDescription="@string/monetization_icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/monetization_icon" />
@@ -215,7 +219,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/alata"
-                    android:text="My Family"
+                    android:text="@string/My_family"
                     android:textAlignment="textStart"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -263,6 +267,7 @@
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/home_icon"
             android:onClick="startHomeP5"
             app:layout_constraintStart_toStartOf="@+id/parent_settings_divider34_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
@@ -283,6 +288,7 @@
             android:layout_height="119dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
+            android:contentDescription="@string/image_mario"
             app:layout_constraintStart_toStartOf="@+id/parent_settings_divider13_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf"
             app:srcCompat="@drawable/pai_e_filho" />
@@ -293,6 +299,7 @@
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/requests"
             android:onClick="startRequestsP4"
             app:layout_constraintStart_toEndOf="@+id/home_imageButton_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
@@ -304,6 +311,7 @@
             android:layout_height="52dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/email_icon"
             android:onClick="startMessagesP7"
             app:layout_constraintStart_toEndOf="@+id/settings_request_imageButton_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
@@ -316,6 +324,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
+            android:contentDescription="@string/person_icon"
             android:onClick="startProfileP5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/settings_messages_imageButton2_epf"

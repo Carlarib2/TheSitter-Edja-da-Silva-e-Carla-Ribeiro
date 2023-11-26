@@ -57,6 +57,9 @@
     <string name="person_icon">Person Icon</string>
     <string name="lock_icon">Lock Icon</string>
     <string name="email_icon">Email Icon</string>
+    <string name="pen_icon">Pen Icon</string>
+    <string name="calendar_icon">Calendar Icon</string>
+    <string name="plu_icon">Plus Icon</string>
     <string name="logout_icon">Logout Icon</string>
     <string name="monetization_icon">Monetization Icon</string>
     <string name="mood_bad_icon">Mood Bad Icon</string>
@@ -105,11 +108,26 @@
     <string name="Ends"> Ends</string>
     <string name="Type_your_message">Type your message</string>
     <string name="Send">Send</string>
-    <string name="text_Jane"> Hi!nYes Iamm available this saturday</string>
+    <string name="text_Jane"> Hi! Yes Iamm available this saturday</string>
     <string name="Jane_Doe"> Jane Doe</string>
     <string name="more"> More</string>
+    <string name="ava">Ava</string>
+    <string name="name">Name</string>
+    <string name="school">School*</string>
+    <string name="allergies">Allergies</string>
+    <string name="important_Notes">Important Notes</string>
+    <string name="years_5">5 years</string>
+    <string name="My_family"> My Family</string>
+    <string name="mario">Mário Igreja</string>
     <string name="message"> Message</string>
+    <string name="classic">Classic</string>
+    <string name="Profile_settings">Profile Settings</string>
     <string name="my_sitters"> My sitters</string>
     <string name="Select_Sitters">Select Sitters</string>
+    <string name="Hey_there">Hey there! Ava loves reading. If yould read for her, it would be perfect.</string>
 
+    <string name="create_family">Create Family Profile</string>
+    <string name="my_Account"> My Account</string>
+    <string name="i_love">I love reading! Thanks for letting me know.</string>
+    <string name="Hi_I_cannot_wait">Hi! I cannot wait to meet your beautiful children. Is there anything you would like to share more?</string>
 </resources>

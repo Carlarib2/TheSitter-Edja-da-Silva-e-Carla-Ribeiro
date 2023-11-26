@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="Jane Doe"
+        android:text="@string/Jane_Doe"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +36,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/contentDescription_sitter_image"
         app:layout_constraintStart_toStartOf="@+id/chat_divider45_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_divider45_epde"
         app:srcCompat="@drawable/sitter" />
@@ -46,7 +47,7 @@
         android:layout_height="59dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="Hi! I can't wait to meet your beautiful children. Is there anything you'd like to share more?"
+        android:text="@string/Hi_I_cannot_wait"
         app:layout_constraintStart_toEndOf="@+id/chat_imageView_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_divider45_epde" />
 
@@ -56,7 +57,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
-        android:text="Hey there! Ava loves reading. If yould read for her, it'd be perfect."
+        android:text="@string/Hey_there"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView2_epde" />
 
@@ -66,6 +67,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
+        android:contentDescription="@string/contentDescription_sitter_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView3_epde"
         app:srcCompat="@drawable/sitter" />
@@ -76,7 +78,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
-        android:text="I love reading! Thanks for letting me know."
+        android:text="@string/i_love"
         app:layout_constraintStart_toEndOf="@+id/chat_imageView2_epde"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView3_epde" />
 
@@ -159,7 +161,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/Type_your_message" />
+            android:autofillHints="@string/Type_your_message"
+            android:hint="@string/Type_your_message"
+            android:inputType="text|textAutoComplete" />
 
         <Button
             android:id="@+id/send_button_epde"

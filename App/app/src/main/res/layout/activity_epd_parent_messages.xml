@@ -63,7 +63,7 @@
         android:id="@+id/message_divider46_ep"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="450dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

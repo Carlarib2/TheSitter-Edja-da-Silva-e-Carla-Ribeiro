@@ -90,13 +90,13 @@
 
     <TextView
         android:id="@+id/textView_andre"
-        android:layout_width="94dp"
+        android:layout_width="170dp"
         android:layout_height="26dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/Andre"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/Andre_"
+        android:text="@string/Alexa"
         app:layout_constraintStart_toEndOf="@+id/image_man"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
         tools:ignore="TextSizeCheck" />
@@ -118,7 +118,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/Alexa"
+        android:text="@string/Andre_"
         app:layout_constraintStart_toEndOf="@+id/image_lady"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider25_esb" />
 
@@ -202,7 +202,7 @@
         android:contentDescription="@string/image_man"
         app:layout_constraintStart_toStartOf="@+id/messages_divider16_esb"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
-        app:srcCompat="@drawable/pai_e_filho" />
+        app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
 
     <ImageView
         android:id="@+id/image_lady"
@@ -212,7 +212,7 @@
         android:contentDescription="@string/Image_lady"
         app:layout_constraintStart_toStartOf="@+id/messages_divider25_esb"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider25_esb"
-        app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
+        app:srcCompat="@drawable/pai_e_filho" />
 
     <Button
         android:id="@+id/button_esb"
@@ -220,7 +220,7 @@
         android:layout_width="208dp"
         android:layout_height="65dp"
         android:onClick="startChatS"
-        android:text="Olá, a Sandra já fez a medicação?"
+        android:text="That's awesome! Thank you."
         android:textAlignment="textStart"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView_alexandra"

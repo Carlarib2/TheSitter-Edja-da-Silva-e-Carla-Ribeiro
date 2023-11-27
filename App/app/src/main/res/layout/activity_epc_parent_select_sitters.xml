@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="Select Sitters"
+        android:text="@string/Select_Sitters"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/send_button_epc" />
+        app:layout_constraintTop_toBottomOf="@+id/save_button_epc" />
 
     <ImageButton
         android:id="@+id/select_home_imageButton_epb"
@@ -54,6 +54,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/home_icon"
         android:onClick="startHomeP3"
         app:layout_constraintStart_toStartOf="@+id/select_divider45_epb"
         app:layout_constraintTop_toBottomOf="@+id/select_divider45_epb"
@@ -65,6 +66,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/requests"
         android:onClick="startRequestsP3"
         app:layout_constraintStart_toEndOf="@+id/select_home_imageButton_epb"
         app:layout_constraintTop_toBottomOf="@+id/select_divider45_epb"
@@ -76,6 +78,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/email_icon"
         android:onClick="startMessagesP5"
         app:layout_constraintStart_toEndOf="@+id/select_request_imageButton2_epb"
         app:layout_constraintTop_toBottomOf="@+id/select_divider45_epb"
@@ -87,18 +90,29 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/person_icon"
         android:onClick="startProfileP3"
         app:layout_constraintStart_toEndOf="@+id/select_messages_imageButton3_epb"
         app:layout_constraintTop_toBottomOf="@+id/select_divider45_epb"
         app:srcCompat="@drawable/person_icon" />
 
     <Button
-        android:id="@+id/send_button_epc"
+        android:id="@+id/save_button_epc"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:onClick="startSendP"
-        android:text="Button"
+        android:text="@string/Save"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="#1e1e1e"
+        android:shadowColor="#F3E5F5"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/allerta_stencil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView3" />

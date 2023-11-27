@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="THE SITTER"
+        android:text="@string/app_logo"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Jane Doe"
+        android:text="@string/Jane_Doe"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView5_es"
         app:layout_constraintTop_toBottomOf="@+id/parent_home_divider12_ep" />
 
@@ -166,7 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Advance: $15/hr"
+        android:text="@string/advance"
         app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
         app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
@@ -196,6 +196,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/calendar_icon"
         app:layout_constraintStart_toStartOf="@+id/profile_divider6_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider6_es"
         app:srcCompat="@drawable/calendar_icon" />
@@ -206,6 +207,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/calendar_icon"
         app:layout_constraintStart_toStartOf="@+id/profile_divider5_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider5_es"
         app:srcCompat="@drawable/calendar_icon" />
@@ -263,7 +265,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Friday, November 30th"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView15_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider5_es" />
 
@@ -357,6 +358,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/home_icon"
         android:src="@drawable/home_icon"
         app:layout_constraintStart_toStartOf="@+id/profile_divider38_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider38_es" />
@@ -367,6 +369,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/requests"
         android:onClick="startRequests2"
         android:src="@drawable/event_icon"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_es"
@@ -378,6 +381,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/email_icon"
         android:onClick="startMessages3"
         android:src="@drawable/mail_icon"
         app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_es"
@@ -390,6 +394,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:contentDescription="@string/person_icon"
         android:onClick="startProfile2"
         android:src="@drawable/person_icon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -413,6 +418,7 @@
         android:layout_height="128dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/contentDescription_sitter_image"
         android:src="@drawable/sitter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_home_divider12_ep" />

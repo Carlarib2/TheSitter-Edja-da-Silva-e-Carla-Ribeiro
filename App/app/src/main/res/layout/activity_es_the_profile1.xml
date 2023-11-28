@@ -265,6 +265,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
+        android:text="@string/friday"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView15_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider5_es" />
 
@@ -275,7 +276,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Saturday, December 20th"
+        android:text="@string/saturday"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView14_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider6_es" />
 
@@ -304,7 +305,7 @@
         android:layout_width="101dp"
         android:layout_height="23dp"
         android:fontFamily="sans-serif-medium"
-        android:hint="0 cancels of 0"
+        android:hint="@string/cancels"
         app:layout_constraintEnd_toEndOf="@+id/profile_textView25_es"
         app:layout_constraintStart_toStartOf="@+id/profile_textView25_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_textView25_es" />
@@ -314,7 +315,7 @@
         android:layout_width="98dp"
         android:layout_height="23dp"
         android:fontFamily="sans-serif-medium"
-        android:hint="0 responses"
+        android:hint="@string/responses"
         app:layout_constraintEnd_toEndOf="@+id/profile_textView23_es"
         app:layout_constraintStart_toStartOf="@+id/profile_textView23_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_textView23_es" />
@@ -325,7 +326,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-medium"
-        android:hint="0 of 1"
+        android:hint="@string/rate"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/profile_textView24_es"
         app:layout_constraintHorizontal_bias="0.575"
@@ -408,7 +409,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="sans-serif-medium"
-        android:text="6 / $301.12"
+        android:text="@string/six"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider7" />
 

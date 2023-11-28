@@ -8,6 +8,70 @@
     android:background="@drawable/gradient"
     tools:context=".parent_home">
 
+  <View
+      android:id="@+id/parent_settings_divider19_epf6"
+      android:layout_width="wrap_content"
+      android:layout_height="5dp"
+      android:layout_marginTop="60dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/profile_divider24_es4" />
+
+  <View
+      android:id="@+id/profile_divider24_es4"
+      android:layout_width="5dp"
+      android:layout_height="99dp"
+      android:layout_marginTop="4dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+
+  <View
+      android:id="@+id/parent_settings_divider19_epf4"
+      android:layout_width="wrap_content"
+      android:layout_height="5dp"
+      android:layout_marginTop="51dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider19_epf6" />
+
+  <View
+      android:id="@+id/parent_settings_divider19_epf3"
+      android:layout_width="wrap_content"
+      android:layout_height="5dp"
+      android:layout_marginTop="10dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/settings_textView43_esc" />
+
+  <View
+      android:id="@+id/parent_settings_divider19_epf2"
+      android:layout_width="wrap_content"
+      android:layout_height="5dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+
+  <View
+      android:id="@+id/parent_settings_divider19_epf5"
+      android:layout_width="wrap_content"
+      android:layout_height="5dp"
+      android:layout_marginTop="100dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider19_epf2" />
+
   <TextView
       android:id="@+id/parent_textView_ep"
       android:layout_width="wrap_content"
@@ -113,11 +177,12 @@
       android:id="@+id/parent_home_divider37_ep"
       android:layout_width="409dp"
       android:layout_height="1dp"
+      android:layout_marginTop="163dp"
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_recyclerView_ep"
+      app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider19_epf4"
       tools:ignore="MissingConstraints" />
 
   <ImageView
@@ -130,16 +195,6 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/parent_home_divider12_ep"
       app:srcCompat="@drawable/pai_e_filho" />
-
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/parent_home_recyclerView_ep"
-      android:layout_width="402dp"
-      android:layout_height="367dp"
-      android:layout_marginTop="20dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.428"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
 
   <ImageButton
       android:id="@+id/requests_imageButton_ep"
@@ -160,6 +215,7 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="50dp"
       android:layout_marginTop="20dp"
+      android:backgroundTint="#000000"
       android:onClick="startBooking"
       android:shadowColor="#1e1e1e"
       android:text="@string/booking"
@@ -182,5 +238,47 @@
       app:layout_constraintEnd_toEndOf="@+id/parent_home_divider2_ep"
       app:layout_constraintStart_toEndOf="@+id/button_booking_p"
       app:layout_constraintTop_toBottomOf="@+id/parent_home_divider2_ep" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="25dp"
+      android:text="@string/number_sitter"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+
+  <TextView
+      android:id="@+id/textView5"
+      android:layout_width="141dp"
+      android:layout_height="36dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="25dp"
+      android:text="@string/number_family"
+      android:textAlignment="center"
+      android:textStyle="bold"
+      app:layout_constraintStart_toEndOf="@+id/profile_divider24_es4"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+
+  <TextView
+      android:id="@+id/textView12"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="17dp"
+      android:hint="@string/one_"
+      app:layout_constraintEnd_toEndOf="@+id/textView"
+      app:layout_constraintStart_toStartOf="@+id/textView"
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+  <TextView
+      android:id="@+id/textView13"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="@string/one"
+      app:layout_constraintEnd_toEndOf="@+id/textView5"
+      app:layout_constraintStart_toStartOf="@+id/textView5"
+      app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

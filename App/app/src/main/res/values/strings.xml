@@ -33,7 +33,7 @@
     <string name="Gender">Gender</string>
     <string name="Education">Education</string>
     <string name="About_me">About me</string>
-    <string name="Experience">Experience</string>
+    <string name="Experience">EXPERIENCE</string>
     <string name="Date_of_Birth">Date of Birth</string>
     <string name="Save">SAVE</string>
     <string name="profile_verification">Profile Verification</string>
@@ -91,9 +91,18 @@
     <string name="sitter"> SITTER</string>
     <string name="booking"> BOOKING</string>
     <string name="date"> Date</string>
-
+    <string name="courses">COURSES</string>
+    <string name="how_long">How long have you been sitter?</string>
+    <string name="let_us">LET US GET TO KNOW YOU</string>
+    <string name="parents_are">Parents are charged (hourly)</string>
+    <string name="abilities">ABILITIES</string>
+    <string name="Set_your_base">Set your base hourly pay</string>
+    <string name="set_your_hourly">Set your hourly rate</string>
     <string name="select_request">Select Request Details</string>
+    <string name="money">$</string>
 
+    <string name="have_you_ever">Have you ever completed a babysitting course?</string>
+    <string name="background">BACKGROUND</string>
     <string name="image_mario"> image Mario</string>
     <string name="advance"> Advance: $15/hr</string>
     <string name="contentDescription_parent"> Parent button</string>

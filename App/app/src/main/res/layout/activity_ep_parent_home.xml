@@ -57,7 +57,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
       android:fontFamily="sans-serif-medium"
-      android:text="@string/Mario_igreja"
+      android:text="@string/advance"
       app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
       app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 

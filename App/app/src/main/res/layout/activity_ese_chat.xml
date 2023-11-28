@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="André Sabino"
-        android:textSize="34dp"
+        android:text="@string/Andre_"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +36,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:contentDescription="@string/Andre"
         app:layout_constraintStart_toStartOf="@+id/divider47_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider47_ese"
         app:srcCompat="@drawable/pai_e_filho" />
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:text="Is Henry asleep?"
+        android:text="@string/is_henry"
         app:layout_constraintStart_toEndOf="@+id/chat_imageView_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider47_ese" />
 
@@ -56,7 +57,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
-        android:text="Not yet, we´re doing some exervices from his school book."
+        android:text="@string/not_yet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView2_ese" />
 
@@ -66,6 +67,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
+        android:contentDescription="@string/Andre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView3_ese"
         app:srcCompat="@drawable/pai_e_filho" />
@@ -76,7 +78,7 @@
         android:layout_height="42dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="That's awesome! Thank you."
+        android:text="@string/that_is"
         app:layout_constraintStart_toEndOf="@+id/chat_imageView2_ese"
         app:layout_constraintTop_toBottomOf="@+id/chat_textView3_ese" />
 
@@ -96,6 +98,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/home_icon"
         android:onClick="startHomeS2"
         app:layout_constraintStart_toStartOf="@+id/divider48_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
@@ -107,6 +110,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/requests"
         android:onClick="startRequestsS2"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
@@ -118,6 +122,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/email_icon"
         android:onClick="startMessagesS2"
         app:layout_constraintStart_toEndOf="@+id/requests_imageButton2_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
@@ -129,6 +134,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/person_icon"
         android:onClick="startProfileS2"
         app:layout_constraintStart_toEndOf="@+id/messages_imageButton3_ese"
         app:layout_constraintTop_toBottomOf="@+id/divider48_ese"
@@ -151,11 +157,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Type  your message" />
+            android:autofillHints="@string/Type_your_message"
+            android:hint="@string/Type_your_message"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/send_button_ese"
-            android:text="send"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:background="@drawable/buttonshape"
@@ -163,12 +170,13 @@
             android:fontFamily="@font/allerta_stencil"
             android:shadowColor="#FCE4EC"
             android:shadowDx="2"
-
             android:shadowDy="2"
+
+            android:text="@string/Send"
 
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:backgroundTint="#1e1e1e"/>
+            app:backgroundTint="#1e1e1e" />
     </LinearLayout>
 
 

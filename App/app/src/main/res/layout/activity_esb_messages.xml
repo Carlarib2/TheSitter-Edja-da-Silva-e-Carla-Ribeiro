@@ -218,7 +218,7 @@
         android:layout_width="208dp"
         android:layout_height="65dp"
         android:onClick="startChatS"
-        android:text="Thas"
+        android:text="@string/that_is"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView_alexandra"

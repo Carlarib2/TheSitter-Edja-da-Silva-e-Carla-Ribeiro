@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="My Account"
+        android:text="@string/my_Account"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -75,7 +75,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Jane Doe"
+        android:text="@string/Jane_Doe"
         app:layout_constraintStart_toEndOf="@+id/settings_imageView16_esc"
         app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf" />
 
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Advance: $15/hr"
+        android:text="@string/advance"
         app:layout_constraintStart_toStartOf="@+id/parent_textView_epf"
         app:layout_constraintTop_toBottomOf="@+id/parent_textView_epf" />
 
@@ -132,6 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/logout_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logout_icon" />
@@ -156,6 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
+        android:contentDescription="@string/person_icon"
         app:layout_constraintStart_toStartOf="@+id/parent_settings_divider14_epf"
         app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider14_epf"
         app:srcCompat="@drawable/person_icon" />
@@ -187,6 +189,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:contentDescription="@string/calendar_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -210,6 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/monetization_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/monetization_icon" />
@@ -244,6 +248,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/schedule_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/schedule_icon" />

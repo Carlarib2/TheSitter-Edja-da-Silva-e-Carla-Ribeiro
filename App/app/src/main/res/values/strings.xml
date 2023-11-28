@@ -93,9 +93,9 @@
     <string name="date"> Date</string>
 
     <string name="select_request">Select Request Details</string>
-    <string name="advance"> BOOKING</string>
+
     <string name="image_mario"> image Mario</string>
-    <string name="Mario_igreja"> Advance: $15/hr</string>
+    <string name="advance"> Advance: $15/hr</string>
     <string name="contentDescription_parent"> Parent button</string>
     <string name="contentDescription_sitter"> Sitter button</string>
     <string name="contentDescription_upload"> Upload image</string>
@@ -127,6 +127,9 @@
     <string name="Select_Sitters">Select Sitters</string>
     <string name="Hey_there">Hey there! Ava loves reading. If yould read for her, it would be perfect.</string>
 
+    <string name="that_is">That is awesome! Thank you.</string>
+    <string name="not_yet">Not yet, we´re doing some exercises from his school book.</string>
+    <string name="is_henry">Is Henry asleep?</string>
     <string name="create_family">Create Family Profile</string>
     <string name="my_Account"> My Account</string>
     <string name="i_love">I love reading! Thanks for letting me know.</string>

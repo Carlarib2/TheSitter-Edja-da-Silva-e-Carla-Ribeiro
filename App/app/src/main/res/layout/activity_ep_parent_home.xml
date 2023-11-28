@@ -209,12 +209,14 @@
       app:srcCompat="@drawable/event_icon" />
 
   <Button
+      app:backgroundTint="#000000"
       android:id="@+id/button_booking_p"
       style="@style/Widget.AppCompat.Button.Borderless"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="50dp"
       android:layout_marginTop="20dp"
+      android:background="@drawable/button3"
       android:backgroundTint="#000000"
       android:onClick="startBooking"
       android:shadowColor="#1e1e1e"
@@ -225,17 +227,20 @@
       app:layout_constraintTop_toBottomOf="@+id/parent_home_divider2_ep" />
 
   <Button
+      app:backgroundTint="#000000"
       android:id="@+id/messag_button_ep"
       style="@style/Widget.AppCompat.Button.Borderless"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
+      android:background="@drawable/button3"
       android:onClick="startMessagesP1"
       android:shadowColor="#1e1e1e"
       android:text="@string/Messages"
       android:textColor="@color/black"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="@+id/parent_home_divider2_ep"
+      app:layout_constraintHorizontal_bias="0.689"
       app:layout_constraintStart_toEndOf="@+id/button_booking_p"
       app:layout_constraintTop_toBottomOf="@+id/parent_home_divider2_ep" />
 

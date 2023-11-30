@@ -48,8 +48,9 @@ public class calendar extends AppCompatActivity {
     }
 
     public void startProfileS3(View view){
-        Intent intent = new Intent(this, profile_settings.class);
-        startActivity(intent);
+        finish();
+        //Intent intent = new Intent(this, profile_settings.class);
+        //startActivity(intent);
     }
 
     public void startSaveS3(View view){

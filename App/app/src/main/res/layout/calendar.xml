@@ -74,6 +74,7 @@
         android:layout_height="426dp"
         android:layout_marginTop="70dp"
         android:dateTextAppearance="@style/CalendarText"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_textView_cal" />

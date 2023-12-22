@@ -1,0 +1,104 @@
+-- cliente
+
+INSERT INTO user ( user_name, user_pla_id) VALUES ('Joaquim igreja', '1');
+INSERT INTO place (pla_address, pla_longitude, pla_altitude) VALUES ('Rua DR. João', -23.987654, -45.123456);
+INSERT INTO status (sta_name)
+VALUES('pendente');
+INSERT INTO client( cli_sta_id,cli_user_id, cli_name, cli_bdate, cli_address, cli_mobile, cli_email, cli_password, cli_gender ) 
+VALUES ('1', '1','Joaquim igreja', str_to_date('2003.12.28','%Y.%m.%d') , 'Benfica', '945939500', 'joaquimigreja@gmail.com', 'joaquimigreja', 'M ')
+
+
+
+-- cliente
+INSERT INTO user (user_name, user_pla_id) VALUES ('Felizarda Gaspar', '2');
+INSERT INTO place (pla_address, pla_longitude, pla_altitude) VALUES ('Cazenga', -23.456789, -46.789012);
+INSERT INTO status (sta_id, sta_name)
+VALUES('2','aceite');
+INSERT INTO client(  cli_sta_id, cli_user_id, cli_name, cli_bdate, cli_address, cli_mobile, cli_email, cli_password, cli_gender ) 
+VALUES ('2', '2', 'Felizarda Gaspar', str_to_date('1990.04.17','%Y.%m.%d') , 'Cazenga', '943970000', 'felizardagaspar@gmail.com', 'felizardagaspar', 'F ')
+
+
+-- família 
+INSERT INTO family_member (fa_name, fa_cli_id, fa_bdate, fa_school,  fa_aboutME, fa_gender, fa_cre_id) 
+VALUES ('Haniela Felizarda', '1', str_to_date('2019.03.21','%Y.%m.%d'), 'Pirilampos', 'Gosta muito de comer', 'F', '1' );
+INSERT INTO creatures( cre_type) VALUES('Person');
+
+
+
+
+-- família
+INSERT INTO creatures(cre_type) VALUES('Person');
+INSERT INTO family_member ( fa_name, fa_cli_id, fa_bdate, fa_school, fa_aboutME, fa_gender, fa_cre_id) 
+VALUES ('Ana Rashelle', '2', str_to_date('2019.03.13','%Y.%m.%d'), 'Pirilampos', 'Gosta muito de cantar', 'F', '2');
+
+
+-- user_chat
+INSERT INTO user_chat (usat_user_id, usat_chat_id)
+VALUES (1, 1);
+
+INSERT INTO user_chat (usat_user_id, usat_chat_id)
+VALUES (2, 2);
+
+-- chat
+INSERT INTO chat (chat_message_content, chat_timestamp)
+VALUES ('OK', '2023-12-17 15:30:00');
+
+INSERT INTO chat (chat_message_content, chat_timestamp)
+VALUES ('Estou bem, obrigado!', '2023-12-17 14:30:00');
+
+
+-- booking
+INSERT INTO booking ( boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime)
+ VALUES ( str_to_date('2023.12.17','%Y.%m.%d'), '1', '19:00:00', '1', '18:00:00')
+ 
+ INSERT INTO booking ( boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime)
+ VALUES ( str_to_date('2023.11.17','%Y.%m.%d'), '2', '19:00:00', '2', '16:00:00')
+
+
+-- sitter
+INSERT INTO place (pla_address, pla_longitude, pla_altitude)
+VALUES ('Arroja', -22.987654, -42.123456);
+INSERT INTO user ( user_name, user_pla_id) VALUES ('Dalinela Bastos', '3')
+
+INSERT INTO sitter (sit_user_id, sit_name, sit_bdate, sit_experience, sit_address, sit_mobile, sit_gender, sit_aboutMe, sit_password, sit_boo_id, sit_email, sit_reability, sit_responseTime, sit_responseRate, sit_education)
+ VALUES( '3', 'Dalinela Bastos', str_to_date('2002.10.11','%Y.%m.%d'), 'Experiência a lidar om crianças', 'Vila', '975030061', 'F', 'Adoro crianças', 'dalinelabastos', '2', 'dalinelabastos@gmail.com', '85', '92', '96', 'Técnica em cuidados infantis')
+
+
+
+
+-- sitter
+
+INSERT INTO place ( pla_address, pla_longitude, pla_altitude)
+VALUES ( 'Meleças', -12.987654, -22.123456);
+INSERT INTO user (user_name, user_pla_id) VALUES ('Jane Doe', '4')
+
+INSERT INTO sitter (sit_user_id, sit_name, sit_bdate, sit_experience, sit_address, sit_mobile, sit_gender, sit_aboutMe, sit_password, sit_boo_id, sit_email, sit_reability, sit_responseTime, sit_responseRate)
+ VALUES('4', 'Jane Doe', str_to_date('2000.02.01','%Y.%m.%d'), 'Experiência como babá a 3 anos', 'Arroja', '966030061', 'F', 'Adoro crianças', 'janedoe', '1', 'janedoe@gmail.com', '90', '95', '98')
+
+-- sitter_rating
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment)
+VALUES('3', '5', 'Ela é perfeita')
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value)
+VALUES('3', '4')
+
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment)
+VALUES('4', '5', 'Adorei')
+
+
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment)
+VALUES('4', '5', 'perfeita')
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value)
+VALUES('4', '4')
+
+
+INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment)
+VALUES('4', '5', 'Amei')
+
+
+
+

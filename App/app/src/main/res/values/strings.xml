@@ -1,4 +1,35 @@
 <resources>
+
+<!-- Activity_a_main-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+    <!--Activity-->
+
+
     <string name="app_name">TheSitter_Project</string>
     <string name="app_image">App Image</string>
     <string name="app_button">Parent button</string>

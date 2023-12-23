@@ -150,19 +150,40 @@
     <string name="advance"> Advance: $15/hr</string>
 
     <!--Activity_esd_my_rate-->
+    <string name="money">$</string>
     <string name="Set_your_base">Set your base hourly pay</string>
     <string name="set_your_hourly">Set your hourly rate</string>
 
-
     <!--Activity_ese_chat-->
+    <string name="not_yet">Not yet, we´re doing some exercises from his school book.</string>
+    <string name="is_henry">Is Henry asleep?</string>
+
     <!--Activity_ese_my_experience-->
+    <string name="courses">COURSES</string>
+    <string name="what_is_the_most">What is the most number of children you are willing to sit for?</string>
+    <string name="abilities">ABILITIES</string>
+    <string name="background">BACKGROUND</string>
+    <string name="tell_parents">TELL PARENTS ABOUT YOURSELF</string>
+    <string name="are_you_able">Are you able to prepare simple meals for kids while sitting?</string>
+    <string name="do_you_have">Do you have a means of transportation to and from your sitting appointment?</string>
+    <string name="have_you_ever">Have you ever completed a babysitting course?</string>
+    <string name="how_long">How long have you been sitter?</string>
+    <string name="what_ages">What ages have you sat for?</string>
+    <string name="have_you_my">Have you ever completed a CPR course?</string>
+    <string name="have_you_been_convicted">Have you been convicted of a crime?</string>
+    <string name="are_you">Are you comfrtable with pets?</string>
+    <string name="let_us">LET US GET TO KNOW YOU</string>
+
+
     <!--Activity_esf_accepted-->
     <!--Activity_esg_declined-->
     <!--Activity_esh_pending-->
     <!--Activity_calendar-->
 
 
-    <string name="app_text">Forgot your password?</string>
+
+
+    
     <string name="app_logo">THE SITTER</string>
     <string name="app_text1">Create your account</string>
     <string name="requests">REQUESTS</string>
@@ -194,23 +215,11 @@
     <string name="message2">Olá, a Sandra já fez a medicação? </string>
     <string name="parent"> PARENT</string>
     <string name="sitter"> SITTER</string>
-    <string name="courses">COURSES</string>
-    <string name="how_long">How long have you been sitter?</string>
-    <string name="let_us">LET US GET TO KNOW YOU</string>
-    <string name="parents_are">Parents are charged (hourly)</string>
-    <string name="abilities">ABILITIES</string>
-    <string name="money">$</string>
-    <string name="have_you_my">Have you ever completed a CPR course?</string>
-    <string name="have_you_been_convicted">Have you been convicted of a crime?</string>
 
-    <string name="are_you_able">Are you able to prepare simple meals for kids while sitting?</string>
-    <string name="are_you">Are you comfrtable with pets?</string>
-    <string name="do_you_have">Do you have a means of transportation to and from your sitting appointment?</string>
-    <string name="what_is_the_most">What is the most number of children you are willing to sit for?</string>
-    <string name="what_ages">What ages have you sat for?</string>
-    <string name="tell_parents">TELL PARENTS ABOUT YOURSELF</string>
-    <string name="have_you_ever">Have you ever completed a babysitting course?</string>
-    <string name="background">BACKGROUND</string>
+
+
+    <string name="parents_are">Parents are charged (hourly)</string>
+
     <string name="contentDescription_parent"> Parent button</string>
     <string name="contentDescription_sitter"> Sitter button</string>
     <string name="contentDescription_sitter_image">sitter_image</string>
@@ -219,8 +228,6 @@
     <string name="no">NO</string>
     <string name="message"> Message</string>
 
-    <string name="not_yet">Not yet, we´re doing some exercises from his school book.</string>
-    <string name="is_henry">Is Henry asleep?</string>
     <string name="my_Account"> My Account</string>
 </resources>
 

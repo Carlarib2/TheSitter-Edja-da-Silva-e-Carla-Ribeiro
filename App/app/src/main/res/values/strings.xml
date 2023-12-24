@@ -16,12 +16,14 @@
     <string name="app_contentDescription1">Username</string>
 
     <!--Activity_d_register-->
+    <string name="app_text1">Create your account</string>
     <string name="lock_icon">Lock Icon</string>
     <string name="email_icon">Email Icon</string>
     <string name="app_user_email">Email</string>
     <string name="app_user_confirm">Confirm your password?</string>
 
     <!--Activity_da_profile-->
+    <string name="profile">Profile</string>
     <string name="day">Day</string>
     <string name="full_name">Full Name</string>
     <string name="Address">Address</string>
@@ -132,7 +134,10 @@
     <string name="dez">10/07</string>
 
     <!--Activity_es_the_profile-->
+    <string name="contentDescription_sitter_image">sitter_image</string>
+    <string name="requests">REQUESTS</string>
     <string name="total_bookings">Total Bookings:</string>
+    <string name="app_logo">THE SITTER</string>
     <string name="Response_time">Response Time</string>
     <string name="Response_Rate">Response Rate</string>
     <string name="Reliability">Reliability</string>
@@ -193,43 +198,26 @@
     <!--Activity_esf_accepted-->
     <!--Activity_esg_declined-->
     <!--Activity_esh_pending-->
+    <string name="quinze">15/07</string>
+
     <!--Activity_calendar-->
 
 
 
 
 
-    <string name="app_logo">THE SITTER</string>
-    <string name="app_text1">Create your account</string>
-    <string name="requests">REQUESTS</string>
 
-
-
-    <string name="profile">Profile</string>
     <string name="mood_bad_icon">Mood Bad Icon</string>
     <string name="photo_icon">Photo Icon</string>
-
-
-
     <string name="upload_icon">Upload Icon</string>
     <string name="event_icon">Event Icon</string>
     <string name="Alex">Alexandra Fidalgo image</string>
     <string name="image_man">Image man</string>
     <string name="Image_pai_dog">Image pai de dog</string>
     <string name="Image_lady">Image Lady</string>
-    <string name="message2">Olá, a Sandra já fez a medicação? </string>
     <string name="parent"> PARENT</string>
     <string name="sitter"> SITTER</string>
-
-
-
-
-    <string name="contentDescription_sitter_image">sitter_image</string>
-    <string name="quinze">15/07</string>
-    <string name="yes">YES</string>
-    <string name="no">NO</string>
     <string name="message"> Message</string>
-
     <string name="my_Account"> My Account</string>
 </resources>
 

@@ -61,6 +61,8 @@
     <string name="app_button_parent">PARENT</string>
     <string name="app_button_1">Sitter button</string>
     <string name="app_button_sitter">SITTER</string>
+    <string name="parent"> PARENT</string>
+    <string name="sitter"> SITTER</string>
 
     <!--Activity_ep_parent_home-->
     <string name="booking"> BOOKING</string>
@@ -103,6 +105,8 @@
     <string name="declined">Declined</string>
 
     <!--Activity_epf_parent_settings-->
+    <string name="photo_icon">Photo Icon</string>
+    <string name="upload_icon">Upload Icon</string>
     <string name="classic">Classic</string>
     <string name="My_family"> My Family</string>
     <string name="Profile_settings">Profile Settings</string>
@@ -111,10 +115,13 @@
     <string name="my_Calendar">My Calendar</string>
     <string name="profile_is_on">Profile is On</string>
     <string name="logout">Logout</string>
+    <string name="event_icon">Event Icon</string>
     <string name="person_icon">Person Icon</string>
     <string name="calendar_icon">Calendar Icon</string>
     <string name="logout_icon">Logout Icon</string>
     <string name="monetization_icon">Monetization Icon</string>
+    <string name="message"> Message</string>
+    <string name="my_Account"> My Account</string>
 
     <!--Activity_epg_parent_my_family-->
     <string name="pen_icon">Pen Icon</string>
@@ -204,21 +211,6 @@
 
 
 
-
-
-
-    <string name="mood_bad_icon">Mood Bad Icon</string>
-    <string name="photo_icon">Photo Icon</string>
-    <string name="upload_icon">Upload Icon</string>
-    <string name="event_icon">Event Icon</string>
-    <string name="Alex">Alexandra Fidalgo image</string>
-    <string name="image_man">Image man</string>
-    <string name="Image_pai_dog">Image pai de dog</string>
-    <string name="Image_lady">Image Lady</string>
-    <string name="parent"> PARENT</string>
-    <string name="sitter"> SITTER</string>
-    <string name="message"> Message</string>
-    <string name="my_Account"> My Account</string>
 </resources>
 
 

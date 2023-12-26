@@ -38,7 +38,7 @@ public class UserController {
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public User saveUser(@RequestBody User user) {
         User savedUser = userRepository.save(user);
-        logger.info("Saving unit with id " + savedUser.getId());
+        logger.info("Saving user with id " + savedUser.getId());
         return savedUser;
     }
 
@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @GetMapping(path = "/{text:[^0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<User> getUnit(@PathVariable(value = "text") String text) {
+    public Iterable<User> getUser(@PathVariable(value = "text") String text) {
         logger.info("User with name like " + text);
         return userRepository.findByNameContaining(text);
     }

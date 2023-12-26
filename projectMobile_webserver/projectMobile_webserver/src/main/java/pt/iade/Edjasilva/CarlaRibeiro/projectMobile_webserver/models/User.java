@@ -42,6 +42,7 @@ public class User {
         return user_pla_id;
     }
 
-    public String getId() {
+    public int getId() {
+       return user_id;
     }
 }

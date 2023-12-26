@@ -2,13 +2,19 @@ package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name="family_member")
 public class Family_member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="fa_id")
     private int fa_id;

@@ -2,13 +2,19 @@ package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name="sitter")
 public class Sitter {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="sit_id")
     private int sit_id;

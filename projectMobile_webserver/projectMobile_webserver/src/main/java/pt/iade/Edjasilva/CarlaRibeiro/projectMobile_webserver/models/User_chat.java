@@ -11,8 +11,8 @@ import jakarta.persistence.*;
 @Table(name="user_chat")
 
 public class User_chat {
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="usat_id")
     private int usat_id;

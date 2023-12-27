@@ -19,6 +19,9 @@ public class User {
     @Column(name="user_bdate")
     private LocalDate userBdate;
 
+    @Column(name="user_upload")
+    private byte[]  userUpload;
+
 
     @Column(name="user_address")
     private String userAddress;
@@ -82,5 +85,9 @@ public class User {
 
     public int getUserPlaId() {
         return userPlaId;
+    }
+
+    public byte[] getUserUpload() {
+        return userUpload;
     }
 }

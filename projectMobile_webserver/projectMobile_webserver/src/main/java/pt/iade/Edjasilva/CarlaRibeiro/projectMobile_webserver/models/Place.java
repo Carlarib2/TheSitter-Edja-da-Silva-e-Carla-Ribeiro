@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 @Entity
 @Table(name="place")
@@ -16,14 +15,18 @@ public class Place {
 
 
     @Column(name="pla_id")
-    private int pla_id;
+    private int plaId;
 
     @Column(name="pla_address")
-    private String pla_address;
+    private String plaAddress;
 
     @Column(name="pla_longitude")
-    private double pla_logitude;
+    private double plaLogitude;
 
     @Column(name="pla_altitude")
-    private double pla_altitude;
+    private double plaAltitude;
+
+    public Place(){
+
+    }
 }

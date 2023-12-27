@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -17,29 +16,70 @@ public class Family_member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="fa_id")
-    private int fa_id;
+    private int faId;
 
     @Column(name="fa_name")
-    private String fa_name;
+    private String faName;
 
     @Column(name="fa_bdate")
-    private LocalDate fa_bdate;
+    private LocalDate faBdate;
 
     @Column(name="fa_school")
-    private String fa_school;
+    private String faSchool;
 
     @Column(name="fa_allergies")
-    private String fa_allergies;
+    private String faAllergies;
 
     @Column(name="fa_aboutMe")
-    private String fa_aboutMe;
+    private String faAboutMe;
 
     @Column(name="fa_gender")
-    private String fa_gender;
+    private String faGender;
 
     @Column(name="fa_cli_id")
-    private int fa_cli_id;
+    private int faCliId;
 
     @Column(name="fa_cre_id")
-    private int fa_cre_id;
+    private int faCreId;
+
+
+    public Family_member(){
+
+    }
+
+    public int getFaId() {
+        return faId;
+    }
+
+    public String getFaName() {
+        return faName;
+    }
+
+    public LocalDate getFaBdate() {
+        return faBdate;
+    }
+
+    public String getFaSchool() {
+        return faSchool;
+    }
+
+    public String getFaAllergies() {
+        return faAllergies;
+    }
+
+    public String getFaAboutMe() {
+        return faAboutMe;
+    }
+
+    public String getFaGender() {
+        return faGender;
+    }
+
+    public int getFaCliId() {
+        return faCliId;
+    }
+
+    public int getFaCreId() {
+        return faCreId;
+    }
 }

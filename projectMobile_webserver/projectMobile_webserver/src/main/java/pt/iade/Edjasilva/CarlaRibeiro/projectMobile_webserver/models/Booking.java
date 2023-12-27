@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 import java.sql.Time;
 import java.time.LocalDate;
@@ -18,22 +17,49 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "boo_id")
-    private int boo_id;
+    private int booId;
 
     @Column(name = "boo_data")
-    private LocalDate boo_data;
+    private LocalDate booData;
 
     @Column(name = "boo_cli_id")
-    private int boo_cli_id;
+    private int booCliId;
 
     @Column(name = "boo_endTime")
-    private Time boo_endTime;
+    private Time booEndTime;
 
     @Column(name = "boo_sta_id")
-    private int boo_sta_id;
+    private int booStaId;
 
     @Column(name = "boo_startTime")
-    private Time boo_startTime;
+    private Time booStartTime;
 
+    public Booking(){
+
+    }
+
+    public int getBooId() {
+        return booId;
+    }
+
+    public LocalDate getBooData() {
+        return booData;
+    }
+
+    public int getBooCliId() {
+        return booCliId;
+    }
+
+    public Time getBooEndTime() {
+        return booEndTime;
+    }
+
+    public int getBooStaId() {
+        return booStaId;
+    }
+
+    public Time getBooStartTime() {
+        return booStartTime;
+    }
 }
 

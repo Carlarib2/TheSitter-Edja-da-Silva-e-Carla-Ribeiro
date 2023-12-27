@@ -6,7 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name="user")
@@ -14,35 +15,72 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+
+    @Column(name="user_bdate")
+    private LocalDate userBdate;
+
+
+    @Column(name="user_address")
+    private String userAddress;
+
+    @Column(name="user_mobile")
+    private String userMobile;
+
+    @Column(name="user_email")
+    private String userEmail;
+
+    @Column(name="user_password")
+    private String userPassword;
+
+    @Column(name="user_gender")
+    private String userGender;
+
     @Column(name="user_id")
-    private int user_id;
+    private int userId;
 
     @Column(name="user_name")
-    private String user_name;
+    private String userName;
 
     @Column(name="user_pla_id")
-    private int user_pla_id;
+    private int userPlaId;
 
     public User() {
     }
 
-    public String getUser_name() {
-        return user_name;
+
+    public LocalDate getUserBdate() {
+        return userBdate;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public String getUserAddress() {
+        return userAddress;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public String getUserMobile() {
+        return userMobile;
     }
 
-    public int getUser_pla_id() {
-        return user_pla_id;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public int getId() {
-       return user_id;
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public String getUserGender() {
+        return userGender;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public int getUserPlaId() {
+        return userPlaId;
     }
 }

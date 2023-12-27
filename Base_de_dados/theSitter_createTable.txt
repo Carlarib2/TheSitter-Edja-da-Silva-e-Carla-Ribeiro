@@ -1,0 +1,168 @@
+USE TheSitter;
+CREATE TABLE user(
+    user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(60) NOT NULL,
+    user_pla_id INT NOT NULL
+);
+
+ALTER TABLE user
+ADD CONSTRAINT user_fk_place
+FOREIGN KEY (user_pla_id) REFERENCES place(pla_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE booking (
+    boo_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    boo_data DATE NOT NULL,
+    boo_cli_id INT NOT NULL,
+    boo_endTime TIME NOT NULL, 
+    boo_sta_id INT NOT NULL ,
+    boo_startTime TIME NOT NULL
+);
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_client
+FOREIGN KEY (boo_cli_id) REFERENCES client(cli_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE booking
+ADD CONSTRAINT booking_fk_status
+FOREIGN KEY (boo_sta_id) REFERENCES status(sta_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE status (
+    sta_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    sta_name VARCHAR(255) NOT NULL DEFAULT 'pendente',
+    CHECK (sta_name IN ('pendente', 'aceite', 'negado'))
+);
+
+
+CREATE TABLE client (
+    cli_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cli_user_id INT NOT NULL,
+    cli_name VARCHAR(60) NOT NULL,
+    cli_bdate DATE NOT NULL,
+    cli_address VARCHAR(255) NOT NULL,
+    cli_mobile VARCHAR(20) NOT NULL,
+    cli_email VARCHAR(255) NOT NULL,
+    cli_password VARCHAR(255) NOT NULL,
+    cli_gender CHAR(1) NOT NULL, 
+    cli_sta_id INT NOT NULL
+    
+);
+
+ALTER TABLE client
+ADD CONSTRAINT client_fk_sta
+FOREIGN KEY (cli_sta_id) REFERENCES status(sta_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE client
+ADD CONSTRAINT client_fk_user
+FOREIGN KEY (cli_user_id) REFERENCES user(user_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE creatures(
+    cre_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cre_type ENUM('person', 'animal') NOT NULL,
+    cre_info TEXT
+);
+
+
+
+CREATE TABLE user_chat(
+    usat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    usat_user_id INT NOT NULL, 
+    usat_chat_id INT NOT NULL
+);
+
+
+
+ALTER TABLE user_chat
+ADD CONSTRAINT user_chat_fk_user
+FOREIGN KEY (usat_user_id) REFERENCES user(user_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE user_chat
+ADD CONSTRAINT user_chat_fk_chat
+FOREIGN KEY (usat_chat_id) REFERENCES chat(chat_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE chat(
+    chat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    chat_message_content TEXT,
+    chat_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE sitter_rating(
+    ra_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ra_sit_id INT NOT NULL, 
+    ra_value INT NOT NULL CHECK (ra_value BETWEEN 1 AND 5),
+    ra_comment TEXT
+);
+
+ALTER TABLE sitter_rating
+ADD CONSTRAINT sitter_rating_fk_sitter
+FOREIGN KEY (ra_sit_id) REFERENCES sitter(sit_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+CREATE TABLE sitter (
+    sit_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    sit_user_id INT NOT NULL,
+    sit_name VARCHAR(60) NOT NULL,
+    sit_bdate DATE NOT NULL,
+    sit_experience TEXT,
+    sit_address VARCHAR(255) NOT NULL,
+    sit_education VARCHAR(255),
+    sit_mobile VARCHAR(20) NOT NULL,
+    sit_gender CHAR(1) NOT NULL,
+    sit_aboutMe TEXT,
+    sit_password VARCHAR(255) NOT NULL,
+    sit_boo_id INT NOT NULL,
+    sit_email VARCHAR(255) NOT NULL,
+    sit_reability INT CHECK (sit_reability >= 0 AND sit_reability <= 100),
+    sit_responseTime INT CHECK (sit_responseTime >= 0 AND sit_responseTime <= 100),
+    sit_responseRate INT CHECK (sit_responseRate >= 0 AND sit_responseRate <= 100)
+);
+
+ALTER TABLE sitter
+ADD CONSTRAINT sitter_fk_user
+FOREIGN KEY (sit_user_id) REFERENCES user(user_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE sitter
+ADD CONSTRAINT sitter_fk_booking
+FOREIGN KEY (sit_boo_id) REFERENCES booking(boo_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE family_member(
+    fa_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fa_name VARCHAR(60) NOT NULL,
+    fa_bdate DATE NOT NULL,
+    fa_school VARCHAR(255),
+    fa_allergies VARCHAR(255),
+    fa_aboutMe TEXT,
+    fa_gender CHAR(1) NOT NULL,
+    fa_cli_id INT NOT NULL,
+    fa_cre_id INT NOT NULL
+);
+
+ALTER TABLE family_member
+ADD CONSTRAINT family_member_fk_client
+FOREIGN KEY (fa_cli_id) REFERENCES client(cli_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE family_member
+ADD CONSTRAINT family_member_fk_creatures
+FOREIGN KEY (fa_cre_id) REFERENCES creatures(cre_id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+CREATE TABLE place (
+    pla_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    pla_address VARCHAR(255) NOT NULL,
+    pla_longitude DOUBLE NOT NULL,
+    pla_altitude DOUBLE NOT NULL
+);

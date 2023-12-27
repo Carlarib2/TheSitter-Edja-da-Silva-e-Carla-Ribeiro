@@ -1,167 +1,226 @@
 <resources>
+
+    <!-- Activity_a_main-->
     <string name="app_name">TheSitter_Project</string>
     <string name="app_image">App Image</string>
-    <string name="app_button">Parent button</string>
-    <string name="app_button_parent">PARENT</string>
-    <string name="app_button_1">Sitter button</string>
-    <string name="app_button_sitter">SITTER</string>
+
+    <!--Activity_b_second-->
     <string name="app_button_login">LOGIN</string>
     <string name="app_button_register">REGISTER</string>
-    <string name="app_text">Forgot your password?</string>
+    <string name="contentDescription_register">Register button</string>
+
+    <!--Activity_c_login-->
     <string name="app_user">Username</string>
     <string name="app_password">Password</string>
     <string name="app_contentDescription">Password</string>
     <string name="app_contentDescription1">Username</string>
-    <string name="app_logo">THE SITTER</string>
+
+    <!--Activity_d_register-->
     <string name="app_text1">Create your account</string>
+    <string name="lock_icon">Lock Icon</string>
+    <string name="email_icon">Email Icon</string>
     <string name="app_user_email">Email</string>
     <string name="app_user_confirm">Confirm your password?</string>
-    <string name="Messages">MESSAGES</string>
-    <string name="requests">REQUESTS</string>
-    <string name="pending">Pending</string>
-    <string name="accepted">Accepted</string>
-    <string name="profile_settings">Profile Settings</string>
-    <string name="declined">Declined</string>
-    <string name="total_bookings">Total Bookings:</string>
-    <string name="Response_time">Response Time</string>
-    <string name="Response_Rate">Response Rate</string>
-    <string name="Reliability">Reliability</string>
-    <string name="first_name">First Name:</string>
+
+    <!--Activity_da_profile-->
+    <string name="profile">Profile</string>
+    <string name="day">Day</string>
+    <string name="full_name">Full Name</string>
     <string name="Address">Address</string>
     <string name="phone_number">Phone Number:</string>
-    <string name="Last_name">Last Name:</string>
     <string name="Gender">Gender</string>
     <string name="Education">Education</string>
     <string name="About_me">About me</string>
     <string name="Experience">EXPERIENCE</string>
     <string name="Date_of_Birth">Date of Birth</string>
-    <string name="Save">SAVE</string>
-    <string name="profile_verification">Profile Verification</string>
-    <string name="upload">Upload a Photo of your Document</string>
-    <string name="my_Calendar">My Calendar</string>
-    <string name="my_Rate">My Rate</string>
-    <string name="my_experience">My Experience</string>
-    <string name="logout">Logout</string>
-    <string name="mobile">Mobile</string>
-    <string name="full_name">Full Name</string>
-    <string name="profile_is_on">Profile is On</string>
-    <string name="female">F</string>
-    <string name="male">M</string>
-    <string name="day">Day</string>
-    <string name="NA">N/A</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
     <string name="other">Other</string>
-    <string name="photo">Take a picture of your face</string>
-    <string name="profile">Profile</string>
-    <string name="person_icon">Person Icon</string>
-    <string name="lock_icon">Lock Icon</string>
-    <string name="email_icon">Email Icon</string>
-    <string name="pen_icon">Pen Icon</string>
-    <string name="calendar_icon">Calendar Icon</string>
-    <string name="plu_icon">Plus Icon</string>
-    <string name="logout_icon">Logout Icon</string>
-    <string name="monetization_icon">Monetization Icon</string>
-    <string name="mood_bad_icon">Mood Bad Icon</string>
-    <string name="photo_camera_icon">Photo Camera Icon</string>
-    <string name="photo_icon">Photo Icon</string>
+    <string name="contentDescription_address">Address</string>
+    <string name="mobile">Mobile</string>
     <string name="schedule_icon">Schedule Icon</string>
     <string name="school_icon">School Icon</string>
     <string name="sentiment_icon">Sentiment Icon</string>
-    <string name="upload_icon">Upload Icon</string>
     <string name="workspace_icon">Workspace Icon</string>
     <string name="home_icon">Home Icon</string>
     <string name="description_icon">Description Icon</string>
+
+    <!--Activity_de_profile_verification-->
+    <string name="photo_camera_icon">Photo Camera Icon</string>
+    <string name="profile_verification">Profile Verification</string>
+    <string name="upload">Upload a Photo of your Document</string>
+    <string name="photo">Take a picture of your face</string>
+    <string name="contentDescription_upload"> Upload image</string>
+    <string name="contentDescription_uploadDoc">Upload Documents</string>
+
+
+    <!--Activity_e_parent_client_choice-->
+    <string name="contentDescription_parent"> Parent button</string>
+    <string name="contentDescription_sitter"> Sitter button</string>
+    <string name="app_button">Parent button</string>
+    <string name="app_button_parent">PARENT</string>
+    <string name="app_button_1">Sitter button</string>
+    <string name="app_button_sitter">SITTER</string>
+    <string name="parent"> PARENT</string>
+    <string name="sitter"> SITTER</string>
+
+    <!--Activity_ep_parent_home-->
+    <string name="booking"> BOOKING</string>
+    <string name="Messages">MESSAGES</string>
+    <string name="number_family">Number of people in the family</string>
+    <string name="number_sitter">Number of sitters</string>
+    <string name="one">1 member</string>
+    <string name="one_">1 sitter</string>
+
+    <!--Activity_epa_parent_booking_1-->
+    <string name="more"> More</string>
+    <string name="starts"> Starts</string>
+    <string name="Ends"> Ends</string>
+    <string name="send_to_my"> SEND TO MY SITTERS NOW</string>
+    <string name="Select_Sitters">Select Sitters</string>
+    <string name="date"> Date</string>
+    <string name="select_request">Select Request Details</string>
+
+    <!--Activity_epb_parent_my_sitters-->
+    <string name="my_sitters"> My sitters</string>
+
+    <!--Activity_epc_parent_select_sitters-->
+    <string name="slect_sitters"> SELECT SITTERS</string>
+
+    <!--Activity_epd_parent_messages-->
     <string name="Message">Messages</string>
+    <string name="text_Jane"> Hi! Yes Iam available this saturday</string>
+    <string name="Jane_Doe"> Jane Doe</string>
+
+    <!--Activity_epde_parent_chat-->
+    <string name="Hey_there">Hey there! Ava loves reading. If would read for her, it would be perfect.</string>
+    <string name="i_love">I love reading! Thanks for letting me know.</string>
+    <string name="Hi_I_cannot_wait">Hi! I cannot wait to meet your beautiful children. Is there anything you would like to share more?</string>
+    <string name="Type_your_message">Type your message</string>
+    <string name="Send">Send</string>
+
+    <!--Activity_epe_parent_requests-->
+    <string name="pending">Pending</string>
+    <string name="accepted">Accepted</string>
+    <string name="declined">Declined</string>
+
+    <!--Activity_epf_parent_settings-->
+    <string name="photo_icon">Photo Icon</string>
+    <string name="upload_icon">Upload Icon</string>
+    <string name="classic">Classic</string>
+    <string name="My_family"> My Family</string>
+    <string name="Profile_settings">Profile Settings</string>
+    <string name="mario">Mário Igreja</string>
+    <string name="image_mario"> image Mario</string>
+    <string name="my_Calendar">My Calendar</string>
+    <string name="profile_is_on">Profile is On</string>
+    <string name="logout">Logout</string>
     <string name="event_icon">Event Icon</string>
-    <string name="Alex">Alexandra Fidalgo image</string>
+    <string name="person_icon">Person Icon</string>
+    <string name="calendar_icon">Calendar Icon</string>
+    <string name="logout_icon">Logout Icon</string>
+    <string name="monetization_icon">Monetization Icon</string>
+    <string name="message"> Message</string>
+    <string name="my_Account"> My Account</string>
+
+    <!--Activity_epg_parent_my_family-->
+    <string name="pen_icon">Pen Icon</string>
+    <string name="plu_icon">Plus Icon</string>
+    <string name="years_5">5 years</string>
+    <string name="ava">Ava</string>
+    <string name="Save">SAVE</string>
+
+    <!--Activity_eph_parent_create-family_profile-->
+    <string name="important_Notes">Important Notes</string>
+    <string name="name">Name</string>
+    <string name="school">School*</string>
+    <string name="allergies">Allergies</string>
+    <string name="create_family">Create Family Profile</string>
+
+    <!--Activity_epi_parent_pending-->
+    <string name="dez">10/07</string>
+
+    <!--Activity_es_the_profile-->
+    <string name="contentDescription_sitter_image">sitter_image</string>
+    <string name="requests">REQUESTS</string>
+    <string name="total_bookings">Total Bookings:</string>
+    <string name="app_logo">THE SITTER</string>
+    <string name="Response_time">Response Time</string>
+    <string name="Response_Rate">Response Rate</string>
+    <string name="Reliability">Reliability</string>
+    <string name="NA">N/A</string>
+    <string name="rate">0 of 0</string>
+    <string name="responses">0 responses</string>
+    <string name="cancels">0 cancels of 0</string>
+    <string name="friday">Friday, November 30th</string>
+    <string name="saturday">Saturday, December 20th</string>
+    <string name="six">6 / $301.12</string>
+
+    <!--Activity_esa_requests_view-->
+
+
+    <!--Activity_esb_messages-->
     <string name="Alexa">Alexandra Fidalgo </string>
     <string name="Nathan">Nathan Campos image</string>
     <string name="Nathan_">Nathan Campos</string>
     <string name="Andre">Andre Sabino image</string>
     <string name="Andre_">André Sabino</string>
-    <string name="image_man">Image man</string>
-    <string name="Image_pai_dog">Image pai de dog</string>
-    <string name="Image_lady">Image Lady</string>
+    <string name="that_is">That is awesome! Thank you.</string>
     <string name="message0">Thank you?</string>
     <string name="message1">Hello, how is Ana?</string>
-    <string name="message2">Olá, a Sandra já fez a medicação? </string>
-    <string name="contentDescription_register">Register button</string>
-    <string name="parent"> PARENT</string>
-    <string name="sitter"> SITTER</string>
-    <string name="booking"> BOOKING</string>
-    <string name="date"> Date</string>
-    <string name="courses">COURSES</string>
-    <string name="how_long">How long have you been sitter?</string>
-    <string name="let_us">LET US GET TO KNOW YOU</string>
+
+    <!--Activity_esc_profile_settings-->
+    <string name="profile_settings">Profile Settings</string>
+    <string name="my_Rate">My Rate</string>
+    <string name="my_experience">My Experience</string>
+    <string name="advance"> Advance: $15/hr</string>
+
+    <!--Activity_esd_my_rate-->
     <string name="parents_are">Parents are charged (hourly)</string>
-    <string name="abilities">ABILITIES</string>
+    <string name="money">$</string>
     <string name="Set_your_base">Set your base hourly pay</string>
     <string name="set_your_hourly">Set your hourly rate</string>
-    <string name="select_request">Select Request Details</string>
-    <string name="money">$</string>
-    <string name="have_you_my">Have you ever completed a CPR course?</string>
-    <string name="have_you_been_convicted">Have you been convicted of a crime?</string>
 
-    <string name="are_you_able">Are you able to prepare simple meals for kids while sitting?</string>
-    <string name="are_you">Are you comfrtable with pets?</string>
-    <string name="do_you_have">Do you have a means of transportation to and from your sitting appointment?</string>
-    <string name="what_is_the_most">What is the most number of children you are willing to sit for?</string>
-    <string name="what_ages">What ages have you sat for?</string>
-    <string name="tell_parents">TELL PARENTS ABOUT YOURSELF</string>
-    <string name="have_you_ever">Have you ever completed a babysitting course?</string>
-    <string name="background">BACKGROUND</string>
-    <string name="image_mario"> image Mario</string>
-    <string name="advance"> Advance: $15/hr</string>
-    <string name="contentDescription_parent"> Parent button</string>
-    <string name="contentDescription_sitter"> Sitter button</string>
-    <string name="contentDescription_upload"> Upload image</string>
-    <string name="contentDescription_uploadDoc">Upload Documents</string>
-    <string name="contentDescription_address">Address</string>
-    <string name="contentDescription_sitter_image">sitter_image</string>
-    <string name="starts"> Starts</string>
-    <string name="slect_sitters"> SELECT SITTERS</string>
-    <string name="send_to_my"> SEND TO MY SITTERS NOW</string>
-    <string name="Ends"> Ends</string>
-    <string name="Type_your_message">Type your message</string>
-    <string name="Send">Send</string>
-    <string name="text_Jane"> Hi! Yes Iam available this saturday</string>
-    <string name="Jane_Doe"> Jane Doe</string>
-    <string name="more"> More</string>
-    <string name="ava">Ava</string>
-    <string name="quinze">15/07</string>
-    <string name="name">Name</string>
-    <string name="yes">YES</string>
-    <string name="no">NO</string>
-    <string name="one">1 member</string>
-    <string name="one_">1 sitter</string>
-    <string name="number_family">Number of people in the family</string>
-    <string name="number_sitter">Number of sitters</string>
-    <string name="rate">0 of 0</string>
-    <string name="responses">0 responses</string>
-    <string name="cancels">0 cancels of 0</string>
-    <string name="six">6 / $301.12</string>
-    <string name="friday">Friday, November 30th</string>
-    <string name="saturday">Saturday, December 20th</string>
-    <string name="school">School*</string>
-    <string name="allergies">Allergies</string>
-    <string name="important_Notes">Important Notes</string>
-    <string name="years_5">5 years</string>
-    <string name="My_family"> My Family</string>
-    <string name="mario">Mário Igreja</string>
-    <string name="message"> Message</string>
-    <string name="classic">Classic</string>
-    <string name="dez">10/07</string>
-    <string name="Profile_settings">Profile Settings</string>
-    <string name="my_sitters"> My sitters</string>
-    <string name="Select_Sitters">Select Sitters</string>
-    <string name="Hey_there">Hey there! Ava loves reading. If would read for her, it would be perfect.</string>
-
-    <string name="that_is">That is awesome! Thank you.</string>
+    <!--Activity_ese_chat-->
     <string name="not_yet">Not yet, we´re doing some exercises from his school book.</string>
     <string name="is_henry">Is Henry asleep?</string>
-    <string name="create_family">Create Family Profile</string>
-    <string name="my_Account"> My Account</string>
-    <string name="i_love">I love reading! Thanks for letting me know.</string>
-    <string name="Hi_I_cannot_wait">Hi! I cannot wait to meet your beautiful children. Is there anything you would like to share more?</string>
+
+    <!--Activity_ese_my_experience-->
+    <string name="courses">COURSES</string>
+    <string name="what_is_the_most">What is the most number of children you are willing to sit for?</string>
+    <string name="abilities">ABILITIES</string>
+    <string name="background">BACKGROUND</string>
+    <string name="tell_parents">TELL PARENTS ABOUT YOURSELF</string>
+    <string name="are_you_able">Are you able to prepare simple meals for kids while sitting?</string>
+    <string name="do_you_have">Do you have a means of transportation to and from your sitting appointment?</string>
+    <string name="have_you_ever">Have you ever completed a babysitting course?</string>
+    <string name="how_long">How long have you been sitter?</string>
+    <string name="what_ages">What ages have you sat for?</string>
+    <string name="have_you_my">Have you ever completed a CPR course?</string>
+    <string name="have_you_been_convicted">Have you been convicted of a crime?</string>
+    <string name="are_you">Are you comfrtable with pets?</string>
+    <string name="let_us">LET US GET TO KNOW YOU</string>
+
+
+    <!--Activity_esf_accepted-->
+    <!--Activity_esg_declined-->
+    <!--Activity_esh_pending-->
+    <string name="quinze">15/07</string>
+
+    <!--Activity_calendar-->
+
+
+
 </resources>
+
+
+
+
+
+
+
+
+
+
+
+

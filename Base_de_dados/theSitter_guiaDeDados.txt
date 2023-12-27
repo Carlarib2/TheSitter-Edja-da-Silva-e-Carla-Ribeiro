@@ -1,103 +1,125 @@
-GUIA DE DADOS
-
-A nossa base de dados está composta por 11 tabelas:
-
-USER
-CHAT
-CLIENT
-CREATURES
-FAMILY MEMBER
-PLACE
-SITTER
-SITTER RATING 
-STATUS
-USER CHAT
-BOOKING
-
-E fizemos a seguinte distribuição para os inserts.
-
-Na tabela 'user' temos 4 users, sendo eles 2 sitters e clientes:
-
-INSERT INTO user (user_name) VALUES ('Joaquim igreja');		(Cliente)
-INSERT INTO user (user_name) VALUES ('Felizarda Gaspar');	(Cliente)
-INSERT INTO user (user_name) VALUES ('Dalinela Bastos');	(Sitter)
-INSERT INTO user (user_name) VALUES ('Jane Doe');		(Sitter)
+A nossa base de dados tem 12 tabelas:
+access;
+booking;
+siiter;
+sitter_rating;
+client;
+place;
+user;
+user_chat;
+family_member;
+creatures;
+status;
+chat;
 
 
+Em uma cidade movimentada chamada Cazenga, onde histórias surpreendentes acontecem, conhecemos Délcia Dinis, uma educadora infantil cheia de entusiasmo. Animada para compartilhar seu amor por crianças, ela decidiu se inscrever como "sitter" no TheSitter, inserindo seus detalhes na tabela user:
 
-Na tabela 'place'temos 4 places que estão relacionados com o cliente e com o sitter.
+Délcia Dinis
+Nome: Délcia Dinis
+Data de Nascimento: 1990-05-22
+Endereço: Cazenga
+Número de Contato: 900000000
+E-mail: delcisabalo@hotmail.com
+Senha: senha1
+Gênero: Feminino
+Localização: Cazenga
+Nível de Acesso: Sitter
+Enquanto isso, em Benfica, Felizarda Gaspar, uma cliente animada, estava procurando serviços de cuidadores para sua família e seus adoráveis animais de estimação. Vamos destacar os detalhes do comando INSERT que a trouxe para a comunidade:
 
+Felizarda Gaspar
+Nome: Felizarda Gaspar
+Data de Nascimento: 1981-04-17
+Endereço: Benfica
+Número de Contato: 910000000
+E-mail: felizagaspar@gmail.com
+Senha: senha2
+Gênero: Feminino
+Localização: Benfica
+Nível de Acesso: Cliente
+A história continua com Joaquim Igreja, um professor dedicado, que estava em busca de cuidados para sua família. Ele confiou em outros "sitters" para o bem-estar de seus entes queridos. Vamos destacar os dados do comando INSERT:
 
-
-Temos a tabela 'client', que contém os dados do cliente:
-
-INSERT INTO client (cli_user_id, cli_name, cli_bdate, cli_address, cli_mobile, cli_email, cli_password, cli_gender) VALUES ('1','Joaquim igreja', '2003-12-28', 'Benfica', '945939500', 'joaquimigreja@gmail.com', 'joaquimigreja', 'M');
-
-INSERT INTO client (cli_user_id, cli_name, cli_bdate, cli_address, cli_mobile, cli_email, cli_password, cli_gender) VALUES ('2', 'Felizarda Gaspar', '1990-04-17', 'Cazenga', '943970000', 'felizardagaspar@gmail.com', 'felizardagaspar', 'F');
-
-
-
-Temos a tabela 'Creatures' com o tipo de família, porque podemos receber animais e pessoas, neste caso estamos a receber pessoas:
-
-INSERT INTO creatures (cre_type) VALUES ('Person');
-INSERT INTO creatures (cre_type) VALUES ('Person');
-
-
-
-Temos a tabela 'family_member' com os dados da família:
-
-
-INSERT INTO family_member (fa_name, fa_cli_id, fa_bdate, fa_school, fa_aboutME, fa_gender, fa_cre_id) VALUES ('Ana Rashelle', '2', '2019-03-13', 'Pirilampos', 'Gosta muito de cantar', 'F', '1');
-
-INSERT INTO family_member (fa_name, fa_cli_id, fa_bdate, fa_school, fa_aboutME, fa_gender, fa_cre_id) VALUES ('Haniela Felizarda', '1', '2019-03-21', 'Pirilampos', 'Gosta muito de comer', 'F', '2');
-
-
-
-
-Temos a tabela 'status', com o estado do serviço no lado da sitter:
-
-INSERT INTO status (sta_name) VALUES ( 'aceite');
-INSERT INTO status (sta_name) VALUES ('pendente');
-
-
-
-Temos a tabela 'booking' com os critérios os horários e outros critérios:
-
-
-INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime) VALUES ('2023-11-17', '2', '19:00:00', '2', '16:00:00');
-
-INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime) VALUES ('2023-12-17', '1', '19:00:00', '1', '18:00:00');
-
-
-
-Temos a tabela 'Sitter' contendo duas sitters e os seus detalhes:
-
-INSERT INTO sitter (sit_user_id, sit_name, sit_bdate, sit_experience, sit_address, sit_mobile, sit_gender, sit_aboutMe, sit_password, sit_boo_id, sit_email, sit_reability, sit_responseTime, sit_responseRate, sit_education) VALUES ('3', 'Dalinela Bastos', '2002-10-11', 'Experiência a lidar om crianças', 'Vila', '975030061', 'F', 'Adoro crianças', 'dalinelabastos', '2', 'dalinelabastos@gmail.com', '85', '92', '96', 'Técnica em cuidados infantis');
-
-INSERT INTO sitter (sit_user_id, sit_name, sit_bdate, sit_experience, sit_address, sit_mobile, sit_gender, sit_aboutMe, sit_password, sit_boo_id, sit_email, sit_reability, sit_responseTime, sit_responseRate) VALUES ('4', 'Jane Doe', '2000-02-01', 'Experiência como babá a 3 anos', 'Rua DR. João', '966030061', 'F', 'Adoro crianças', 'janedoe', '1', 'janedoe@gmail.com', '90', '95', '98');
+Joaquim Igreja
+Nome: Joaquim Igreja
+Data de Nascimento: 2003-12-28
+Endereço: Arroja
+Número de Contato: 930000000
+E-mail: joaquimigreja@example.com
+Senha: senha4
+Gênero: Masculino
+Localização: Arroja
+Nível de Acesso: Cliente
 
 
 
 
-Temos as tabelas 'chat' e 'user_chat' contendo a informação do user e o chat:
+Délcia Dinis recebeu avaliações como:
+Avaliação: 4
+Comentário: "Bom serviço"
+Avaliação: 5
+Comentário: "Excelente"
+
+Délcia Dinis recebeu reservas como:
+
+Data: 2023-01-01
+Cliente: Felizarda Gaspar
+Hora de Início: 10:00:00
+Hora de Término: 12:00:00
+Status: Aceite
+Joaquim Igreja fez reservas como:
+
+Data: 2023-01-02
+Cliente: Joaquim Igreja
+Hora de Início: 12:00:00
+Hora de Término: 14:00:00
+Status: Pendente
 
 
-INSERT INTO user_chat (usat_user_id, usat_chat_id) VALUES (1, 1);
-
-INSERT INTO chat (chat_message_content, chat_timestamp) VALUES ('Estou bem, obrigado!', '2023-12-17 14:30:00');
-
-INSERT INTO user_chat (usat_user_id, usat_chat_id) VALUES (2, 2);
-
-INSERT INTO chat (chat_message_content, chat_timestamp) VALUES ('OK', '2023-12-17 15:30:00');
 
 
+Outras Inserções Relevantes:
+
+1. Creatures (creatures):
+
+A tabela creatures adiciona uma camada especial à comunidade, incluindo informações sobre os membros da família e animais de estimação. Por exemplo:
+Ana Rashelle é um ser "person" que gosta de cantar.
+Max é um ser "animal" que adora festinhas.
 
 
+2. Family Members (family_member):
 
-Temos a tabela 'sitter_rating', contendo as avalições das sitters e os comentários que são feitos pelos clientes:
+Destaquemos alguns membros adicionais da família que foram inseridos na tabela family_member:
+Ana Rashelle:
+
+Data de Nascimento: 2019-03-13
+Escola: Pirilampos
+Alergias: Rinite alérgica
+Sobre: Divertido
+Max:
+
+Data de Nascimento: 2010-03-01
+Sobre: Ama doces
+Outros membros da família:
+
+Haniela Felizarda, Rex, Ramiro Nathaniel, entre outros.
 
 
-INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment) VALUES ('1', '5', 'Ela é perfeita');
+3. Chat (chat) e User Chat (user_chat):
 
-INSERT INTO sitter_rating (ra_sit_id, ra_value) VALUES ('2', '4');
+A interação entre sitters, clientes e membros da família é facilitada pelas tabelas chat e user_chat.
+Alguns exemplos de mensagens no chat:
+"Olá, tudo bem?"
+"Boa noite, obrigada pela ajuda."
+"Já estão todos a dormir."
 
+
+4. Places (place):
+
+A tabela place destaca a diversidade de localizações dos membros da comunidade:
+Cazenga, Benfica, Vila, Arroja, Prenda.
+
+
+5. Sitter Information (sitter):
+
+Além das informações já fornecidas sobre a Délcia Dinis, Joaquim Igreja e outros sitters, há mais detalhes sobre as suas experiências e habilidades únicas:
+Experiência, Educação, Sobre Mim, Reabilidade, Tempo de Resposta, Taxa de Resposta.

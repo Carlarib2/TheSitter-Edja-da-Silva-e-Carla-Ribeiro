@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 
@@ -17,11 +16,27 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="chat_id")
-    private int chat_id;
+    private int chatId;
 
     @Column(name="chat_message_content")
-    private String chat_message_content;
+    private String chatMessageContent;
 
     @Column(name="chat_timestamp")
-    private Timestamp chat_timestamp;
+    private Timestamp chatTimestamp;
+
+    public Chat(){
+
+    }
+
+    public int getChatId() {
+        return chatId;
+    }
+
+    public String getChatMessageContent() {
+        return chatMessageContent;
+    }
+
+    public Timestamp getChatTimestamp() {
+        return chatTimestamp;
+    }
 }

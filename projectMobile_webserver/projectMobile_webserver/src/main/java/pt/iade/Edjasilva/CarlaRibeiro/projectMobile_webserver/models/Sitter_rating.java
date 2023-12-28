@@ -6,9 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
-
-import java.time.LocalDate;
 
 @Entity
 @Table(name="sitter_rating")
@@ -17,18 +14,25 @@ public class Sitter_rating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="ra_id")
-    private int ra_id;
+    private int raId;
 
     @Column(name="ra_sit_id")
-    private int ra_sit_id;
+    private int raSitId;
 
     @Column(name="ra_value")
-    private int ra_value;
+    private int raValue;
 
     @Column(name="ra_comment")
-    private String ra_comment;
+    private String raComment;
 
+    public Sitter_rating(){
+    }
 
+    public int getRaId(){return raId; }
 
+    public int getRaSitId(){return raSitId;}
 
+    public int getRaValue(){return raValue;}
+
+    public String getRaComment(){return raComment;}
 }

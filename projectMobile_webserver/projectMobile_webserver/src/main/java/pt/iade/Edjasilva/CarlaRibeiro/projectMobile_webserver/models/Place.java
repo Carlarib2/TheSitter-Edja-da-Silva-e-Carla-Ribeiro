@@ -29,4 +29,20 @@ public class Place {
     public Place(){
 
     }
+
+    public int getPlaId() {
+        return plaId;
+    }
+
+    public String getPlaAddress() {
+        return plaAddress;
+    }
+
+    public double getPlaLogitude() {
+        return plaLogitude;
+    }
+
+    public double getPlaAltitude() {
+        return plaAltitude;
+    }
 }

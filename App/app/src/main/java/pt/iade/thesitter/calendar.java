@@ -28,9 +28,11 @@ public class calendar extends AppCompatActivity {
                 Toast.makeText(calendar.this, "Data selecionada: " + selectedDate, Toast.LENGTH_SHORT).show();
 
                 datasSelecionadas.add(selectedDate);
+
             }
         });
     }
+
 
     public void startHomeS3(View view){
         Intent intent = new Intent(this, the_profile_1.class);
@@ -55,6 +57,6 @@ public class calendar extends AppCompatActivity {
 
     public void startSaveS3(View view){
         Intent intent = new Intent(this, profile_settings.class);
-        startActivity(intent);
+        finish();
     }
 }

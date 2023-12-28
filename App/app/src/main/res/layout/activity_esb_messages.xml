@@ -187,7 +187,7 @@
         android:layout_width="113dp"
         android:layout_height="113dp"
         android:layout_marginStart="20dp"
-        android:contentDescription="@string/Image_pai_dog"
+        android:contentDescription="@string/Nathan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider17_esb"
         app:srcCompat="@drawable/pai_e_c_ozinho" />
@@ -197,7 +197,7 @@
         android:layout_width="121dp"
         android:layout_height="124dp"
         android:layout_marginStart="20dp"
-        android:contentDescription="@string/image_man"
+        android:contentDescription="@string/Alex"
         app:layout_constraintStart_toStartOf="@+id/messages_divider16_esb"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
         app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />
@@ -207,7 +207,7 @@
         android:layout_width="121dp"
         android:layout_height="130dp"
         android:layout_marginStart="20dp"
-        android:contentDescription="@string/Image_lady"
+        android:contentDescription="@string/Andre"
         app:layout_constraintStart_toStartOf="@+id/messages_divider25_esb"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider25_esb"
         app:srcCompat="@drawable/pai_e_filho" />

@@ -15,6 +15,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column(name="user_id")
+    private int userId;
 
     @Column(name="user_bdate")
     private LocalDate userBdate;
@@ -38,8 +40,7 @@ public class User {
     @Column(name="user_gender")
     private String userGender;
 
-    @Column(name="user_id")
-    private int userId;
+   
 
     @Column(name="user_name")
     private String userName;

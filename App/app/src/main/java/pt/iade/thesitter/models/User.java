@@ -1,10 +1,22 @@
 package pt.iade.thesitter.models;
 
+import com.google.gson.annotations.JsonAdapter;
+import pt.iade.thesitter.utilities.WebRequest;
+import pt.iade.thesitter.utilities.DateJsonAdapter;
+import java.net.URL;
+import java.time.LocalDate;
 import java.time.LocalDate;
 import java.io.Serializable;
+import android.util.Log;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+
+
 public class User implements Serializable{
 
     private LocalDate userBdate;
+    @JsonAdapter(DateJsonAdapter.class)
 
     private byte[]  userUpload;
 
@@ -43,6 +55,34 @@ public class User implements Serializable{
 
     public LocalDate getUserBdate() {
         return userBdate;
+    }
+    public void save(/*SaveResponse response*/) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    if (userId == 0) {
+                        WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
+                        String resp = request.performPostRequest(User.this);
+
+                        User user = new Gson().fromJson(resp, User.class);
+
+                        userId= user.getUserId();
+                       // response.response();
+
+                    } else {
+                        WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/"+userId));
+                        request.performPostRequest(User.this);
+
+                        //response.response();
+                    }
+                } catch (Exception e){
+                    Log.e("Save", e.toString());
+                }
+
+            }
+        });
+        thread.start();
     }
 
     public byte[] getUserUpload() {

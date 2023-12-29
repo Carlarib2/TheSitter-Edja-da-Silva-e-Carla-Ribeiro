@@ -2,11 +2,13 @@ pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\CreaturesCont
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Sitter_rating.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Status.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Place.class
+pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Access.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\StatusController.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\Family_memberRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\CreaturesRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\Sitter_ratingController.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\StatusRepository.class
+pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\AccessRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\BookingController.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Creatures.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\UserController.class
@@ -18,6 +20,7 @@ pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\SitterControl
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\responses\Response.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Family_member.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\ChatRepository.class
+pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\AccessController.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\BookingRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\exceptions\NotFoundException.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\PlaceController.class

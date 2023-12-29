@@ -1,8 +1,8 @@
 package pt.iade.thesitter.models;
 
 import java.time.LocalDate;
-
-public class User {
+import java.io.Serializable;
+public class User implements Serializable{
 
     private LocalDate userBdate;
 

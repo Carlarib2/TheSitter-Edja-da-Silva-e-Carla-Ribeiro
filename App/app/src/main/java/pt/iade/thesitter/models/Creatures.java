@@ -10,9 +10,7 @@ public class Creatures {
     private String creInfo;
 
     public Creatures(){
-
     }
-
     public Creatures(int creId, String creType, String creInfo) {
         this.creId = creId;
         this.creType = creType;

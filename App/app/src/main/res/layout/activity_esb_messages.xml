@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    android:contentDescription="@string/Image_lady"
     tools:context=".messages">
 
     <TextView
@@ -197,7 +196,7 @@
         android:layout_width="121dp"
         android:layout_height="124dp"
         android:layout_marginStart="20dp"
-        android:contentDescription="@string/Alex"
+        android:contentDescription="@string/Alex_image"
         app:layout_constraintStart_toStartOf="@+id/messages_divider16_esb"
         app:layout_constraintTop_toBottomOf="@+id/messages_divider16_esb"
         app:srcCompat="@drawable/filha_e_m_e_de_100_anos" />

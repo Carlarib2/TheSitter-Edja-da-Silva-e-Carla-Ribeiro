@@ -168,6 +168,8 @@
     <string name="that_is">That is awesome! Thank you.</string>
     <string name="message0">Thank you?</string>
     <string name="message1">Hello, how is Ana?</string>
+    <string name="Alex_image">Alexanda Fidalgo image</string>
+
 
     <!--Activity_esc_profile_settings-->
     <string name="profile_settings">Profile Settings</string>
@@ -198,7 +200,7 @@
     <string name="what_ages">What ages have you sat for?</string>
     <string name="have_you_my">Have you ever completed a CPR course?</string>
     <string name="have_you_been_convicted">Have you been convicted of a crime?</string>
-    <string name="are_you">Are you comfrtable with pets?</string>
+    <string name="are_you">Are you comfortable with pets?</string>
     <string name="let_us">LET US GET TO KNOW YOU</string>
 
 
@@ -206,6 +208,8 @@
     <!--Activity_esg_declined-->
     <!--Activity_esh_pending-->
     <string name="quinze">15/07</string>
+    <string name="Yes">YES</string>
+    <string name="No">NO</string>
 
     <!--Activity_calendar-->
 

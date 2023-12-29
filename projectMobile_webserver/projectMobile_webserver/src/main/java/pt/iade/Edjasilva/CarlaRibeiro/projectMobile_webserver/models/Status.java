@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 @Entity
 @Table(name="status")
@@ -16,8 +15,18 @@ public class Status {
 
 
     @Column(name="sta_id")
-    private int sta_id;
+    private int staId;
 
     @Column(name="sta_name")
-    private String sta_name;
+    private String staName;
+
+    public Status (){
+    }
+
+    public int getStaId(){return staId;}
+    public String getStaName(){return staName;}
+
+
+
+
 }

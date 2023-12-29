@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.*;
 
 @Entity
 @Table(name="creatures")
@@ -15,13 +14,27 @@ public class Creatures {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name="cre_id")
-    private int cre_id;
+    private int creId;
 
     @Column(name="cre_type")
-    private String cre_type;
+    private String creType;
 
     @Column(name="cre_info")
-    private String cre_info;
+    private String creInfo;
 
+    public Creatures(){
 
+    }
+
+    public int getCreId() {
+        return creId;
+    }
+
+    public String getCreType() {
+        return creType;
+    }
+
+    public String getCreInfo() {
+        return creInfo;
+    }
 }

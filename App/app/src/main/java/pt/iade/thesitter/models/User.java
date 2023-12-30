@@ -1,22 +1,23 @@
 package pt.iade.thesitter.models;
 
+import android.util.Log;
+
+import com.google.gson.Gson;
 import com.google.gson.annotations.JsonAdapter;
-import pt.iade.thesitter.utilities.WebRequest;
-import pt.iade.thesitter.utilities.DateJsonAdapter;
+
+import java.io.Serializable;
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.LocalDate;
-import java.io.Serializable;
-import android.util.Log;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
+import java.util.HashMap;
+
+import pt.iade.thesitter.utilities.DateJsonAdapter;
+
+import pt.iade.thesitter.utilities.WebRequest;
 
 
 public class User implements Serializable{
-
-    private LocalDate userBdate;
     @JsonAdapter(DateJsonAdapter.class)
+    private LocalDate userBdate;
 
     private byte[]  userUpload;
 
@@ -56,19 +57,20 @@ public class User implements Serializable{
     public LocalDate getUserBdate() {
         return userBdate;
     }
-    public void save(/*SaveResponse response*/) {
+    public void save(SaveResponse response) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
                     if (userId == 0) {
                         WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
-                        String resp = request.performPostRequest(User.this);
+                        String response = request.performPostRequest(User.this);
 
-                        User user = new Gson().fromJson(resp, User.class);
+                        User user = new Gson().fromJson(response, User.class);
+
 
                         userId= user.getUserId();
-                       // response.response();
+                        /*response.response();*/
 
                     } else {
                         WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/"+userId));
@@ -80,6 +82,30 @@ public class User implements Serializable{
                     Log.e("Save", e.toString());
                 }
 
+            }
+        });
+        thread.start();
+    }
+
+    public static void Login(String userEmail, String userPassword, LoginResponse response){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
+
+                    HashMap<String, String> params = new HashMap<String, String>();
+                    params.put("userPassword", userPassword);
+                    params.put("userEmail", userEmail);
+
+                    String resp = request.performGetRequest(params);
+                    User user = new Gson().fromJson(resp, User.class);
+
+                    response.response(user);
+
+                } catch (Exception e){
+                    Log.e("User.Login", e.toString());
+                }
             }
         });
         thread.start();
@@ -120,4 +146,12 @@ public class User implements Serializable{
     public int getUserPlaId() {
         return userPlaId;
     }
+    public interface SaveResponse {
+        public void response();
+    }
+
+    public interface LoginResponse {
+        public void response(User user);
+    }
+
 }

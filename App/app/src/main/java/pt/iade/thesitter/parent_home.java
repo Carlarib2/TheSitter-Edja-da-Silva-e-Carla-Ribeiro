@@ -12,6 +12,8 @@ public class parent_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ep_parent_home);
+
+        setupComponents();
     }
 
     public void startBooking(View view){
@@ -42,5 +44,9 @@ public class parent_home extends AppCompatActivity {
     public void startMessagesP1(View view){
         Intent intent = new Intent(this, parent_messages.class);
         startActivity(intent);
+    }
+
+    public void setupComponents() {
+
     }
 }

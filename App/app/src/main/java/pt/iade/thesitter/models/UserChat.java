@@ -1,6 +1,6 @@
 package pt.iade.thesitter.models;
 
-public class User_chat {
+public class UserChat {
 
     private int usatId;
 
@@ -10,10 +10,10 @@ public class User_chat {
 
     private int usatChatId;
 
-    public User_chat() {
+    public UserChat() {
     }
 
-    public User_chat(int usatId, int usatUserId, int usatChatId) {
+    public UserChat(int usatId, int usatUserId, int usatChatId) {
         this.usatId = usatId;
         this.usatUserId = usatUserId;
         this.usatChatId = usatChatId;

@@ -2,7 +2,7 @@ package pt.iade.thesitter.models;
 
 import java.time.LocalDate;
 
-public class Family_member {
+public class FamilyMember {
 
 
 
@@ -25,11 +25,11 @@ public class Family_member {
     private int faCreId;
 
 
-    public Family_member(){
+    public FamilyMember(){
 
     }
 
-    public Family_member(int faId, String faName, LocalDate faBdate, String faSchool, String faAllergies, String faAboutMe, String faGender, int faCliId, int faCreId) {
+    public FamilyMember(int faId, String faName, LocalDate faBdate, String faSchool, String faAllergies, String faAboutMe, String faGender, int faCliId, int faCreId) {
         this.faId = faId;
         this.faName = faName;
         this.faBdate = faBdate;

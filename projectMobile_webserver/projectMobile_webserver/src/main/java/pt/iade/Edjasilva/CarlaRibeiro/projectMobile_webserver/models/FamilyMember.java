@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="family_member")
-public class Family_member {
+public class FamilyMember {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -43,7 +43,7 @@ public class Family_member {
     private int faCreId;
 
 
-    public Family_member(){
+    public FamilyMember(){
 
     }
 

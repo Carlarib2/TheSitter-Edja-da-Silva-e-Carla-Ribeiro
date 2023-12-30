@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="sitter_rating")
-public class Sitter_rating {
+public class SitterRating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -25,7 +25,7 @@ public class Sitter_rating {
     @Column(name="ra_comment")
     private String raComment;
 
-    public Sitter_rating(){
+    public SitterRating(){
     }
 
     public int getRaId(){return raId; }

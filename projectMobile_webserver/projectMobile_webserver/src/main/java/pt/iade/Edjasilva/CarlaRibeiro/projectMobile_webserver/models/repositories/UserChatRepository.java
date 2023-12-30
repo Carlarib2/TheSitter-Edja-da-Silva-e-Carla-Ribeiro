@@ -7,4 +7,5 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.UserChat;
 public interface UserChatRepository extends CrudRepository<UserChat, Integer> {
     Iterable<UserChat> findByUsatId(int usatId);
 
+
 }

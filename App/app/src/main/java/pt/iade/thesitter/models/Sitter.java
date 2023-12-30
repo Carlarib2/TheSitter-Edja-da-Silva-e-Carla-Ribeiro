@@ -15,7 +15,7 @@ public class Sitter {
     private String sitEducation;
 
 
-    private int sitAboutMe;
+    private String sitAboutMe;
 
 
     private int sitBooId;
@@ -33,7 +33,7 @@ public class Sitter {
 
     }
 
-    public Sitter(int sitId, int sitUserId, String sitExperience, String sitEducation, int sitAboutMe, int sitBooId, int sitReability, int sitResponseTime, int sitResponseRate) {
+    public Sitter(int sitId, int sitUserId, String sitExperience, String sitEducation, String sitAboutMe, int sitBooId, int sitReability, int sitResponseTime, int sitResponseRate) {
         this.sitId = sitId;
         this.sitUserId = sitUserId;
         this.sitExperience = sitExperience;
@@ -53,7 +53,7 @@ public class Sitter {
 
     public String getSitEducation() {return sitEducation;}
 
-    public int getSitAboutMe() {return sitAboutMe;}
+    public String getSitAboutMe() {return sitAboutMe;}
 
     public int getSitBooId() {return sitBooId;}
 

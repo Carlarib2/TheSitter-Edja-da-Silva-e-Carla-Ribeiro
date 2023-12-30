@@ -23,7 +23,7 @@ public class SitterRatingController {
     private SitterRatingRepository sitterRatingRepository;
 
     @GetMapping(path="/all", produces= MediaType.APPLICATION_JSON_VALUE)
-    private Iterable<SitterRating> getSitterRating(){
+    public Iterable<SitterRating> getSitterRating(){
         logger.info("Sending the rating off all the sitters");
         return sitterRatingRepository.findAll();
 

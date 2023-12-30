@@ -28,7 +28,7 @@ public class Sitter {
     private String sitEducation;
 
     @Column(name="sit_aboutMe")
-    private int sitAboutMe;
+    private String sitAboutMe;
 
     @Column(name="sit_boo_id")
     private int sitBooId;
@@ -54,7 +54,7 @@ public class Sitter {
 
     public String getSitEducation() {return sitEducation;}
 
-    public int getSitAboutMe() {return sitAboutMe;}
+    public String getSitAboutMe() {return sitAboutMe;}
 
     public int getSitBooId() {return sitBooId;}
 

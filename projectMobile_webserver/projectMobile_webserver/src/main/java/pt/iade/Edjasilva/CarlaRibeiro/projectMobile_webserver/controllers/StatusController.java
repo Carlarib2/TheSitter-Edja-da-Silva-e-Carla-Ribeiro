@@ -20,7 +20,7 @@ public class StatusController {
     private StatusRepository statusRepository;
 
     @GetMapping(path="/all", produces= MediaType.APPLICATION_JSON_VALUE)
-        private Iterable<Status> getStatus(){
+        public Iterable<Status> getStatus(){
         logger.info("sending all status");
         return statusRepository.findAll();
     }

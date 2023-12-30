@@ -16,5 +16,9 @@ public class register extends AppCompatActivity {
     public void startRegister2(View view){
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
+        setupComponents();
+    }
+
+    private void setupComponents() {
     }
 }

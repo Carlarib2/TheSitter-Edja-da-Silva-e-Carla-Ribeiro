@@ -85,12 +85,10 @@
         android:id="@+id/register_button_d"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/app_button_register"
         android:fontFamily="@font/allerta_stencil"
-        android:onClick="startRegister2"
         android:shadowColor="#FCE4EC"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -99,7 +97,6 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_editText_d" />
@@ -108,7 +105,7 @@
         android:id="@+id/create_textView_d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/app_text1"
         android:textAlignment="center"
@@ -116,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
+        app:layout_constraintTop_toBottomOf="@+id/sitter_switch_d" />
 
     <ImageView
         android:id="@+id/register_imageView6_d"
@@ -170,6 +167,18 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
+
+    <Switch
+        android:id="@+id/sitter_switch_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:text="Are you a Sitter?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

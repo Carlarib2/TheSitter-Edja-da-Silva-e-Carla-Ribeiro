@@ -40,8 +40,6 @@ public class User {
     @Column(name="user_gender")
     private String userGender;
 
-
-
     @Column(name="user_name")
     private String userName;
 

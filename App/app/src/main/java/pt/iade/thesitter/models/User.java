@@ -38,9 +38,10 @@ public class User implements Serializable{
     private int userPlaId;
 
     public User() {
+        this(0, "", 0, "", "", "", "", "", null, null);
     }
 
-    public User(String userName, int userPlaId, int userId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate) {
+    public User(int userId, String userName, int userPlaId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate) {
         this.userName = userName;
         this.userPlaId = userPlaId;
         this.userId= userId;
@@ -111,41 +112,105 @@ public class User implements Serializable{
         thread.start();
     }
 
+
+    public static void Register(String userName, String userEmail, String userPassword, String UserPassword, RegisterResponse response){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
+
+                    HashMap<String, String> params = new HashMap<String, String>();
+                    params.put("userPassword", userPassword);
+                    params.put("userEmail", userEmail);
+
+                    String resp = request.performGetRequest(params);
+                    User user= new Gson().fromJson(resp, User.class);
+
+                    response.response(user);
+
+                } catch (Exception e){
+                    Log.e("User.Register", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
+
+    public void setUserBdate(LocalDate userBdate) {
+        this.userBdate = userBdate;
+    }
+
     public byte[] getUserUpload() {
         return userUpload;
+    }
+
+    public void setUserUpload(byte[] userUpload) {
+        this.userUpload = userUpload;
     }
 
     public String getUserAddress() {
         return userAddress;
     }
 
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
+    }
+
     public String getUserMobile() {
         return userMobile;
+    }
+
+    public void setUserMobile(String userMobile) {
+        this.userMobile = userMobile;
     }
 
     public String getUserEmail() {
         return userEmail;
     }
 
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
     public String getUserPassword() {
         return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public String getUserGender() {
         return userGender;
     }
 
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
+    }
+
     public int getUserId() {
         return userId;
     }
+
 
     public String getUserName() {
         return userName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public int getUserPlaId() {
         return userPlaId;
     }
+
+    public void setUserPlaId(int userPlaId) {
+        this.userPlaId = userPlaId;
+    }
+
+
     public interface SaveResponse {
         public void response();
     }
@@ -153,5 +218,11 @@ public class User implements Serializable{
     public interface LoginResponse {
         public void response(User user);
     }
+
+    public interface RegisterResponse{
+        public void response(User user);
+    }
+
+
 
 }

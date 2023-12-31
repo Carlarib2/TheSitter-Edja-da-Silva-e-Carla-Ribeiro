@@ -4,4 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Place;
 
 public interface PlaceRepository extends CrudRepository<Place, Integer> {
+    Iterable<Place> findByPlaId(int plaId);
 }

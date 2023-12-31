@@ -21,6 +21,9 @@ public class Access {
     @Column(name="ac_name")
     private String acName;
 
+    public Access() {
+    }
+
     public int getAcId() {
         return acId;
     }

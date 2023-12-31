@@ -11,7 +11,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Place;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.PlaceRepository;
 
 @RestController
-@RequestMapping(path= "/api/places")
+@RequestMapping(path= "/api/place")
 public class PlaceController {
 
     private Logger logger = LoggerFactory.getLogger(PlaceController.class);

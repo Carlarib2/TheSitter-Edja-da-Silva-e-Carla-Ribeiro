@@ -113,7 +113,7 @@ public class User implements Serializable{
     }
 
 
-    public static void Register(String userName, String userEmail, String userPassword, String UserPassword, RegisterResponse response){
+   public static void Register(String userName, String userEmail, String userPassword, String UserPassword, RegisterResponse response){
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {

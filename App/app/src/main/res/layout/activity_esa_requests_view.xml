@@ -69,7 +69,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="9dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Friday, November 29th"
+        android:hint="Friday, November 29th"
         app:layout_constraintStart_toEndOf="@+id/requests_imageView18_esa"
         app:layout_constraintTop_toBottomOf="@+id/requests_divider9_esa" />
 
@@ -151,7 +151,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="9dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Friday, September 22th"
+        android:hint="Friday, September 22th"
         app:layout_constraintStart_toEndOf="@+id/requests_imageView17_esa"
         app:layout_constraintTop_toBottomOf="@+id/requests_divider8_esa" />
 

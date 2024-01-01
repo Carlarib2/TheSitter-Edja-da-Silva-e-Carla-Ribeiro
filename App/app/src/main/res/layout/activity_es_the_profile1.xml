@@ -167,7 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/advance"
+        android:hint="@string/advance"
         app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
         app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
@@ -266,7 +266,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/friday"
+        android:hint="@string/friday"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView15_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider5_es" />
 
@@ -277,7 +277,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/saturday"
+        android:hint="@string/saturday"
         app:layout_constraintStart_toEndOf="@+id/profile_imageView14_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider6_es" />
 
@@ -410,7 +410,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/six"
+        android:hint="@string/six"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider7" />
 

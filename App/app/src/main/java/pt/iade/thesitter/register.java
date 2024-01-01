@@ -70,6 +70,13 @@ public class register extends AppCompatActivity {
                 if (isSitter) {
                     intent = new Intent(register.this, profile.class);
                 } else {
+
+                    newUser.save(new User.SaveResponse() {
+                        @Override
+                        public void response() {
+
+                        }
+                    });
                     intent = new Intent(register.this, parent_home.class);
                 }
                 intent.putExtra("user", newUser);

@@ -75,7 +75,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/Jane_Doe"
+        android:hint="@string/Jane_Doe"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/settings_imageView16_esc"
         app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf" />
 

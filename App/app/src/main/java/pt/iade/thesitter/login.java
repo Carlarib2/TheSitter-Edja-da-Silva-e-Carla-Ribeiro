@@ -11,10 +11,8 @@ import android.widget.EditText;
 import pt.iade.thesitter.models.User;
 
 public class login extends AppCompatActivity {
-    protected Button login_button_c;
-    protected Button sae_button_epb;
-    EditText username_editView;
-    EditText password_editView;
+    protected Button login_button_c, sae_button_epb;
+    EditText username_editView, password_editView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -9,23 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import pt.iade.thesitter.models.User;
 
 public class register extends AppCompatActivity {
     protected Button register;
-            //register_button_d;
-    EditText username;
-        //user_editTex_d;
-    EditText email;
-                //mail_editText_d;
-    EditText password;
-        //pass_editText_d;
-    EditText confirmPass;
-                //confirm_editText_d
-    Switch confirmSitter;
+    EditText username,  email,password, confirmPass ;
+    protected Switch confirmSitter;
 
-    //sitter_switch_d
 
 
     @Override
@@ -49,30 +41,42 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View vi) {
                 String userName = username.getText().toString();
-                String userPassword=password.getText().toString();
                 String userEmail=email.getText().toString();
+                String userPassword=password.getText().toString();
                 String userConfirmPass=confirmPass.getText().toString();
-                int sitterConfirm=confirmSitter.getSwitchPadding();
+                boolean isSitter=confirmSitter.isChecked();
 
-                if(confirmSitter!=null) {
+                if(!userPassword.equals(userConfirmPass)){
+                    Toast.makeText(register.this, "Passwords are not the same!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+
                     User newUser = new User();
                     newUser.setUserName(userName);
                     newUser.setUserEmail(userEmail);
                     newUser.setUserPassword(userPassword);
 
 
-                    Intent intent = new Intent(register.this, profile.class);
+                    /*Intent intent = new Intent(register.this, profile.class);
                     intent.putExtra("user", newUser);
                     startActivity(intent);
-                } else {
+
 
                     Intent intent = new Intent(register.this, parent_home.class);
-                    startActivity(intent);
+                    startActivity(intent);*/
+                Intent intent;
+                if (isSitter) {
+                    intent = new Intent(register.this, profile.class);
+                } else {
+                    intent = new Intent(register.this, parent_home.class);
+                }
+                intent.putExtra("user", newUser);
+                startActivity(intent);
 
 
                 }
-            }
-
         });
     }
 }

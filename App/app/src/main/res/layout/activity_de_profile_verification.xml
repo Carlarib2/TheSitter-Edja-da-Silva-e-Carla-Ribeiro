@@ -41,9 +41,9 @@
         android:textStyle="bold"
         app:backgroundTint="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/upload_imageButton_de"
-        app:layout_constraintStart_toStartOf="@+id/upload_imageButton_de"
-        app:layout_constraintTop_toBottomOf="@+id/upload_imageButton_de" />
+        app:layout_constraintEnd_toEndOf="@+id/btnPDF"
+        app:layout_constraintStart_toStartOf="@+id/btnPDF"
+        app:layout_constraintTop_toBottomOf="@+id/btnPDF" />
 
     <TextView
         android:id="@+id/upload_textView_de"
@@ -96,7 +96,7 @@
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <ImageButton
-        android:id="@+id/upload_imageButton_de"
+        android:id="@+id/btnPDF"
         android:layout_width="157dp"
         android:layout_height="116dp"
         android:layout_marginTop="20dp"

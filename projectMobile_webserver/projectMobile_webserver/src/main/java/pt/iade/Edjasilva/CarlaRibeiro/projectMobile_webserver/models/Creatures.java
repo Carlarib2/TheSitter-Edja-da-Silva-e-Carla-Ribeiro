@@ -26,6 +26,7 @@ public class Creatures {
 
     }
 
+
     public int getCreId() {
         return creId;
     }
@@ -34,7 +35,15 @@ public class Creatures {
         return creType;
     }
 
+    public void setCreType(String creType) {
+        this.creType = creType;
+    }
+
     public String getCreInfo() {
         return creInfo;
+    }
+
+    public void setCreInfo(String creInfo) {
+        this.creInfo = creInfo;
     }
 }

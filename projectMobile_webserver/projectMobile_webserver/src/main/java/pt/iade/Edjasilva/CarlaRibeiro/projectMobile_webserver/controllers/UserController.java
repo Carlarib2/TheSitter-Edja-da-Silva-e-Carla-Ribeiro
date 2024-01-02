@@ -21,20 +21,21 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<User> getUsers(){
         logger.info("Sending all Users");
         return userRepository.findAll();
     }
-    @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public User getUser(@PathVariable int id) {
-        logger.info("Sending user with id " + id);
-        Optional<User> _user = userRepository.findByUserId(id);
-        if (_user.isEmpty())
-            throw new NotFoundException("" + id, "User", "id");
-        else
-            return _user.get();
+
+    @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
+    public User login(@RequestParam(name = "userEmail") String email,
+                      @RequestParam(name = "userPassword") String password){
+        logger.info("sending user with email:"+email);
+        return userRepository.findByUserEmailAndUserPassword(email, password);
+
     }
+
+
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public User saveUser(@RequestBody User user) {
         User savedUser = userRepository.save(user);

@@ -1,6 +1,6 @@
 package pt.iade.thesitter.models;
 
-public class Sitter_rating {
+public class SitterRating {
 
 
     private int raId;
@@ -11,10 +11,10 @@ public class Sitter_rating {
 
     private String raComment;
 
-    public Sitter_rating(){
+    public SitterRating(){
     }
 
-    public Sitter_rating(int raId, int raSitId, int raValue, String raComment) {
+    public SitterRating(int raId, int raSitId, int raValue, String raComment) {
         this.raId = raId;
         this.raSitId = raSitId;
         this.raValue = raValue;
@@ -28,4 +28,16 @@ public class Sitter_rating {
     public int getRaValue(){return raValue;}
 
     public String getRaComment(){return raComment;}
+
+    public void setRaSitId(int raSitId) {
+        this.raSitId = raSitId;
+    }
+
+    public void setRaValue(int raValue) {
+        this.raValue = raValue;
+    }
+
+    public void setRaComment(String raComment) {
+        this.raComment = raComment;
+    }
 }

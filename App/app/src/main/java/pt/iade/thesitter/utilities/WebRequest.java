@@ -213,9 +213,12 @@ public class WebRequest {
             String query = uri.getQuery();
             for (String key : params.keySet()) {
                 if (query == null) {
-                    query = key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+
+                    //query = key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    query = key + "=" + params.get(key);
                 } else {
-                    query += "&" + key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    //query += "&" + key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    query += "&" + key + "=" + params.get(key);
                 }
             }
 

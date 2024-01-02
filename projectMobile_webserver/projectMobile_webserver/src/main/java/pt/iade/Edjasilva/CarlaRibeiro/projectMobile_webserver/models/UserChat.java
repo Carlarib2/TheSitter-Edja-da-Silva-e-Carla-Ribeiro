@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="user_chat")
 
-public class User_chat {
+public class UserChat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -22,7 +22,7 @@ public class User_chat {
     @Column(name="usat_chat_id")
     private int usatChatId;
 
-    public User_chat() {
+    public UserChat() {
     }
 
 
@@ -34,7 +34,15 @@ public class User_chat {
         return usatUserId;
     }
 
+    public void setUsatUserId(int usatUserId) {
+        this.usatUserId = usatUserId;
+    }
+
     public int getUsatChatId() {
         return usatChatId;
+    }
+
+    public void setUsatChatId(int usatChatId) {
+        this.usatChatId = usatChatId;
     }
 }

@@ -28,7 +28,7 @@ public class Sitter {
     private String sitEducation;
 
     @Column(name="sit_aboutMe")
-    private int sitAboutMe;
+    private String sitAboutMe;
 
     @Column(name="sit_boo_id")
     private int sitBooId;
@@ -46,27 +46,72 @@ public class Sitter {
 
     }
 
-    public int getSitId() {return sitId;}
 
-    public int getSitUserId() {return sitUserId;}
+    public int getSitId() {
+        return sitId;
+    }
 
-    public String getSitExperience() {return sitExperience;}
+    public int getSitUserId() {
+        return sitUserId;
+    }
 
-    public String getSitEducation() {return sitEducation;}
+    public void setSitUserId(int sitUserId) {
+        this.sitUserId = sitUserId;
+    }
 
-    public int getSitAboutMe() {return sitAboutMe;}
+    public String getSitExperience() {
+        return sitExperience;
+    }
 
-    public int getSitBooId() {return sitBooId;}
+    public void setSitExperience(String sitExperience) {
+        this.sitExperience = sitExperience;
+    }
+
+    public String getSitEducation() {
+        return sitEducation;
+    }
+
+    public void setSitEducation(String sitEducation) {
+        this.sitEducation = sitEducation;
+    }
+
+    public String getSitAboutMe() {
+        return sitAboutMe;
+    }
+
+    public void setSitAboutMe(String sitAboutMe) {
+        this.sitAboutMe = sitAboutMe;
+    }
+
+    public int getSitBooId() {
+        return sitBooId;
+    }
+
+    public void setSitBooId(int sitBooId) {
+        this.sitBooId = sitBooId;
+    }
 
     public int getSitReability() {
         return sitReability;
+    }
+
+    public void setSitReability(int sitReability) {
+        this.sitReability = sitReability;
     }
 
     public int getSitResponseTime() {
         return sitResponseTime;
     }
 
+    public void setSitResponseTime(int sitResponseTime) {
+        this.sitResponseTime = sitResponseTime;
+    }
+
     public int getSitResponseRate() {
         return sitResponseRate;
+    }
+
+    public void setSitResponseRate(int sitResponseRate) {
+        this.sitResponseRate = sitResponseRate;
     }
 }

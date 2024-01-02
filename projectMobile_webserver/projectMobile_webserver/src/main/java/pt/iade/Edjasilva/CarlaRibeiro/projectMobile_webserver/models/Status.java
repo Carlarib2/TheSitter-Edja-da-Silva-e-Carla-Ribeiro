@@ -23,10 +23,16 @@ public class Status {
     public Status (){
     }
 
-    public int getStaId(){return staId;}
-    public String getStaName(){return staName;}
 
+    public int getStaId() {
+        return staId;
+    }
 
+    public String getStaName() {
+        return staName;
+    }
 
-
+    public void setStaName(String staName) {
+        this.staName = staName;
+    }
 }

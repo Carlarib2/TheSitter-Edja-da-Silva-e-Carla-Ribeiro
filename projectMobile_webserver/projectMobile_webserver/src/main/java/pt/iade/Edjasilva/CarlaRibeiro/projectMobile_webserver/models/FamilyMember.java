@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="family_member")
-public class Family_member {
+public class FamilyMember {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -43,43 +43,77 @@ public class Family_member {
     private int faCreId;
 
 
-    public Family_member(){
+    public FamilyMember(){
 
     }
+
 
     public int getFaId() {
         return faId;
     }
 
+
     public String getFaName() {
         return faName;
+    }
+
+    public void setFaName(String faName) {
+        this.faName = faName;
     }
 
     public LocalDate getFaBdate() {
         return faBdate;
     }
 
+    public void setFaBdate(LocalDate faBdate) {
+        this.faBdate = faBdate;
+    }
+
     public String getFaSchool() {
         return faSchool;
+    }
+
+    public void setFaSchool(String faSchool) {
+        this.faSchool = faSchool;
     }
 
     public String getFaAllergies() {
         return faAllergies;
     }
 
+    public void setFaAllergies(String faAllergies) {
+        this.faAllergies = faAllergies;
+    }
+
     public String getFaAboutMe() {
         return faAboutMe;
+    }
+
+    public void setFaAboutMe(String faAboutMe) {
+        this.faAboutMe = faAboutMe;
     }
 
     public String getFaGender() {
         return faGender;
     }
 
+    public void setFaGender(String faGender) {
+        this.faGender = faGender;
+    }
+
     public int getFaCliId() {
         return faCliId;
     }
 
+    public void setFaCliId(int faCliId) {
+        this.faCliId = faCliId;
+    }
+
     public int getFaCreId() {
         return faCreId;
+    }
+
+    public void setFaCreId(int faCreId) {
+        this.faCreId = faCreId;
     }
 }

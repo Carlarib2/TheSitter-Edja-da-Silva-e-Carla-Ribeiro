@@ -21,94 +21,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/day_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/day"
-        android:entries="@array/Day"
-        android:hint="@string/day"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/bdate_textView_da"
-        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
-
-    <Spinner
-        android:id="@+id/gender_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/other"
-        android:entries="@array/gender"
-        android:hint="@string/other"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/gender_textView_da"
-        app:layout_constraintStart_toStartOf="@+id/gender_textView_da"
-        app:layout_constraintTop_toBottomOf="@+id/gender_textView_da" />
-
-    <Spinner
-        android:id="@+id/month_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/month"
-        android:entries="@array/Month"
-        android:hint="@string/month"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/day_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
-
-    <Spinner
-        android:id="@+id/year_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/year"
-        android:entries="@array/Year"
-        android:hint="@string/year"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/bdate_textView_da"
-        app:layout_constraintStart_toEndOf="@+id/month_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da" />
-
     <EditText
-        android:id="@+id/mobile_editText_da"
+        android:id="@+id/experience_editText_da"
         style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/mobile"
-        android:hint="@string/mobile"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/gender_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/gender_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/gender_editText_da" />
-
-    <EditText
-        android:id="@+id/eaddress_ditText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/Address"
-        android:hint="@string/Address"
-        android:inputType="text"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="90dp"
+        android:autofillHints="@string/Experience"
+        android:hint="@string/Experience"
+        android:inputType="text|textImeMultiLine|textMultiLine"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/education_editText_da"
@@ -116,29 +37,14 @@
         app:layout_constraintTop_toBottomOf="@+id/education_editText_da" />
 
     <EditText
-        android:id="@+id/experience_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/Experience"
-        android:hint="@string/Experience"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/mobile_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/mobile_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/mobile_editText_da" />
-
-    <EditText
         android:id="@+id/about_editText_da"
         style="@style/Edit_Text_Profile"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="90dp"
         android:autofillHints="@string/About_me"
         android:hint="@string/About_me"
-        android:inputType="text"
+        android:inputType="text|textImeMultiLine|textMultiLine"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/experience_editText_da"
@@ -149,38 +55,23 @@
     <EditText
         android:id="@+id/education_editText_da"
         style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="90dp"
         android:autofillHints="@string/Education"
         android:hint="@string/Education"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/full_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/full_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/full_editText_da" />
-
-    <EditText
-        android:id="@+id/full_editText_da"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="325dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:autofillHints="@string/full_name"
-        android:hint="@string/full_name"
-        android:inputType="text"
+        android:inputType="text|textMultiLine"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/profile_divider15_da"
         app:layout_constraintStart_toStartOf="@+id/profile_divider15_da"
-        app:layout_constraintTop_toBottomOf="@+id/create_profile_textView_da" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_divider15_da" />
 
     <Button
         android:id="@+id/save_button_da"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="135dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -196,55 +87,6 @@
         app:layout_constraintEnd_toEndOf="@+id/about_editText_da"
         app:layout_constraintStart_toStartOf="@+id/about_editText_da"
         app:layout_constraintTop_toBottomOf="@+id/about_editText_da" />
-
-    <TextView
-        android:id="@+id/bdate_textView_da"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/Date_of_Birth"
-        android:textAlignment="viewStart"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/eaddress_ditText_da"
-        app:layout_constraintStart_toStartOf="@+id/eaddress_ditText_da"
-        app:layout_constraintTop_toBottomOf="@+id/eaddress_ditText_da" />
-
-    <TextView
-        android:id="@+id/gender_textView_da"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="@string/Gender"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/year_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/day_editText_da"
-        app:layout_constraintTop_toBottomOf="@+id/month_editText_da" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="240dp"
-        android:contentDescription="@string/person_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/full_editText_da"
-        app:layout_constraintEnd_toEndOf="@+id/full_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/full_editText_da"
-        app:layout_constraintTop_toTopOf="@+id/full_editText_da"
-        app:srcCompat="@drawable/person_icon" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="240dp"
-        android:contentDescription="@string/home_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/eaddress_ditText_da"
-        app:layout_constraintEnd_toEndOf="@+id/eaddress_ditText_da"
-        app:layout_constraintStart_toStartOf="@+id/eaddress_ditText_da"
-        app:layout_constraintTop_toTopOf="@+id/eaddress_ditText_da"
-        app:srcCompat="@drawable/home_icon" />
 
     <ImageView
         android:id="@+id/imageView28"
@@ -281,18 +123,6 @@
         app:layout_constraintStart_toStartOf="@+id/experience_editText_da"
         app:layout_constraintTop_toTopOf="@+id/experience_editText_da"
         app:srcCompat="@drawable/workspace_icon" />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="240dp"
-        android:contentDescription="@string/mobile"
-        app:layout_constraintBottom_toBottomOf="@+id/mobile_editText_da"
-        app:layout_constraintEnd_toEndOf="@+id/mobile_editText_da"
-        app:layout_constraintStart_toStartOf="@+id/mobile_editText_da"
-        app:layout_constraintTop_toTopOf="@+id/mobile_editText_da"
-        app:srcCompat="@drawable/call_icon" />
 
     <View
         android:id="@+id/profile_divider15_da"

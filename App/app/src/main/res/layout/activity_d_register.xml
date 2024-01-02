@@ -221,7 +221,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:autofillHints="@string/app_contentDescription1"
-                    android:hint="@string/app_user"
+                    android:hint="@string/Address"
                     android:inputType="text"
                     android:textAlignment="center"
                     android:textStyle="bold"
@@ -234,22 +234,96 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="240dp"
                     android:contentDescription="@string/home_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/address_editTex_d"
+                    app:layout_constraintEnd_toEndOf="@+id/address_editTex_d"
+                    app:layout_constraintStart_toStartOf="@+id/address_editTex_d"
+                    app:layout_constraintTop_toTopOf="@+id/address_editTex_d"
                     app:srcCompat="@drawable/home_icon" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/bdate"
                 android:layout_width="match_parent"
+                android:layout_height="103dp">
+
+                <TextView
+                    android:id="@+id/bdate_textView_da2"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="60dp"
+                    android:text="@string/Date_of_Birth"
+                    android:textAlignment="viewStart"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/day_editText_da2"
+                    style="@style/Edit_Text_Profile"
+                    android:layout_width="70dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints="@string/day"
+                    android:entries="@array/Day"
+                    android:hint="@string/day"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/bdate_textView_da2"
+                    app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da2" />
+
+                <Spinner
+                    android:id="@+id/month_editText_da2"
+                    style="@style/Edit_Text_Profile"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints="@string/month"
+                    android:entries="@array/Month"
+                    android:hint="@string/month"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/day_editText_da2"
+                    app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da2" />
+
+                <Spinner
+                    android:id="@+id/year_editText_da2"
+                    style="@style/Edit_Text_Profile"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:autofillHints="@string/year"
+                    android:entries="@array/Year"
+                    android:hint="@string/year"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/month_editText_da2"
+                    app:layout_constraintTop_toBottomOf="@+id/bdate_textView_da2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <EditText
-                    android:id="@+id/bdate_editTex_d"
+                <Spinner
+                    android:id="@+id/gender_editTex_d"
                     style="@style/Edit_Text"
                     android:layout_width="315dp"
                     android:layout_height="74dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginBottom="30dp"
+                    android:entries="@array/gender"
                     android:autofillHints="@string/app_contentDescription1"
                     android:hint="@string/app_user"
                     android:inputType="text"
@@ -259,24 +333,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/gender"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:id="@+id/gender_editTex_d"
-                    style="@style/Edit_Text"
-                    android:layout_width="315dp"
-                    android:layout_height="74dp"
-                    android:autofillHints="@string/app_contentDescription1"
-                    android:hint="@string/app_user"
-                    android:inputType="text"
-                    android:textAlignment="center"
+                <TextView
+                    android:id="@+id/gender_textView_da2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="@string/Gender"
+                    android:textSize="24sp"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="64dp" />
+                    app:layout_constraintBottom_toTopOf="@+id/gender_editTex_d"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -284,17 +354,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="240dp"
+                    android:contentDescription="@string/mobile"
+                    app:layout_constraintBottom_toBottomOf="@+id/mobile_editTex_d"
+                    app:layout_constraintEnd_toEndOf="@+id/mobile_editTex_d"
+                    app:layout_constraintStart_toStartOf="@+id/mobile_editTex_d"
+                    app:layout_constraintTop_toTopOf="@+id/mobile_editTex_d"
+                    app:srcCompat="@drawable/call_icon" />
+
                 <EditText
                     android:id="@+id/mobile_editTex_d"
                     style="@style/Edit_Text"
                     android:layout_width="315dp"
                     android:layout_height="74dp"
                     android:autofillHints="@string/app_contentDescription1"
-                    android:hint="@string/app_user"
-                    android:inputType="text"
+                    android:hint="@string/mobile"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="64dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

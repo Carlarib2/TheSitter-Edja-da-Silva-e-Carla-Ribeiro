@@ -8,14 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import pt.iade.thesitter.models.User;
 
 public class register extends AppCompatActivity {
     protected Button register;
-    EditText username,  email,password, confirmPass ;
+    EditText username,  email, password, confirmPass, address, mobile;
+
+    protected Spinner day, month, year, gender;
     protected Switch confirmSitter;
 
 
@@ -36,6 +42,12 @@ public class register extends AppCompatActivity {
         password=(EditText) findViewById(R.id.pass_editText_d);
         confirmPass=(EditText) findViewById(R.id.confirm_editText_d);
         confirmSitter=(Switch) findViewById(R.id.sitter_switch_d);
+        address=(EditText) findViewById(R.id.address_editTex_d);
+        gender=(Spinner) findViewById(R.id.gender_editTex_d);
+        day=(Spinner) findViewById(R.id.day_editText_da2);
+        month=(Spinner) findViewById(R.id.month_editText_da2);
+        year=(Spinner) findViewById(R.id.year_editText_da2);
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +57,12 @@ public class register extends AppCompatActivity {
                 String userPassword=password.getText().toString();
                 String userConfirmPass=confirmPass.getText().toString();
                 boolean isSitter=confirmSitter.isChecked();
+                int dayValue = Integer.parseInt(day.getSelectedItem().toString());
+                int monthValue=month.getSelectedItemPosition() + 1;
+                int yearValue= Integer.parseInt(year.getSelectedItem().toString());
+                LocalDate birtDate = LocalDate.of(yearValue, monthValue, dayValue);
+                //String userBdateString = birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
 
                 if(!userPassword.equals(userConfirmPass)){
                     Toast.makeText(register.this, "Passwords are not the same!", Toast.LENGTH_SHORT).show();
@@ -57,6 +75,7 @@ public class register extends AppCompatActivity {
                     newUser.setUserName(userName);
                     newUser.setUserEmail(userEmail);
                     newUser.setUserPassword(userPassword);
+                    newUser.setUserBdate(birtDate);
 
 
                     /*Intent intent = new Intent(register.this, profile.class);

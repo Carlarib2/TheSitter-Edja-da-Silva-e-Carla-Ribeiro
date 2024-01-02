@@ -33,6 +33,7 @@ public class login extends AppCompatActivity {
                 String username = username_editView.getText().toString();
                 String password = password_editView.getText().toString();
 
+
                 User.Login(username, password, new User.LoginResponse() {
                     @Override
                     public void response(User returnedUser) {

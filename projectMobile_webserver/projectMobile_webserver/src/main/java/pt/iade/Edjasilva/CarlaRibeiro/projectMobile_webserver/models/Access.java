@@ -24,11 +24,18 @@ public class Access {
     public Access() {
     }
 
+
     public int getAcId() {
         return acId;
     }
 
+
+
     public String getAcName() {
         return acName;
+    }
+
+    public void setAcName(String acName) {
+        this.acName = acName;
     }
 }

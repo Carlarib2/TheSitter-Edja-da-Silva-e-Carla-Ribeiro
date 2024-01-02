@@ -34,7 +34,15 @@ public class UserChat {
         return usatUserId;
     }
 
+    public void setUsatUserId(int usatUserId) {
+        this.usatUserId = usatUserId;
+    }
+
     public int getUsatChatId() {
         return usatChatId;
+    }
+
+    public void setUsatChatId(int usatChatId) {
+        this.usatChatId = usatChatId;
     }
 }

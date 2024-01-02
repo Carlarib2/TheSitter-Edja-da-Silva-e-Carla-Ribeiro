@@ -28,11 +28,32 @@ public class SitterRating {
     public SitterRating(){
     }
 
-    public int getRaId(){return raId; }
 
-    public int getRaSitId(){return raSitId;}
+    public int getRaId() {
+        return raId;
+    }
 
-    public int getRaValue(){return raValue;}
+    public int getRaSitId() {
+        return raSitId;
+    }
 
-    public String getRaComment(){return raComment;}
+    public void setRaSitId(int raSitId) {
+        this.raSitId = raSitId;
+    }
+
+    public int getRaValue() {
+        return raValue;
+    }
+
+    public void setRaValue(int raValue) {
+        this.raValue = raValue;
+    }
+
+    public String getRaComment() {
+        return raComment;
+    }
+
+    public void setRaComment(String raComment) {
+        this.raComment = raComment;
+    }
 }

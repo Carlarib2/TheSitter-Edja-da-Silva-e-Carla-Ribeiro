@@ -38,28 +38,50 @@ public class Booking {
 
     }
 
+
     public int getBooId() {
         return booId;
     }
 
+
     public LocalDate getBooData() {
         return booData;
+    }
+
+    public void setBooData(LocalDate booData) {
+        this.booData = booData;
     }
 
     public int getBooCliId() {
         return booCliId;
     }
 
+    public void setBooCliId(int booCliId) {
+        this.booCliId = booCliId;
+    }
+
     public Time getBooEndTime() {
         return booEndTime;
+    }
+
+    public void setBooEndTime(Time booEndTime) {
+        this.booEndTime = booEndTime;
     }
 
     public int getBooStaId() {
         return booStaId;
     }
 
+    public void setBooStaId(int booStaId) {
+        this.booStaId = booStaId;
+    }
+
     public Time getBooStartTime() {
         return booStartTime;
+    }
+
+    public void setBooStartTime(Time booStartTime) {
+        this.booStartTime = booStartTime;
     }
 }
 

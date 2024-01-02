@@ -28,15 +28,25 @@ public class Chat {
 
     }
 
+
     public int getChatId() {
         return chatId;
     }
+
 
     public String getChatMessageContent() {
         return chatMessageContent;
     }
 
+    public void setChatMessageContent(String chatMessageContent) {
+        this.chatMessageContent = chatMessageContent;
+    }
+
     public Timestamp getChatTimestamp() {
         return chatTimestamp;
+    }
+
+    public void setChatTimestamp(Timestamp chatTimestamp) {
+        this.chatTimestamp = chatTimestamp;
     }
 }

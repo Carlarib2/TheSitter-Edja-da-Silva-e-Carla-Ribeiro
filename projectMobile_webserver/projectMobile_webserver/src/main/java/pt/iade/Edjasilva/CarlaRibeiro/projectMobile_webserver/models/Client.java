@@ -29,15 +29,25 @@ public class Client {
 
     }
 
+
     public int getCliId() {
         return cliId;
     }
+
 
     public int getCliUserId() {
         return cliUserId;
     }
 
+    public void setCliUserId(int cliUserId) {
+        this.cliUserId = cliUserId;
+    }
+
     public int getCliStaId() {
         return cliStaId;
+    }
+
+    public void setCliStaId(int cliStaId) {
+        this.cliStaId = cliStaId;
     }
 }

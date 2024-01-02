@@ -30,6 +30,7 @@ public class Place {
 
     }
 
+
     public int getPlaId() {
         return plaId;
     }
@@ -38,11 +39,23 @@ public class Place {
         return plaAddress;
     }
 
+    public void setPlaAddress(String plaAddress) {
+        this.plaAddress = plaAddress;
+    }
+
     public double getPlaLogitude() {
         return plaLogitude;
     }
 
+    public void setPlaLogitude(double plaLogitude) {
+        this.plaLogitude = plaLogitude;
+    }
+
     public double getPlaAltitude() {
         return plaAltitude;
+    }
+
+    public void setPlaAltitude(double plaAltitude) {
+        this.plaAltitude = plaAltitude;
     }
 }

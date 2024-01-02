@@ -31,39 +31,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
 
-    <TextView
-        android:id="@+id/create_textView_d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/app_text1"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sitter_switch_d" />
-
-    <Switch
-        android:id="@+id/sitter_switch_d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        android:text="Are you a Sitter?"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
-
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="559dp"
-        app:layout_constraintBottom_toTopOf="@+id/register_button_d"
+        android:layout_width="406dp"
+        android:layout_height="828dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/create_textView_d">
+        app:layout_constraintTop_toBottomOf="@+id/register_divider11_d">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,6 +48,32 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <Switch
+                    android:id="@+id/sitter_switch_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Are you a Sitter?"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/create_textView_d"
+                    app:layout_constraintStart_toStartOf="@+id/create_textView_d"
+                    app:layout_constraintTop_toBottomOf="@+id/create_textView_d" />
+
+                <TextView
+                    android:id="@+id/create_textView_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_text1"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/register_imageView6_d"
@@ -92,7 +92,7 @@
                     style="@style/Edit_Text"
                     android:layout_width="315dp"
                     android:layout_height="74dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="130dp"
                     android:layout_marginBottom="30dp"
                     android:autofillHints="@string/app_contentDescription1"
                     android:hint="@string/app_user"
@@ -314,15 +314,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gender"
                 android:layout_width="match_parent"
-                android:layout_height="121dp">
+                android:layout_height="138dp">
 
                 <Spinner
                     android:id="@+id/gender_editTex_d"
                     style="@style/Edit_Text"
                     android:layout_width="315dp"
                     android:layout_height="74dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
                     android:autofillHints="@string/app_contentDescription1"
                     android:entries="@array/gender"
                     android:hint="@string/app_user"
@@ -331,6 +330,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -381,29 +381,36 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/register_button_d"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/buttonshape"
+                    android:contentDescription="@string/app_button_register"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:shadowColor="#FCE4EC"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="@string/app_button_register"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1e1e1e"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/register_button_d"
-        android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/buttonshape"
-        android:contentDescription="@string/app_button_register"
-        android:fontFamily="@font/allerta_stencil"
-        android:shadowColor="#FCE4EC"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="2"
-        android:text="@string/app_button_register"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#1e1e1e"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,4 +38,16 @@ public class Place {
     public double getPlaAltitude() {
         return plaAltitude;
     }
+
+    public void setPlaAddress(String plaAddress) {
+        this.plaAddress = plaAddress;
+    }
+
+    public void setPlaLogitude(double plaLogitude) {
+        this.plaLogitude = plaLogitude;
+    }
+
+    public void setPlaAltitude(double plaAltitude) {
+        this.plaAltitude = plaAltitude;
+    }
 }

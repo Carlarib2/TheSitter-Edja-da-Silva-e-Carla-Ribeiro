@@ -28,4 +28,12 @@ public class Creatures {
     public String getCreInfo() {
         return creInfo;
     }
+
+    public void setCreType(String creType) {
+        this.creType = creType;
+    }
+
+    public void setCreInfo(String creInfo) {
+        this.creInfo = creInfo;
+    }
 }

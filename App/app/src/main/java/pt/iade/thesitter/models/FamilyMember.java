@@ -76,4 +76,36 @@ public class FamilyMember {
     public int getFaCreId() {
         return faCreId;
     }
+
+    public void setFaName(String faName) {
+        this.faName = faName;
+    }
+
+    public void setFaBdate(LocalDate faBdate) {
+        this.faBdate = faBdate;
+    }
+
+    public void setFaSchool(String faSchool) {
+        this.faSchool = faSchool;
+    }
+
+    public void setFaAllergies(String faAllergies) {
+        this.faAllergies = faAllergies;
+    }
+
+    public void setFaAboutMe(String faAboutMe) {
+        this.faAboutMe = faAboutMe;
+    }
+
+    public void setFaGender(String faGender) {
+        this.faGender = faGender;
+    }
+
+    public void setFaCliId(int faCliId) {
+        this.faCliId = faCliId;
+    }
+
+    public void setFaCreId(int faCreId) {
+        this.faCreId = faCreId;
+    }
 }

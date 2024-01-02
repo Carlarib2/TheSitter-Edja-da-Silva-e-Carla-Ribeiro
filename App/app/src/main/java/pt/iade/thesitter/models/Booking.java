@@ -55,4 +55,23 @@ public class Booking {
         return booStartTime;
     }
 
+    public void setBooData(LocalDate booData) {
+        this.booData = booData;
+    }
+
+    public void setBooCliId(int booCliId) {
+        this.booCliId = booCliId;
+    }
+
+    public void setBooEndTime(Time booEndTime) {
+        this.booEndTime = booEndTime;
+    }
+
+    public void setBooStaId(int booStaId) {
+        this.booStaId = booStaId;
+    }
+
+    public void setBooStartTime(Time booStartTime) {
+        this.booStartTime = booStartTime;
+    }
 }

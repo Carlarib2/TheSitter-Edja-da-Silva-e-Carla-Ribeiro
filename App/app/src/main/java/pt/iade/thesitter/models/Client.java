@@ -30,4 +30,12 @@ public class Client {
     public int getCliStaId() {
         return cliStaId;
     }
+
+    public void setCliUserId(int cliUserId) {
+        this.cliUserId = cliUserId;
+    }
+
+    public void setCliStaId(int cliStaId) {
+        this.cliStaId = cliStaId;
+    }
 }

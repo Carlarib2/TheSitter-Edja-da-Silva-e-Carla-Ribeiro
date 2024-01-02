@@ -68,4 +68,36 @@ public class Sitter {
     public int getSitResponseRate() {
         return sitResponseRate;
     }
+
+    public void setSitUserId(int sitUserId) {
+        this.sitUserId = sitUserId;
+    }
+
+    public void setSitExperience(String sitExperience) {
+        this.sitExperience = sitExperience;
+    }
+
+    public void setSitEducation(String sitEducation) {
+        this.sitEducation = sitEducation;
+    }
+
+    public void setSitAboutMe(String sitAboutMe) {
+        this.sitAboutMe = sitAboutMe;
+    }
+
+    public void setSitBooId(int sitBooId) {
+        this.sitBooId = sitBooId;
+    }
+
+    public void setSitReability(int sitReability) {
+        this.sitReability = sitReability;
+    }
+
+    public void setSitResponseTime(int sitResponseTime) {
+        this.sitResponseTime = sitResponseTime;
+    }
+
+    public void setSitResponseRate(int sitResponseRate) {
+        this.sitResponseRate = sitResponseRate;
+    }
 }

@@ -21,4 +21,8 @@ public class Access {
     public String getAcName() {
         return acName;
     }
+
+    public void setAcName(String acName) {
+        this.acName = acName;
+    }
 }

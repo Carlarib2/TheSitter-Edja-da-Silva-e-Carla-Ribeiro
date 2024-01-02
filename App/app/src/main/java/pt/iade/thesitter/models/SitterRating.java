@@ -28,4 +28,16 @@ public class SitterRating {
     public int getRaValue(){return raValue;}
 
     public String getRaComment(){return raComment;}
+
+    public void setRaSitId(int raSitId) {
+        this.raSitId = raSitId;
+    }
+
+    public void setRaValue(int raValue) {
+        this.raValue = raValue;
+    }
+
+    public void setRaComment(String raComment) {
+        this.raComment = raComment;
+    }
 }

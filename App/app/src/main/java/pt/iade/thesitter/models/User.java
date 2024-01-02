@@ -63,7 +63,7 @@ public class User implements Serializable{
     public LocalDate getUserBdate() {
         return userBdate;
     }
-    /*public void save(SaveResponse response) {
+    public void save(SaveResponse response) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -76,7 +76,7 @@ public class User implements Serializable{
 
 
                         userId= user.getUserId();
-                        /*response.response();
+                        /*response.response();*/
 
                     } else {
                         WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/"+userId));
@@ -88,42 +88,6 @@ public class User implements Serializable{
                     Log.e("Save", e.toString());
                 }
 
-            }
-        });
-        thread.start();
-    }*/
-
-
-    public void save(SaveResponse response) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    WebRequest request;
-                    String responseString;
-
-                    if (userId == 0) {
-                        //new user
-                        request = new WebRequest(new URL(WebRequest.LOCALHOST + "/api/users"));
-                        responseString = request.performPostRequest(User.this);
-                    } else {
-                        //update user
-                        request = new WebRequest(new URL(WebRequest.LOCALHOST + "/api/users" + userId));
-                        responseString = request.performPutRequest(User.this);
-                    }
-
-                    User user = new Gson().fromJson(responseString, User.class);
-
-
-                    if (userId == 0) {
-                        userId = user.getUserId();
-                    }
-
-
-                    response.response(user);
-                } catch (Exception e) {
-                    Log.e("User.Save", e.toString());
-                }
             }
         });
         thread.start();
@@ -154,7 +118,7 @@ public class User implements Serializable{
     }
 
 
-   public static void Register(String userName, String userEmail, String userPassword, RegisterResponse response){
+    public static void Register(String userName, String userEmail, String userPassword, RegisterResponse response){
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -259,12 +223,8 @@ public class User implements Serializable{
     }
 
 
-    /*public interface SaveResponse {
-        public void response();
-    }*/
-
     public interface SaveResponse {
-        void response(User user);
+        public void response();
     }
 
     public interface LoginResponse {

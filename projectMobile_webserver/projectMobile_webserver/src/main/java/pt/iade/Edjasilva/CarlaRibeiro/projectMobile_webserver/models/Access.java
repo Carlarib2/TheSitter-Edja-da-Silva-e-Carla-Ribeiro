@@ -1,12 +1,10 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 @Table(name="access")
@@ -20,6 +18,17 @@ public class Access {
 
     @Column(name="ac_name")
     private String acName;
+    @OneToMany(mappedBy = "access")
+    @JsonManagedReference("access-user")
+    private Set<User> users;
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 
     public Access() {
     }

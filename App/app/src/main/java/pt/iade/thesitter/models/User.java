@@ -37,11 +37,15 @@ public class User implements Serializable{
 
     private int userPlaId;
 
+
+
+    private int userAcId;
+
     public User() {
-        this(0, "", 0, "", "", "", "", "", null, null);
+        this(0, "", 0, "", "", "", "", "", null, null,0);
     }
 
-    public User(int userId, String userName, int userPlaId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate) {
+    public User(int userId, String userName, int userPlaId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate, int userAcId) {
         this.userName = userName;
         this.userPlaId = userPlaId;
         this.userId= userId;
@@ -52,13 +56,14 @@ public class User implements Serializable{
         this.userAddress=userAddress;
         this.userUpload=userUpload;
         this.userBdate=userBdate;
+        this.userAcId=userAcId;
     }
 
 
     public LocalDate getUserBdate() {
         return userBdate;
     }
-    public void save(SaveResponse response) {
+    /*public void save(SaveResponse response) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -71,7 +76,7 @@ public class User implements Serializable{
 
 
                         userId= user.getUserId();
-                        /*response.response();*/
+                        /*response.response();
 
                     } else {
                         WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/"+userId));
@@ -83,6 +88,42 @@ public class User implements Serializable{
                     Log.e("Save", e.toString());
                 }
 
+            }
+        });
+        thread.start();
+    }*/
+
+
+    public void save(SaveResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WebRequest request;
+                    String responseString;
+
+                    if (userId == 0) {
+                        //new user
+                        request = new WebRequest(new URL(WebRequest.LOCALHOST + "/api/users"));
+                        responseString = request.performPostRequest(User.this);
+                    } else {
+                        //update user
+                        request = new WebRequest(new URL(WebRequest.LOCALHOST + "/api/users" + userId));
+                        responseString = request.performPutRequest(User.this);
+                    }
+
+                    User user = new Gson().fromJson(responseString, User.class);
+
+
+                    if (userId == 0) {
+                        userId = user.getUserId();
+                    }
+
+
+                    response.response(user);
+                } catch (Exception e) {
+                    Log.e("User.Save", e.toString());
+                }
             }
         });
         thread.start();
@@ -160,6 +201,13 @@ public class User implements Serializable{
     public String getUserMobile() {
         return userMobile;
     }
+    public int getUserAcId() {
+        return userAcId;
+    }
+
+    public void setUserAcId(int userAcId) {
+        this.userAcId = userAcId;
+    }
 
     public void setUserMobile(String userMobile) {
         this.userMobile = userMobile;
@@ -211,8 +259,12 @@ public class User implements Serializable{
     }
 
 
-    public interface SaveResponse {
+    /*public interface SaveResponse {
         public void response();
+    }*/
+
+    public interface SaveResponse {
+        void response(User user);
     }
 
     public interface LoginResponse {

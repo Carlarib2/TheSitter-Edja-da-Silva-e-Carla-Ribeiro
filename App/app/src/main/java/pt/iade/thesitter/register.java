@@ -36,73 +36,74 @@ public class register extends AppCompatActivity {
 
 
     private void setupComponents() {
-        register=(Button) findViewById(R.id.register_button_d);
-        username=(EditText) findViewById(R.id.user_editTex_d);
-        email=(EditText) findViewById(R.id.mail_editText_d);
-        password=(EditText) findViewById(R.id.pass_editText_d);
-        confirmPass=(EditText) findViewById(R.id.confirm_editText_d);
-        confirmSitter=(Switch) findViewById(R.id.sitter_switch_d);
-        address=(EditText) findViewById(R.id.address_editTex_d);
-        gender=(Spinner) findViewById(R.id.gender_editTex_d);
-        day=(Spinner) findViewById(R.id.day_editText_da2);
-        month=(Spinner) findViewById(R.id.month_editText_da2);
-        year=(Spinner) findViewById(R.id.year_editText_da2);
+        register = (Button) findViewById(R.id.register_button_d);
+        username = (EditText) findViewById(R.id.user_editTex_d);
+        email = (EditText) findViewById(R.id.mail_editText_d);
+        password = (EditText) findViewById(R.id.pass_editText_d);
+        confirmPass = (EditText) findViewById(R.id.confirm_editText_d);
+        confirmSitter = (Switch) findViewById(R.id.sitter_switch_d);
+        address = (EditText) findViewById(R.id.address_editTex_d);
+        gender = (Spinner) findViewById(R.id.gender_editTex_d);
+        day = (Spinner) findViewById(R.id.day_editText_da2);
+        month = (Spinner) findViewById(R.id.month_editText_da2);
+        year = (Spinner) findViewById(R.id.year_editText_da2);
+        mobile=(EditText) findViewById(R.id.mobile_editTex_d);
 
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View vi) {
+            public void onClick(View v) {
                 String userName = username.getText().toString();
-                String userEmail=email.getText().toString();
-                String userPassword=password.getText().toString();
-                String userConfirmPass=confirmPass.getText().toString();
-                boolean isSitter=confirmSitter.isChecked();
+                String userEmail = email.getText().toString();
+                String userPassword = password.getText().toString();
+                String userConfirmPass = confirmPass.getText().toString();
+                String userAddress= address.getText().toString();
+                String userGender= gender.getSelectedItem().toString();
+                String userMobile= mobile.getText().toString();
+                boolean isSitter = confirmSitter.isChecked();
                 int dayValue = Integer.parseInt(day.getSelectedItem().toString());
-                int monthValue=month.getSelectedItemPosition() + 1;
-                int yearValue= Integer.parseInt(year.getSelectedItem().toString());
-                LocalDate birtDate = LocalDate.of(yearValue, monthValue, dayValue);
-                //String userBdateString = birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                int monthValue = month.getSelectedItemPosition() + 1;
+                int yearValue = Integer.parseInt(year.getSelectedItem().toString());
+                LocalDate birthDate = LocalDate.of(yearValue, monthValue, dayValue);
 
-
-                if(!userPassword.equals(userConfirmPass)){
+                if (!userPassword.equals(userConfirmPass)) {
                     Toast.makeText(register.this, "Passwords are not the same!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                User newUser = new User();
+                newUser.setUserName(userName);
+                newUser.setUserEmail(userEmail);
+                newUser.setUserPassword(userPassword);
+                newUser.setUserBdate(birthDate);
+                newUser.setUserAddress(userAddress);
+                newUser.setUserGender(userGender);
+                newUser.setUserMobile(userMobile);
 
-
-                    User newUser = new User();
-                    newUser.setUserName(userName);
-                    newUser.setUserEmail(userEmail);
-                    newUser.setUserPassword(userPassword);
-                    newUser.setUserBdate(birtDate);
-
-
-                    /*Intent intent = new Intent(register.this, profile.class);
-                    intent.putExtra("user", newUser);
-                    startActivity(intent);
-
-
-                    Intent intent = new Intent(register.this, parent_home.class);
-                    startActivity(intent);*/
-                Intent intent;
-                if (isSitter) {
-                    intent = new Intent(register.this, profile.class);
-                } else {
-
-                    newUser.save(new User.SaveResponse() {
-                        @Override
-                        public void response() {
-
-                        }
-                    });
-                    intent = new Intent(register.this, parent_home.class);
-                }
-                intent.putExtra("user", newUser);
-                startActivity(intent);
-
-
-                }
+                newUser.save(new User.SaveResponse() {
+                    @Override
+                    public void response(User savedUser) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (savedUser != null) {
+                                    Toast.makeText(register.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                                    Intent intent;
+                                    if (isSitter) {
+                                        intent = new Intent(register.this, profile.class);
+                                    } else {
+                                        intent = new Intent(register.this, parent_home.class);
+                                    }
+                                    intent.putExtra("user", savedUser);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(register.this, "Registration failed. Please try again.", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+            }
         });
-    }
-}
+    }}

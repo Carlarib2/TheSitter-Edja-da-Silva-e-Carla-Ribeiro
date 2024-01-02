@@ -1,4 +1,5 @@
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\CreaturesController.class
+pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\UserService.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Status.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Place.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\SitterRatingController.class

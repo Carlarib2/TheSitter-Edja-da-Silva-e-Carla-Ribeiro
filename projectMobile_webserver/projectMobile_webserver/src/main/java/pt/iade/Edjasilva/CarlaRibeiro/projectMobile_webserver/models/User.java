@@ -1,11 +1,7 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -43,8 +39,24 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
-    @Column(name="user_pla_id")
-    private int userPlaId;
+    //@Column(name="user_pla_id")
+    //private int userPlaId;
+
+   // @Column(name="user_ac_id")
+   // private int userAcId;
+
+    @ManyToOne
+    @JoinColumn(name="user_ac_id", referencedColumnName = "ac_id")
+    @JsonBackReference("access-user")
+    private Access access;
+
+
+    @OneToOne
+    @JoinColumn(name="user_pla_id", referencedColumnName = "pla_id")
+    @JsonBackReference("place-user")
+    private Place place;
+
+
 
     public User() {
     }
@@ -118,11 +130,35 @@ public class User {
         this.userName = userName;
     }
 
-    public int getUserPlaId() {
+    /*public int getUserPlaId() {
         return userPlaId;
     }
 
     public void setUserPlaId(int userPlaId) {
         this.userPlaId = userPlaId;
+    }
+
+    public int getUserAcId() {
+        return userAcId;
+    }
+
+    /*public void setUserAcId(int userAcId) {
+        this.userAcId = userAcId;
+    }*/
+
+    public Access getAccess() {
+        return access;
+    }
+
+    public void setAccess(Access access) {
+        this.access = access;
+    }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public void setPlace(Place place) {
+        this.place = place;
     }
 }

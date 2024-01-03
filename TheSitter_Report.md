@@ -264,25 +264,37 @@ O nosso aplicativo tem 12 tabelas:
 
 
 
-## Tabela `status`
+## Tabela `sitter_rating`
 
 | Column  | Type         | Constraints                          |
 | ------- | ------------ | ------------------------------------ |
-| sta_id  | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| sta_name | VARCHAR(255) | NOT NULL                             |
+| ra_id  | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| ra_value |INT          |NOT NULL CHECK (ra_value BETWEEN 1 AND 5)|
+| ra_comment| TEXT       |                                       |
+| ra_sta_id| INT         |NOT NULL                               |
 
+-**ra_id:**
+   -Definição: Identificador único para cada sitter rating na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **sta_id:**
-    - Definição: Identificador único para cada status na tabela de status.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Não pode ser nulo (NOT NULL).
-    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
+-**ra_value:**
+   -Definição: Armazena o valor das avaliações.
+   -Tipos de dados:INT.
+   -Restrições: NOT NULL CHECK (ra_value BETWEEN 1 AND 5).
 
-- **sta_name:**
-    - Definição: Armazena o nome do status.
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
+-**ra_comment:**
+   -Definição: Armazena o comentários  das avaliações.
+   -Tipos de dados:TEXT.
+
+-**ra_sit_id:**
+   -Definição: Identificador relacionado as sitters .
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
 
 
 ## Tabela `client`

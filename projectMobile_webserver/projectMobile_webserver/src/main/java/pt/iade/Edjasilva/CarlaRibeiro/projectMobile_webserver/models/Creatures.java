@@ -1,11 +1,9 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 @Table(name="creatures")
@@ -22,14 +20,14 @@ public class Creatures {
     @Column(name="cre_info")
     private String creInfo;
 
+    @OneToMany(mappedBy = "creatures")
+    @JsonBackReference("familyMember-creatures")
+    private Set<Creatures> creatures;
+
     public Creatures(){
 
     }
 
-
-    public int getCreId() {
-        return creId;
-    }
 
     public String getCreType() {
         return creType;
@@ -45,5 +43,17 @@ public class Creatures {
 
     public void setCreInfo(String creInfo) {
         this.creInfo = creInfo;
+    }
+
+    public Set<Creatures> getCreatures() {
+        return creatures;
+    }
+
+    public void setCreatures(Set<Creatures> creatures) {
+        this.creatures = creatures;
+    }
+
+    public int getCreId() {
+        return creId;
     }
 }

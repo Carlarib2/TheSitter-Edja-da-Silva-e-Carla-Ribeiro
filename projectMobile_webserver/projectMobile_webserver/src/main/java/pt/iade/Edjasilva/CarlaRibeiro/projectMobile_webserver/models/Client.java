@@ -1,13 +1,10 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name="client")
@@ -19,8 +16,19 @@ public class Client {
     @Column(name="cli_id")
     private int cliId;
 
-    @Column(name="cli_user_id")
-    private int cliUserId;
+    @OneToOne
+    @JoinColumn(name="cli_user_id", referencedColumnName = "user_id")
+    @JsonManagedReference("user-client")
+    private User user;
+
+    @OneToMany(mappedBy = "client")
+    @JsonManagedReference("familyMember-client")
+    private Set<FamilyMember> familyMembers;
+
+    @OneToMany(mappedBy = "client")
+    @JsonManagedReference("client-booking")
+    private Set<Booking> booking;
+
 
 
 
@@ -29,18 +37,31 @@ public class Client {
     }
 
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<FamilyMember> getFamilyMembers() {
+        return familyMembers;
+    }
+
+    public void setFamilyMembers(Set<FamilyMember> familyMembers) {
+        this.familyMembers = familyMembers;
+    }
+
+    public Set<Booking> getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Set<Booking> booking) {
+        this.booking = booking;
+    }
+
     public int getCliId() {
         return cliId;
     }
-
-
-    public int getCliUserId() {
-        return cliUserId;
-    }
-
-    public void setCliUserId(int cliUserId) {
-        this.cliUserId = cliUserId;
-    }
-
-
 }

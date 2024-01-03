@@ -1,9 +1,11 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name="user")
@@ -46,14 +48,9 @@ public class User {
 
 
 
-
     public User() {
     }
 
-
-    public int getUserId() {
-        return userId;
-    }
 
     public LocalDate getUserBdate() {
         return userBdate;
@@ -119,22 +116,6 @@ public class User {
         this.userName = userName;
     }
 
-    /*public int getUserPlaId() {
-        return userPlaId;
-    }
-
-    public void setUserPlaId(int userPlaId) {
-        this.userPlaId = userPlaId;
-    }
-
-    public int getUserAcId() {
-        return userAcId;
-    }
-
-    /*public void setUserAcId(int userAcId) {
-        this.userAcId = userAcId;
-    }*/
-
     public Access getAccess() {
         return access;
     }
@@ -143,4 +124,7 @@ public class User {
         this.access = access;
     }
 
+    public int getUserId() {
+        return userId;
+    }
 }

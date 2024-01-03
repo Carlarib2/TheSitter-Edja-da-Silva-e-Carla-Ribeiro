@@ -8,7 +8,7 @@
     android:autofillHints="@string/app_password"
     android:background="@drawable/gradient"
     android:contentDescription="@string/app_user"
-    tools:context=".login">
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/logo_image_c"

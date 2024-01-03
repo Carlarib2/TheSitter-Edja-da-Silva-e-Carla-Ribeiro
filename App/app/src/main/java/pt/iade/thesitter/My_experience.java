@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class my_experience extends AppCompatActivity {
+public class My_experience extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class my_experience extends AppCompatActivity {
     }
 
     public void startSaveS2(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+        Intent intent = new Intent(this, Profile_settings.class);
         startActivity(intent);
     }
 }

@@ -31,76 +31,76 @@
             android:name=".parent_pending"
             android:exported="false" />
         <activity
-            android:name=".ese_sitter_chat"
+            android:name=".Ese_sitter_chat"
             android:exported="false" />
         <activity
-            android:name=".epd_parent_chat"
+            android:name=".Epd_parent_chat"
             android:exported="false" />
         <activity
-            android:name=".parent_messages"
+            android:name=".Parent_messages"
             android:exported="false" />
         <activity
-            android:name=".parent_my_sitters"
+            android:name=".Parent_my_sitters"
             android:exported="false" />
         <activity
-            android:name=".parent_requests"
+            android:name=".Parent_requests"
             android:exported="false" />
         <activity
-            android:name=".parent_booking_1"
+            android:name=".Parent_booking_1"
             android:exported="false" />
         <activity
-            android:name=".my_experience"
+            android:name=".My_experience"
             android:exported="false" />
         <activity
-            android:name=".my_rate"
+            android:name=".My_rate"
             android:exported="false" />
         <activity
-            android:name=".parent_settings"
+            android:name=".Parent_settings"
             android:exported="false" />
         <activity
-            android:name=".parent_create_family_profile"
+            android:name=".Parent_create_family_profile"
             android:exported="false" />
         <activity
-            android:name=".parent_home"
+            android:name=".Parent_home"
             android:exported="false" />
         <activity
-            android:name=".parent_selectSitters"
+            android:name=".Parent_selectSitters"
             android:exported="false" />
         <activity
-            android:name=".parent_my_family"
+            android:name=".Parent_my_family"
             android:exported="false" />
         <activity
-            android:name=".calendar"
+            android:name=".Calendar"
             android:exported="false" />
         <activity
-            android:name=".parent_client_choice"
+            android:name=".Parent_client_choice"
             android:exported="false" />
         <activity
-            android:name=".profile_settings"
+            android:name=".Profile_settings"
             android:exported="false" />
         <activity
-            android:name=".messages"
+            android:name=".Messages"
             android:exported="false" />
         <activity
-            android:name=".requests_view"
+            android:name=".Requests_view"
             android:exported="false" />
         <activity
-            android:name=".the_profile_1"
+            android:name=".The_profile_1"
             android:exported="false" />
         <activity
-            android:name=".profile_verification"
+            android:name=".Profile_verification"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".register"
+            android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".second"
+            android:name=".Second"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

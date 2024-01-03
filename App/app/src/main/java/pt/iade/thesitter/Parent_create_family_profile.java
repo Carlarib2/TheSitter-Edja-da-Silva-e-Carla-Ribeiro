@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class parent_create_family_profile extends AppCompatActivity {
+public class Parent_create_family_profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,27 +15,27 @@ public class parent_create_family_profile extends AppCompatActivity {
     }
 
     public void startHomeP6(View view){
-        Intent intent = new Intent(this, parent_home.class);
+        Intent intent = new Intent(this, Parent_home.class);
         startActivity(intent);
     }
 
     public void startRequestsP5(View view){
-        Intent intent = new Intent(this, parent_requests.class);
+        Intent intent = new Intent(this, Parent_requests.class);
         startActivity(intent);
     }
 
     public void startMessagesP8(View view){
-        Intent intent = new Intent(this, parent_messages.class);
+        Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
     }
 
     public void startProfileP6(View view){
-        Intent intent = new Intent(this, parent_settings.class);
+        Intent intent = new Intent(this, Parent_settings.class);
         startActivity(intent);
     }
 
     public void startSaveP(View view){
-        Intent intent = new Intent(this, parent_settings.class);
+        Intent intent = new Intent(this, Parent_settings.class);
         startActivity(intent);
     }
 }

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class parent_booking_1 extends AppCompatActivity {
+public class Parent_booking_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,38 +15,38 @@ public class parent_booking_1 extends AppCompatActivity {
     }
 
     public void startDate(View view){
-        Intent intent = new Intent(this, calendar.class);
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
         finish();
     }
 
     public void startSitter2(View view){
-        Intent intent = new Intent(this, parent_selectSitters.class);
+        Intent intent = new Intent(this, Parent_selectSitters.class);
         startActivity(intent);
     }
 
     public void startSend(View view){
-        Intent intent = new Intent(this, parent_my_sitters.class);
+        Intent intent = new Intent(this, Parent_my_sitters.class);
         startActivity(intent);
     }
 
     public void startHome10(View view){
-        Intent intent = new Intent(this, parent_home.class);
+        Intent intent = new Intent(this, Parent_home.class);
         startActivity(intent);
     }
 
     public void startRequests10(View view){
-        Intent intent = new Intent(this, parent_requests.class);
+        Intent intent = new Intent(this, Parent_requests.class);
         startActivity(intent);
     }
 
     public void startMessagesP2(View view){
-        Intent intent = new Intent(this, parent_messages.class);
+        Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
     }
 
     public void startProfile9(View view){
-        Intent intent = new Intent(this, parent_settings.class);
+        Intent intent = new Intent(this, Parent_settings.class);
         startActivity(intent);
     }
 }

@@ -17,7 +17,7 @@ import android.widget.ImageButton;
 import android.Manifest;
 
 
-public class profile_verification extends AppCompatActivity {
+public class Profile_verification extends AppCompatActivity {
 
     ImageButton btnCam, btnPDF;
     private static final int CAMERA_REQUEST_CODE = 101;
@@ -84,7 +84,7 @@ public class profile_verification extends AppCompatActivity {
     }
 
     public void startSave2(View view){
-        Intent intent = new Intent(this, parent_client_choice.class);
+        Intent intent = new Intent(this, Parent_client_choice.class);
         startActivity(intent);
     }
 

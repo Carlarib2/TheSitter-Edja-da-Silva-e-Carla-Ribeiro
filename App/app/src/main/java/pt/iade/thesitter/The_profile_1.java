@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import pt.iade.thesitter.models.User;
 
-public class the_profile_1 extends AppCompatActivity {
+public class The_profile_1 extends AppCompatActivity {
     TextView name_textView;
     User user;
 
@@ -25,27 +25,27 @@ public class the_profile_1 extends AppCompatActivity {
     }
 
     public void startRequests(View view){
-        Intent intent = new Intent(this, requests_view.class);
+        Intent intent = new Intent(this, Requests_view.class);
         startActivity(intent);
     }
 
     public void startMessages(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
     }
 
     public void startMessages3(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
     }
 
     public void startProfile2(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+        Intent intent = new Intent(this, Profile_settings.class);
         startActivity(intent);
     }
 
     public void startRequests2(View view){
-        Intent intent = new Intent(this, requests_view.class);
+        Intent intent = new Intent(this, Requests_view.class);
         startActivity(intent);
     }
 

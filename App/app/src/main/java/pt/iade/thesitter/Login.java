@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import pt.iade.thesitter.models.User;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     protected Button login_button_c, sae_button_epb;
     EditText username_editView, password_editView;
     @Override
@@ -39,7 +39,7 @@ public class login extends AppCompatActivity {
                     public void response(User returnedUser) {
                         if (returnedUser != null) {
 
-                            Intent intent = new Intent(login.this, the_profile_1.class);
+                            Intent intent = new Intent(Login.this, The_profile_1.class);
                             intent.putExtra("user", returnedUser);
                             startActivity(intent);
                         }
@@ -57,7 +57,7 @@ public class login extends AppCompatActivity {
         String username = username_editView.getText().toString();
         String password = username_editView.getText().toString();
 
-        Intent intent = new Intent(this, parent_home.class);
+        Intent intent = new Intent(this, Parent_home.class);
         //ToDo: distinguir o sitter do parent
        //User user = new User("", 1, 1,"","","","","",null,null);
       // intent.putExtra("user", new User());

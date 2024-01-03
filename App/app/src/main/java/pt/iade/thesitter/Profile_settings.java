@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class profile_settings extends AppCompatActivity {
+public class Profile_settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,42 +15,42 @@ public class profile_settings extends AppCompatActivity {
     }
 
     public void startHome2(View view){
-        Intent intent = new Intent(this, the_profile_1.class);
+        Intent intent = new Intent(this, The_profile_1.class);
         startActivity(intent);
     }
 
     public void startMessages4(View view){
-        Intent intent = new Intent(this, messages.class);
+        Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
     }
 
     public void startProfile3(View view){
-        Intent intent = new Intent(this, profile_settings.class);
+        Intent intent = new Intent(this, Profile_settings.class);
         startActivity(intent);
     }
 
     public void startRequests3(View view){
-        Intent intent = new Intent(this, requests_view.class);
+        Intent intent = new Intent(this, Requests_view.class);
         startActivity(intent);
     }
 
     public void startCalendar(View view){
-        Intent intent = new Intent(this, calendar.class);
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 
     public void startRate(View view){
-        Intent intent = new Intent(this, my_rate.class);
+        Intent intent = new Intent(this, My_rate.class);
         startActivity(intent);
     }
 
     public void startExperience(View view){
-        Intent intent = new Intent(this, my_experience.class);
+        Intent intent = new Intent(this, My_experience.class);
         startActivity(intent);
     }
 
     public void startLogout(View view){
-        Intent intent = new Intent(this, login.class);
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
 }

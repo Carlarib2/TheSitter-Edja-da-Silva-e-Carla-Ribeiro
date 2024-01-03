@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     android:contentDescription="@string/description_icon"
-    tools:context=".profile">
+    tools:context=".Profile">
 
     <TextView
         android:id="@+id/create_profile_textView_da"

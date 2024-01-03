@@ -8,7 +8,7 @@ import android.view.View;
 
 import pt.iade.thesitter.models.User;
 
-public class profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     User user;
 
@@ -24,7 +24,7 @@ public class profile extends AppCompatActivity {
     }
 
     public void startSave(View view){
-        Intent intent = new Intent(this, profile_verification.class);
+        Intent intent = new Intent(this, Profile_verification.class);
         startActivity(intent);
     }
 

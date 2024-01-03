@@ -1,5 +1,4 @@
 package pt.iade.thesitter;
-import static pt.iade.thesitter.models.User.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +12,10 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import pt.iade.thesitter.models.User;
 
-public class register extends AppCompatActivity {
+public class Register extends AppCompatActivity {
     protected Button register;
     EditText username,  email, password, confirmPass, address, mobile;
 
@@ -65,7 +63,7 @@ public class register extends AppCompatActivity {
 
 
                 if(!userPassword.equals(userConfirmPass)){
-                    Toast.makeText(register.this, "Passwords are not the same!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Passwords are not the same!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -87,7 +85,7 @@ public class register extends AppCompatActivity {
                     startActivity(intent);*/
                 Intent intent;
                 if (isSitter) {
-                    intent = new Intent(register.this, profile.class);
+                    intent = new Intent(Register.this, Profile.class);
                 } else {
 
                     newUser.save(new User.SaveResponse() {
@@ -96,7 +94,7 @@ public class register extends AppCompatActivity {
 
                         }
                     });
-                    intent = new Intent(register.this, parent_home.class);
+                    intent = new Intent(Register.this, Parent_home.class);
                 }
                 intent.putExtra("user", newUser);
                 startActivity(intent);

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".epd_parent_chat">
+    tools:context=".Epd_parent_chat">
 
     <TextView
         android:id="@+id/chat_textView_epde"

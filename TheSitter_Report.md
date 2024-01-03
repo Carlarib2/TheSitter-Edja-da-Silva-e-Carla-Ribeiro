@@ -77,7 +77,7 @@
 4. Entrar em contato com solicitadores para combinar detalhes.
 
 ## Base de Dados
-O nosso aplicativo tem 9 tabelas:
+O nosso aplicativo tem 12 tabelas:
 
 ## Tabela `place`
 
@@ -99,7 +99,7 @@ O nosso aplicativo tem 9 tabelas:
    - Definição: Armazena o endereço do local.
    - Tipo de dados: String de comprimento variável, até 255 caracteres.
 
-- **pla_latitude:**
+- **pla_longititude:**
    - Definição: Armazena a latitude do local.
    - Tipo de dados: Número de ponto flutuante de precisão dupla.
    - Restrições: Não pode ser nulo (NOT NULL).
@@ -109,75 +109,43 @@ O nosso aplicativo tem 9 tabelas:
    - Tipo de dados: Número de ponto flutuante de precisão dupla.
    - Restrições: Não pode ser nulo (NOT NULL).
 
-*A altitude e a latitude são utilizadas para calcular a proximidade entre diferentes locais.*
+*A altitude e a longititude são utilizadas para calcular a proximidade entre diferentes locais.*
 
 
-## Tabela `agenda`
+## Tabela `access`
 
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
-| age_id        | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| age_data      | DATE          |                                      |
-| age_sit_id    | INT           |                                      |
-| age_clifa_id  | INT           |                                      |
-| age_startTime | TIME          |                                      |
-| age_endTime   | TIME          |                                      |
-| age_sta_id    | INT           |                                      |
-| age_pla_id    | INT           |                                      |
+| ac_id         | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
+| ac_name       | DATE          |  NOT NULL ,CHECK (ac_name IN ('sitter', 'client', 'admin'))|
 
-- **age_id:**
-    - Definição: Identificador único para cada entrada na tabela de agenda.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Não pode ser nulo (NOT NULL).
-    - Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
-    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **age_data:**
-    - Definição: Armazena a data da entrada na agenda.
-    - Tipo de dados: Data (no formato DATE).
+- **ac_id:**
+-Definição: Identificador único para cada acesso na tabela de access.
+-Tipo de dados: Número inteiro.
+-Restrições: Não pode ser nulo (NOT NULL).
+-Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+-Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **age_sit_id:**
-    - Definição: Identificador relacionado ao status da entrada na agenda.
-    - Tipo de dados: Número inteiro.
+-**ac_name:**
+-Definição: Armazena o nome do acesso
+-Tipo de dados: String de até 60 caracteres.
+-Restrições: Não pode ser nulo(NOT NULL).
 
-- **age_clifa_id:**
-    - Definição: Identificador relacionado ao cliente/fornecedor associado à entrada na agenda.
-    - Tipo de dados: Número inteiro.
-    - Propriedade especial: Chave estrangeira.
-
-- **age_startTime:**
-    - Definição: Armazena a hora de início da entrada na agenda.
-    - Tipo de dados: Hora (no formato TIME).
-
-- **age_endTime:**
-    - Definição: Armazena a hora de término da entrada na agenda.
-    - Tipo de dados: Hora (no formato TIME).
-
-- **age_sta_id:**
-    - Definição: Identificador relacionado ao status da entrada na agenda.
-    - Tipo de dados: Número inteiro.
-    - Propriedade especial: Chave estrangeira.
-   
-- **age_pla_id:**
-    - Definição: Identificador relacionado ao local associado à entrada na agenda.
-    - Tipo de dados: Número inteiro.
-    - Propriedade especial: Chave estrangeira.
 
 ## Tabela `sitter`
 
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
-| sit_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| sit_name       | VARCHAR(60)  | NOT NULL                             |
-| sit_bdate      | DATE         | NOT NULL                             |
+| sit_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
+| sit_user_id    | INT          | NOT NULL                             |
 | sit_experience | TEXT         |                                      |
-| sit_address    | VARCHAR(255) |  NOT NULL                            |
 | sit_education  | VARCHAR(255) |                                      |
-| sit_mobile     | VARCHAR(20)  |                                      |
-| sit_gender     | CHAR(1)      | NOT NULL                             |
-| sit_aboutMe    | TEXT         |                                      |
-| sit_password   | VARCHAR(255) | NOT NULL                             |
-| sit_email      | VARCHAR(255) | NOT NULL                             |
+| sit_reability  | INT          |                                      |
+| sit_responseTime| INT         |                                      |
+| sit_responserate| INT         |                                      |
+| sit_boo_id      | INT         | NOT NULL                             |
+| sit_aboutMe     | VARCHAR(255)|                                      |
 
 - **sit_id:**
     - Definição: Identificador único para cada sitter na tabela.
@@ -186,51 +154,45 @@ O nosso aplicativo tem 9 tabelas:
     - Propriedade especial: Será automaticamente incrementado para cada novo registro (AUTO_INCREMENT).
     - Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **sit_name:**
-    - Definição: Armazena o nome da sitter(babá).
-    - Tipo de dados: String de até 60 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
-
-- **sit_bdate:**
-    - Definição: Armazena a data de nascimento da sitter(babá).
-    - Tipo de dados: Data (no formato DATE).
-    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_experience:**
     - Definição: Armazena informações sobre a experiência da sitter(babá).
     - Tipo de dados: Texto longo (TEXT).
+ 
+  - **sit_user_id:**
+   -Definição: Identificador relacionado ao user.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira. Não pode ser nulo (NOT NULL).
 
-- **sit_address:**
-    - Definição: Armazena o endereço da sitter(babá).
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_education:**
     - Definição: Armazena informações sobre a educação da sitter(babá).
     - Tipo de dados: String de até 255 caracteres.
 
-- **sit_mobile:**
-    - Definição: Armazena o número de telefone celular da sitter(babá).
-    - Tipo de dados: String de até 20 caracteres.
-
-- **sit_gender:**
-    - Definição: Armazena o gênero da sitter(babá).
-    - Tipo de dados: Caractere (CHAR) de comprimento 1.
-    - Restrições: Não pode ser nulo (NOT NULL).
 
 - **sit_aboutMe:**
     - Definição: Armazena informações adicionais sobre a sitter(babá).
     - Tipo de dados: Texto longo (TEXT).
+ 
 
-- **sit_email:**
-    - Definição: Armazena o endereço de e-mail da sitter(babá).
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
+  - **sit_reability:**
+   -Definição: Armazena  a reability da sitter( babá).
+   -Tipo de dados:INT. 
+   -Restrições: CHECK (sit_reability >= 0 AND sit_reability <= 100)
 
-- **sit_password:**
-    - Definição: Armazena a senha da sitter(babá).
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
+ - **sit_reaponseTime:**
+   -Definição: Armazena  o Response time da sitter( babá).
+   -Tipo de dados:INT. 
+   -Restrições: CHECK (sit_responseTime >= 0 AND sit_responseTime <= 100).
+
+
+ - **sit_responseRate:**
+   -Definição: Armazena  o Response rate da sitter( babá).
+   -Tipo de dados:INT. 
+   -Restrições: CHECK (sit_responseRate >= 0 AND sit_responseTime <= 100).
+
+
+
 
   
 ## Tabela `booking`
@@ -238,10 +200,11 @@ O nosso aplicativo tem 9 tabelas:
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
 | boo_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| boo_age_id   | INT  |                                      |
-| boo_sit_id   | INT  |                                      |
-| boo_clifa_id | INT  |                                      |
-| boo_sta_id   | INT  |                                      |
+| boo_data     | INT  | NOT NULL                              |
+| boo_startTime | INT  |NOT NULL                              |
+| boo_cli_id   | INT  | NOT NULL                              |
+| boo_sta_id   | INT  | NOT NULL                              |
+| boo_endTime  | INT  | NOT NULL                              |
 
 - **boo_id:**
     - Definição: Identificador único para cada reserva na tabela de reservas (booking).
@@ -250,72 +213,88 @@ O nosso aplicativo tem 9 tabelas:
     - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
     - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **boo_age_id:**
-    - Definição: Identificador relacionado à entrada na agenda associada à reserva.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
-
-- **boo_sit_id:**
-    - Definição: Identificador relacionado à babá associada à reserva.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
-
-- **boo_clifa_id:**
-    - Definição: Identificador relacionado ao cliente/fornecedor associado à reserva.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
-
 - **boo_sta_id:**
     - Definição: Identificador relacionado ao status da reserva.
     - Tipo de dados: Número inteiro.
     - Restrições: Chave estrangeira.
-
-## Tabela `booking_status`
-
-| Column     | Type | Constraints                          |
-| ---------- | ---- | ------------------------------------ |
-| bsta_id    | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| bsta_boo_id | INT  |                                      |
-| bsta_sta_id | INT  |                                      |
+ 
+- **boo_cli_id:**
+   -Definição: Identificador relacionado ao cliente  da reserva.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira. Não pode ser nulo (NOT NULL).
 
 
-- **bsta_id:**
-    - Definição: Identificador único para cada registro de status de reserva na tabela de status de reserva.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Não pode ser nulo (NOT NULL).
-    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **bsta_boo_id:**
-    - Definição: Identificador relacionado à reserva associada ao status.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
+-**boo_data:**
+   -Definição: Identificador relacionado a data da reserva.
+   -Tipo de dados: DATE.
+   -Restrições: Não pode ser nulo (NOT NULL).
 
-- **bsta_sta_id:**
-    - Definição: Identificador relacionado ao status da reserva.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
+-**boo_endTime:**
+   -Definição: Identificador relacionado ao fim da reserva.
+   -Tipo de dados: TIME.
+   -Restrições: Não pode ser nulo (NOT NULL).
+
+-**boo_endTime:**
+   -Definição: Identificador relacionado ao ínicio da reserva.
+   -Tipo de dados: TIME.
+   -Restrições: Não pode ser nulo (NOT NULL).
 
 
 ## Tabela `status`
 
+| Column     | Type | Constraints                          |
+| ---------- | ---- | ------------------------------------ |
+| sta_id     | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| sta_name   | INT  |                                      |
+
+
+
+-**sta_id:**
+   -Definição: Identificador único para cada status na tabela de status.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   -Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
+
+-**sta_name:**
+   -Definição: Armazena o nome do status
+   -Tipo de dados: String de até 255 caracteres.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
+
+
+## Tabela `sitter_rating`
+
 | Column  | Type         | Constraints                          |
 | ------- | ------------ | ------------------------------------ |
-| sta_id  | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| sta_name | VARCHAR(255) | NOT NULL                             |
+| ra_id  | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| ra_value |INT          |NOT NULL CHECK (ra_value BETWEEN 1 AND 5)|
+| ra_comment| TEXT       |                                       |
+| ra_sta_id| INT         |NOT NULL                               |
 
+-**ra_id:**
+   -Definição: Identificador único para cada sitter rating na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **sta_id:**
-    - Definição: Identificador único para cada status na tabela de status.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Não pode ser nulo (NOT NULL).
-    - Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
-    - Chave primária: Utilizada para identificar exclusivamente cada registro na tabela.
+-**ra_value:**
+   -Definição: Armazena o valor das avaliações.
+   -Tipos de dados:INT.
+   -Restrições: NOT NULL CHECK (ra_value BETWEEN 1 AND 5).
 
-- **sta_name:**
-    - Definição: Armazena o nome do status.
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
+-**ra_comment:**
+   -Definição: Armazena o comentários  das avaliações.
+   -Tipos de dados:TEXT.
+
+-**ra_sit_id:**
+   -Definição: Identificador relacionado as sitters .
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
 
 
 ## Tabela `client`
@@ -323,14 +302,10 @@ O nosso aplicativo tem 9 tabelas:
 | Column         | Type         | Constraints                          |
 | -------------- | ------------ | ------------------------------------ |
 | cli_id         | INT          | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| cli_clifa_id   | INT          |                                      |
-| cli_name       | VARCHAR(60)  | NOT NULL                             |
-| cli_bdate      | DATE         | NOT NULL                             |
-| cli_address    | VARCHAR(255) |                                      |
-| cli_mobile     | VARCHAR(20)  |                                      |
-| cli_email      | VARCHAR(255) | NOT NULL                             |
-| cli_password   | VARCHAR(255) | NOT NULL                             |
-| cli_gender     | CHAR(1)      | NOT NULL                             |
+| cli_clifa_id   | INT          | NOT NULL                              |
+| cli_user_id    | INT           | NOT NULL                              |
+
+
 
 
 - **cli_id:**
@@ -344,61 +319,173 @@ O nosso aplicativo tem 9 tabelas:
     - Tipo de dados: Número inteiro.
     - Restrições: Chave estrangeira.
 
-- **cli_name:**
-    - Definição: Armazena o nome do cliente.
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
-
-- **cli_bdate:**
-    - Definição: Armazena a data de nascimento do cliente.
-    - Tipo de dados: Data (no formato DATE).
-    - Restrições: Não pode ser nulo (NOT NULL).
- 
-- **cli_address:**
-    - Definição: Armazena o endereço do cliente.
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
-
-- **cli_mobile:**
-    - Definição: Armazena o número de telefone celular do cliente.
-    - Tipo de dados: String de até 20 caracteres.
-
-- **cli_email:**
-    - Definição: Armazena o endereço de e-mail do cliente.
-    - Tipo de dados: String de até 255 caracteres.
-
-- **cli_gender:**
-    - Definição: Armazena o gênero do cliente.
-    - Tipo de dados: Caractere (CHAR) de comprimento 1.
-    - Restrições: Não pode ser nulo (NOT NULL).
-
-- **cli_password:**
-    - Definição: Armazena a senha do cliente.
-    - Tipo de dados: String de até 255 caracteres.
-    - Restrições: Não pode ser nulo (NOT NULL).
+-**cli_user_id:**
+   -Definição:Identificador relacionado ao user .
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira. Não pode ser nulo (NOT NULL)
 
 
-## Tabela `client_family`
+## Tabela `user`
+| Column        | Type | Constraints                          |
+| ------------  | ---- | ------------------------------------ |
+| user_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
+| user_name     | INT  | NOT NULL                              |
+| user_bdate    | Date |NOT NULL                               |
+| user_upload   | byte | NOT NULL                              |
+| user_address  |  TEXT| NOT NULL                              |
+| user_mobile   | TEXT | NOT NULL                              |
+| user_email    |TEXT  | NOT NULL                              |
+| user_password | TEXT | NOT NULL                              |
+| user_pla_id   | INT  | NOT NULL                              |
+| user_ac_id    | INT  | NOT NULL                              |
+
+
+-**user_id:**
+   -Definição: Identificador único para cada user na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   -Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
+
+-**user_name:**
+   -Definição: Armazena o nome do user.
+   -Tipo de dados: String de até 255 caracteres.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
+-**user_pla_id:**
+   -Definição: Identificador relacionado ao local.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
+
+-**user_bdate:**
+   -Definição: Armazena a data de nascimento do usuário.
+   -Tipo de dados: Data.
+   -Restrições: Não pode ser nulo (NOT NULL).
+
+
+-**user_upload:**
+   -Definição: Armazena informações binárias,armazenar arquivos como imagens.
+   -Tipo de dados: Blob/binário.
+   -Restrições: Não pode ser nulo (NOT NULL).
+
+
+-**user_address:**
+   -Definição: Armazena o endereço do usuário.
+   -Tipo de dados: Texto, adequado para endereços mais longos.
+   -Restrições: Não pode ser nulo (NOT NULL).
+
+-**user_mobile:**
+   -Definição: Armazena o número de telefone móvel do usuário.
+   -Tipo de dados: Texto, permitindo flexibilidade no formato do número.
+   -Restrições: Não pode ser nulo (NOT NULL).
+
+-**user_email:**
+   -Definição: Armazena o endereço de e-mail do usuário.
+   -Tipo de dados: Texto.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   
+-**user_password:**
+   -Definição: Armazena a senha do usuário.
+   -Tipo de dados: Texto. Idealmente, deve armazenar uma hash da senha, e não a senha em texto puro, por motivos de segurança.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   
+   
+-**user_ac_id:**
+   -Definição: Referencia um identificador em outra tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL). Deve ser uma chave estrangeira que referencia uma entrada válida em outra tabela.
+
+
+
+
+   ## Tabela `creatures`
+   
+| Column       | Type | Constraints                          |
+| ------------ | ---- | ------------------------------------ |
+| cre_id       | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
+| cre_type     | INT  |                                      |
+| cre_info     | INT  | NOT NULL                             |
+
+
+
+-**cre_id:**
+   -Definição: Identificador único para cada criatura na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   -Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
+
+-**cre_type:**
+   -Definição: Armazena informações sobre o  tipo na tabela.
+   -Tipo de dados: ENUM.
+   -Restrições: ('person', 'animal') NOT NULL
+
+-**cre_info:**
+   -Definição: Armazena informações extras na  tabela.
+   -Tipo de dados: TEXT.
+
+
+
+## Tabela `user_chat`
 
 | Column       | Type | Constraints                          |
 | ------------ | ---- | ------------------------------------ |
-| clifa_id     | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY |
-| clifa_cli_id | INT  |                                      |
+| usat_id      | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
+| usat_user_id | INT  |                                      |
+| usat_chat_id | INT  | NOT NULL                             |
 
 
-A tabela `client_family` foi implementada para mapear relacionamentos familiares entre clientes.
 
-- **clifa_id:**
-    - Definição:* Identificador único para cada entrada na tabela de família de clientes.
-    - Tipo de dados:* Número inteiro.
-    - Restrições:* Não pode ser nulo (**NOT NULL**).
-    - Propriedade especial:* Será automaticamente incrementado para cada nova entrada (**AUTO_INCREMENT**).
-    - Chave primária:* Utilizada para identificar exclusivamente cada registro na tabela.
+-**usat_id:**
+   -Definição: Identificador único para cada user chat na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   -Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
 
-- **clifa_cli_id:**
-    - Definição: Identificador do relacionamento ao cliente na tabela `client`.
-    - Tipo de dados: Número inteiro.
-    - Restrições: Chave estrangeira.
+-**usat_user_id:**
+   -Definição: Identificador relacionado ao user.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
+-**usat_chat_id:**
+   -Definição: Identificador relacionado ao chat .
+   -Tipo de dados: Número inteiro.
+   -Restrições: Chave estrangeira.
+   -Restrições: Não pode ser nulo(NOT NULL).
+
+
+
+
+## Tabela `chat`
+
+| Column       | Type | Constraints                          |
+| ------------ | ---- | ------------------------------------ |
+| chat_id      | INT  | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
+|Chat_message_content | text  |                              |
+| chat_timestamp      | INT  | NOT NULL                      |
+
+
+-**chat_id:**
+   -Definição: Identificador único para cada chat na tabela.
+   -Tipo de dados: Número inteiro.
+   -Restrições: Não pode ser nulo (NOT NULL).
+   -Propriedade especial: Será automaticamente incrementado para cada nova entrada (AUTO_INCREMENT).
+   -Chave primária:Utilizada para identificar exclusivamente cada registro na tabela.
+
+-**Chat_message_content:**
+   -Definição: Armazena o conteúdo das mensagens.
+   -Tipos de dados: TEXT.
+
+-**Chat_message_content:**
+   -Definição: Armazena o tempo exato.
+   -Tipos de dados: TIMESTAMP.
+   -Restrições: DEFAULT CURRENT_TIMESTAMP.
+
+
 
 
 ## Tabela `family_member`

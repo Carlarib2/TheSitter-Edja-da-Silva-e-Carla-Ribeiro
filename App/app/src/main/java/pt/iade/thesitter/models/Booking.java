@@ -18,6 +18,8 @@ public class Booking {
 
     private Time booStartTime;
 
+    private int booSitId;
+
     public Booking(){
 
     }
@@ -73,5 +75,13 @@ public class Booking {
 
     public void setBooStartTime(Time booStartTime) {
         this.booStartTime = booStartTime;
+    }
+
+    public int getBooSitId() {
+        return booSitId;
+    }
+
+    public void setBooSitId(int booSitId) {
+        this.booSitId = booSitId;
     }
 }

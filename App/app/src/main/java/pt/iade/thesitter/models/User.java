@@ -35,8 +35,6 @@ public class User implements Serializable{
 
     private String userName;
 
-    private int userPlaId;
-
 
 
     private int userAcId;
@@ -47,7 +45,6 @@ public class User implements Serializable{
 
     public User(int userId, String userName, int userPlaId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate, int userAcId) {
         this.userName = userName;
-        this.userPlaId = userPlaId;
         this.userId= userId;
         this.userGender=userGender;
         this.userPassword=userPassword;
@@ -214,13 +211,6 @@ public class User implements Serializable{
         this.userName = userName;
     }
 
-    public int getUserPlaId() {
-        return userPlaId;
-    }
-
-    public void setUserPlaId(int userPlaId) {
-        this.userPlaId = userPlaId;
-    }
 
 
     public interface SaveResponse {

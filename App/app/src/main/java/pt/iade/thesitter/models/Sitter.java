@@ -18,7 +18,6 @@ public class Sitter {
     private String sitAboutMe;
 
 
-    private int sitBooId;
 
 
     private int sitReability;
@@ -39,7 +38,7 @@ public class Sitter {
         this.sitExperience = sitExperience;
         this.sitEducation = sitEducation;
         this.sitAboutMe = sitAboutMe;
-        this.sitBooId = sitBooId;
+
         this.sitReability = sitReability;
         this.sitResponseTime = sitResponseTime;
         this.sitResponseRate = sitResponseRate;
@@ -55,7 +54,7 @@ public class Sitter {
 
     public String getSitAboutMe() {return sitAboutMe;}
 
-    public int getSitBooId() {return sitBooId;}
+
 
     public int getSitReability() {
         return sitReability;
@@ -85,9 +84,6 @@ public class Sitter {
         this.sitAboutMe = sitAboutMe;
     }
 
-    public void setSitBooId(int sitBooId) {
-        this.sitBooId = sitBooId;
-    }
 
     public void setSitReability(int sitReability) {
         this.sitReability = sitReability;

@@ -39,6 +39,8 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
+
+
     //@Column(name="user_pla_id")
     //private int userPlaId;
 
@@ -50,11 +52,6 @@ public class User {
     @JsonBackReference("access-user")
     private Access access;
 
-
-    @OneToOne
-    @JoinColumn(name="user_pla_id", referencedColumnName = "pla_id")
-    @JsonBackReference("place-user")
-    private Place place;
 
 
 
@@ -154,11 +151,4 @@ public class User {
         this.access = access;
     }
 
-    public Place getPlace() {
-        return place;
-    }
-
-    public void setPlace(Place place) {
-        this.place = place;
-    }
 }

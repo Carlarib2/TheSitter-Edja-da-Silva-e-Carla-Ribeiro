@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView selectSitters_image;
-    TextView selectSitters_Name,selectSitters_Gender, selectSitters_Mobile;
+    public ImageView selectSitters_image;
+    public TextView selectSitters_Name,selectSitters_Gender, selectSitters_Mobile;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 

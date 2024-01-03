@@ -31,8 +31,13 @@ public class Booking {
     @Column(name = "boo_sta_id")
     private int booStaId;
 
+    @Column(name = "boo_sit_id")
+    private int booSitId;
+
     @Column(name = "boo_startTime")
     private Time booStartTime;
+
+
 
     public Booking(){
 
@@ -82,6 +87,14 @@ public class Booking {
 
     public void setBooStartTime(Time booStartTime) {
         this.booStartTime = booStartTime;
+    }
+
+    public int getBooSitId() {
+        return booSitId;
+    }
+
+    public void setBooSitId(int booSitId) {
+        this.booSitId = booSitId;
     }
 }
 

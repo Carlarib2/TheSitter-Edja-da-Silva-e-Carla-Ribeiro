@@ -30,8 +30,6 @@ public class Sitter {
     @Column(name="sit_aboutMe")
     private String sitAboutMe;
 
-    @Column(name="sit_boo_id")
-    private int sitBooId;
 
     @Column(name="sit_reability")
     private int sitReability;
@@ -83,13 +81,6 @@ public class Sitter {
         this.sitAboutMe = sitAboutMe;
     }
 
-    public int getSitBooId() {
-        return sitBooId;
-    }
-
-    public void setSitBooId(int sitBooId) {
-        this.sitBooId = sitBooId;
-    }
 
     public int getSitReability() {
         return sitReability;

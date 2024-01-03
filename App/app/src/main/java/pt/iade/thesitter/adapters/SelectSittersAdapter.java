@@ -1,43 +1,85 @@
 package pt.iade.thesitter.adapters;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.zip.Inflater;
 
-import pt.iade.thesitter.MyViewHolder;
 import pt.iade.thesitter.R;
+import pt.iade.thesitter.models.Sitter;
+import pt.iade.thesitter.models.User;
 
-public class SelectSittersAdapter extends RecyclerView.Adapter<MyViewHolder> {
-
+public class SelectSittersAdapter extends RecyclerView.Adapter<SelectSittersAdapter.ViewHolder> {
+    ArrayList<User> items;
     Context context;
-    List<Item> items;
+    ItemClickListener clickListener;
 
+    public SelectSittersAdapter(ArrayList<User> items, Context context) {
+        this.items = items;
+        this.context = context;
+        clickListener = null;
+    }
 
-   @NonNull
+    @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return MyViewHolder(LayoutInflater.from(context).inflate(R.layout.selectview, parent,false));
+    public SelectSittersAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.selectview, parent, false);
+        return new ViewHolder(view);
+    }
+
+    public void setOnClickListener(ItemClickListener listener){
+        clickListener = listener;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.selectSitters_Name.setText(items.get(position).getName());
-        holder.selectSitters_Gender.setText(items.get(position).getGender());
-        holder.selectSitters_Mobile.setText(items.get(position).getMobile());
-        holder.selectSitters_image.setImageResource(items.get(position).getImage());
+    public void onBindViewHolder(@NonNull SelectSittersAdapter.ViewHolder holder, int position) {
+        User user = items.get(position);
 
+        holder.selectSitters_Name.setText(user.getUserName());
+        holder.selectSitters_Mobile.setText(user.getUserMobile());
+        holder.selectSitters_Gender.setText(user.getUserGender());
+        holder.sitterImage.setImageResource(R.drawable.drake);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        ImageView sitterImage;
+        EditText selectSitters_Name, selectSitters_Gender, selectSitters_Mobile;
+        View rowDivider;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            sitterImage = itemView.findViewById(R.id.selectSitters_image);
+            selectSitters_Name = itemView.findViewById(R.id.selectSitters_Name);
+            selectSitters_Gender = itemView.findViewById(R.id.selectSitters_Gender);
+            selectSitters_Mobile = itemView.findViewById(R.id.selectSitters_Mobile);
+
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (clickListener != null){
+                clickListener.onItemClick(v, getAdapterPosition());
+            }
+        }
+    }
+
+    public interface ItemClickListener{
+        public void onItemClick(View view, int position);
     }
 }
-
-

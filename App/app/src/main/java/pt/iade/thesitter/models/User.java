@@ -35,8 +35,6 @@ public class User implements Serializable{
 
     private String userName;
 
-
-
     private int userAcId;
 
     public User() {

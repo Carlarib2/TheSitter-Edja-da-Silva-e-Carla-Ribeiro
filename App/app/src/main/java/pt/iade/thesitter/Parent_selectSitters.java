@@ -8,23 +8,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import pt.iade.thesitter.adapters.SelectSittersAdapter;
+import pt.iade.thesitter.models.Sitter;
+import pt.iade.thesitter.models.User;
+
 public class Parent_selectSitters extends AppCompatActivity {
+    ArrayList<User> usersList;
+    RecyclerView listView;
+    SelectSittersAdapter selectSittersAdapter;
     String name, gender, mobile;
     int image;
-protected RecyclerView selectSitters;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_epc_parent_select_sitters);
 
-        setupComponents();
+        setUpComponents();
+
+        RecyclerView recyclerView_selectSitters = findViewById(R.id.recyclerView_selectSitters);
     }
 
-    private void setupComponents(){
-        selectSitters=(RecyclerView) findViewById(R.id.recyclerView_selectSitters);
-        selectSitters.setLayoutManager(new LinearLayoutManager(this));
 
-    }
 
     public void startHomeP3(View view){
         Intent intent = new Intent(this, Parent_home.class);
@@ -50,4 +58,8 @@ protected RecyclerView selectSitters;
         Intent intent = new Intent(this, parent_pending.class);
         startActivity(intent);
     }*/
+
+    private void setUpComponents() {
+
+    }
 }

@@ -39,14 +39,6 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
-
-
-    //@Column(name="user_pla_id")
-    //private int userPlaId;
-
-   // @Column(name="user_ac_id")
-   // private int userAcId;
-
     @ManyToOne
     @JoinColumn(name="user_ac_id", referencedColumnName = "ac_id")
     @JsonBackReference("access-user")

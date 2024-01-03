@@ -1,12 +1,12 @@
--- Criar as tabelas. thesitter_ 
+-- Criar as tabelas 
 
 
 CREATE TABLE user(
     user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_name VARCHAR(60) NOT NULL unique ,
     user_bdate DATE NOT NULL,
-    user_address VARCHAR(255) NOT NULL,
     user_upload VARBINARY(255),
+    user_address VARCHAR(255) NOT NULL,
     user_mobile VARCHAR(20) NOT NULL,
     user_email VARCHAR(255) NOT NULL unique,
     user_password VARCHAR(255) NOT NULL,
@@ -105,12 +105,12 @@ ac_name VARCHAR(60) NOT NULL ,
 ALTER TABLE user
 ADD CONSTRAINT user_fk_place
 FOREIGN KEY (user_pla_id) REFERENCES place(pla_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE user
 ADD CONSTRAINT user_fk_access
 FOREIGN KEY (user_ac_id) REFERENCES access(ac_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE booking
 ADD CONSTRAINT booking_fk_client
@@ -120,49 +120,49 @@ ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE booking
 ADD CONSTRAINT booking_fk_status
 FOREIGN KEY (boo_sta_id) REFERENCES status(sta_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE client
 ADD CONSTRAINT client_fk_sta
 FOREIGN KEY (cli_sta_id) REFERENCES status(sta_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE client
 ADD CONSTRAINT client_fk_user
 FOREIGN KEY (cli_user_id) REFERENCES user(user_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE user_chat
 ADD CONSTRAINT user_chat_fk_user
 FOREIGN KEY (usat_user_id) REFERENCES user(user_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE user_chat
 ADD CONSTRAINT user_chat_fk_chat
 FOREIGN KEY (usat_chat_id) REFERENCES chat(chat_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE sitter_rating
 ADD CONSTRAINT sitter_rating_fk_sitter
 FOREIGN KEY (ra_sit_id) REFERENCES sitter(sit_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE sitter
 ADD CONSTRAINT sitter_fk_user
 FOREIGN KEY (sit_user_id) REFERENCES user(user_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE sitter
 ADD CONSTRAINT sitter_fk_booking
 FOREIGN KEY (sit_boo_id) REFERENCES booking(boo_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE family_member
 ADD CONSTRAINT family_member_fk_client
 FOREIGN KEY (fa_cli_id) REFERENCES client(cli_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE family_member
 ADD CONSTRAINT family_member_fk_creatures
 FOREIGN KEY (fa_cre_id) REFERENCES creatures(cre_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;

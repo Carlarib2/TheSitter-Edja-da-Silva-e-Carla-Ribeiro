@@ -1,17 +1,28 @@
 package pt.iade.thesitter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 public class Parent_my_sitters extends AppCompatActivity {
+    String name, gender, mobile;
+    int image;
+    protected RecyclerView mySitters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_epb_parent_my_sitters);
+        setupComponents();
+    }
+
+    private void setupComponents(){
+        mySitters=(RecyclerView) findViewById(R.id.my_sitters_recyclerView2_epb);
+        mySitters.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void startSave5(View view){

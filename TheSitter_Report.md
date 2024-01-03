@@ -117,9 +117,7 @@ O nosso aplicativo tem 12 tabelas:
 | Column        | Type          | Constraints                          |
 | ------------- | ------------- | ------------------------------------ |
 | ac_id         | INT           | NOT NULL, AUTO_INCREMENT, PRIMARY KEY|
-| ac_name       | DATE          |  NOT NULL ,
-    CHECK (ac_name IN ('sitter', 'client', 'admin'))
-                                    |
+| ac_name       | DATE          |  NOT NULL ,CHECK (ac_name IN ('sitter', 'client', 'admin'))|
 
 
 - **ac_id:**

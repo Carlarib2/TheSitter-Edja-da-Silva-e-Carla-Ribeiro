@@ -10,9 +10,7 @@ public class Creatures {
     private String creInfo;
 
     public Creatures(){
-
     }
-
     public Creatures(int creId, String creType, String creInfo) {
         this.creId = creId;
         this.creType = creType;
@@ -29,5 +27,13 @@ public class Creatures {
 
     public String getCreInfo() {
         return creInfo;
+    }
+
+    public void setCreType(String creType) {
+        this.creType = creType;
+    }
+
+    public void setCreInfo(String creInfo) {
+        this.creInfo = creInfo;
     }
 }

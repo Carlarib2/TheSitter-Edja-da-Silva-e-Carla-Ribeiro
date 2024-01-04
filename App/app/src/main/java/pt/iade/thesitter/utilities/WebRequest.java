@@ -18,6 +18,8 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
+import pt.iade.thesitter.models.User;
+
 /**
  * Abstracts away a lot of the headaches with HTTP requests on Android.
  *
@@ -213,9 +215,12 @@ public class WebRequest {
             String query = uri.getQuery();
             for (String key : params.keySet()) {
                 if (query == null) {
-                    query = key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+
+                    //query = key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    query = key + "=" + params.get(key);
                 } else {
-                    query += "&" + key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    //query += "&" + key + "=" + URLEncoder.encode(params.get(key), StandardCharsets.UTF_8.toString());
+                    query += "&" + key + "=" + params.get(key);
                 }
             }
 
@@ -225,4 +230,39 @@ public class WebRequest {
 
         return uri;
     }
+
+
+
+
+
+
+
+
+    public String performPutRequest(Serializable obj) throws IOException, URISyntaxException {
+        byte[] putData = new Gson().toJson(obj).getBytes(StandardCharsets.UTF_8);
+
+        Log.i("WebRequest", "Sending PUT to " + url);
+        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestMethod("PUT");
+        urlConnection.setRequestProperty("Content-Type", "application/json");
+        urlConnection.setRequestProperty("Content-Length", Integer.toString(putData.length));
+        urlConnection.setUseCaches(false);
+        urlConnection.setDoOutput(true);
+
+        // Send request body.
+        OutputStream os = urlConnection.getOutputStream();
+        os.write(putData, 0, putData.length);
+        os.flush();
+
+        // Get request response.
+        InputStream is = new BufferedInputStream(urlConnection.getInputStream());
+        String result = readStreamToString(is);
+        Log.i("WebRequest-Response", result);
+
+        os.close();
+        is.close();
+
+        return result;
+    }
+
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".requests_view">
+    tools:context=".Requests_view">
 
     <EditText
         android:id="@+id/declined_editText_epe"

@@ -68,7 +68,11 @@
     <string name="booking"> BOOKING</string>
     <string name="Messages">MESSAGES</string>
     <string name="number_family">Number of people in the family</string>
-    <string name="number_sitter">Number of sitters</string>
+    <string name="my_sitters.">My Sitters</string>
+    <string name="address">Address:</string>
+    <string name="mobile_">Mobile:</string>
+    <string name="gender">Gender:</string>
+    <string name="birthday">Birthday:</string>
     <string name="one">1 member</string>
     <string name="one_">1 sitter</string>
 

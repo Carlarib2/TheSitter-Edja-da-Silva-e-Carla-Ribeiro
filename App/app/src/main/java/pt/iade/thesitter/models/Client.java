@@ -1,22 +1,54 @@
 package pt.iade.thesitter.models;
 
-public class Client {
+import android.util.Log;
 
+import com.google.gson.Gson;
 
+import java.io.Serializable;
+import java.net.URL;
+
+import pt.iade.thesitter.Register;
+import pt.iade.thesitter.utilities.WebRequest;
+
+public class Client implements Serializable {
     private int cliId;
-
     private int cliUserId;
 
-    private int cliStaId;
-
     public Client(){
+        this(0, 0);
+    }
+
+    public Client(int cliId, int cliUserId) {
+        this.cliId = cliId;
+        this.cliUserId = cliUserId;
 
     }
 
-    public Client(int cliId, int cliUserId, int cliStaId) {
-        this.cliId = cliId;
-        this.cliUserId = cliUserId;
-        this.cliStaId = cliStaId;
+    public void register(User user, RegisterResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                user.register(new User.RegisterResponse() {
+                    @Override
+                    public void response() {
+                        cliUserId = user.getUserId();
+                        try {
+                            WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients"));
+                            String resp = request.performPostRequest(Client.this);
+
+                            Client client = new Gson().fromJson(resp, Client.class);
+
+                            cliId = client.getCliId();
+                            response.response();
+
+                        } catch (Exception e){
+                            Log.e("Client.register", e.toString());
+                        }
+                    }
+                });
+            }
+        });
+        thread.start();
     }
 
     public int getCliId() {
@@ -27,7 +59,12 @@ public class Client {
         return cliUserId;
     }
 
-    public int getCliStaId() {
-        return cliStaId;
+    public void setCliUserId(int cliUserId) {
+        this.cliUserId = cliUserId;
+    }
+
+
+    public interface RegisterResponse{
+        public void response();
     }
 }

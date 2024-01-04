@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".parent_my_family">
+    tools:context=".Parent_my_family">
 
     <TextView
         android:id="@+id/myFamily_textView_epg"
@@ -60,7 +60,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="@string/ava"
+        android:hint="@string/ava"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/pacifico_regular"
-        android:text="@string/years_5"
+        android:hint="@string/years_5"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
         app:layout_constraintTop_toBottomOf="@+id/name_textView_epg" />

@@ -8,7 +8,7 @@
     android:autofillHints="@string/app_password"
     android:background="@drawable/gradient"
     android:contentDescription="@string/app_user"
-    tools:context=".login">
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/logo_image_c"
@@ -138,6 +138,18 @@
         app:layout_constraintStart_toStartOf="@+id/pass_editText_c"
         app:layout_constraintTop_toTopOf="@+id/pass_editText_c"
         app:srcCompat="@drawable/lock_icon" />
+
+    <Switch
+        android:id="@+id/switch_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:text="Are you a Sitter?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image_c" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,9 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 @Table(name="status")
@@ -20,13 +18,20 @@ public class Status {
     @Column(name="sta_name")
     private String staName;
 
+
     public Status (){
     }
 
-    public int getStaId(){return staId;}
-    public String getStaName(){return staName;}
 
+    public String getStaName() {
+        return staName;
+    }
 
+    public void setStaName(String staName) {
+        this.staName = staName;
+    }
 
-
+    public int getStaId() {
+        return staId;
+    }
 }

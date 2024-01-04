@@ -10,4 +10,5 @@ public interface UserRepository extends CrudRepository<User, Integer> {
     Iterable<User> findByUserNameContaining(String text);
 
     Optional<User> findByUserId(int userId);
+    User findByUserEmailAndUserPassword(String email, String password);
 }

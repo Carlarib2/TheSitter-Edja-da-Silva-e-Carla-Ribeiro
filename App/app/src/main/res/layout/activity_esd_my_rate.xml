@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".my_rate">
+    tools:context=".My_rate">
 
     <TextView
         android:id="@+id/mysitters_textView_epb"
@@ -33,7 +33,7 @@
         android:id="@+id/rate_divider39_esc"
         android:layout_width="409dp"
         android:layout_height="3dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +170,7 @@
         android:id="@+id/save_button_esd"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="240dp"
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/allerta_stencil"
         android:onClick="startSaveS"

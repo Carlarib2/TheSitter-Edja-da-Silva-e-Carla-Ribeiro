@@ -32,4 +32,12 @@ public class Chat {
     public Timestamp getChatTimestamp() {
         return chatTimestamp;
     }
+
+    public void setChatMessageContent(String chatMessageContent) {
+        this.chatMessageContent = chatMessageContent;
+    }
+
+    public void setChatTimestamp(Timestamp chatTimestamp) {
+        this.chatTimestamp = chatTimestamp;
+    }
 }

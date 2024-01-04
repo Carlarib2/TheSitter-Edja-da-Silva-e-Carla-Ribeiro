@@ -1,13 +1,11 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.sql.Timestamp;
+import java.util.Set;
 
 @Entity
 @Table(name="chat")
@@ -24,19 +22,30 @@ public class Chat {
     @Column(name="chat_timestamp")
     private Timestamp chatTimestamp;
 
+
+
     public Chat(){
 
     }
 
-    public int getChatId() {
-        return chatId;
-    }
 
     public String getChatMessageContent() {
         return chatMessageContent;
     }
 
+    public void setChatMessageContent(String chatMessageContent) {
+        this.chatMessageContent = chatMessageContent;
+    }
+
     public Timestamp getChatTimestamp() {
         return chatTimestamp;
+    }
+
+    public void setChatTimestamp(Timestamp chatTimestamp) {
+        this.chatTimestamp = chatTimestamp;
+    }
+
+    public int getChatId() {
+        return chatId;
     }
 }

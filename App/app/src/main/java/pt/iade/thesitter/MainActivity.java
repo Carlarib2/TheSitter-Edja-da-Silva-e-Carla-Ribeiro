@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, second.class);
+                Intent intent = new Intent(MainActivity.this, Second.class);
                 startActivity(intent);
 
                 // Adiciona uma animação de transição

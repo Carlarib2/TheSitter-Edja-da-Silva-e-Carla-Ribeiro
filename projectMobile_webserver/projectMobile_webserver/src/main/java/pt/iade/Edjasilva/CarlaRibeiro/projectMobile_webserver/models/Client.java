@@ -1,13 +1,10 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name="client")
@@ -15,18 +12,13 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-
     @Column(name="cli_id")
     private int cliId;
 
-    @Column(name="cli_user_id")
+    @Column(name = "cli_user_id")
     private int cliUserId;
 
-    @Column(name="cli_sta_id")
-    private int cliStaId;
-
-    public Client(){
-
+    public Client() {
     }
 
     public int getCliId() {
@@ -37,7 +29,7 @@ public class Client {
         return cliUserId;
     }
 
-    public int getCliStaId() {
-        return cliStaId;
+    public void setCliUserId(int cliUserId) {
+        this.cliUserId = cliUserId;
     }
 }

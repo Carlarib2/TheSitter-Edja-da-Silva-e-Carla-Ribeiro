@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -14,11 +15,16 @@ public class profile_settings extends AppCompatActivity {
 =======
 public class Profile_settings extends AppCompatActivity {
 >>>>>>> 8467f4a31a5034772b925135adefb93a5c7317f5:App/app/src/main/java/pt/iade/thesitter/Profile_settings.java
+=======
+
+public class Profile_settings extends AppCompatActivity {
+>>>>>>> 8467f4a31a5034772b925135adefb93a5c7317f5
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esc_profile_settings);
+<<<<<<< HEAD
 
         profileOnSwitch = (Switch) findViewById(R.id.profile_switch_epf);
         profileOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -31,6 +37,8 @@ public class Profile_settings extends AppCompatActivity {
                 }
             }
         });
+=======
+>>>>>>> 8467f4a31a5034772b925135adefb93a5c7317f5
     }
 
     public void startHome2(View view){

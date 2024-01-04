@@ -11,7 +11,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMembe
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.familyMemberRepository;
 
 @RestController
-@RequestMapping(path="/api/familyMember")
+@RequestMapping(path="/api/familyMembers")
 public class FamilyMemberController {
 
 

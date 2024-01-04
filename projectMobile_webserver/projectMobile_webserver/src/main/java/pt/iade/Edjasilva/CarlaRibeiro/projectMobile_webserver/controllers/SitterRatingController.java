@@ -12,7 +12,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositorie
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRepository;
 
 @RestController
-@RequestMapping(path="/api/sitterRating")
+@RequestMapping(path="/api/sitterRatings")
 
 public class SitterRatingController {
 

@@ -13,7 +13,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositorie
 import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
 
 @RestController
-@RequestMapping(path="/api/userChat")
+@RequestMapping(path="/api/userChats")
 public class UserChatController {
 
     private Logger logger= LoggerFactory.getLogger(UserChatController.class);

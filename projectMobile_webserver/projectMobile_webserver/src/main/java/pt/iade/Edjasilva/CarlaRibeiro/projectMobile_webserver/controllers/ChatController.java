@@ -11,7 +11,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Chat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.ChatRepository;
 
 @RestController
-@RequestMapping(path= "/api/chat")
+@RequestMapping(path= "/api/chats")
 
 public class ChatController {
 

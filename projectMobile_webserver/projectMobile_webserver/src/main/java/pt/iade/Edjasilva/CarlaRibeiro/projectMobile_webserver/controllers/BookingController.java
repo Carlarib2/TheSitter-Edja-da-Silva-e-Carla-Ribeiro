@@ -12,7 +12,7 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Chat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.BookingRepository;
 
 @RestController
-@RequestMapping(path ="/api/booking")
+@RequestMapping(path ="/api/bookings")
 public class BookingController {
 
     private Logger logger= LoggerFactory.getLogger(BookingController.class);

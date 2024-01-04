@@ -1,48 +1,28 @@
--- inserts. thesitter_
+-- inserts
 
 -- table status
 INSERT INTO status (sta_name) VALUES 
     ('pendente'),
     ('aceite'),
-    ('negado'),
-    ('pendente'),
-    ('aceite');
-    
-    -- table acess 
-    INSERT INTO access (ac_name) VALUES 
-    ('sitter'),
-    ('client'),
-    ('sitter'),
-    ('client'),
-    ('sitter');
-    
-    -- table place
-    
-    INSERT INTO place (pla_address, pla_longitude, pla_altitude) VALUES 
-    ('Cazenga', 123.456, 789.012),
-    ('Benfica', 126.789, 123.456),
-    ('Vila', 129.012, 146.789),
-    ('Arroja', 234.567, 130.123),
-    ('Prenda', 128.890, 135.678);
-    
+    ('negado');
     
     -- table user 
     
-    INSERT INTO user (user_name, user_bdate, user_address, user_mobile, user_email, user_password, user_gender, user_pla_id, user_ac_id) VALUES
-    ('Délcia Dinis', '1990-05-22', 'Cazenga', '900000000', 'delcisabalo@hotmail.com', 'senha1', 'F', 1, 1),
-    ('Felizarda Gaspar', '1981-04-17', 'Benfica', '910000000', 'felizagaspar@gmail.com', 'senha2', 'F', 2, 2),
-    ('Jeovany Garcia', '1990-12-26', 'Vila', '920000000', 'geovanigarcia1@hotmail.com.com', 'senha3', 'M', 3, 1),
-    ('Joaquim Igreja', '2003-12-28', 'Arroja', '930000000', 'joaquimigreja@example.com', 'senha4', 'M', 4, 2),
-    ('Dalinela Bastos', '2002-10-11', 'Prenda', '940000000', 'dalinelacarina@example.com', 'senha5', 'F', 5, 3);
+    INSERT INTO user (user_name, user_bdate, user_address, user_mobile, user_email, user_password, user_gender) VALUES
+    ('Délcia Dinis', '1990-05-22', 'Cazenga', '900000000', 'delcisabalo@hotmail.com', 'senha1', 'F'),
+    ('Felizarda Gaspar', '1981-04-17', 'Benfica', '910000000', 'felizagaspar@gmail.com', 'senha2', 'F'),
+    ('Jeovany Garcia', '1990-12-26', 'Vila', '920000000', 'geovanigarcia1@hotmail.com.com', 'senha3', 'M'),
+    ('Joaquim Igreja', '2003-12-28', 'Arroja', '930000000', 'joaquimigreja@example.com', 'senha4', 'M'),
+    ('Dalinela Bastos', '2002-10-11', 'Prenda', '940000000', 'dalinelacarina@example.com', 'senha5', 'F');
     
     -- table client
     
-    INSERT INTO client (cli_user_id, cli_sta_id) VALUES
-	(2, 2),
-    (4, 1),
-    (2, 1),
-    (4, 2),
-    (2, 2);
+    INSERT INTO client (cli_user_id) VALUES
+	(2),
+    (4),
+    (2),
+    (4),
+    (2);
     
 -- table Creatures 
 
@@ -62,22 +42,23 @@ INSERT INTO creatures (cre_type, cre_info) VALUES
     ('Haniela Felizarda', '2019-03-21', 'Alicerce', 'Asma alérgica', 'Esperto', 'F',3 , 3),
     ('Rex', '2021-06-06', 'Escola4', '', '', 'M', 4, 4),
     ('Ramiro Nathaniel', '2016-07-07', 'Nossa senhora de Fátima', 'Urticária', 'Brincalhão', 'M', 5, 5);
-
-
--- tabela booking
-
-INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime) VALUES
-    ('2023-01-01', 2, '12:00:00', 2, '10:00:00'),
-    ('2023-01-02', 4, '14:00:00', 1, '12:00:00'),
-    ('2023-01-04', 4, '18:00:00', 2, '16:00:00');
     
     
 -- table sitter 
 
-INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit_boo_id, sit_reability, sit_responseTime, sit_responseRate) VALUES
-    (1, 'Educadora infantil', 'Licenciatura em educação', 'Amo crianças', 1, 90, 80, 95),
-    (3, 'Professora', 'Doutorado em educação', 'Amo animais', 2, 80, 70, 85),
-    (5, 'Enfermagem', 'Licenciatura em enfermagem', 'Amo cuidar de pessoas', 3, 70, 60, 75);
+INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit_reability, sit_responseTime, sit_responseRate) VALUES
+    (1, 'Educadora infantil', 'Licenciatura em educação', 'Amo crianças', 90, 80, 95),
+    (3, 'Professora', 'Doutorado em educação', 'Amo animais', 80, 70, 85),
+    (5, 'Enfermagem', 'Licenciatura em enfermagem', 'Amo cuidar de pessoas', 70, 60, 75);
+    
+    
+    
+    -- tabela booking
+
+INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime, boo_sit_id) VALUES
+    ('2023-01-01', 2, '12:00:00', 2, '10:00:00',1 ),
+    ('2023-01-02', 4, '14:00:00', 1, '12:00:00', 2),
+    ('2023-01-04', 4, '18:00:00', 2, '16:00:00',3 );
     
 
     
@@ -109,7 +90,7 @@ INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment) VALUES
     (2, 3, 'Serviço médio'),
     (1, 2, 'Não recomendado'),
     (2, 5, 'Ótimo'),
-    (1, 4, 'Amei'),
+	(1, 4, 'Amei'),
     (3, 5, 'Excelente trabalho'),
     (2, 3, 'Serviço médio'),
     (3, 2, 'Não recomendado'),

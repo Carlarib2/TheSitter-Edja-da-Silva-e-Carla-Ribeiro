@@ -12,56 +12,24 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-
     @Column(name="cli_id")
     private int cliId;
 
-    @OneToOne
-    @JoinColumn(name="cli_user_id", referencedColumnName = "user_id")
-    @JsonManagedReference("user-client")
-    private User user;
+    @Column(name = "cli_user_id")
+    private int cliUserId;
 
-    @OneToMany(mappedBy = "client")
-    @JsonManagedReference("familyMember-client")
-    private Set<FamilyMember> familyMembers;
-
-    @OneToMany(mappedBy = "client")
-    @JsonManagedReference("client-booking")
-    private Set<Booking> booking;
-
-
-
-
-    public Client(){
-
-    }
-
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Set<FamilyMember> getFamilyMembers() {
-        return familyMembers;
-    }
-
-    public void setFamilyMembers(Set<FamilyMember> familyMembers) {
-        this.familyMembers = familyMembers;
-    }
-
-    public Set<Booking> getBooking() {
-        return booking;
-    }
-
-    public void setBooking(Set<Booking> booking) {
-        this.booking = booking;
+    public Client() {
     }
 
     public int getCliId() {
         return cliId;
+    }
+
+    public int getCliUserId() {
+        return cliUserId;
+    }
+
+    public void setCliUserId(int cliUserId) {
+        this.cliUserId = cliUserId;
     }
 }

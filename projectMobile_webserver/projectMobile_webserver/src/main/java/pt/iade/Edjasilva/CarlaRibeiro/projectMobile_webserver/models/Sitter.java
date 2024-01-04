@@ -1,11 +1,6 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
-import java.util.Set;
 
 @Entity
 @Table(name="sitter")
@@ -16,12 +11,8 @@ public class Sitter {
     @Column(name="sit_id")
     private int sitId;
 
-    @OneToOne
-    @JoinColumn(name="sit_user_id", referencedColumnName = "user_id")
-    @JsonBackReference("user-sitter")
-    private User user;
-
-
+    @Column(name = "sit_user_id")
+    private int sitUserId;
 
     @Column(name="sit_experience")
     private String sitExperience;
@@ -32,9 +23,8 @@ public class Sitter {
     @Column(name="sit_aboutMe")
     private String sitAboutMe;
 
-
-    @Column(name="sit_reability")
-    private int sitReability;
+    @Column(name="sit_reliability")
+    private int sitReliability;
 
     @Column(name="sit_responseTime")
     private int sitResponseTime;
@@ -42,26 +32,22 @@ public class Sitter {
     @Column(name="sit_responseRate")
     private int sitResponseRate;
 
-    @OneToMany(mappedBy = "sitter")
-    @JsonManagedReference("sitter-sitterRating")
-    private Set<SitterRating> sitterRatings;
-
-
-    @OneToMany(mappedBy = "sitter")
-    @JsonManagedReference("sitter-booking")
-    private Set<Booking> booking;
 
     public Sitter(){
 
     }
 
-
-    public User getUser() {
-        return user;
+    public int getSitId() {
+        return sitId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+
+    public int getSitUserId() {
+        return sitUserId;
+    }
+
+    public void setSitUserId(int sitUserId) {
+        this.sitUserId = sitUserId;
     }
 
     public String getSitExperience() {
@@ -88,12 +74,12 @@ public class Sitter {
         this.sitAboutMe = sitAboutMe;
     }
 
-    public int getSitReability() {
-        return sitReability;
+    public int getSitReliability() {
+        return sitReliability;
     }
 
-    public void setSitReability(int sitReability) {
-        this.sitReability = sitReability;
+    public void setSitReliability(int sitReliability) {
+        this.sitReliability = sitReliability;
     }
 
     public int getSitResponseTime() {
@@ -110,25 +96,5 @@ public class Sitter {
 
     public void setSitResponseRate(int sitResponseRate) {
         this.sitResponseRate = sitResponseRate;
-    }
-
-    public Set<SitterRating> getSitterRatings() {
-        return sitterRatings;
-    }
-
-    public void setSitterRatings(Set<SitterRating> sitterRatings) {
-        this.sitterRatings = sitterRatings;
-    }
-
-    public Set<Booking> getBooking() {
-        return booking;
-    }
-
-    public void setBooking(Set<Booking> booking) {
-        this.booking = booking;
-    }
-
-    public int getSitId() {
-        return sitId;
     }
 }

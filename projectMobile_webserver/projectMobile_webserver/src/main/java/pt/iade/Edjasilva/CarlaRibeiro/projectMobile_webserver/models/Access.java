@@ -18,17 +18,9 @@ public class Access {
 
     @Column(name="ac_name")
     private String acName;
-    @OneToMany(mappedBy = "access")
-    @JsonManagedReference("access-user")
-    private Set<User> users;
 
-    public Set<User> getUsers() {
-        return users;
-    }
 
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
+
 
     public Access() {
     }

@@ -18,9 +18,6 @@ public class Status {
     @Column(name="sta_name")
     private String staName;
 
-    @OneToMany(mappedBy = "status")
-    @JsonManagedReference("status-booking")
-    private Set<Booking> booking;
 
     public Status (){
     }
@@ -32,14 +29,6 @@ public class Status {
 
     public void setStaName(String staName) {
         this.staName = staName;
-    }
-
-    public Set<Booking> getBooking() {
-        return booking;
-    }
-
-    public void setBooking(Set<Booking> booking) {
-        this.booking = booking;
     }
 
     public int getStaId() {

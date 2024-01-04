@@ -5,12 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import java.time.chrono.IsoChronology;
+
+import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class Profile extends AppCompatActivity {
-
+    EditText educationEditText, experienceEditText, aboutMeEditText;
+    Button saveButton;
     User user;
+    Sitter sitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +26,7 @@ public class Profile extends AppCompatActivity {
 
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("user");
+        sitter = (Sitter) intent.getSerializableExtra("sitter");
 
         setupComponents();
     }
@@ -29,10 +37,33 @@ public class Profile extends AppCompatActivity {
     }
 
     private void setupComponents() {
+        educationEditText = (EditText) findViewById(R.id.education_editText_da);
+        experienceEditText = (EditText) findViewById(R.id.experience_editText_da);
+        aboutMeEditText = (EditText) findViewById(R.id.about_editText_da);
+        saveButton = (Button) findViewById(R.id.save_button_da);
 
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                commitViews();
+                sitter.register(user, new Sitter.RegisterResponse() {
+                    @Override
+                    public void response() {
+                        Intent intent = new Intent(Profile.this, The_profile_1.class);
+                        intent.putExtra("user", user);
+                        intent.putExtra("sitter", sitter);
+
+                        startActivity(intent);
+                    }
+                });
+
+            }
+        });
     }
 
     public void commitViews() {
-        //user.setEd
+        sitter.setSitEducation(educationEditText.getText().toString());
+        sitter.setSitExperience(experienceEditText.getText().toString());
+        sitter.setSitAboutMe(aboutMeEditText.getText().toString());
     }
 }

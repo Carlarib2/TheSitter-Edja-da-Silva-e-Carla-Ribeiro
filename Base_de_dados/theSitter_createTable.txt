@@ -1,4 +1,4 @@
--- Criar as tabelas 
+-- Criar as tabelas *new
 
 
 CREATE TABLE user(
@@ -10,9 +10,8 @@ CREATE TABLE user(
     user_mobile VARCHAR(20) NOT NULL,
     user_email VARCHAR(255) NOT NULL unique,
     user_password VARCHAR(255) NOT NULL,
-    user_gender CHAR(1) NOT NULL,
-    user_pla_id INT NOT NULL,
-    user_ac_id INT NOT NULL
+    user_gender CHAR(1) NOT NULL
+
 );
 
 CREATE TABLE booking (
@@ -20,6 +19,7 @@ CREATE TABLE booking (
     boo_data DATE NOT NULL,
     boo_cli_id INT NOT NULL,
     boo_endTime TIME NOT NULL, 
+    boo_sit_id INT NOT NULL ,
     boo_sta_id INT NOT NULL ,
     boo_startTime TIME NOT NULL
 );
@@ -32,8 +32,7 @@ CREATE TABLE status (
 
 CREATE TABLE client (
     cli_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cli_user_id INT NOT NULL,
-    cli_sta_id INT NOT NULL
+    cli_user_id INT NOT NULL
     
 );
 
@@ -69,7 +68,6 @@ CREATE TABLE sitter (
     sit_experience TEXT,
     sit_education VARCHAR(255),
     sit_aboutMe TEXT,
-    sit_boo_id INT NOT NULL,
     sit_reability INT CHECK (sit_reability >= 0 AND sit_reability <= 100),
     sit_responseTime INT CHECK (sit_responseTime >= 0 AND sit_responseTime <= 100),
     sit_responseRate INT CHECK (sit_responseRate >= 0 AND sit_responseRate <= 100)
@@ -87,44 +85,15 @@ CREATE TABLE family_member(
     fa_cre_id INT NOT NULL
 );
 
-CREATE TABLE place (
-    pla_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    pla_address VARCHAR(255) NOT NULL,
-    pla_longitude DOUBLE NOT NULL,
-    pla_altitude DOUBLE NOT NULL
-);
-
-
-CREATE TABLE access(
-ac_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-ac_name VARCHAR(60) NOT NULL ,
-    CHECK (ac_name IN ('sitter', 'client', 'admin'))
-);
-
-
-ALTER TABLE user
-ADD CONSTRAINT user_fk_place
-FOREIGN KEY (user_pla_id) REFERENCES place(pla_id)
-ON DELETE CASCADE;
-
-ALTER TABLE user
-ADD CONSTRAINT user_fk_access
-FOREIGN KEY (user_ac_id) REFERENCES access(ac_id)
-ON DELETE CASCADE;
 
 ALTER TABLE booking
 ADD CONSTRAINT booking_fk_client
 FOREIGN KEY (boo_cli_id) REFERENCES client(cli_id)
-ON DELETE NO ACTION ON UPDATE NO ACTION;
+ON DELETE CASCADE;
 
 ALTER TABLE booking
 ADD CONSTRAINT booking_fk_status
 FOREIGN KEY (boo_sta_id) REFERENCES status(sta_id)
-ON DELETE CASCADE;
-
-ALTER TABLE client
-ADD CONSTRAINT client_fk_sta
-FOREIGN KEY (cli_sta_id) REFERENCES status(sta_id)
 ON DELETE CASCADE;
 
 ALTER TABLE client
@@ -150,11 +119,6 @@ ON DELETE CASCADE;
 ALTER TABLE sitter
 ADD CONSTRAINT sitter_fk_user
 FOREIGN KEY (sit_user_id) REFERENCES user(user_id)
-ON DELETE CASCADE;
-
-ALTER TABLE sitter
-ADD CONSTRAINT sitter_fk_booking
-FOREIGN KEY (sit_boo_id) REFERENCES booking(boo_id)
 ON DELETE CASCADE;
 
 ALTER TABLE family_member

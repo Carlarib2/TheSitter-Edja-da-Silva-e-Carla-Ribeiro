@@ -19,7 +19,7 @@ public class Booking {
     @Column(name = "boo_data")
     private LocalDate booData;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "boo_cli_id", referencedColumnName = "cli_id")
     @JsonBackReference("client-booking")
     private Client client;
@@ -27,12 +27,12 @@ public class Booking {
     @Column(name = "boo_endTime")
     private Time booEndTime;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "boo_sta_id", referencedColumnName = "sta_id")
     @JsonBackReference("status-booking")
     private Status status;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "boo_sit_id", referencedColumnName = "sit_id")
     @JsonBackReference("sitter-booking")
     private Sitter sitter;

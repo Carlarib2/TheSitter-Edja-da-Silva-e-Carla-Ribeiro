@@ -35,13 +35,11 @@ public class User implements Serializable{
 
     private String userName;
 
-    private int userAcId;
-
     public User() {
-        this(0, "", 0, "", "", "", "", "", null, null,0);
+        this(0, "", "", "", "", "", "", null, null);
     }
 
-    public User(int userId, String userName, int userPlaId, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate, int userAcId) {
+    public User(int userId, String userName, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate) {
         this.userName = userName;
         this.userId= userId;
         this.userGender=userGender;
@@ -51,38 +49,30 @@ public class User implements Serializable{
         this.userAddress=userAddress;
         this.userUpload=userUpload;
         this.userBdate=userBdate;
-        this.userAcId=userAcId;
     }
 
 
     public LocalDate getUserBdate() {
         return userBdate;
     }
-    public void save(SaveResponse response) {
+
+
+    public void register (RegisterResponse response) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
-                    if (userId == 0) {
-                        WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
-                        String response = request.performPostRequest(User.this);
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
+                    String resp = request.performPostRequest(User.this);
 
-                        User user = new Gson().fromJson(response, User.class);
+                    User user = new Gson().fromJson(resp, User.class);
 
+                    userId = user.getUserId();
+                    response.response();
 
-                        userId= user.getUserId();
-                        /*response.response();*/
-
-                    } else {
-                        WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/"+userId));
-                        request.performPostRequest(User.this);
-
-                        //response.response();
-                    }
                 } catch (Exception e){
-                    Log.e("Save", e.toString());
+                    Log.e("User.register", e.toString());
                 }
-
             }
         });
         thread.start();
@@ -113,30 +103,6 @@ public class User implements Serializable{
     }
 
 
-    public static void Register(String userName, String userEmail, String userPassword, RegisterResponse response){
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
-
-                    HashMap<String, String> params = new HashMap<String, String>();
-                    params.put("userPassword", userPassword);
-                    params.put("userEmail", userEmail);
-
-                    String resp = request.performGetRequest(params);
-                    User user= new Gson().fromJson(resp, User.class);
-
-                    response.response(user);
-
-                } catch (Exception e){
-                    Log.e("User.Register", e.toString());
-                }
-            }
-        });
-        thread.start();
-    }
-
     public void setUserBdate(LocalDate userBdate) {
         this.userBdate = userBdate;
     }
@@ -159,13 +125,6 @@ public class User implements Serializable{
 
     public String getUserMobile() {
         return userMobile;
-    }
-    public int getUserAcId() {
-        return userAcId;
-    }
-
-    public void setUserAcId(int userAcId) {
-        this.userAcId = userAcId;
     }
 
     public void setUserMobile(String userMobile) {
@@ -210,17 +169,12 @@ public class User implements Serializable{
     }
 
 
-
-    public interface SaveResponse {
-        public void response();
-    }
-
     public interface LoginResponse {
         public void response(User user);
     }
 
     public interface RegisterResponse{
-        public void response(User user);
+        public void response();
     }
 
 

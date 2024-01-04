@@ -12,12 +12,12 @@ public class UserChat {
     @Column(name="usat_id")
     private int usatId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="usat_user_id", referencedColumnName = "user_id")
     @JsonBackReference("user-userChat")
     private User user;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn (name="usat_chat_id", referencedColumnName = "chat_id")
     @JsonBackReference("chat-userChat")
     private Chat chat;

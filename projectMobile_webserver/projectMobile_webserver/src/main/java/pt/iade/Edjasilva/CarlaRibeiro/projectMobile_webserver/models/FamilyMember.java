@@ -33,12 +33,12 @@ public class FamilyMember {
     private String faGender;
 
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="fa_cli_id")
     @JsonManagedReference("familyMember-client")
     private Client client;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn (name="fa_cre_id", referencedColumnName = "cre_id")
     @JsonManagedReference("familyMember-creatures")
     private Creatures creatures;

@@ -41,12 +41,6 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
-    @ManyToOne
-    @JoinColumn(name="user_ac_id", referencedColumnName = "ac_id")
-    @JsonBackReference("access-user")
-    private Access access;
-
-
 
     public User() {
     }
@@ -114,14 +108,6 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public Access getAccess() {
-        return access;
-    }
-
-    public void setAccess(Access access) {
-        this.access = access;
     }
 
     public int getUserId() {

@@ -12,7 +12,7 @@ public class SitterRating {
     @Column(name="ra_id")
     private int raId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="ra_sit_id", referencedColumnName = "sit_id")
     @JsonBackReference("sitter-sitterRating")
     private Sitter sitter;

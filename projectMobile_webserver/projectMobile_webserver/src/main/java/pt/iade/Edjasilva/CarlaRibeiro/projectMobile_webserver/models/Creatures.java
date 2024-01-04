@@ -20,10 +20,6 @@ public class Creatures {
     @Column(name="cre_info")
     private String creInfo;
 
-    @OneToMany(mappedBy = "creatures")
-    @JsonBackReference("familyMember-creatures")
-    private Set<Creatures> creatures;
-
     public Creatures(){
 
     }
@@ -43,14 +39,6 @@ public class Creatures {
 
     public void setCreInfo(String creInfo) {
         this.creInfo = creInfo;
-    }
-
-    public Set<Creatures> getCreatures() {
-        return creatures;
-    }
-
-    public void setCreatures(Set<Creatures> creatures) {
-        this.creatures = creatures;
     }
 
     public int getCreId() {

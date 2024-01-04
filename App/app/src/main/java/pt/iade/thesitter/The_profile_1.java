@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class The_profile_1 extends AppCompatActivity {
     TextView name_textView;
     User user;
+    Sitter sitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class The_profile_1 extends AppCompatActivity {
 
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("user");
+        sitter = (Sitter) intent.getSerializableExtra("sitter");
 
         setupComponents();
     }

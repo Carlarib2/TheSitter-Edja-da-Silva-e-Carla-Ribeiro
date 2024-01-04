@@ -1,11 +1,7 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="sitter_rating")
@@ -16,9 +12,10 @@ public class SitterRating {
     @Column(name="ra_id")
     private int raId;
 
-    @Column(name="ra_sit_id")
-    private int raSitId;
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="ra_sit_id", referencedColumnName = "sit_id")
+    @JsonBackReference("sitter-sitterRating")
+    private Sitter sitter;
     @Column(name="ra_value")
     private int raValue;
 
@@ -29,16 +26,12 @@ public class SitterRating {
     }
 
 
-    public int getRaId() {
-        return raId;
+    public Sitter getSitter() {
+        return sitter;
     }
 
-    public int getRaSitId() {
-        return raSitId;
-    }
-
-    public void setRaSitId(int raSitId) {
-        this.raSitId = raSitId;
+    public void setSitter(Sitter sitter) {
+        this.sitter = sitter;
     }
 
     public int getRaValue() {
@@ -55,5 +48,9 @@ public class SitterRating {
 
     public void setRaComment(String raComment) {
         this.raComment = raComment;
+    }
+
+    public int getRaId() {
+        return raId;
     }
 }

@@ -1,13 +1,6 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-import java.time.LocalDate;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="sitter")
@@ -18,7 +11,7 @@ public class Sitter {
     @Column(name="sit_id")
     private int sitId;
 
-    @Column(name="sit_user_id")
+    @Column(name = "sit_user_id")
     private int sitUserId;
 
     @Column(name="sit_experience")
@@ -30,11 +23,8 @@ public class Sitter {
     @Column(name="sit_aboutMe")
     private String sitAboutMe;
 
-    @Column(name="sit_boo_id")
-    private int sitBooId;
-
-    @Column(name="sit_reability")
-    private int sitReability;
+    @Column(name="sit_reliability")
+    private int sitReliability;
 
     @Column(name="sit_responseTime")
     private int sitResponseTime;
@@ -42,14 +32,15 @@ public class Sitter {
     @Column(name="sit_responseRate")
     private int sitResponseRate;
 
+
     public Sitter(){
 
     }
 
-
     public int getSitId() {
         return sitId;
     }
+
 
     public int getSitUserId() {
         return sitUserId;
@@ -83,20 +74,12 @@ public class Sitter {
         this.sitAboutMe = sitAboutMe;
     }
 
-    public int getSitBooId() {
-        return sitBooId;
+    public int getSitReliability() {
+        return sitReliability;
     }
 
-    public void setSitBooId(int sitBooId) {
-        this.sitBooId = sitBooId;
-    }
-
-    public int getSitReability() {
-        return sitReability;
-    }
-
-    public void setSitReability(int sitReability) {
-        this.sitReability = sitReability;
+    public void setSitReliability(int sitReliability) {
+        this.sitReliability = sitReliability;
     }
 
     public int getSitResponseTime() {

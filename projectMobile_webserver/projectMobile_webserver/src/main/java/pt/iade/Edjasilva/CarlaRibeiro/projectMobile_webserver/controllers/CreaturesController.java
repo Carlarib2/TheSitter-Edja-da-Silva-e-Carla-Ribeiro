@@ -4,9 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Creatures;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.CreaturesRepository;
 
@@ -24,5 +22,14 @@ public class CreaturesController {
     Iterable<Creatures> getCreatures(){
         logger.info("sending all creatures");
         return creaturesRepository.findAll();
+    }
+
+    @PostMapping(path= "", produces=MediaType.APPLICATION_JSON_VALUE)
+    public Creatures saveCreatures(@RequestBody Creatures creatures){
+
+        Creatures savedCreatures = creaturesRepository.save(creatures);
+        logger.info("Saving creatures with id " + savedCreatures.getCreId());
+
+        return savedCreatures;
     }
 }

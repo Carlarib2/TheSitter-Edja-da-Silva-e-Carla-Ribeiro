@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     android:contentDescription="@string/lock_icon"
-    tools:context=".register">
+    tools:context=".Register">
 
     <TextView
         android:id="@+id/app_textView_d"
@@ -231,7 +231,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/selectSitters_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="240dp"

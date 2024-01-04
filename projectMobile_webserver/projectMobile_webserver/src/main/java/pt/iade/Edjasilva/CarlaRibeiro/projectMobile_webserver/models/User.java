@@ -1,13 +1,11 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name="user")
@@ -43,16 +41,10 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
-    @Column(name="user_pla_id")
-    private int userPlaId;
 
     public User() {
     }
 
-
-    public int getUserId() {
-        return userId;
-    }
 
     public LocalDate getUserBdate() {
         return userBdate;
@@ -118,11 +110,7 @@ public class User {
         this.userName = userName;
     }
 
-    public int getUserPlaId() {
-        return userPlaId;
-    }
-
-    public void setUserPlaId(int userPlaId) {
-        this.userPlaId = userPlaId;
+    public int getUserId() {
+        return userId;
     }
 }

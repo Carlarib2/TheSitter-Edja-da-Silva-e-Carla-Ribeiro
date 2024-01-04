@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     android:contentDescription="@string/description_icon"
-    tools:context=".profile">
+    tools:context=".Profile">
 
     <TextView
         android:id="@+id/create_profile_textView_da"
@@ -75,7 +75,6 @@
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
-        android:onClick="startSave"
         android:shadowColor="#F3E5F5"
         android:shadowDx="2"
         android:shadowDy="2"

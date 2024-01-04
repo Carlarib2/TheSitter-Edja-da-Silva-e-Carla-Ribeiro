@@ -3,15 +3,14 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Client;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRepository;
 
 
 @RestController
-@RequestMapping(path= "/api/sitter")
+@RequestMapping(path= "/api/sitters")
 
 public class SitterController {
 
@@ -25,6 +24,14 @@ public class SitterController {
         logger.info("Sending all the Sitters");
         return sitterRepository.findAll();
 
+    }
+
+    @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Sitter saveSitter(@RequestBody Sitter sitter){
+        Sitter savedSitter = sitterRepository.save(sitter);
+        logger.info("Saving sitter with id " + savedSitter.getSitId());
+
+        return savedSitter;
     }
 
 }

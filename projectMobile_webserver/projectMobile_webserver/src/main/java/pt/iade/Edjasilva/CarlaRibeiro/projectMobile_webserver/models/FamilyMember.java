@@ -1,11 +1,7 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -36,11 +32,16 @@ public class FamilyMember {
     @Column(name="fa_gender")
     private String faGender;
 
-    @Column(name="fa_cli_id")
-    private int faCliId;
 
-    @Column(name="fa_cre_id")
-    private int faCreId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="fa_cli_id")
+    @JsonManagedReference("familyMember-client")
+    private Client client;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn (name="fa_cre_id", referencedColumnName = "cre_id")
+    @JsonManagedReference("familyMember-creatures")
+    private Creatures creatures;
 
 
     public FamilyMember(){
@@ -48,10 +49,10 @@ public class FamilyMember {
     }
 
 
+
     public int getFaId() {
         return faId;
     }
-
 
     public String getFaName() {
         return faName;
@@ -101,19 +102,19 @@ public class FamilyMember {
         this.faGender = faGender;
     }
 
-    public int getFaCliId() {
-        return faCliId;
+    public Client getClient() {
+        return client;
     }
 
-    public void setFaCliId(int faCliId) {
-        this.faCliId = faCliId;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
-    public int getFaCreId() {
-        return faCreId;
+    public Creatures getCreatures() {
+        return creatures;
     }
 
-    public void setFaCreId(int faCreId) {
-        this.faCreId = faCreId;
+    public void setCreatures(Creatures creatures) {
+        this.creatures = creatures;
     }
 }

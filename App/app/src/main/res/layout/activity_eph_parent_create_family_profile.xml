@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".parent_create_family_profile">
+    tools:context=".Parent_create_family_profile">
 
     <EditText
         android:id="@+id/allergies_editTex_eph"

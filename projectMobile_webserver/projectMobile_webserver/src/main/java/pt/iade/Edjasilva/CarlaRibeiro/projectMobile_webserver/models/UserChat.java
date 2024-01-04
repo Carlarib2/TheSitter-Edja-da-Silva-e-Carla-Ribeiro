@@ -1,10 +1,6 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="user_chat")
@@ -16,33 +12,37 @@ public class UserChat {
     @Column(name="usat_id")
     private int usatId;
 
-    @Column(name="usat_user_id")
-    private int usatUserId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="usat_user_id", referencedColumnName = "user_id")
+    @JsonBackReference("user-userChat")
+    private User user;
 
-    @Column(name="usat_chat_id")
-    private int usatChatId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn (name="usat_chat_id", referencedColumnName = "chat_id")
+    @JsonBackReference("chat-userChat")
+    private Chat chat;
 
     public UserChat() {
     }
 
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Chat getChat() {
+        return chat;
+    }
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
+
     public int getUsatId() {
         return usatId;
-    }
-
-    public int getUsatUserId() {
-        return usatUserId;
-    }
-
-    public void setUsatUserId(int usatUserId) {
-        this.usatUserId = usatUserId;
-    }
-
-    public int getUsatChatId() {
-        return usatChatId;
-    }
-
-    public void setUsatChatId(int usatChatId) {
-        this.usatChatId = usatChatId;
     }
 }

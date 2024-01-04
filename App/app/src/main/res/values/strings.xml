@@ -212,6 +212,9 @@
     <string name="No">NO</string>
 
     <!--Activity_calendar-->
+    <!--Activity_my_sitters_list-->
+    <string name="sitter_Name">Name</string>
+    <string name="sitter_Location">Location</string>
 
 
 

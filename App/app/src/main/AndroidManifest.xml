@@ -8,8 +8,8 @@
 
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheSitter"
         tools:targetApi="31">
+        <activity
+            android:name=".my_sitters_recyclerview"
+            android:exported="false" />
         <activity
             android:name=".sitter_declined"
             android:exported="false" />

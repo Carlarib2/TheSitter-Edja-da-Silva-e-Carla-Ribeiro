@@ -5,13 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 public class profile_settings extends AppCompatActivity {
+    protected Switch profileOnSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esc_profile_settings);
+
+        profileOnSwitch = (Switch) findViewById(R.id.profile_switch_epf);
+        profileOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // TODO: Fazer coisa que profile esta on.
+                } else {
+                    // TODO: Fazer contratio
+                }
+            }
+        });
     }
 
     public void startHome2(View view){

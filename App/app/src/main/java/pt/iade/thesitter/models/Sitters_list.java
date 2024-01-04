@@ -1,2 +1,4 @@
-package pt.iade.thesitter.models;public class sitters_list {
+package pt.iade.thesitter.models;
+
+public class Sitters_list {
 }

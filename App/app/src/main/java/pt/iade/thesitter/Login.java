@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import pt.iade.thesitter.models.User;
 
 public class Login extends AppCompatActivity {
     protected Button login_button_c, sae_button_epb;
     EditText username_editView, password_editView;
+    protected Switch confirmSitter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class Login extends AppCompatActivity {
         username_editView = (EditText) findViewById(R.id.user_editText_c);
         password_editView = (EditText) findViewById(R.id.pass_editText_c);
         login_button_c = (Button) findViewById(R.id.login_button_c);
+        confirmSitter=(Switch) findViewById(R.id.switch_c);
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +37,12 @@ public class Login extends AppCompatActivity {
                 String password = password_editView.getText().toString();
 
 
+
+                if(confirmSitter.isChecked() ){
+
+                }else{
+
+                }
                 User.Login(username, password, new User.LoginResponse() {
                     @Override
                     public void response(User returnedUser) {

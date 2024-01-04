@@ -48,7 +48,7 @@ public class UserController {
     /*@DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteUser(@PathVariable int UserId) {
         logger.info("Deleting user with id " + UserId);
-        // No verification to see if it exists
+
         userRepository.deleteById(UserId);
         return new Response("Deleted user with id " + UserId, null);
     }

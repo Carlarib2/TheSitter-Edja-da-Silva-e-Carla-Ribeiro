@@ -19,10 +19,7 @@ INSERT INTO status (sta_name) VALUES
     
     INSERT INTO client (cli_user_id) VALUES
 	(2),
-    (4),
-    (2),
-    (4),
-    (2);
+    (4);
     
 -- table Creatures 
 
@@ -39,14 +36,14 @@ INSERT INTO creatures (cre_type, cre_info) VALUES
     INSERT INTO family_member (fa_name, fa_bdate, fa_school, fa_allergies, fa_aboutMe, fa_gender, fa_cli_id, fa_cre_id) VALUES
     ('Ana Rashelle', '2019-03-13', 'Pirilampos', 'Rinite alérgica', 'Divertido', 'F', 1, 1),
     ('Max', '2010-03-01', '', '', 'Ama doces', 'M', 2, 2),
-    ('Haniela Felizarda', '2019-03-21', 'Alicerce', 'Asma alérgica', 'Esperto', 'F',3 , 3),
-    ('Rex', '2021-06-06', 'Escola4', '', '', 'M', 4, 4),
-    ('Ramiro Nathaniel', '2016-07-07', 'Nossa senhora de Fátima', 'Urticária', 'Brincalhão', 'M', 5, 5);
+    ('Haniela Felizarda', '2019-03-21', 'Alicerce', 'Asma alérgica', 'Esperto', 'F',2 , 3),
+    ('Rex', '2021-06-06', 'Escola4', '', '', 'M', 2, 4),
+    ('Ramiro Nathaniel', '2016-07-07', 'Nossa senhora de Fátima', 'Urticária', 'Brincalhão', 'M', 1, 5);
     
     
 -- table sitter 
 
-INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit_reability, sit_responseTime, sit_responseRate) VALUES
+INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit_reliability, sit_responseTime, sit_responseRate) VALUES
     (1, 'Educadora infantil', 'Licenciatura em educação', 'Amo crianças', 90, 80, 95),
     (3, 'Professora', 'Doutorado em educação', 'Amo animais', 80, 70, 85),
     (5, 'Enfermagem', 'Licenciatura em enfermagem', 'Amo cuidar de pessoas', 70, 60, 75);
@@ -57,8 +54,8 @@ INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit
 
 INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime, boo_sit_id) VALUES
     ('2023-01-01', 2, '12:00:00', 2, '10:00:00',1 ),
-    ('2023-01-02', 4, '14:00:00', 1, '12:00:00', 2),
-    ('2023-01-04', 4, '18:00:00', 2, '16:00:00',3 );
+    ('2023-01-02', 1, '14:00:00', 1, '12:00:00', 2),
+    ('2023-01-04', 1, '18:00:00', 2, '16:00:00',3 );
     
 
     

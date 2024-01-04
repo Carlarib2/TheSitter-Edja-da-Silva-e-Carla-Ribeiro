@@ -68,7 +68,7 @@ CREATE TABLE sitter (
     sit_experience TEXT,
     sit_education VARCHAR(255),
     sit_aboutMe TEXT,
-    sit_reability INT CHECK (sit_reability >= 0 AND sit_reability <= 100),
+    sit_reliability INT CHECK (sit_reliability >= 0 AND sit_reliability <= 100),
     sit_responseTime INT CHECK (sit_responseTime >= 0 AND sit_responseTime <= 100),
     sit_responseRate INT CHECK (sit_responseRate >= 0 AND sit_responseRate <= 100)
 );

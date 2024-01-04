@@ -3,14 +3,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.User;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.UserRepository;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.responses.Response;
 
-
-import java.time.LocalDate;
 
 
 @RestController

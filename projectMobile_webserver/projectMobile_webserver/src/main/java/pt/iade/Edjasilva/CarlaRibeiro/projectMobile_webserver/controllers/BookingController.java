@@ -26,4 +26,5 @@ public class BookingController {
         logger.info("Sending all chats");
         return bookingRepository.findAll();
     }
+    
 }

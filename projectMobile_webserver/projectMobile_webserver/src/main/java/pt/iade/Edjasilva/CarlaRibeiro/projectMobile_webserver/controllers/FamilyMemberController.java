@@ -7,10 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Booking;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.UserChat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.familyMemberRepository;
 
 @RestController

@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Booking;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Chat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.BookingRepository;
 
 @RestController

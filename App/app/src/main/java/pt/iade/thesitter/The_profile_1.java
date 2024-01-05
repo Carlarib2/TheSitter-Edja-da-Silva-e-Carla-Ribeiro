@@ -72,7 +72,7 @@ public class The_profile_1 extends AppCompatActivity {
     }
 
     public void startProfile2(View view){
-        Intent intent = new Intent(this, profile_settings.Profile_settings.class);
+        Intent intent = new Intent(this, Profile_settings.class);
         startActivity(intent);
     }
 

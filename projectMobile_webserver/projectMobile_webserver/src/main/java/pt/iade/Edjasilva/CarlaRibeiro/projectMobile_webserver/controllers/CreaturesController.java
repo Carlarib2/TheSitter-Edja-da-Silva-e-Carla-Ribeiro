@@ -3,9 +3,12 @@ package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Creatures;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.CreaturesRepository;
 
 @RestController
@@ -31,5 +34,26 @@ public class CreaturesController {
         logger.info("Saving creatures with id " + savedCreatures.getCreId());
 
         return savedCreatures;
+    }
+
+    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
+    public Creatures ids(@RequestParam (name= "CreId") int id){
+        logger.info("Sending creatures with id:" + id);
+        return creaturesRepository.findByCreId(id);
+    }
+
+    @DeleteMapping(path="/id" ,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> deleteByCreaturesId(@RequestParam(name = "creId") int id) {
+        logger.info("Attempting to delete creatures with id: " + id);
+
+        if (creaturesRepository.existsById(id)) {
+            creaturesRepository.deleteById(id);
+            logger.info("Deleted creatures with id:" + id);
+            return ResponseEntity.ok("Creatures with id " + id + " was successfully deleted.");
+        } else {
+            logger.info("Creatures with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Creatures with id " + id + " not found.");
+        }
+
     }
 }

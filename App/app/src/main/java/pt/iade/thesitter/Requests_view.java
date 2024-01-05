@@ -60,7 +60,7 @@ public class Requests_view extends AppCompatActivity {
     }
 
     public void startProfileS(View view){
-        Intent intent = new Intent(this, profile_settings.Profile_settings.class);
+        Intent intent = new Intent(this, Profile_settings.class);
         startActivity(intent);
     }
 

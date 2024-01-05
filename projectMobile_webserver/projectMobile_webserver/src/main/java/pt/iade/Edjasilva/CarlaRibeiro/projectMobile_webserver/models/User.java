@@ -15,13 +15,11 @@ public class User {
 
     @Column(name="user_id")
     private int userId;
+    @Column(name="user_name")
+    private String userName;
 
     @Column(name="user_bdate")
     private LocalDate userBdate;
-
-    @Column(name="user_upload")
-    private byte[]  userUpload;
-
 
     @Column(name="user_address")
     private String userAddress;
@@ -37,9 +35,10 @@ public class User {
 
     @Column(name="user_gender")
     private String userGender;
+    @Column(name="user_upload")
+    private byte[]  userUpload;
 
-    @Column(name="user_name")
-    private String userName;
+
 
 
     public User() {

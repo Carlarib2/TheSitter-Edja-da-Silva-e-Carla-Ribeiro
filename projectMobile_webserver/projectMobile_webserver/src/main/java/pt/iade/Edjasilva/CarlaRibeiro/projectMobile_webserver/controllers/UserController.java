@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Booking;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.User;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.UserRepository;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.responses.Response;
@@ -64,12 +65,6 @@ public class UserController {
     }
 
 
-
-
-
-
-
-
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public User login(@RequestParam(name = "userEmail") String email,
                       @RequestParam(name = "userPassword") String password){
@@ -92,7 +87,30 @@ public class UserController {
         return savedUser;
 
 
+    }
 
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateUser(@PathVariable("id") int id, @RequestBody User updatedUser) {
+        logger.info("Attempting to update Booking with id: " + id);
 
+        if (userRepository.existsById(id)) {
+            User existingUser = userRepository.findById(id).get();
+
+            existingUser.setUserBdate(updatedUser.getUserBdate());
+            existingUser.setUserUpload(updatedUser.getUserUpload());
+            existingUser.setUserAddress(updatedUser.getUserAddress());
+            existingUser.setUserMobile(updatedUser.getUserMobile());
+            existingUser.setUserEmail(updatedUser.getUserEmail());
+            existingUser.setUserPassword(updatedUser.getUserPassword());
+            existingUser.setUserGender(updatedUser.getUserGender());
+
+            userRepository.save(existingUser);
+
+            logger.info("Updated user with id: " + id);
+            return ResponseEntity.ok(existingUser);
+        } else {
+            logger.info("User with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User with id " + id + " not found.");
+        }
     }
 }

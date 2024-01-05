@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Booking;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Status;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.StatusRepository;
 
@@ -56,6 +57,28 @@ public class StatusController {
         }
 
         }
+
+
+
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateStatus(@PathVariable("id") int id, @RequestBody Status updatedStatus) {
+        logger.info("Attempting to update Status with id: " + id);
+
+        if (statusRepository.existsById(id)) {
+            Status existingStatus = statusRepository.findById(id).get();
+
+            existingStatus.setStaName(updatedStatus.getStaName());
+
+
+            statusRepository.save(existingStatus);
+
+            logger.info("Updated Status with id: " + id);
+            return ResponseEntity.ok(existingStatus);
+        } else {
+            logger.info("Status with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Status with id " + id + " not found.");
+        }
+    }
     }
 
 

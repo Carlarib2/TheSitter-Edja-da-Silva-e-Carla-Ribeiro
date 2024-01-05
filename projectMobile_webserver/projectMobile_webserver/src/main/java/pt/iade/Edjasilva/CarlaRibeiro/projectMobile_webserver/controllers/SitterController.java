@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Client;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.SitterRating;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRepository;
@@ -56,6 +57,31 @@ public class SitterController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Sitter with id " + id + " not found.");
         }
 
+    }
+
+
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateSitter(@PathVariable("id") int id, @RequestBody Sitter updatedSitter) {
+        logger.info("Attempting to update Sitter with id: " + id);
+
+        if (sitterRepository.existsById(id)) {
+            Sitter existingSitter = sitterRepository.findById(id).get();
+
+            existingSitter.setSitAboutMe(updatedSitter.getSitAboutMe());
+            existingSitter.setSitEducation(updatedSitter.getSitEducation());
+            existingSitter.setSitExperience(updatedSitter.getSitExperience());
+            existingSitter.setSitReliability(updatedSitter.getSitReliability());
+            existingSitter.setSitResponseRate(updatedSitter.getSitResponseRate());
+
+
+            sitterRepository.save(existingSitter);
+
+            logger.info("Updated Sitter with id: " + id);
+            return ResponseEntity.ok(existingSitter);
+        } else {
+            logger.info("Sitter with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Sitter with id " + id + " not found.");
+        }
     }
 
 }

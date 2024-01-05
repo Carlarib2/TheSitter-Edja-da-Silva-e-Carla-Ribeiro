@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Creatures;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Status;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.CreaturesRepository;
 
 @RestController
@@ -55,5 +56,26 @@ public class CreaturesController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Creatures with id " + id + " not found.");
         }
 
+    }
+
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateCreatures(@PathVariable("id") int id, @RequestBody Creatures updatedCreatures) {
+        logger.info("Attempting to update Creatures with id: " + id);
+
+        if (creaturesRepository.existsById(id)) {
+            Creatures existingCreatures = creaturesRepository.findById(id).get();
+
+            existingCreatures.setCreType(updatedCreatures.getCreType());
+            existingCreatures.setCreInfo(updatedCreatures.getCreInfo());
+
+
+            creaturesRepository.save(existingCreatures);
+
+            logger.info("Updated Creatures with id: " + id);
+            return ResponseEntity.ok(existingCreatures);
+        } else {
+            logger.info("Creatures with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Creatures with id " + id + " not found.");
+        }
     }
 }

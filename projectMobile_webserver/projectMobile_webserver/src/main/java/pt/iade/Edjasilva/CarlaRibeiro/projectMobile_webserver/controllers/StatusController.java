@@ -3,7 +3,9 @@ package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Status;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.StatusRepository;
@@ -40,6 +42,22 @@ public class StatusController {
         return statusRepository.findByStaName( name);
     }
 
+    @DeleteMapping(path="/id" ,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> deleteByUserId(@RequestParam(name = "staId") int id) {
+        logger.info("Attempting to delete status with id: " + id);
+
+        if (statusRepository.existsById(id)) {
+            statusRepository.deleteById(id);
+            logger.info("Deleted status with id:" + id);
+            return ResponseEntity.ok("Status with id " + id + " was successfully deleted.");
+        } else {
+            logger.info("User with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Status with id " + id + " not found.");
+        }
+
+        }
+    }
 
 
-}
+
+

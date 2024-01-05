@@ -64,12 +64,6 @@ public class UserController {
     }
 
 
-
-
-
-
-
-
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public User login(@RequestParam(name = "userEmail") String email,
                       @RequestParam(name = "userPassword") String password){
@@ -90,8 +84,6 @@ public class UserController {
         User savedUser = userRepository.save(user);
         logger.info("Saving user with id " + savedUser.getUserId());
         return savedUser;
-
-
 
 
     }

@@ -25,6 +25,12 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
+    public User ids(@RequestParam (name= "userId") int id){
+        logger.info("Sending user with id:" + id);
+        return userRepository.findByUserId(id);
+    }
+
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public User login(@RequestParam(name = "userEmail") String email,
                       @RequestParam(name = "userPassword") String password){
@@ -32,6 +38,13 @@ public class UserController {
         return userRepository.findByUserEmailAndUserPassword(email, password);
 
     }
+
+    @GetMapping(path="/name", produces=MediaType.APPLICATION_JSON_VALUE)
+    public User names (@RequestParam(name= "userName") String name){
+        logger.info("Sending user with name:" + name);
+        return userRepository.findByUserName(name);
+    }
+
 
 
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -39,6 +39,16 @@
             app:layout_constraintStart_toStartOf="@+id/constraintLayout"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
+        <Spinner
+            android:id="@+id/spinner_start_date"
+            android:layout_width="166dp"
+            android:layout_height="79dp"
+            android:entries="@array/TIME"
+            app:layout_constraintBottom_toBottomOf="@+id/starts_editText_epa"
+            app:layout_constraintEnd_toEndOf="@+id/starts_editText_epa"
+            app:layout_constraintStart_toStartOf="@+id/starts_editText_epa"
+            app:layout_constraintTop_toTopOf="@+id/starts_editText_epa" />
+
         <EditText
             android:id="@+id/ends_editText_epa"
             style="@style/Edit_Text_Profile"
@@ -56,6 +66,16 @@
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
             app:layout_constraintStart_toEndOf="@+id/starts_editText_epa"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="168dp"
+            android:layout_height="77dp"
+            android:entries="@array/TIME"
+            app:layout_constraintBottom_toBottomOf="@+id/ends_editText_epa"
+            app:layout_constraintEnd_toEndOf="@+id/ends_editText_epa"
+            app:layout_constraintStart_toStartOf="@+id/ends_editText_epa"
+            app:layout_constraintTop_toTopOf="@+id/ends_editText_epa" />
 
         <EditText
             android:id="@+id/address_editText_epa"

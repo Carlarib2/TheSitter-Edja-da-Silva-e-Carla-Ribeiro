@@ -37,6 +37,8 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("androidx.recyclerview:recyclerview:1.4.0-alpha01")
+    implementation("androidx.cardview:cardview:1.0.0")
     testImplementation("junit:junit:4.13.2")
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")

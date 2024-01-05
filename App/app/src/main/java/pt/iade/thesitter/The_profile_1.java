@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class The_profile_1 extends AppCompatActivity {
+    protected Switch theProfile1;
+    protected Switch theProfile2;
     TextView name_textView;
     User user;
     Sitter sitter;
@@ -19,6 +24,30 @@ public class The_profile_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_es_the_profile1);
+
+        theProfile1 = (Switch) findViewById(R.id.profile_switch1_es);
+        theProfile1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(getApplicationContext(), "ON", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        theProfile2 = (Switch) findViewById(R.id.profile_switch2_es);
+        theProfile2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(getApplicationContext(), "ON", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("user");
@@ -43,7 +72,7 @@ public class The_profile_1 extends AppCompatActivity {
     }
 
     public void startProfile2(View view){
-        Intent intent = new Intent(this, Profile_settings.class);
+        Intent intent = new Intent(this, profile_settings.Profile_settings.class);
         startActivity(intent);
     }
 

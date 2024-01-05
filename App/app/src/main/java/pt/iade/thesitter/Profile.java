@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,23 @@ public class Profile extends AppCompatActivity {
         experienceEditText = (EditText) findViewById(R.id.experience_editText_da);
         aboutMeEditText = (EditText) findViewById(R.id.about_editText_da);
         saveButton = (Button) findViewById(R.id.save_button_da);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(educationEditText.getText())){
+                    educationEditText.setError("Education is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(experienceEditText.getText())){
+                    experienceEditText.setError("Email is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty((aboutMeEditText.getText()))){
+                    aboutMeEditText.setError("Password is Required");
+                }
+            }
+        });
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override

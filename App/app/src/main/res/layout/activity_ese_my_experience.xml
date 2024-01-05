@@ -17,6 +17,7 @@
         android:fontFamily="@font/pacifico_regular"
         android:text="@string/my_experience"
         android:textSize="34sp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -151,9 +152,9 @@
                     android:layout_marginBottom="24dp"
                     android:entries="@array/whats_ages_have_you"
                     android:inputType="number"
-                    app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
 
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

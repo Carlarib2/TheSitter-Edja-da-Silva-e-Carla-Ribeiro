@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,19 @@ public class Login extends AppCompatActivity {
         password_editView = (EditText) findViewById(R.id.pass_editText_c);
         login_button_c = (Button) findViewById(R.id.login_button_c);
         confirmSitter=(Switch) findViewById(R.id.switch_c);
+
+        login_button_c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(username_editView.getText())){
+                    username_editView.setError("Username is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(password_editView.getText())){
+                    password_editView.setError("Email is Required");
+                }
+            }
+        });
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.time.LocalDate;
 
@@ -50,6 +53,37 @@ public class Register extends AppCompatActivity {
         day=(Spinner) findViewById(R.id.day_editText_da2);
         month=(Spinner) findViewById(R.id.month_editText_da2);
         year=(Spinner) findViewById(R.id.year_editText_da2);
+
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(usernameEditText.getText())){
+                    usernameEditText.setError("Username is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(emailEditText.getText())){
+                    emailEditText.setError("Email is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty((passwordEditText.getText()))){
+                    passwordEditText.setError("Password is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(confirmPassEditText.getText())){
+                    confirmPassEditText.setError("Password is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(addressEditText.getText())){
+                    addressEditText.setError("Address is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(mobileEditText.getText())){
+                    mobileEditText.setError("Phone Number is Required");
+                }
+            }
+        });
+
 
 
         register.setOnClickListener(new View.OnClickListener() {

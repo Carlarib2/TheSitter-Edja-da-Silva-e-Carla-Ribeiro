@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.User;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.UserChat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.UserChatRepository;
 
@@ -33,6 +34,11 @@ public class UserChatController {
         logger.info("Saving user chat with id " + savedUserChat.getUsatId());
 
         return savedUserChat;
+    }
+    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
+    public UserChat chatId(@RequestParam (name= "usatId") int id){
+        logger.info("Sending user chat with id:" + id);
+        return userChatRepository.findByUsatId(id);
     }
 
 }

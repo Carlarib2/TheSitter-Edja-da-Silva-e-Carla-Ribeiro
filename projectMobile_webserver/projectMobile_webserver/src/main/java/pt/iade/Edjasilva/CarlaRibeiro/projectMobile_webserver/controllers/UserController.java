@@ -49,6 +49,20 @@ public class UserController {
         }
     }
 
+    @DeleteMapping(path="/name" ,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> deleteByUserName(@RequestParam(name = "userName") String name) {
+        logger.info("Attempting to delete user with name: " + name);
+
+        if (userRepository.existsByUserName(name)) {
+            userRepository.deleteByUserName(name);
+            logger.info("Deleted user with name:" + name);
+            return ResponseEntity.ok("User with name " + name + " was successfully deleted.");
+        } else {
+            logger.info("User with name " + name + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User with name " + name + " not found.");
+        }
+    }
+
 
 
 
@@ -79,38 +93,6 @@ public class UserController {
 
 
 
-      //  @DeleteMapping(path = "/id", produces = MediaType.APPLICATION_JSON_VALUE)
-        //public User delete (@RequestParam(name= "userId") int id){
-         //   logger.info("Deleting user with id:" + id);
-        // return  userRepository.deleteByUserId(id);
-        //}
-
-        /*@DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-        public Response deleteUser(@PathVariable("id") int id) {
-            logger.info("Deleting user with id " + id);
-            userRepository.deleteByUserId(id);
-            return new Response("Deleted user with id " + id, null);
-        }*/
-
-
-
-
-    /*@DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response deleteUser(@PathVariable int UserId) {
-        logger.info("Deleting user with id " + UserId);
-
-        userRepository.deleteById(UserId);
-        return new Response("Deleted user with id " + UserId, null);
-    }
-
-
-
-
-
-    }
-
-
-*/
 
     }
 }

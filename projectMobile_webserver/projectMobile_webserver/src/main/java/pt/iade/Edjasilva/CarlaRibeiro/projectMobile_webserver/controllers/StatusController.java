@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Status;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.UserChat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.StatusRepository;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(path="/api/status")
@@ -32,4 +33,13 @@ public class StatusController {
 
         return savedStatus;
     }
+
+    @GetMapping(path="/name", produces=MediaType.APPLICATION_JSON_VALUE)
+    public List<Status> names (@RequestParam(name= "staName") String name){
+        logger.info("Sending status with name:" + name);
+        return statusRepository.findByStaName( name);
+    }
+
+
+
 }

@@ -11,13 +11,12 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 
-public class profile_settings extends AppCompatActivity {
-    protected Switch profileOnSwitch;
+
 
 
     public class Profile_settings extends AppCompatActivity {
 
-
+        protected Switch profileOnSwitch;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -78,4 +77,3 @@ public class profile_settings extends AppCompatActivity {
         }
     }
 
-}

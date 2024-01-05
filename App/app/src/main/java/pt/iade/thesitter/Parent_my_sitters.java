@@ -30,10 +30,10 @@ public class Parent_my_sitters extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP4(View view){
+    /*public void startMessagesP4(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startRequestsP2(View view){
         Intent intent = new Intent(this, Parent_requests.class);

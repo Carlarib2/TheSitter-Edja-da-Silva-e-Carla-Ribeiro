@@ -19,7 +19,7 @@ public class User implements Serializable{
     @JsonAdapter(DateJsonAdapter.class)
     private LocalDate userBdate;
 
-    private byte[]  userUpload;
+    private byte[]  userUploadDc;
 
     private String userAddress;
 
@@ -35,11 +35,13 @@ public class User implements Serializable{
 
     private String userName;
 
+    private byte [] userUploadIm;
+
     public User() {
-        this(0, "", "", "", "", "", "", null, null);
+        this(0, "", "", "", "", "", "", null, null, null);
     }
 
-    public User(int userId, String userName, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate) {
+    public User(int userId, String userName, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate, byte[] userUploadIm) {
         this.userName = userName;
         this.userId= userId;
         this.userGender=userGender;
@@ -47,8 +49,9 @@ public class User implements Serializable{
         this.userEmail=userEmail;
         this.userMobile=userMobile;
         this.userAddress=userAddress;
-        this.userUpload=userUpload;
+        this.userUploadDc=userUploadDc;
         this.userBdate=userBdate;
+        this.userUploadIm=userUploadIm;
     }
 
 
@@ -108,11 +111,11 @@ public class User implements Serializable{
     }
 
     public byte[] getUserUpload() {
-        return userUpload;
+        return userUploadDc;
     }
 
     public void setUserUpload(byte[] userUpload) {
-        this.userUpload = userUpload;
+        this.userUploadDc = userUpload;
     }
 
     public String getUserAddress() {
@@ -166,6 +169,14 @@ public class User implements Serializable{
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public byte[] getUserUploadIm() {
+        return userUploadIm;
+    }
+
+    public void setUserUploadIm(byte[] userUploadIm) {
+        this.userUploadIm = userUploadIm;
     }
 
 

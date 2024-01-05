@@ -18,6 +18,9 @@ public class User {
     @Column(name="user_name")
     private String userName;
 
+    @Column(name="user_email")
+    private String userEmail;
+
     @Column(name="user_bdate")
     private LocalDate userBdate;
 
@@ -26,17 +29,17 @@ public class User {
 
     @Column(name="user_mobile")
     private String userMobile;
-
-    @Column(name="user_email")
-    private String userEmail;
+    @Column(name="user_gender")
+    private String userGender;
 
     @Column(name="user_password")
     private String userPassword;
 
-    @Column(name="user_gender")
-    private String userGender;
     @Column(name="user_upload")
-    private byte[]  userUpload;
+    private byte[]  userUploadDc;
+
+    @Column(name="user_uploadIm")
+    private byte[] userUploadIm;
 
 
 
@@ -53,12 +56,12 @@ public class User {
         this.userBdate = userBdate;
     }
 
-    public byte[] getUserUpload() {
-        return userUpload;
+    public byte[] getUserUploadDc() {
+        return userUploadDc;
     }
 
-    public void setUserUpload(byte[] userUpload) {
-        this.userUpload = userUpload;
+    public void setUserUploadDc(byte[] userUpload) {
+        this.userUploadDc = userUploadDc;
     }
 
     public String getUserAddress() {
@@ -111,5 +114,13 @@ public class User {
 
     public int getUserId() {
         return userId;
+    }
+
+    public byte[] getUserUploadIm() {
+        return userUploadIm;
+    }
+
+    public void setUserUploadIm(byte[] userUploadIm) {
+        this.userUploadIm = userUploadIm;
     }
 }

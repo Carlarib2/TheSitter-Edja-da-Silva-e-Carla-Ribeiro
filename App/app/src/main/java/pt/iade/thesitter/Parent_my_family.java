@@ -24,10 +24,10 @@ public class Parent_my_family extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages8(View view){
+    /*public void startMessages8(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfile6(View view){
         Intent intent = new Intent(this, Parent_settings.class);

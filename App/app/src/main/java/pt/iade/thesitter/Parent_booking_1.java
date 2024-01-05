@@ -67,10 +67,10 @@ public class Parent_booking_1 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP2(View view){
+    /*public void startMessagesP2(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfile9(View view){
         Intent intent = new Intent(this, Parent_settings.class);

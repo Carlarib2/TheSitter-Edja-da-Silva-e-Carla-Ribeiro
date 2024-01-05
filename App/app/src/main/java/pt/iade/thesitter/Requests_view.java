@@ -54,10 +54,10 @@ public class Requests_view extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesS(View view){
+   /* public void startMessagesS(View view){
         Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfileS(View view){
         Intent intent = new Intent(this, Profile_settings.class);

@@ -61,15 +61,15 @@ public class The_profile_1 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages(View view){
+    /*public void startMessages(View view){
         Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
-    }
+    }*/
 
-    public void startMessages3(View view){
+    /*public void startMessages3(View view){
         Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfile2(View view){
         Intent intent = new Intent(this, Profile_settings.class);

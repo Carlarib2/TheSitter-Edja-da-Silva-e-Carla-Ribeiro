@@ -32,10 +32,10 @@ public class Parent_home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP(View view){
+   /* public void startMessagesP(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfileP(View view){
         Intent intent = new Intent(this, Parent_settings.class);
@@ -52,10 +52,10 @@ public class Parent_home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP1(View view){
+    /*public void startMessagesP1(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void setupComponents() {
         nameTextView = (TextView) findViewById(R.id.name_textView_ep);

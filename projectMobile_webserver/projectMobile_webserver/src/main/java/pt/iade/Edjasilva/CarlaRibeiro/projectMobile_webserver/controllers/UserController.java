@@ -97,7 +97,7 @@ public class UserController {
             User existingUser = userRepository.findById(id).get();
 
             existingUser.setUserBdate(updatedUser.getUserBdate());
-            existingUser.setUserUpload(updatedUser.getUserUpload());
+            existingUser.setUserUploadDc(updatedUser.getUserUploadDc());
             existingUser.setUserAddress(updatedUser.getUserAddress());
             existingUser.setUserMobile(updatedUser.getUserMobile());
             existingUser.setUserEmail(updatedUser.getUserEmail());

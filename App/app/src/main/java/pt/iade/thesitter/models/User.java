@@ -16,47 +16,33 @@ import pt.iade.thesitter.utilities.WebRequest;
 
 
 public class User implements Serializable{
+    private int userId;
+    private String userName;
+    private String userGender;
+    private String userEmail;
+    private String userPassword;
     @JsonAdapter(DateJsonAdapter.class)
     private LocalDate userBdate;
-
-    private byte[]  userUploadDc;
-
-    private String userAddress;
-
     private String userMobile;
-
-    private String userEmail;
-
-    private String userPassword;
-
-    private String userGender;
-
-    private int userId;
-
-    private String userName;
-
-    private byte [] userUploadIm;
+    private String userAddress;
+    private int userUploadIm;
+    private int userUploadDc;
 
     public User() {
-        this(0, "", "", "", "", "", "", null, null, null);
+        this(0, "", "", "", "", LocalDate.now(), "", "", 0, 0);
     }
 
-    public User(int userId, String userName, String userGender, String userPassword, String userEmail, String userMobile, String userAddress, byte[] userUpload, LocalDate userBdate, byte[] userUploadIm) {
-        this.userName = userName;
+    public User(int userId, String userName, String userGender, String userEmail, String userPassword, LocalDate userBdate, String userMobile, String userAddress, int userUploadDc, int userUploadIm) {
         this.userId= userId;
+        this.userName = userName;
         this.userGender=userGender;
-        this.userPassword=userPassword;
         this.userEmail=userEmail;
-        this.userMobile=userMobile;
-        this.userAddress=userAddress;
-        this.userUploadDc=userUploadDc;
+        this.userPassword=userPassword;
         this.userBdate=userBdate;
+        this.userAddress=userAddress;
+        this.userMobile=userMobile;
+        this.userUploadDc=userUploadDc;
         this.userUploadIm=userUploadIm;
-    }
-
-
-    public LocalDate getUserBdate() {
-        return userBdate;
     }
 
 
@@ -105,33 +91,24 @@ public class User implements Serializable{
         thread.start();
     }
 
-
-    public void setUserBdate(LocalDate userBdate) {
-        this.userBdate = userBdate;
+    public int getUserId() {
+        return userId;
     }
 
-    public byte[] getUserUpload() {
-        return userUploadDc;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserUpload(byte[] userUpload) {
-        this.userUploadDc = userUpload;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUserAddress() {
-        return userAddress;
+    public String getUserGender() {
+        return userGender;
     }
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public String getUserMobile() {
-        return userMobile;
-    }
-
-    public void setUserMobile(String userMobile) {
-        this.userMobile = userMobile;
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
     }
 
     public String getUserEmail() {
@@ -150,33 +127,44 @@ public class User implements Serializable{
         this.userPassword = userPassword;
     }
 
-    public String getUserGender() {
-        return userGender;
+    public LocalDate getUserBdate() {
+        return userBdate;
     }
 
-    public void setUserGender(String userGender) {
-        this.userGender = userGender;
+    public void setUserBdate(LocalDate userBdate) {
+        this.userBdate = userBdate;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUserMobile() {
+        return userMobile;
     }
 
-
-    public String getUserName() {
-        return userName;
+    public void setUserMobile(String userMobile) {
+        this.userMobile = userMobile;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getUserAddress() {
+        return userAddress;
     }
 
-    public byte[] getUserUploadIm() {
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
+    }
+
+    public int getUserUploadIm() {
         return userUploadIm;
     }
 
-    public void setUserUploadIm(byte[] userUploadIm) {
+    public void setUserUploadIm(int userUploadIm) {
         this.userUploadIm = userUploadIm;
+    }
+
+    public int getUserUploadDc() {
+        return userUploadDc;
+    }
+
+    public void setUserUploadDc(int userUploadDc) {
+        this.userUploadDc = userUploadDc;
     }
 
 

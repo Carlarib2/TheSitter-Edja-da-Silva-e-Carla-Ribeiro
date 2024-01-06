@@ -13,13 +13,20 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.Manifest;
+
+import pt.iade.thesitter.models.Sitter;
+import pt.iade.thesitter.models.User;
 
 
 public class Profile_verification extends AppCompatActivity {
 
     ImageButton btnCam, btnPDF;
+    Button saveButton;
+    User user;
+    Sitter sitter;
     private static final int CAMERA_REQUEST_CODE = 101;
     private static final int PDF_REQUEST_CODE = 102;
 
@@ -29,10 +36,13 @@ public class Profile_verification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_de_profile_verification);
-
+        Intent intent = getIntent();
+        user = (User) intent.getSerializableExtra("user");
+        sitter = (Sitter) intent.getSerializableExtra("sitter");
 
         btnCam = (ImageButton) findViewById(R.id.btnCam);
         btnPDF = (ImageButton) findViewById(R.id.btnPDF);
+        saveButton = (Button) findViewById(R.id.save_button_de);
 
 
         if (ContextCompat.checkSelfPermission(this,
@@ -57,6 +67,8 @@ public class Profile_verification extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     private void openPDFSelector() {
@@ -78,17 +90,26 @@ public class Profile_verification extends AppCompatActivity {
         }
     }
 
+
+
     private void handleSelectedPdf(Uri pdfUri) {
 
       // Todo: ler o arquivo, visualizá-lo ou fazer upload
     }
 
+
+
+
     public void startSave2(View view){
-        Intent intent = new Intent(this, Parent_client_choice.class);
+        Intent intent = new Intent(this, The_profile_1.class);
         startActivity(intent);
     }
 
-    /*private void uploadFile(String filePath) {
-        // Código para upload do arquivo
-    }*/
+
+   // public commitViews(){
+        
+     //   user.setUserUploadIm(btnCam.getImageAlpha());
+    //    user.setUserUploadDc(btnPDF.getImageAlpha());
+  //  }
+
 }

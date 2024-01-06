@@ -34,7 +34,10 @@ import android.widget.Toast;
                     }
                 }
             });
+
+
         }
+
 
         public void startHome2(View view) {
             Intent intent = new Intent(this, The_profile_1.class);

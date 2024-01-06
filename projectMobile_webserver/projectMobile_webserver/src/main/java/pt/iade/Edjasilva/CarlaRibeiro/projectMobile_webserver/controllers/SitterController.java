@@ -30,18 +30,24 @@ public class SitterController {
 
     }
 
+    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
+    public Sitter ids(@RequestParam (name= "sitId") int id){
+        logger.info("Sending sitter with id:" + id);
+        return sitterRepository.findBySitId(id);
+    }
+
+    @GetMapping(path = "/user/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Sitter getByUserId(@PathVariable int userId) {
+        logger.info("Sending sitter with userId="+userId);
+        return sitterRepository.findBySitUserId(userId);
+    }
+
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Sitter saveSitter(@RequestBody Sitter sitter){
         Sitter savedSitter = sitterRepository.save(sitter);
         logger.info("Saving sitter with id " + savedSitter.getSitId());
 
         return savedSitter;
-    }
-
-    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
-    public Sitter ids(@RequestParam (name= "sitId") int id){
-        logger.info("Sending sitter with id:" + id);
-        return sitterRepository.findBySitId(id);
     }
 
     @DeleteMapping(path="/id" ,produces = MediaType.APPLICATION_JSON_VALUE)

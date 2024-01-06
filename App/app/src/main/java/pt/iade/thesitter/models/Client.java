@@ -51,6 +51,26 @@ public class Client implements Serializable {
         thread.start();
     }
 
+    public static void GetByUserId(int userId, GetByUserIdResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients/user/"+userId));
+                    String resp = request.performGetRequest();
+
+                    Client client = new Gson().fromJson(resp, Client.class);
+
+                    response.response(client);
+
+                } catch (Exception e){
+                    Log.e("Client.GetByUserId", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
+
     public int getCliId() {
         return cliId;
     }
@@ -66,5 +86,9 @@ public class Client implements Serializable {
 
     public interface RegisterResponse{
         public void response();
+    }
+
+    public interface GetByUserIdResponse{
+        public void response(Client returnedClient);
     }
 }

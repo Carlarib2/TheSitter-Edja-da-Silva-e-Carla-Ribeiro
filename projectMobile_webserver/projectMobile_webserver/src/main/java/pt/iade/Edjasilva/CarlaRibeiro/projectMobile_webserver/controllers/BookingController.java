@@ -63,7 +63,7 @@ public class BookingController {
             if (bookingRepository.existsById(id)) {
                 Booking existingBooking = bookingRepository.findById(id).get();
 
-                existingBooking.setBooData(updatedBooking.getBooData());
+                existingBooking.setBooDate(updatedBooking.getBooDate());
                 existingBooking.setBooEndTime(updatedBooking.getBooEndTime());
                 existingBooking.setBooStartTime(updatedBooking.getBooStartTime());
 

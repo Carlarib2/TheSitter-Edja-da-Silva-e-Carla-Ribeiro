@@ -1,10 +1,8 @@
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\CreaturesController.class
-pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\Status.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\SitterRatingController.class
-pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\StatusController.class
+pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\enums\BookingStatus.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\CreaturesRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\SitterRating.class
-pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\StatusRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\familyMemberRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\models\repositories\SitterRatingRepository.class
 pt\iade\Edjasilva\CarlaRibeiro\projectMobile_webserver\controllers\BookingController.class

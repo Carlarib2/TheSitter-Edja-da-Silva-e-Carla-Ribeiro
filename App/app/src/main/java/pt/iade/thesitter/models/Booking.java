@@ -1,80 +1,97 @@
 package pt.iade.thesitter.models;
 
-import java.sql.Time;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Booking {
+import pt.iade.thesitter.enums.BookingStatus;
 
-
+public class Booking implements Serializable {
     private int booId;
-
-    private LocalDate booData;
-
     private int booCliId;
-
-    private Time booEndTime;
-
-    private int booStaId;
-
-    private Time booStartTime;
-
+    private String booAddress;
+    private LocalDate booDate;
+    private String booEndTime;
+    private BookingStatus booStatus;
+    private String booStartTime;
+    private String booMore;
     private int booSitId;
 
     public Booking(){
 
     }
 
-    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime) {
+    public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
+                   String booEndTime, BookingStatus booStatus, String booStartTime,
+                   String booMore, int booSitId) {
         this.booId = booId;
-        this.booData = booData;
         this.booCliId = booCliId;
+        this.booAddress = booAddress;
+        this.booDate = booDate;
         this.booEndTime = booEndTime;
-        this.booStaId = booStaId;
+        this.booStatus = booStatus;
         this.booStartTime = booStartTime;
+        this.booMore = booMore;
+        this.booSitId = booSitId;
     }
 
     public int getBooId() {
         return booId;
     }
 
-    public LocalDate getBooData() {
-        return booData;
-    }
-
     public int getBooCliId() {
         return booCliId;
-    }
-
-    public Time getBooEndTime() {
-        return booEndTime;
-    }
-
-    public int getBooStaId() {
-        return booStaId;
-    }
-
-    public Time getBooStartTime() {
-        return booStartTime;
-    }
-
-    public void setBooData(LocalDate booData) {
-        this.booData = booData;
     }
 
     public void setBooCliId(int booCliId) {
         this.booCliId = booCliId;
     }
 
-    public void setBooEndTime(Time booEndTime) {
+    public String getBooAddress() {
+        return booAddress;
+    }
+
+    public void setBooAddress(String booAddress) {
+        this.booAddress = booAddress;
+    }
+
+    public LocalDate getBooDate() {
+        return booDate;
+    }
+
+    public void setBooDate(LocalDate booDate) {
+        this.booDate = booDate;
+    }
+
+    public String getBooEndTime() {
+        return booEndTime;
+    }
+
+    public void setBooEndTime(String booEndTime) {
         this.booEndTime = booEndTime;
     }
 
-    public void setBooStaId(int booStaId) {
-        this.booStaId = booStaId;
+    public BookingStatus getBooStatus() {
+        return booStatus;
     }
 
-    public void setBooStartTime(Time booStartTime) {
+    public void setBooStatus(BookingStatus booStatus) {
+        this.booStatus = booStatus;
+    }
+
+    public String getBooStartTime() {
+        return booStartTime;
+    }
+
+    public void setBooStartTime(String booStartTime) {
         this.booStartTime = booStartTime;
+    }
+
+    public String getBooMore() {
+        return booMore;
+    }
+
+    public void setBooMore(String booMore) {
+        this.booMore = booMore;
     }
 
     public int getBooSitId() {

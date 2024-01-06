@@ -75,13 +75,14 @@
     <string name="birthday">Birthday:</string>
     <string name="one">1 member</string>
     <string name="one_">1 sitter</string>
+    <string name="ep_parent">\u0040Parent</string>
 
     <!--Activity_epa_parent_booking_1-->
     <string name="more"> More</string>
     <string name="starts"> Starts</string>
     <string name="Ends"> Ends</string>
-    <string name="send_to_my"> SEND TO MY SITTERS NOW</string>
-    <string name="Select_Sitters">Select Sitters</string>
+    <string name="send_to_my"> SEND TO MY SITTER NOW</string>
+    <string name="Select_Sitters">Select Sitter</string>
     <string name="date"> Date</string>
     <string name="select_request">Select Request Details</string>
 

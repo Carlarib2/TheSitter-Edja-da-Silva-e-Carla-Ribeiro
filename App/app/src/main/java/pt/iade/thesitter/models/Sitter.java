@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.HashMap;
 
 import pt.iade.thesitter.utilities.WebRequest;
 
@@ -58,6 +59,26 @@ public class Sitter implements Serializable {
                         }
                     }
                 });
+            }
+        });
+        thread.start();
+    }
+
+    public static void GetByUserId(int userId, GetByUserIdResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters/user/"+userId));
+                    String resp = request.performGetRequest();
+
+                    Sitter sitter = new Gson().fromJson(resp, Sitter.class);
+
+                    response.response(sitter);
+
+                } catch (Exception e){
+                    Log.e("Sitter.GetByUserId", e.toString());
+                }
             }
         });
         thread.start();
@@ -119,5 +140,9 @@ public class Sitter implements Serializable {
 
     public interface RegisterResponse{
         public void response();
+    }
+
+    public interface GetByUserIdResponse{
+        public void response(Sitter returnedSitter);
     }
 }

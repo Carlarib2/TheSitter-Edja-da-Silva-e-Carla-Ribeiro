@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".Parent_my_sitters">
+    tools:context=".Parent_my_family$Parent_my_sitters">
 
 
     <TextView

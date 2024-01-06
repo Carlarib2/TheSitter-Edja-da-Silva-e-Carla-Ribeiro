@@ -43,7 +43,7 @@
             android:name=".Parent_messages"
             android:exported="false" />
         <activity
-            android:name=".Parent_my_sitters"
+            android:name=".Parent_my_family$Parent_my_sitters"
             android:exported="false" />
         <activity
             android:name=".Parent_requests"

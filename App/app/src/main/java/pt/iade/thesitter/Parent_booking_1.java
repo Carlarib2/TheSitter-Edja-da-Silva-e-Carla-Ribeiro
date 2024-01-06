@@ -1,6 +1,5 @@
 package pt.iade.thesitter;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -53,7 +52,7 @@ public class Parent_booking_1 extends AppCompatActivity {
     }
 
     public void startSend(View view){
-        Intent intent = new Intent(this, Parent_my_sitters.class);
+        Intent intent = new Intent(this, Parent_my_family.Parent_my_sitters.class);
         startActivity(intent);
     }
 

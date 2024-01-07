@@ -30,9 +30,9 @@ public class The_profile_1 extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "ON", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Available", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "OFF", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Unavailable", Toast.LENGTH_SHORT).show();
                 }
             }
         });

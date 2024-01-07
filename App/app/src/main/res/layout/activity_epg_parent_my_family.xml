@@ -24,7 +24,7 @@
         android:id="@+id/save_button_epg"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
@@ -42,41 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton_epg" />
 
-    <ImageView
-        android:id="@+id/person_imageView_epg"
-        android:layout_width="69dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
-        android:contentDescription="@string/person_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_faimily_divider35_epg"
-        app:srcCompat="@drawable/person_icon" />
-
-    <TextView
-        android:id="@+id/name_textView_epg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:fontFamily="@font/pacifico_regular"
-        android:hint="@string/ava"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
-        app:layout_constraintTop_toBottomOf="@+id/my_faimily_divider35_epg" />
-
-    <TextView
-        android:id="@+id/age_textView_epg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/pacifico_regular"
-        android:hint="@string/years_5"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/person_imageView_epg"
-        app:layout_constraintTop_toBottomOf="@+id/name_textView_epg" />
-
     <View
         android:id="@+id/my_faimily_divider35_epg"
         android:layout_width="409dp"
@@ -91,12 +56,12 @@
         android:id="@+id/my_family_divider27_epg"
         android:layout_width="409dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_textView_epg" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_myFamily" />
 
     <ImageButton
         android:id="@+id/message_imageButton_epg"
@@ -134,28 +99,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg" />
 
-    <ImageButton
-        android:id="@+id/pen_imageButton_epg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="60dp"
-        android:contentDescription="@string/pen_icon"
-        app:layout_constraintEnd_toEndOf="@+id/my_faimily_divider35_epg"
-        app:layout_constraintTop_toBottomOf="@+id/my_faimily_divider35_epg"
-        app:srcCompat="@drawable/edit_pen_icon" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton_epg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:background="#0C0C0C"
         android:clickable="true"
         android:contentDescription="@string/plu_icon"
         android:onClick="startAdd"
         app:backgroundTint="#9FA8DA"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/my_family_divider27_epg"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider27_epg"
         app:srcCompat="@android:drawable/ic_menu_add" />
@@ -183,4 +138,12 @@
         app:layout_constraintStart_toEndOf="@+id/message_imageButton_epg"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg"
         app:srcCompat="@drawable/person_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_myFamily"
+        android:layout_width="409dp"
+        android:layout_height="378dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_faimily_divider35_epg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

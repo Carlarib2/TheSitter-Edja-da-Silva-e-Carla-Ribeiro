@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Parent_create_family_profile extends AppCompatActivity {
     EditText nameFamily, allergiesFamily;
@@ -32,10 +33,12 @@ public class Parent_create_family_profile extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(nameFamily.getText())){
                     nameFamily.setError("Name is Required");
+                    Toast.makeText(getApplicationContext(), "Name is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(allergiesFamily.getText())){
                     allergiesFamily.setError("If No Allergies enter 'N/A'");
+                    Toast.makeText(getApplicationContext(), "If No Allergies Enter N/A", Toast.LENGTH_LONG).show();
                 }
             }
         });

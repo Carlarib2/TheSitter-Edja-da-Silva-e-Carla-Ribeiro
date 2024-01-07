@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.Sitter;
@@ -33,7 +34,26 @@ public class Login extends AppCompatActivity {
         username_editView = (EditText) findViewById(R.id.user_editText_c);
         password_editView = (EditText) findViewById(R.id.pass_editText_c);
         login_button_c = (Button) findViewById(R.id.login_button_c);
+<<<<<<< HEAD
         confirmSitter = (Switch) findViewById(R.id.switch_c);
+=======
+        confirmSitter=(Switch) findViewById(R.id.switch_c);
+
+        login_button_c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(username_editView.getText())){
+                    username_editView.setError("Username is Required");
+                    Toast.makeText(getApplicationContext(), "Username is Required", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(password_editView.getText())){
+                    password_editView.setError("Email is Required");
+                    Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+>>>>>>> Carla
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,6 @@
 package pt.iade.thesitter;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,45 +9,25 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import android.widget.Toast;
-=======
->>>>>>> Carla
-=======
-
-import android.widget.Toast;
-
->>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
 import android.widget.Spinner;
-
 import java.time.LocalDate;
 
+import pt.iade.thesitter.enums.BookingStatus;
 import pt.iade.thesitter.models.Booking;
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import android.widget.Toast;
->>>>>>> Carla
-=======
->>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
->>>>>>> Carla
-=======
-
-import android.widget.Toast;
->>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
 
 public class Parent_booking_1 extends AppCompatActivity {
+    private static final int BOOKING_ACTIVITY_RETURN_ID=1;
     EditText addressBooking, dateTextView, moreTextView;
     Spinner startDateSpinner, endDateSpinner;
     Button sendMySitters, selectSitters;
     User user;
     Client client;
     Booking booking;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +40,21 @@ public class Parent_booking_1 extends AppCompatActivity {
         booking = (Booking) intent.getSerializableExtra("booking");
 
         setupComponents();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == BOOKING_ACTIVITY_RETURN_ID){
+            if (resultCode == AppCompatActivity.RESULT_OK){
+
+                assert data != null;
+                Booking updateBooking = (Booking) data.getSerializableExtra("booking");
+                assert updateBooking != null;
+                booking.setBooSitId(updateBooking.getBooSitId());
+            }
+        }
     }
 
     private void setupComponents() {
@@ -81,17 +77,22 @@ public class Parent_booking_1 extends AppCompatActivity {
                 intent.putExtra("client", client);
                 intent.putExtra("booking", booking);
 
-                startActivity(intent);
+                startActivityForResult(intent, BOOKING_ACTIVITY_RETURN_ID);
             }
         });
 
         sendMySitters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(addressBooking.getText())){
-                    addressBooking.setError("Address is Required");
-                    Toast.makeText(getApplicationContext(), "Address is Required", Toast.LENGTH_LONG).show();
-                }
+                booking.setBooCliId(client.getCliId());
+                booking.setBooStatus(BookingStatus.PENDING);
+
+                booking.save(new Booking.SaveResponse() {
+                    @Override
+                    public void response() {
+                        finish();
+                    }
+                });
             }
         });
 
@@ -129,7 +130,7 @@ public class Parent_booking_1 extends AppCompatActivity {
     }
 
     public void startSend(View view){
-        Intent intent = new Intent(this, Parent_my_family.Parent_my_sitters.class);
+        Intent intent = new Intent(this, Parent_my_sitters.class);
         startActivity(intent);
     }
 

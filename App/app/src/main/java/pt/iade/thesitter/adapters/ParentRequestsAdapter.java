@@ -30,7 +30,7 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
     @Override
     public ParentRequestsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.parent_requests_view, parent, false);
+        View view = inflater.inflate(R.layout.row_parent_requests, parent, false);
         return new ParentRequestsAdapter.ViewHolder(view);
     }
 

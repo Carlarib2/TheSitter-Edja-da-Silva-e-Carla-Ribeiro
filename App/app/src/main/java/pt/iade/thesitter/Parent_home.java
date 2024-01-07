@@ -31,6 +31,8 @@ public class Parent_home extends AppCompatActivity {
 
     public void startBooking(View view){
         Intent intent = new Intent(this, Parent_booking_1.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 

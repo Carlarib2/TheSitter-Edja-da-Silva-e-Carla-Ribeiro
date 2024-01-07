@@ -112,6 +112,17 @@ public class WebRequest {
     /**
      * Performs a POST request with a JSON body.
      *
+     * @param obj JSON serializable object.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPostRequest(Serializable obj) throws IOException, URISyntaxException {
+        return performPostRequest(null, obj);
+    }
+
+    /**
+     * Performs a POST request with a JSON body.
+     *
      * @param params URL parameters.
      * @param obj JSON serializable object.
      *
@@ -121,16 +132,6 @@ public class WebRequest {
         return performPostRequest(params, new Gson().toJson(obj), "application/json");
     }
 
-    /**
-     * Performs a POST request with a JSON body.
-     *
-     * @param obj JSON serializable object.
-     *
-     * @return Raw response from the web server.
-     */
-    public String performPostRequest(Serializable obj) throws IOException, URISyntaxException {
-        return performPostRequest(null, obj);
-    }
 
     /**
      * Performs a POST request with an URL-encoded body.
@@ -152,6 +153,103 @@ public class WebRequest {
 
         return performPostRequest(params, body, "application/x-www-form-urlencoded");
     }
+
+    /**
+     * Performs a POST request with an URL-encoded body.
+     *
+     * @param bodyParams Body form parameters.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPostRequest(HashMap<String, String> bodyParams) throws IOException, URISyntaxException {
+        return performPostRequest(null, bodyParams);
+    }
+
+
+    /**
+     * Performs a simple PUT request.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPutRequest(Serializable obj) throws IOException, URISyntaxException {
+        return performPutRequest(null, obj);
+    }
+
+    /**
+     * Performs a PUT request with a JSON body.
+     *
+     * @param params URL parameters.
+     * @param obj JSON serializable object.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPutRequest(HashMap<String, String> params, Serializable obj) throws IOException, URISyntaxException {
+        return performPutRequest(params, new Gson().toJson(obj), "application/json");
+    }
+
+    /**
+     * Performs a PUT request with a plain text body.
+     *
+     * @param params URL parameters.
+     * @param body Raw request body.
+     * @param contentType MIME type of the body content.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPutRequest(HashMap<String, String> params, String body, String contentType) throws IOException, URISyntaxException {
+        byte[] postData = body.getBytes(StandardCharsets.UTF_8);
+
+        Log.i("WebRequest", "Sending PUT to " + url);
+        Log.i("WebRequest-Body", body);
+        URI uri = buildUri(params);
+        HttpURLConnection urlConnection = (HttpURLConnection) uri.toURL().openConnection();
+        urlConnection.setRequestMethod("PUT");
+        urlConnection.setRequestProperty("Content-Type", contentType);
+        urlConnection.setRequestProperty("Content-Length", Integer.toString(postData.length));
+        urlConnection.setUseCaches(false);
+        urlConnection.setDoOutput(true);
+
+        // Send request body.
+        OutputStream os = urlConnection.getOutputStream();
+        os.write(postData, 0, postData.length);
+        os.flush();
+
+        // Get request response.
+        InputStream is = new BufferedInputStream(urlConnection.getInputStream());
+        String result = readStreamToString(is);
+        Log.i("WebRequest-Response", result);
+
+        os.close();
+        is.close();
+
+        return result;
+    }
+
+
+    /**
+     * Performs a PUT request and gets the response from the server as a String.
+     *
+     * @param params URL parameters.
+     *
+     * @return Raw response from the web server.
+     */
+    public String performPutRequest(HashMap<String, String> params) throws IOException, URISyntaxException {
+        Log.i("WebRequest", "Sending PUT to " + url);
+        URI uri = buildUri(params);
+        HttpURLConnection urlConnection = (HttpURLConnection) uri.toURL().openConnection();
+        urlConnection.setRequestMethod("PUT");
+        String result = null;
+        try {
+            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+            result = readStreamToString(in);
+            Log.i("WebRequest-Response", result);
+        } finally {
+            urlConnection.disconnect();
+        }
+
+        return result;
+    }
+
 
 
     /**
@@ -187,16 +285,11 @@ public class WebRequest {
         return result;
     }
 
-    /**
-     * Performs a POST request with an URL-encoded body.
-     *
-     * @param bodyParams Body form parameters.
-     *
-     * @return Raw response from the web server.
-     */
-    public String performPostRequest(HashMap<String, String> bodyParams) throws IOException, URISyntaxException {
-        return performPostRequest(null, bodyParams);
-    }
+
+
+
+
+
 
     protected String readStreamToString(InputStream in) throws IOException {
         BufferedInputStream bis = new BufferedInputStream(in);
@@ -229,40 +322,6 @@ public class WebRequest {
         }
 
         return uri;
-    }
-
-
-
-
-
-
-
-
-    public String performPutRequest(Serializable obj) throws IOException, URISyntaxException {
-        byte[] putData = new Gson().toJson(obj).getBytes(StandardCharsets.UTF_8);
-
-        Log.i("WebRequest", "Sending PUT to " + url);
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-        urlConnection.setRequestMethod("PUT");
-        urlConnection.setRequestProperty("Content-Type", "application/json");
-        urlConnection.setRequestProperty("Content-Length", Integer.toString(putData.length));
-        urlConnection.setUseCaches(false);
-        urlConnection.setDoOutput(true);
-
-        // Send request body.
-        OutputStream os = urlConnection.getOutputStream();
-        os.write(putData, 0, putData.length);
-        os.flush();
-
-        // Get request response.
-        InputStream is = new BufferedInputStream(urlConnection.getInputStream());
-        String result = readStreamToString(is);
-        Log.i("WebRequest-Response", result);
-
-        os.close();
-        is.close();
-
-        return result;
     }
 
 }

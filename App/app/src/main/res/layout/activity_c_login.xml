@@ -65,7 +65,6 @@
         android:backgroundTint="#e1d9d9"
         android:contentDescription="@string/app_button_login"
         android:fontFamily="@font/allerta_stencil"
-        android:onClick="startLogin2"
         android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"

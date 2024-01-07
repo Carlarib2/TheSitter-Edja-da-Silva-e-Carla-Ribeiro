@@ -31,7 +31,7 @@ public class SittersRequestsAdapter extends RecyclerView.Adapter<SittersRequests
     @Override
     public SittersRequestsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.sitters_requests_view, parent, false);
+        View view = inflater.inflate(R.layout.row_sitter_requests, parent, false);
         return new SittersRequestsAdapter.ViewHolder(view);
     }
 

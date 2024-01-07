@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import pt.iade.thesitter.R;
 import pt.iade.thesitter.models.FamilyMember;

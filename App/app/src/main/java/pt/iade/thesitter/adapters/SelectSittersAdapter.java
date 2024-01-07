@@ -60,9 +60,9 @@ public class SelectSittersAdapter extends RecyclerView.Adapter<SelectSittersAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            sitterImage = itemView.findViewById(R.id.my_Sitters_image);
-            selectSitters_Name = itemView.findViewById(R.id.my_Sitters_Name);
-            selectSitters_Gender = itemView.findViewById(R.id.my_Sitters_Gender);
+            sitterImage = itemView.findViewById(R.id.my_Family_image);
+            selectSitters_Name = itemView.findViewById(R.id.my_Family_Name);
+            selectSitters_Gender = itemView.findViewById(R.id.my_Family_Bdate);
             selectSitters_Mobile = itemView.findViewById(R.id.my_Sitters_Mobile);
 
 

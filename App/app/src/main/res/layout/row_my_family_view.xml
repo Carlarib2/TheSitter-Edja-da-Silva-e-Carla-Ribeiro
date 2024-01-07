@@ -31,7 +31,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/myFamily_selected"
                 app:layout_constraintTop_toBottomOf="@+id/myFamily_selected"
-                android:src="@drawable/babyImage">
+                android:src="@drawable/babyImage"/>
 
             <TextView
                 android:id="@+id/my_Family_name"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:textColor="@color/light_text"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/my_Family_image"

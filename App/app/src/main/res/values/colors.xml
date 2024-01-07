@@ -8,7 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_text">#7D7D7D</color>
-    <color name= "red">#FFAA0303</color>
-    <color name="green">#FF3CB81A</color>
+    <color name= "DECLINED">#FFAA0303</color>
+    <color name="ACCEPTED">#FF3CB81A</color>
+    <color name="PENDING">#FFE69536</color>
 
 </resources>

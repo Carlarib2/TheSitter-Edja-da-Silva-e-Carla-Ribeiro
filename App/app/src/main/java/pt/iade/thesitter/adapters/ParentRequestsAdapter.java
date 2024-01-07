@@ -1,2 +1,4 @@
-package pt.iade.thesitter.adapters;public class AcceptedAdapter {
+package pt.iade.thesitter.adapters;
+
+public class ParentRequestsAdapter {
 }

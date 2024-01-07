@@ -1,2 +1,4 @@
-package pt.iade.thesitter.adapters;public class DeclinedAdapter {
+package pt.iade.thesitter.adapters;
+
+public class SittersRequestsAdapter {
 }

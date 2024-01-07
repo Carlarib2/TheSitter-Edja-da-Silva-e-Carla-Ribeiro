@@ -10,12 +10,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 import pt.iade.thesitter.R;
-import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class SelectSittersAdapter extends RecyclerView.Adapter<SelectSittersAdapter.ViewHolder> {
@@ -63,10 +60,10 @@ public class SelectSittersAdapter extends RecyclerView.Adapter<SelectSittersAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            sitterImage = itemView.findViewById(R.id.selectSitters_image);
-            selectSitters_Name = itemView.findViewById(R.id.selectSitters_Name);
-            selectSitters_Gender = itemView.findViewById(R.id.selectSitters_Gender);
-            selectSitters_Mobile = itemView.findViewById(R.id.selectSitters_Mobile);
+            sitterImage = itemView.findViewById(R.id.my_Sitters_image);
+            selectSitters_Name = itemView.findViewById(R.id.my_Sitters_Name);
+            selectSitters_Gender = itemView.findViewById(R.id.my_Sitters_Gender);
+            selectSitters_Mobile = itemView.findViewById(R.id.my_Sitters_Mobile);
 
 
         }

@@ -1,2 +1,4 @@
-package pt.iade.thesitter.adapters;public class MyFamilyAdapter {
+package pt.iade.thesitter.adapters;
+
+public class MyFamilyAdapter {
 }

@@ -10,10 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import android.widget.Toast;
 =======
 >>>>>>> Carla
+=======
+
+import android.widget.Toast;
+
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
 import android.widget.Spinner;
 
 import java.time.LocalDate;
@@ -22,12 +28,17 @@ import pt.iade.thesitter.models.Booking;
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import android.widget.Toast;
 >>>>>>> Carla
 =======
 >>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
+=======
+
+import android.widget.Toast;
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
 
 public class Parent_booking_1 extends AppCompatActivity {
     EditText addressBooking, dateTextView, moreTextView;

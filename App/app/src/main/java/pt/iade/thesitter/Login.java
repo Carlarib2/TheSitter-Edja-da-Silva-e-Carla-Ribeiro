@@ -36,10 +36,15 @@ public class Login extends AppCompatActivity {
         login_button_c = (Button) findViewById(R.id.login_button_c);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         confirmSitter = (Switch) findViewById(R.id.switch_c);
 =======
 =======
 >>>>>>> Carla
+=======
+
+        confirmSitter = (Switch) findViewById(R.id.switch_c);
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
         confirmSitter=(Switch) findViewById(R.id.switch_c);
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
@@ -57,12 +62,35 @@ public class Login extends AppCompatActivity {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Carla
 =======
 =======
         confirmSitter = (Switch) findViewById(R.id.switch_c);
 >>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
+=======
+
+        confirmSitter=(Switch) findViewById(R.id.switch_c);
+
+        login_button_c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(username_editView.getText())){
+                    username_editView.setError("Username is Required");
+                    Toast.makeText(getApplicationContext(), "Username is Required", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(password_editView.getText())){
+                    password_editView.setError("Email is Required");
+                    Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        confirmSitter = (Switch) findViewById(R.id.switch_c);
+
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
             @Override

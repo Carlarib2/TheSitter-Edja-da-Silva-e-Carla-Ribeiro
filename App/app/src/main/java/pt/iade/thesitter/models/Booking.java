@@ -23,20 +23,32 @@ public class Booking implements Serializable {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
     public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
                    String booEndTime, BookingStatus booStatus, String booStartTime,
                    String booMore, int booSitId) {
-=======
+
     public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
+<<<<<<< HEAD
 >>>>>>> Carla
 =======
-    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
 =======
+
+
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
+    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
+
     public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
                    String booEndTime, BookingStatus booStatus, String booStartTime,
                    String booMore, int booSitId) {
+<<<<<<< HEAD
 >>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
+=======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
         this.booId = booId;
         this.booCliId = booCliId;
         this.booAddress = booAddress;
@@ -46,18 +58,25 @@ public class Booking implements Serializable {
         this.booStartTime = booStartTime;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
         this.booMore = booMore;
         this.booSitId = booSitId;
-=======
         this.booName = booName;
+<<<<<<< HEAD
 >>>>>>> Carla
 =======
-        this.booName = booName;
 =======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
+        this.booName = booName;
         this.booMore = booMore;
         this.booSitId = booSitId;
+<<<<<<< HEAD
 >>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
+=======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
     }
 
     public int getBooId() {
@@ -70,9 +89,12 @@ public class Booking implements Serializable {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Carla
+=======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
     public Time getBooEndTime() {
         return booEndTime;
     }
@@ -92,11 +114,14 @@ public class Booking implements Serializable {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Carla
 =======
 =======
 >>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
+=======
+>>>>>>> 227f32b0e836dd208f6b6f02eac8019ef6d988c9
     public void setBooCliId(int booCliId) {
         this.booCliId = booCliId;
     }

@@ -35,8 +35,11 @@ public class Login extends AppCompatActivity {
         password_editView = (EditText) findViewById(R.id.pass_editText_c);
         login_button_c = (Button) findViewById(R.id.login_button_c);
 <<<<<<< HEAD
+<<<<<<< HEAD
         confirmSitter = (Switch) findViewById(R.id.switch_c);
 =======
+=======
+>>>>>>> Carla
         confirmSitter=(Switch) findViewById(R.id.switch_c);
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +56,12 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+<<<<<<< HEAD
+>>>>>>> Carla
+=======
+=======
+        confirmSitter = (Switch) findViewById(R.id.switch_c);
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
 
         login_button_c.setOnClickListener(new View.OnClickListener() {

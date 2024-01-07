@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+=======
+>>>>>>> Carla
 import android.widget.Spinner;
 
 import java.time.LocalDate;
@@ -16,8 +21,12 @@ import java.time.LocalDate;
 import pt.iade.thesitter.models.Booking;
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
+<<<<<<< HEAD
 =======
 import android.widget.Toast;
+>>>>>>> Carla
+=======
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
 
 public class Parent_booking_1 extends AppCompatActivity {

@@ -22,11 +22,20 @@ public class Booking implements Serializable {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
                    String booEndTime, BookingStatus booStatus, String booStartTime,
                    String booMore, int booSitId) {
 =======
     public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
+>>>>>>> Carla
+=======
+    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
+=======
+    public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
+                   String booEndTime, BookingStatus booStatus, String booStartTime,
+                   String booMore, int booSitId) {
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
         this.booId = booId;
         this.booCliId = booCliId;
@@ -36,10 +45,18 @@ public class Booking implements Serializable {
         this.booStatus = booStatus;
         this.booStartTime = booStartTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.booMore = booMore;
         this.booSitId = booSitId;
 =======
         this.booName = booName;
+>>>>>>> Carla
+=======
+        this.booName = booName;
+=======
+        this.booMore = booMore;
+        this.booSitId = booSitId;
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
     }
 
@@ -52,7 +69,10 @@ public class Booking implements Serializable {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Carla
     public Time getBooEndTime() {
         return booEndTime;
     }
@@ -71,6 +91,11 @@ public class Booking implements Serializable {
         this.booData = booData;
     }
 
+<<<<<<< HEAD
+>>>>>>> Carla
+=======
+=======
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 >>>>>>> Carla
     public void setBooCliId(int booCliId) {
         this.booCliId = booCliId;

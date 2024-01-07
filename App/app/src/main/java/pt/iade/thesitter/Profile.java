@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.time.chrono.IsoChronology;
 
@@ -48,14 +49,17 @@ public class Profile extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(educationEditText.getText())){
                     educationEditText.setError("Education is Required");
+                    Toast.makeText(getApplicationContext(), "Education is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(experienceEditText.getText())){
                     experienceEditText.setError("Email is Required");
+                    Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty((aboutMeEditText.getText()))){
                     aboutMeEditText.setError("Password is Required");
+                    Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                 }
             }
         });

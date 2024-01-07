@@ -44,7 +44,7 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
         FamilyMember user = items.get(position);
 
         holder.my_Family_Name.setText(user.getFaName());
-       // holder.my_Family_Bdate.setLocalDate(user.getFaBdate());
+       // holder.my_Family_Bdate.setLocalDate(user.getFaBdate());// to be fixed!!
         holder.my_Family_Image.setImageResource(R.drawable.drake);
         holder.my_Family_Button.setImageResource(R.drawable.edit_pen_icon);
     }
@@ -63,9 +63,9 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
             super(itemView);
 
             my_Family_Image = itemView.findViewById(R.id.my_Family_image);
-            my_Family_Name = itemView.findViewById(R.id.my_Family_Name);
+            my_Family_Name = itemView.findViewById(R.id.my_Family_name);
             my_Family_Bdate = itemView.findViewById(R.id.my_Family_Bdate);
-            my_Family_Button = itemView.findViewById(R.id.my_family_button);
+            my_Family_Button = itemView.findViewById(R.id.my_Family_button);
 
 
         }

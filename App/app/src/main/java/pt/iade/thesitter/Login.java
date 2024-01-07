@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import pt.iade.thesitter.models.User;
 
@@ -36,10 +37,12 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(username_editView.getText())){
                     username_editView.setError("Username is Required");
+                    Toast.makeText(getApplicationContext(), "Username is Required", Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password_editView.getText())){
                     password_editView.setError("Email is Required");
+                    Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_LONG).show();
                 }
             }
         });

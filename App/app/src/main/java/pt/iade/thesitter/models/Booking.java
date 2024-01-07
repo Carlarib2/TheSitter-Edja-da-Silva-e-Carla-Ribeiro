@@ -19,18 +19,20 @@ public class Booking {
     private Time booStartTime;
 
     private int booSitId;
+    private String booName;
 
     public Booking(){
 
     }
 
-    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime) {
+    public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
         this.booId = booId;
         this.booData = booData;
         this.booCliId = booCliId;
         this.booEndTime = booEndTime;
         this.booStaId = booStaId;
         this.booStartTime = booStartTime;
+        this.booName = booName;
     }
 
     public int getBooId() {
@@ -56,6 +58,8 @@ public class Booking {
     public Time getBooStartTime() {
         return booStartTime;
     }
+
+    public String getBooName() {return booName;}
 
     public void setBooData(LocalDate booData) {
         this.booData = booData;
@@ -84,4 +88,5 @@ public class Booking {
     public void setBooSitId(int booSitId) {
         this.booSitId = booSitId;
     }
+    public void setBooName(String booName) {this.booName = booName; }
 }

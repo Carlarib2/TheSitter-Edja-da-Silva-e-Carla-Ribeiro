@@ -60,26 +60,32 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(usernameEditText.getText())){
                     usernameEditText.setError("Username is Required");
+                    Toast.makeText(getApplicationContext(), "Username is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(emailEditText.getText())){
                     emailEditText.setError("Email is Required");
+                    Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty((passwordEditText.getText()))){
                     passwordEditText.setError("Password is Required");
+                    Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(confirmPassEditText.getText())){
                     confirmPassEditText.setError("Password is Required");
+                    Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(addressEditText.getText())){
                     addressEditText.setError("Address is Required");
+                    Toast.makeText(getApplicationContext(), "Address is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(mobileEditText.getText())){
                     mobileEditText.setError("Phone Number is Required");
+                    Toast.makeText(getApplicationContext(), "Phone Number is Required", Toast.LENGTH_SHORT).show();
                 }
             }
         });

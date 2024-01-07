@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Parent_booking_1 extends AppCompatActivity {
     EditText addressBooking, notesBooking;
@@ -33,6 +34,7 @@ public class Parent_booking_1 extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(addressBooking.getText())){
                     addressBooking.setError("Address is Required");
+                    Toast.makeText(getApplicationContext(), "Address is Required", Toast.LENGTH_LONG).show();
                 }
             }
         });

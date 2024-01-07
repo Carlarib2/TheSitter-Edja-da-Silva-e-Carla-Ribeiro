@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +13,6 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_centerVertical="true"
-        android:background="@drawable/circle_icon"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,19 +43,7 @@
         android:textAppearance="?attr/textAppearanceListItemSmall"
         app:layout_constraintStart_toStartOf="@+id/my_Family_Name"
         app:layout_constraintTop_toBottomOf="@+id/my_Family_Name"
-        tools:text="Gender" />
-
-    <TextView
-        android:id="@+id/my_Sitters_Mobile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_Family_Bdate"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@id/my_Family_image"
-        android:textAppearance="?attr/textAppearanceListItemSmall"
-        app:layout_constraintStart_toStartOf="@+id/my_Family_Bdate"
-        app:layout_constraintTop_toBottomOf="@+id/my_Family_Bdate"
-        tools:text="Mobile" />
+        tools:text="@string/birthday" />
 
     <View
         android:id="@+id/row_divider"
@@ -66,5 +54,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_Family_image" />
+
+    <ImageButton
+        android:id="@+id/my_family_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:contextClickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

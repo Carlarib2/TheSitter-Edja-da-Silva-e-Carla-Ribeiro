@@ -62,8 +62,8 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
 
             parent_requests_image = itemView.findViewById(R.id.parent_requests_image);
             parent_requests_name = itemView.findViewById(R.id.parent_requests_name);
-            parent_requests_gender = itemView.findViewById(R.id.parent_requests_gender);
-            parent_requests_mobile = itemView.findViewById(R.id.parent_requests_mobile);
+            parent_requests_gender = itemView.findViewById(R.id.parent_requests_email);
+            parent_requests_mobile = itemView.findViewById(R.id.parent_requests_status);
 
 
         }

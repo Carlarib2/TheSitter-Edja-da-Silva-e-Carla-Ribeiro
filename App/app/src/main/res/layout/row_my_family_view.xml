@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_myFamily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/my_Family_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/myFamily_selected"
+                app:layout_constraintTop_toBottomOf="@+id/myFamily_selected"
+                android:src="@drawable/babyImage">
+
+            <TextView
+                android:id="@+id/my_Family_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/myFamily_selected"
+                app:layout_constraintStart_toEndOf="@+id/myFamily_selected"
+                app:layout_constraintTop_toTopOf="@+id/myFamily_selected"
+                tools:text="Ana Rashelle" />
+
+            <TextView
+                android:id="@+id/my_Family_Bdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/light_text"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/my_Family_image"
+                app:layout_constraintTop_toBottomOf="@+id/my_Family_name"
+                tools:text="2019-03-13" />
+
+            <ImageButton
+                android:id="@+id/my_Family_button"
+                android:layout_width="69dp"
+                android:layout_height="55dp"
+                android:layout_margin="20dp"
+                android:background="#FEFEFE"
+                android:contentDescription="@string/app_contentDescription"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/edit_pen_icon" />
+
+            <TextView
+                android:id="@+id/my_Family_creatures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Person"
+                android:textColor="@color/light_text"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/my_Family_Bdate"
+                app:layout_constraintTop_toBottomOf="@+id/my_Family_Bdate" />
+
+            <RadioButton
+                android:id="@+id/myFamily_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

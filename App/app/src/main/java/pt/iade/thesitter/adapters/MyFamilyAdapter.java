@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 import pt.iade.thesitter.R;
 import pt.iade.thesitter.models.FamilyMember;
@@ -32,7 +31,7 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
     @Override
     public MyFamilyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.my_family_view, parent, false);
+        View view = inflater.inflate(R.layout.row_my_family_view, parent, false);
         return new MyFamilyAdapter.ViewHolder(view);
     }
 

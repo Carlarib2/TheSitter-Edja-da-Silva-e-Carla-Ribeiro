@@ -5,7 +5,8 @@ CREATE TABLE user(
     user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_name VARCHAR(60) NOT NULL unique ,
     user_bdate DATE NOT NULL,
-    user_upload VARBINARY(255),
+    user_uploadDc INT,
+	user_uploadIm INT,
     user_address VARCHAR(255) NOT NULL,
     user_mobile VARCHAR(20) NOT NULL,
     user_email VARCHAR(255) NOT NULL unique,
@@ -16,23 +17,20 @@ CREATE TABLE user(
 
 CREATE TABLE booking (
     boo_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    boo_data DATE NOT NULL,
+    boo_date DATE NOT NULL,
+    boo_address VARCHAR (50) NOT NULL,
     boo_cli_id INT NOT NULL,
-    boo_endTime TIME NOT NULL, 
+    boo_endTime VARCHAR (50) NOT NULL, 
     boo_sit_id INT NOT NULL ,
-    boo_sta_id INT NOT NULL ,
-    boo_startTime TIME NOT NULL
-);
-
-CREATE TABLE status (
-    sta_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    sta_name VARCHAR(255) NOT NULL DEFAULT 'pendente',
-    CHECK (sta_name IN ('pendente', 'aceite', 'negado'))
+    boo_status VARCHAR (30) NOT NULL ,
+    boo_startTime VARCHAR (50) NOT NULL,
+    boo_more VARCHAR(222)
 );
 
 CREATE TABLE client (
     cli_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cli_user_id INT NOT NULL
+    cli_user_id INT NOT NULL,
+    cli_sitNum INT 
     
 );
 
@@ -42,17 +40,6 @@ CREATE TABLE creatures(
     cre_info TEXT
 );
 
-CREATE TABLE user_chat(
-    usat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    usat_user_id INT NOT NULL, 
-    usat_chat_id INT NOT NULL
-);
-
-CREATE TABLE chat(
-    chat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    chat_message_content TEXT,
-    chat_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 
 
 CREATE TABLE sitter_rating(
@@ -91,25 +78,12 @@ ADD CONSTRAINT booking_fk_client
 FOREIGN KEY (boo_cli_id) REFERENCES client(cli_id)
 ON DELETE CASCADE;
 
-ALTER TABLE booking
-ADD CONSTRAINT booking_fk_status
-FOREIGN KEY (boo_sta_id) REFERENCES status(sta_id)
-ON DELETE CASCADE;
 
 ALTER TABLE client
 ADD CONSTRAINT client_fk_user
 FOREIGN KEY (cli_user_id) REFERENCES user(user_id)
 ON DELETE CASCADE;
 
-ALTER TABLE user_chat
-ADD CONSTRAINT user_chat_fk_user
-FOREIGN KEY (usat_user_id) REFERENCES user(user_id)
-ON DELETE CASCADE;
-
-ALTER TABLE user_chat
-ADD CONSTRAINT user_chat_fk_chat
-FOREIGN KEY (usat_chat_id) REFERENCES chat(chat_id)
-ON DELETE CASCADE;
 
 ALTER TABLE sitter_rating
 ADD CONSTRAINT sitter_rating_fk_sitter

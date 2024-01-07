@@ -8,11 +8,13 @@ import android.telephony.TelephonyCallback;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
 
 public class Parent_home extends AppCompatActivity {
-    TextView nameTextView;
+    TextView nameTextView, bDateTextView, genderTextView, mobileTextView, addressTextView;
     User user;
     Client client;
     @Override
@@ -32,10 +34,6 @@ public class Parent_home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP(View view){
-        Intent intent = new Intent(this, Parent_messages.class);
-        startActivity(intent);
-    }
 
     public void startProfileP(View view){
         Intent intent = new Intent(this, Parent_settings.class);
@@ -52,18 +50,22 @@ public class Parent_home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP1(View view){
-        Intent intent = new Intent(this, Parent_messages.class);
-        startActivity(intent);
-    }
 
     public void setupComponents() {
         nameTextView = (TextView) findViewById(R.id.name_textView_ep);
+        bDateTextView = (TextView) findViewById(R.id.birthday_textView_ep);
+        genderTextView = (TextView) findViewById(R.id.gender_textView_ep);
+        mobileTextView = (TextView) findViewById(R.id.mobile_textView_ep);
+        addressTextView = (TextView) findViewById(R.id.address_textView_ep);
 
         populateViews();
     }
 
     private void populateViews() {
         nameTextView.setText(user.getUserName());
+        bDateTextView.setText(user.getUserBdate().toString());
+        genderTextView.setText(user.getUserGender());
+        mobileTextView.setText(user.getUserMobile());
+        addressTextView.setText(user.getUserAddress());
     }
 }

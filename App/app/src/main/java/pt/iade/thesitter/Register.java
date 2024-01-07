@@ -95,6 +95,7 @@ public class Register extends AppCompatActivity {
 
                 if (confirmSitter.isChecked()) {
                     Intent intent = new Intent(Register.this, Profile.class);
+
                     intent.putExtra("user", newUser);
                     intent.putExtra("sitter", new Sitter());
 

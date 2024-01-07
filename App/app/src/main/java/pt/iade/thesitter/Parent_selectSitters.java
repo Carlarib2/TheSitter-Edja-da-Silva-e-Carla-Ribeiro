@@ -44,20 +44,19 @@ public class Parent_selectSitters extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP5(View view){
+    /*public void startMessagesP5(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfileP3(View view){
         Intent intent = new Intent(this, Parent_settings.class);
         startActivity(intent);
     }
 
-    /*public void startSendP(View view){
-        Intent intent = new Intent(this, parent_pending.class);
-        startActivity(intent);
-    }*/
+    public void startSendP(View view){
+        finish();
+    }
 
     private void setUpComponents() {
 

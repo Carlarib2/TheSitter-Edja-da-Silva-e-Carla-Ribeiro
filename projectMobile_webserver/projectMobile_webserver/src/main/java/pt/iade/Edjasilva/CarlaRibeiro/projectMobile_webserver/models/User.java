@@ -17,26 +17,22 @@ public class User {
     private int userId;
     @Column(name="user_name")
     private String userName;
-
-    @Column(name="user_bdate")
-    private LocalDate userBdate;
-
-    @Column(name="user_address")
-    private String userAddress;
-
-    @Column(name="user_mobile")
-    private String userMobile;
-
-    @Column(name="user_email")
-    private String userEmail;
-
-    @Column(name="user_password")
-    private String userPassword;
-
     @Column(name="user_gender")
     private String userGender;
-    @Column(name="user_upload")
-    private byte[]  userUpload;
+    @Column(name="user_email")
+    private String userEmail;
+    @Column(name="user_password")
+    private String userPassword;
+    @Column(name="user_bdate")
+    private LocalDate userBdate;
+    @Column(name="user_mobile")
+    private String userMobile;
+    @Column(name="user_address")
+    private String userAddress;
+    @Column(name="user_uploadDc")
+    private int  userUploadDc;
+    @Column(name="user_uploadIm")
+    private int userUploadIm;
 
 
 
@@ -44,37 +40,24 @@ public class User {
     public User() {
     }
 
-
-    public LocalDate getUserBdate() {
-        return userBdate;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUserBdate(LocalDate userBdate) {
-        this.userBdate = userBdate;
+    public String getUserName() {
+        return userName;
     }
 
-    public byte[] getUserUpload() {
-        return userUpload;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setUserUpload(byte[] userUpload) {
-        this.userUpload = userUpload;
+    public String getUserGender() {
+        return userGender;
     }
 
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public String getUserMobile() {
-        return userMobile;
-    }
-
-    public void setUserMobile(String userMobile) {
-        this.userMobile = userMobile;
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
     }
 
     public String getUserEmail() {
@@ -93,23 +76,43 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public String getUserGender() {
-        return userGender;
+    public LocalDate getUserBdate() {
+        return userBdate;
     }
 
-    public void setUserGender(String userGender) {
-        this.userGender = userGender;
+    public void setUserBdate(LocalDate userBdate) {
+        this.userBdate = userBdate;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUserMobile() {
+        return userMobile;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserMobile(String userMobile) {
+        this.userMobile = userMobile;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
+    }
+
+    public int getUserUploadDc() {
+        return userUploadDc;
+    }
+
+    public void setUserUploadDc(int userUploadDc) {
+        this.userUploadDc = userUploadDc;
+    }
+
+    public int getUserUploadIm() {
+        return userUploadIm;
+    }
+
+    public void setUserUploadIm(int userUploadIm) {
+        this.userUploadIm = userUploadIm;
     }
 }

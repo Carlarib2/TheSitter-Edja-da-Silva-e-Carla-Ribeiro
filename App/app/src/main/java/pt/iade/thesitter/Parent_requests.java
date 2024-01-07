@@ -24,10 +24,10 @@ public class Parent_requests extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP7(View view){
+    /*public void startMessagesP7(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfile8(View view){
         Intent intent = new Intent(this, Parent_settings.class);

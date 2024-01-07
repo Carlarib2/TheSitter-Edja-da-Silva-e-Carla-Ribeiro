@@ -8,10 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.SitterRating;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Status;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.User;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRatingRepository;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRepository;
 
 @RestController
 @RequestMapping(path="/api/sitterRatings")

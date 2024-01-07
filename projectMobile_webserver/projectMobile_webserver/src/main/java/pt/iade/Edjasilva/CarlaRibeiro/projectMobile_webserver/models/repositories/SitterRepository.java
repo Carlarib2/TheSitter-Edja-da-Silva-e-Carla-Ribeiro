@@ -8,4 +8,6 @@ import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.User;
 public interface SitterRepository extends CrudRepository<Sitter, Integer> {
     //Iterable<Sitter> findBySitId(int sitId);
     Sitter findBySitId(int id);
+
+    Sitter findBySitUserId(int userId);
 }

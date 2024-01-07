@@ -27,7 +27,7 @@
         android:layout_marginStart="52dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toEndOf="@+id/profile_textView25_es"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <TextView
         android:id="@+id/profile_textView23_es"
@@ -64,7 +64,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile_divider4_es"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <View
         android:id="@+id/divider7"
@@ -96,7 +96,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <View
         android:id="@+id/parent_home_divider2_ep"
@@ -172,7 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
     <View
-        android:id="@+id/parent_home_divider_ep"
+        android:id="@+id/divider4"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_marginTop="10dp"
@@ -189,7 +189,7 @@
         android:layout_marginStart="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toEndOf="@+id/profile_textView17_es"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <ImageView
         android:id="@+id/profile_imageView14_es"
@@ -243,8 +243,8 @@
         android:text="@string/Reliability"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/parent_home_divider_ep"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintStart_toStartOf="@+id/divider4"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <TextView
         android:id="@+id/profile_textView17_es"
@@ -257,7 +257,7 @@
         android:textAlignment="textStart"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/profile_divider24_es"
-        app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <TextView
         android:id="@+id/profile_textView20_es"
@@ -348,7 +348,7 @@
         android:id="@+id/profile_divider38_es"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

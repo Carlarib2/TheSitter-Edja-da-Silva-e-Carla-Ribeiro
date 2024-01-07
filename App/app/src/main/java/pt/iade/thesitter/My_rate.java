@@ -24,10 +24,10 @@ public class My_rate extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessages7(View view){
+    /*public void startMessages7(View view){
         Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfile5(View view){
         Intent intent = new Intent(this, Profile_settings.class);

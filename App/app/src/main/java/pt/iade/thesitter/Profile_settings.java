@@ -34,17 +34,20 @@ import android.widget.Toast;
                     }
                 }
             });
+
+
         }
+
 
         public void startHome2(View view) {
             Intent intent = new Intent(this, The_profile_1.class);
             startActivity(intent);
         }
 
-        public void startMessages4(View view) {
+       /* public void startMessages4(View view) {
             Intent intent = new Intent(this, Messages.class);
             startActivity(intent);
-        }
+        }*/
 
         public void startProfile3(View view) {
             Intent intent = new Intent(this, Parent_settings.class);

@@ -8,7 +8,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-<<<<<<< HEAD
+
+import android.widget.Toast;
+
 import android.widget.Spinner;
 
 import java.time.LocalDate;
@@ -16,9 +18,8 @@ import java.time.LocalDate;
 import pt.iade.thesitter.models.Booking;
 import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
-=======
+
 import android.widget.Toast;
->>>>>>> Carla
 
 public class Parent_booking_1 extends AppCompatActivity {
     EditText addressBooking, dateTextView, moreTextView;

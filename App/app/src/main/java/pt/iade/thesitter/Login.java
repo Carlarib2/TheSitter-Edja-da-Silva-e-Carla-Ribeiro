@@ -11,12 +11,16 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import pt.iade.thesitter.models.Client;
+import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class Login extends AppCompatActivity {
     protected Button login_button_c, sae_button_epb;
     EditText username_editView, password_editView;
     protected Switch confirmSitter;
+    User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class Login extends AppCompatActivity {
         username_editView = (EditText) findViewById(R.id.user_editText_c);
         password_editView = (EditText) findViewById(R.id.pass_editText_c);
         login_button_c = (Button) findViewById(R.id.login_button_c);
+<<<<<<< HEAD
         confirmSitter=(Switch) findViewById(R.id.switch_c);
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +51,9 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+=======
+        confirmSitter = (Switch) findViewById(R.id.switch_c);
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
 
         login_button_c.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,28 +61,47 @@ public class Login extends AppCompatActivity {
                 String username = username_editView.getText().toString();
                 String password = password_editView.getText().toString();
 
+                if (username.equals("")) {
+                    username_editView.setError("Username is Required");
+                } else if (password.equals("")) {
+                    password_editView.setError("Email is Required");
+                } else {
+                    User.Login(username, password, new User.LoginResponse() {
+                        @Override
+                        public void response(User returnedUser) {
+
+                            if (confirmSitter.isChecked()) {
+                                Sitter.GetByUserId(returnedUser.getUserId(), new Sitter.GetByUserIdResponse() {
+                                    @Override
+                                    public void response(Sitter returnedSitter) {
+                                        Intent intent = new Intent(Login.this, The_profile_1.class);
+                                        intent.putExtra("user", returnedUser);
+                                        intent.putExtra("sitter", returnedSitter);
+                                        startActivity(intent);
+                                    }
+                                });
 
 
-                if(confirmSitter.isChecked() ){
+                            } else {
+                                Client.GetByUserId(returnedUser.getUserId(), new Client.GetByUserIdResponse() {
+                                    @Override
+                                    public void response(Client returnedClient) {
+                                        Intent intent = new Intent(Login.this, Parent_home.class);
+                                        intent.putExtra("user", returnedUser);
+                                        intent.putExtra("client", returnedClient);
+                                        startActivity(intent);
+                                    }
+                                });
+                            }
 
-                }else{
-
-                }
-                User.Login(username, password, new User.LoginResponse() {
-                    @Override
-                    public void response(User returnedUser) {
-                        if (returnedUser != null) {
-
-                            Intent intent = new Intent(Login.this, The_profile_1.class);
-                            intent.putExtra("user", returnedUser);
-                            startActivity(intent);
                         }
-                    }
-                });
+
+                    });
+                }
+
             }
         });
     }
-
 
 
 
@@ -93,5 +120,5 @@ public class Login extends AppCompatActivity {
 
 
 
-    }
+}
 

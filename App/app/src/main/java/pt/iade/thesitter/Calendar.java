@@ -44,10 +44,10 @@ public class Calendar extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesS3(View view){
+    /*public void startMessagesS3(View view){
         Intent intent = new Intent(this, Messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfileS3(View view){
         finish();

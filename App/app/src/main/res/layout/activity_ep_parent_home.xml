@@ -8,18 +8,29 @@
     android:background="@drawable/gradient"
     tools:context=".Parent_home">
 
+  <ImageView
+      android:id="@+id/parent_imageView_ep"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/Andre"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep"
+      app:srcCompat="@drawable/parent_image" />
+
   <View
-      android:id="@+id/profile_divider24_es3"
+      android:id="@+id/divider1"
       android:layout_width="5dp"
       android:layout_height="99dp"
       android:layout_marginStart="76dp"
       android:layout_marginTop="8dp"
       android:background="?android:attr/listDivider"
       app:layout_constraintStart_toEndOf="@+id/textView"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep2" />
+      app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
   <View
-      android:id="@+id/parent_home_divider_ep3"
+      android:id="@+id/divider2"
       android:layout_width="match_parent"
       android:layout_height="2dp"
       android:layout_marginTop="30dp"
@@ -30,17 +41,17 @@
       app:layout_constraintTop_toBottomOf="@+id/parent_imageView_ep" />
 
   <View
-      android:id="@+id/parent_home_divider_ep2"
+      android:id="@+id/divider3"
       android:layout_width="match_parent"
       android:layout_height="2dp"
       android:layout_marginTop="80dp"
       android:background="?android:attr/listDivider"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep3" />
+      app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
   <View
-      android:id="@+id/parent_home_divider_ep"
+      android:id="@+id/divider4"
       android:layout_width="match_parent"
       android:layout_height="2dp"
       android:layout_marginTop="116dp"
@@ -48,31 +59,7 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep2" />
-
-  <ImageButton
-      android:id="@+id/profile_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/person_icon"
-      android:onClick="startProfileP"
-      android:src="@drawable/person_icon"
-      app:layout_constraintStart_toEndOf="@+id/message_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
-
-  <ImageButton
-      android:id="@+id/message_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/email_icon"
-      android:onClick="startMessagesP"
-      android:src="@drawable/mail_icon"
-      app:layout_constraintStart_toEndOf="@+id/requests_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
+      app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
   <Button
       android:id="@+id/button_booking_p"
@@ -92,19 +79,7 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.45"
       app:layout_constraintStart_toEndOf="@+id/messag_button_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep3" />
-
-  <ImageButton
-      android:id="@+id/requests_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/requests"
-      android:onClick="startRequests8"
-      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep"
-      app:srcCompat="@drawable/event_icon" />
+      app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
   <Button
       android:id="@+id/messag_button_ep"
@@ -114,14 +89,13 @@
       android:layout_marginStart="50dp"
       android:layout_marginTop="20dp"
       android:background="@drawable/button3"
-      android:onClick="startMessagesP1"
       android:shadowColor="#1e1e1e"
       android:text="@string/Messages"
       android:textColor="@color/black"
       android:textStyle="bold"
       app:backgroundTint="#000000"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep3" />
+      app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
   <TextView
       android:id="@+id/textView"
@@ -133,12 +107,12 @@
       android:textSize="16sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep2" />
+      app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
   <TextView
       android:id="@+id/textView5"
       android:layout_width="141dp"
-      android:layout_height="36dp"
+      android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
       android:layout_marginEnd="30dp"
       android:text="@string/number_family"
@@ -146,7 +120,7 @@
       android:textSize="16sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep2" />
+      app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
   <TextView
       android:id="@+id/textView12"
@@ -184,11 +158,10 @@
       android:id="@+id/textView18"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
+      android:layout_marginTop="24dp"
       android:text="@string/mobile_"
-      android:textSize="16sp"
+      android:textSize="20sp"
       android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="@+id/textView19"
       app:layout_constraintStart_toStartOf="@+id/textView19"
       app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -196,11 +169,10 @@
       android:id="@+id/textView17"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="@string/Address"
-      android:textSize="16sp"
+      android:layout_marginTop="24dp"
+      android:text="@string/address"
+      android:textSize="20sp"
       android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="@+id/textView18"
       app:layout_constraintStart_toStartOf="@+id/textView18"
       app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -208,77 +180,61 @@
       android:id="@+id/textView19"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
+      android:layout_marginTop="24dp"
       android:text="@string/gender"
-      android:textSize="16sp"
+      android:textSize="20sp"
       android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="@+id/textView20"
       app:layout_constraintStart_toStartOf="@+id/textView20"
       app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-  <ImageButton
-      android:id="@+id/home_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/home_icon"
-      android:onClick="startHome8"
-      android:src="@drawable/home_icon"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
 
   <TextView
       android:id="@+id/textView20"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="15dp"
-      android:layout_marginTop="50dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="32dp"
       android:text="@string/birthday"
-      android:textSize="16sp"
+      android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+      app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
   <TextView
-      android:id="@+id/textView22"
+      android:id="@+id/address_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
       android:hint="@string/address"
-      app:layout_constraintEnd_toEndOf="@+id/textView23"
-      app:layout_constraintStart_toStartOf="@+id/textView23"
-      app:layout_constraintTop_toBottomOf="@+id/textView23" />
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@+id/mobile_textView_ep"
+      app:layout_constraintTop_toTopOf="@+id/textView17" />
 
   <TextView
-      android:id="@+id/textView23"
+      android:id="@+id/mobile_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
       android:hint="@string/mobile_"
-      app:layout_constraintEnd_toEndOf="@+id/textView24"
-      app:layout_constraintStart_toStartOf="@+id/textView24"
-      app:layout_constraintTop_toBottomOf="@+id/textView24" />
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@+id/gender_textView_ep"
+      app:layout_constraintTop_toTopOf="@+id/textView18" />
 
   <TextView
-      android:id="@+id/textView24"
+      android:id="@+id/gender_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
       android:hint="@string/gender"
-      app:layout_constraintEnd_toEndOf="@+id/textView25"
-      app:layout_constraintStart_toStartOf="@+id/textView25"
-      app:layout_constraintTop_toBottomOf="@+id/textView25" />
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@+id/birthday_textView_ep"
+      app:layout_constraintTop_toTopOf="@+id/textView19" />
 
   <TextView
-      android:id="@+id/textView25"
+      android:id="@+id/birthday_textView_ep"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="50dp"
-      android:layout_marginEnd="28dp"
+      android:layout_marginEnd="32dp"
       android:hint="@string/birthday"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider_ep" />
+      app:layout_constraintTop_toTopOf="@+id/textView20" />
 
   <TextView
       android:id="@+id/parent_textView_ep"
@@ -298,34 +254,71 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="15dp"
-      android:layout_marginTop="45dp"
+      android:layout_marginTop="16dp"
       android:fontFamily="sans-serif-medium"
-      android:hint="@string/mario"
-      android:textSize="24sp"
+      android:textSize="26sp"
       android:textStyle="bold"
       app:layout_constraintStart_toEndOf="@+id/parent_imageView_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep" />
+      app:layout_constraintTop_toTopOf="@+id/parent_imageView_ep"
+      tools:text="@string/mario" />
 
   <TextView
-      android:id="@+id/adv_textView_ep"
+      android:id="@+id/textView11"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:fontFamily="sans-serif-medium"
-      android:hint="@string/advance"
-      app:layout_constraintEnd_toEndOf="@+id/name_textView_ep"
+      android:textColor="@color/light_text"
+      android:textSize="16sp"
+      android:textStyle="italic"
+      android:text="@string/ep_parent"
       app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
       app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
-  <ImageView
-      android:id="@+id/parent_imageView_ep"
-      android:layout_width="150dp"
-      android:layout_height="132dp"
-      android:layout_marginStart="36dp"
+  <ImageButton
+      android:id="@+id/home_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
       android:layout_marginTop="10dp"
-      android:contentDescription="@string/Andre"
+      android:contentDescription="@string/home_icon"
+      android:onClick="startHome8"
+      android:src="@drawable/home_icon"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep"
-      app:srcCompat="@drawable/pai_e_filho" />
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
+
+  <ImageButton
+      android:id="@+id/requests_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/requests"
+      android:onClick="startRequests8"
+      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep"
+      app:srcCompat="@drawable/event_icon" />
+
+  <ImageButton
+      android:id="@+id/message_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/email_icon"
+      android:onClick="startMessagesP"
+      android:src="@drawable/mail_icon"
+      app:layout_constraintStart_toEndOf="@+id/requests_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
+
+  <ImageButton
+      android:id="@+id/profile_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="52dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/person_icon"
+      android:onClick="startProfileP"
+      android:src="@drawable/person_icon"
+      app:layout_constraintStart_toEndOf="@+id/message_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

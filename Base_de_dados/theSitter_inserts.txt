@@ -1,25 +1,19 @@
 -- inserts
 
--- table status
-INSERT INTO status (sta_name) VALUES 
-    ('pendente'),
-    ('aceite'),
-    ('negado');
-    
     -- table user 
     
-    INSERT INTO user (user_name, user_bdate, user_address, user_mobile, user_email, user_password, user_gender) VALUES
-    ('Délcia Dinis', '1990-05-22', 'Cazenga', '900000000', 'delcisabalo@hotmail.com', 'senha1', 'F'),
-    ('Felizarda Gaspar', '1981-04-17', 'Benfica', '910000000', 'felizagaspar@gmail.com', 'senha2', 'F'),
-    ('Jeovany Garcia', '1990-12-26', 'Vila', '920000000', 'geovanigarcia1@hotmail.com.com', 'senha3', 'M'),
-    ('Joaquim Igreja', '2003-12-28', 'Arroja', '930000000', 'joaquimigreja@example.com', 'senha4', 'M'),
-    ('Dalinela Bastos', '2002-10-11', 'Prenda', '940000000', 'dalinelacarina@example.com', 'senha5', 'F');
+    INSERT INTO user (user_name, user_bdate, user_uploadDc, user_uploadIm, user_address, user_mobile, user_email, user_password, user_gender) VALUES
+    ('Délcia Dinis', '1990-05-22', 0, 0, 'Cazenga', '900000000', 'delcisabalo@hotmail.com', 'senha1', 'F'),
+    ('Felizarda Gaspar', '1981-04-17', 0, 0, 'Benfica', '910000000', 'felizagaspar@gmail.com', 'senha2', 'F'),
+    ('Jeovany Garcia', '1990-12-26', 0, 0, 'Vila', '920000000', 'geovanigarcia1@hotmail.com.com', 'senha3', 'M'),
+    ('Joaquim Igreja', '2003-12-28', 0, 0, 'Arroja', '930000000', 'joaquimigreja@example.com', 'senha4', 'M'),
+    ('Dalinela Bastos', '2002-10-11', 0, 0, 'Prenda', '940000000', 'dalinelacarina@example.com', 'senha5', 'F');
     
     -- table client
     
-    INSERT INTO client (cli_user_id) VALUES
-	(2),
-    (4);
+    INSERT INTO client (cli_user_id, cli_sitNum) VALUES
+	(2, 0),
+    (4, 0);
     
 -- table Creatures 
 
@@ -52,33 +46,14 @@ INSERT INTO sitter (sit_user_id, sit_experience, sit_education, sit_aboutMe, sit
     
     -- tabela booking
 
-INSERT INTO booking (boo_data, boo_cli_id, boo_endTime, boo_sta_id, boo_startTime, boo_sit_id) VALUES
-    ('2023-01-01', 2, '12:00:00', 2, '10:00:00',1 ),
-    ('2023-01-02', 1, '14:00:00', 1, '12:00:00', 2),
-    ('2023-01-04', 1, '18:00:00', 2, '16:00:00',3 );
-    
-
-    
-    -- table chat
-    
-    INSERT INTO chat (chat_message_content) VALUES
-    ('Olá, tudo bem?'),
-    ('Boa noite, obrigada pela ajuda.'),
-    ('Já estão todos a dormir.'),
-    ('Muito obrigada.'),
-    ('kkkk');
+INSERT INTO booking (boo_date, boo_address, boo_cli_id, boo_endTime, boo_status, boo_startTime, boo_sit_id) VALUES
+	('2023-01-04', 'Uma rua', 1, '18:00:00', 'DECLINED', '04:00pm',3 ),
+    ('2023-01-01', 'Duas ruas', 2, '12:00:00', 'DECLINED', '10:00am',1 ),
+    ('2023-01-02', 'Tres ruas', 1, '14:00:00', 'PENDING', '12:00am', 2),
+    ('2023-01-04', 'Quatro ruas', 1, '18:00:00', 'ACCEPTED', '04:00pm',3 );
+     
     
     
-    -- table user_chat 
-    
-    INSERT INTO user_chat (usat_user_id, usat_chat_id) VALUES
-    (1, 1),
-    (2, 2),
-    (3, 3),
-    (4, 4),
-    (5, 5);
-
-
 -- table sitter_rating 
 
 INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment) VALUES
@@ -92,16 +67,6 @@ INSERT INTO sitter_rating (ra_sit_id, ra_value, ra_comment) VALUES
     (2, 3, 'Serviço médio'),
     (3, 2, 'Não recomendado'),
     (1, 5, 'Recomendo');
-
-
-
-    
-    
-    
-
-
-
-
 
 
 

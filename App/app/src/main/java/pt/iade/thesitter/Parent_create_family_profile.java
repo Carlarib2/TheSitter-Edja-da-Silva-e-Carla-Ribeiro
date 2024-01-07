@@ -54,10 +54,10 @@ public class Parent_create_family_profile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP8(View view){
+    /*public void startMessagesP8(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startProfileP6(View view){
         Intent intent = new Intent(this, Parent_settings.class);

@@ -71,7 +71,7 @@ public class Profile extends AppCompatActivity {
                 sitter.register(user, new Sitter.RegisterResponse() {
                     @Override
                     public void response() {
-                        Intent intent = new Intent(Profile.this, The_profile_1.class);
+                        Intent intent = new Intent(Profile.this, Profile_verification.class);
                         intent.putExtra("user", user);
                         intent.putExtra("sitter", sitter);
 

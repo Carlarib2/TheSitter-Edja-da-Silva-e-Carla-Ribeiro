@@ -20,10 +20,10 @@ public class Parent_settings extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startMessagesP7(View view){
+    /*public void startMessagesP7(View view){
         Intent intent = new Intent(this, Parent_messages.class);
         startActivity(intent);
-    }
+    }*/
 
     public void startRequestsP4(View view){
         Intent intent = new Intent(this, Parent_requests.class);

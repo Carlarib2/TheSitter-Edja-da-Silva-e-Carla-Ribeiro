@@ -8,8 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
-import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.UserChat;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.familyMemberRepository;
 
 @RestController
@@ -55,6 +53,31 @@ public class FamilyMemberController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Family member with id " + id + " not found.");
         }
 
+    }
+
+
+
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateFamilyMember(@PathVariable("id") int id, @RequestBody FamilyMember updatedFamilyMember) {
+        logger.info("Attempting to update Family Member with id: " + id);
+
+        if (familyMemberRepository.existsById(id)) {
+            FamilyMember existingFamilyMember = familyMemberRepository.findById(id).get();
+
+            existingFamilyMember.setFaAboutMe(updatedFamilyMember.getFaAboutMe());
+            existingFamilyMember.setFaAllergies(updatedFamilyMember.getFaAllergies());
+            existingFamilyMember.setFaBdate(updatedFamilyMember.getFaBdate());
+            existingFamilyMember.setFaGender(updatedFamilyMember.getFaGender());
+            existingFamilyMember.setFaSchool(updatedFamilyMember.getFaSchool());
+
+            familyMemberRepository.save(existingFamilyMember);
+
+            logger.info("Updated Family member with id: " + id);
+            return ResponseEntity.ok(existingFamilyMember);
+        } else {
+            logger.info("Family member with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Family member with id " + id + " not found.");
+        }
     }
 
 }

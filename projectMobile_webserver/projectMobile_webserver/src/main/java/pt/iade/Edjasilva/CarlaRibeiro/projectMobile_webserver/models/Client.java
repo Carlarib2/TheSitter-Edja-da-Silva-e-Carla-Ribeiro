@@ -14,9 +14,10 @@ public class Client {
 
     @Column(name="cli_id")
     private int cliId;
-
     @Column(name = "cli_user_id")
     private int cliUserId;
+    @Column(name = "cli_sitNum")
+    private int cliSitNum;
 
     public Client() {
     }
@@ -31,5 +32,13 @@ public class Client {
 
     public void setCliUserId(int cliUserId) {
         this.cliUserId = cliUserId;
+    }
+
+    public int getCliSitNum() {
+        return cliSitNum;
+    }
+
+    public void setCliSitNum(int cliSitNum) {
+        this.cliSitNum = cliSitNum;
     }
 }

@@ -1,10 +1,9 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.enums.BookingStatus;
 
-import java.sql.Time;
 import java.time.LocalDate;
 
 @Entity
@@ -16,8 +15,11 @@ public class Booking {
     @Column(name = "boo_id")
     private int booId;
 
+    @Column(name = "boo_address")
+    private String booAddress;
+
     @Column(name = "boo_data")
-    private LocalDate booData;
+    private LocalDate booDate;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "boo_cli_id", referencedColumnName = "cli_id")
@@ -25,12 +27,11 @@ public class Booking {
     private Client client;
 
     @Column(name = "boo_endTime")
-    private Time booEndTime;
+    private String booEndTime;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "boo_sta_id", referencedColumnName = "sta_id")
-    @JsonBackReference("status-booking")
-    private Status status;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "boo_status")
+    private BookingStatus status;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "boo_sit_id", referencedColumnName = "sit_id")
@@ -39,7 +40,10 @@ public class Booking {
 
 
     @Column(name = "boo_startTime")
-    private Time booStartTime;
+    private String booStartTime;
+
+    @Column(name = "boo_more")
+    private String booMore;
 
 
 
@@ -47,13 +51,24 @@ public class Booking {
 
     }
 
-
-    public LocalDate getBooData() {
-        return booData;
+    public int getBooId() {
+        return booId;
     }
 
-    public void setBooData(LocalDate booData) {
-        this.booData = booData;
+    public void setBooAddress(String booAddress) {
+        this.booAddress = booAddress;
+    }
+
+    public String getBooAddress() {
+        return booAddress;
+    }
+
+    public LocalDate getBooDate() {
+        return booDate;
+    }
+
+    public void setBooDate(LocalDate booDate) {
+        this.booDate = booDate;
     }
 
     public Client getClient() {
@@ -64,19 +79,19 @@ public class Booking {
         this.client = client;
     }
 
-    public Time getBooEndTime() {
+    public String getBooEndTime() {
         return booEndTime;
     }
 
-    public void setBooEndTime(Time booEndTime) {
+    public void setBooEndTime(String booEndTime) {
         this.booEndTime = booEndTime;
     }
 
-    public Status getStatus() {
+    public BookingStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(BookingStatus status) {
         this.status = status;
     }
 
@@ -88,16 +103,16 @@ public class Booking {
         this.sitter = sitter;
     }
 
-    public Time getBooStartTime() {
+    public String getBooStartTime() {
         return booStartTime;
     }
 
-    public void setBooStartTime(Time booStartTime) {
+    public void setBooStartTime(String booStartTime) {
         this.booStartTime = booStartTime;
     }
 
-    public int getBooId() {
-        return booId;
+    public String getBooMore() {
+        return booMore;
     }
 }
 

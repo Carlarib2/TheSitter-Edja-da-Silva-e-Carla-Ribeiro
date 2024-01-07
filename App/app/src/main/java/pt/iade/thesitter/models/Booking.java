@@ -1,23 +1,19 @@
 package pt.iade.thesitter.models;
 
-import java.sql.Time;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Booking {
+import pt.iade.thesitter.enums.BookingStatus;
 
-
+public class Booking implements Serializable {
     private int booId;
-
-    private LocalDate booData;
-
     private int booCliId;
-
-    private Time booEndTime;
-
-    private int booStaId;
-
-    private Time booStartTime;
-
+    private String booAddress;
+    private LocalDate booDate;
+    private String booEndTime;
+    private BookingStatus booStatus;
+    private String booStartTime;
+    private String booMore;
     private int booSitId;
     private String booName;
 
@@ -25,28 +21,37 @@ public class Booking {
 
     }
 
+<<<<<<< HEAD
     public Booking(int booId, LocalDate booData, int booCliId, Time booEndTime, int booStaId, Time booStartTime, String booName) {
+=======
+    public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
+                   String booEndTime, BookingStatus booStatus, String booStartTime,
+                   String booMore, int booSitId) {
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
         this.booId = booId;
-        this.booData = booData;
         this.booCliId = booCliId;
+        this.booAddress = booAddress;
+        this.booDate = booDate;
         this.booEndTime = booEndTime;
-        this.booStaId = booStaId;
+        this.booStatus = booStatus;
         this.booStartTime = booStartTime;
+<<<<<<< HEAD
         this.booName = booName;
+=======
+        this.booMore = booMore;
+        this.booSitId = booSitId;
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
     }
 
     public int getBooId() {
         return booId;
     }
 
-    public LocalDate getBooData() {
-        return booData;
-    }
-
     public int getBooCliId() {
         return booCliId;
     }
 
+<<<<<<< HEAD
     public Time getBooEndTime() {
         return booEndTime;
     }
@@ -65,20 +70,58 @@ public class Booking {
         this.booData = booData;
     }
 
+=======
+>>>>>>> db6ce72fbb620ea45449cb163fe2622f243c7d3f
     public void setBooCliId(int booCliId) {
         this.booCliId = booCliId;
     }
 
-    public void setBooEndTime(Time booEndTime) {
+    public String getBooAddress() {
+        return booAddress;
+    }
+
+    public void setBooAddress(String booAddress) {
+        this.booAddress = booAddress;
+    }
+
+    public LocalDate getBooDate() {
+        return booDate;
+    }
+
+    public void setBooDate(LocalDate booDate) {
+        this.booDate = booDate;
+    }
+
+    public String getBooEndTime() {
+        return booEndTime;
+    }
+
+    public void setBooEndTime(String booEndTime) {
         this.booEndTime = booEndTime;
     }
 
-    public void setBooStaId(int booStaId) {
-        this.booStaId = booStaId;
+    public BookingStatus getBooStatus() {
+        return booStatus;
     }
 
-    public void setBooStartTime(Time booStartTime) {
+    public void setBooStatus(BookingStatus booStatus) {
+        this.booStatus = booStatus;
+    }
+
+    public String getBooStartTime() {
+        return booStartTime;
+    }
+
+    public void setBooStartTime(String booStartTime) {
         this.booStartTime = booStartTime;
+    }
+
+    public String getBooMore() {
+        return booMore;
+    }
+
+    public void setBooMore(String booMore) {
+        this.booMore = booMore;
     }
 
     public int getBooSitId() {

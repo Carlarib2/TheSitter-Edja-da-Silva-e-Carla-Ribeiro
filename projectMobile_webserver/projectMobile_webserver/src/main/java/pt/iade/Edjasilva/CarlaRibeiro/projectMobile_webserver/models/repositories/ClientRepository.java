@@ -9,4 +9,6 @@ public interface ClientRepository extends CrudRepository<Client, Integer> {
 
    // Iterable<Client> findByCliId(int cliId);
     Client findByCliId(int id);
+
+    Client findByCliUserId(int userId);
 }

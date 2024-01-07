@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Client;
+import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.FamilyMember;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.Sitter;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.SitterRating;
 import pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.models.repositories.SitterRepository;
@@ -29,18 +30,24 @@ public class SitterController {
 
     }
 
+    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
+    public Sitter ids(@RequestParam (name= "sitId") int id){
+        logger.info("Sending sitter with id:" + id);
+        return sitterRepository.findBySitId(id);
+    }
+
+    @GetMapping(path = "/user/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Sitter getByUserId(@PathVariable int userId) {
+        logger.info("Sending sitter with userId="+userId);
+        return sitterRepository.findBySitUserId(userId);
+    }
+
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Sitter saveSitter(@RequestBody Sitter sitter){
         Sitter savedSitter = sitterRepository.save(sitter);
         logger.info("Saving sitter with id " + savedSitter.getSitId());
 
         return savedSitter;
-    }
-
-    @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
-    public Sitter ids(@RequestParam (name= "sitId") int id){
-        logger.info("Sending sitter with id:" + id);
-        return sitterRepository.findBySitId(id);
     }
 
     @DeleteMapping(path="/id" ,produces = MediaType.APPLICATION_JSON_VALUE)
@@ -56,6 +63,31 @@ public class SitterController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Sitter with id " + id + " not found.");
         }
 
+    }
+
+
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateSitter(@PathVariable("id") int id, @RequestBody Sitter updatedSitter) {
+        logger.info("Attempting to update Sitter with id: " + id);
+
+        if (sitterRepository.existsById(id)) {
+            Sitter existingSitter = sitterRepository.findById(id).get();
+
+            existingSitter.setSitAboutMe(updatedSitter.getSitAboutMe());
+            existingSitter.setSitEducation(updatedSitter.getSitEducation());
+            existingSitter.setSitExperience(updatedSitter.getSitExperience());
+            existingSitter.setSitReliability(updatedSitter.getSitReliability());
+            existingSitter.setSitResponseRate(updatedSitter.getSitResponseRate());
+
+
+            sitterRepository.save(existingSitter);
+
+            logger.info("Updated Sitter with id: " + id);
+            return ResponseEntity.ok(existingSitter);
+        } else {
+            logger.info("Sitter with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Sitter with id " + id + " not found.");
+        }
     }
 
 }

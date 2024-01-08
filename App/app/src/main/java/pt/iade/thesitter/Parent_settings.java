@@ -2,7 +2,9 @@ package pt.iade.thesitter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -59,11 +61,6 @@ public class Parent_settings extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void startLogout2(View view){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-    }
-
     public void startCalendar2(View view){
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
@@ -76,4 +73,18 @@ public class Parent_settings extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void startLogout2(View view) {
+        SharedPreferences preferences = getSharedPreferences("TheSitter", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = ((SharedPreferences) preferences).edit();
+        editor.clear();
+        editor.apply();
+
+        Intent intent = new Intent(this, Login.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+
+    }
+
 }

@@ -2,7 +2,9 @@ package pt.iade.thesitter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -104,10 +106,16 @@ public class Profile_settings extends AppCompatActivity {
     }
 
     public void startLogout(View view) {
+        SharedPreferences preferences = getSharedPreferences("TheSitter", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+
         Intent intent = new Intent(this, Login.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+        finish();
+
     }
-
-
 }
 

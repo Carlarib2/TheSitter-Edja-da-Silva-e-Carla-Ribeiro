@@ -8,4 +8,5 @@ public interface familyMemberRepository extends CrudRepository<FamilyMember, Int
 
     Iterable<FamilyMember> findByFaName(String faName);
     FamilyMember findByFaId(int id);
+    Iterable<FamilyMember> findByFaCliId(int cliId);
 }

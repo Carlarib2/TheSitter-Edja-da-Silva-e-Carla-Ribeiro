@@ -30,8 +30,7 @@ public class Parent_settings extends AppCompatActivity {
     }
 
     public void setupComponents(){
-        parentTextView= findViewById(R.id.parent_textView_epf);
-        populateViews();
+
     }
 
 

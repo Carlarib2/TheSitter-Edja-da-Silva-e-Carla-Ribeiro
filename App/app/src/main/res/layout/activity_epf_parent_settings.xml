@@ -294,7 +294,7 @@
             android:contentDescription="@string/Andre"
             app:layout_constraintStart_toStartOf="@+id/parent_settings_divider13_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf"
-            app:srcCompat="@drawable/pai_e_filho" />
+            app:srcCompat="@drawable/parent_image" />
 
         <ImageButton
             android:id="@+id/settings_request_imageButton_epf"

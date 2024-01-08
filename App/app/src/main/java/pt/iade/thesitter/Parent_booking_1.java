@@ -84,6 +84,10 @@ public class Parent_booking_1 extends AppCompatActivity {
         sendMySitters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (booking == null) {
+                    booking = new Booking();
+                    commitViews();
+                }
                 booking.setBooCliId(client.getCliId());
                 booking.setBooStatus(BookingStatus.PENDING);
 
@@ -109,6 +113,7 @@ public class Parent_booking_1 extends AppCompatActivity {
     }
 
     private void commitViews() {
+
         booking.setBooAddress(addressBooking.getText().toString());
         booking.setBooDate(LocalDate.now());
         booking.setBooMore(moreTextView.getText().toString());

@@ -34,7 +34,8 @@ public class Profile_settings extends AppCompatActivity {
         setupComponents();
     }
     public void setupComponents(){
-
+        sitterTextView= findViewById(R.id.parent_textView_epf);
+        populateViews();
 
         profileOnSwitch = (Switch) findViewById(R.id.profile_switch_epf);
         profileOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -54,7 +55,7 @@ public class Profile_settings extends AppCompatActivity {
 
 
     public void populateViews(){
-        //profil.setText(user.getUserName());
+        sitterTextView.setText(user.getUserName());
     }
 
 

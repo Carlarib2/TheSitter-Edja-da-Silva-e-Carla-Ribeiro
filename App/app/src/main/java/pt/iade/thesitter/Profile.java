@@ -34,7 +34,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void startSave(View view){
-        Intent intent = new Intent(this, Profile_verification.class);
+        Intent intent = new Intent(this, The_profile_1.class);
         startActivity(intent);
     }
 
@@ -71,7 +71,7 @@ public class Profile extends AppCompatActivity {
                 sitter.register(user, new Sitter.RegisterResponse() {
                     @Override
                     public void response() {
-                        Intent intent = new Intent(Profile.this, Profile_verification.class);
+                        Intent intent = new Intent(Profile.this, The_profile_1.class);
                         intent.putExtra("user", user);
                         intent.putExtra("sitter", sitter);
 

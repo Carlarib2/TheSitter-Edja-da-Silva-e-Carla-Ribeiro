@@ -3,9 +3,12 @@ package pt.iade.thesitter.models;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import pt.iade.thesitter.utilities.WebRequest;
@@ -35,6 +38,39 @@ public class Sitter implements Serializable {
         this.sitReliability = sitReliability;
         this.sitResponseTime = sitResponseTime;
         this.sitResponseRate = sitResponseRate;
+    }
+
+    public static void GetSitters(GetSittersResponse response) {
+        ArrayList<Sitter> sitters = new ArrayList<Sitter>();
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters/all"));
+                    String resp = request.performGetRequest();
+
+                    JsonArray array = new Gson().fromJson(resp, JsonArray.class);
+
+                    ArrayList<Integer> userIds = new ArrayList<Integer>();
+
+                    for (JsonElement element : array) {
+                        sitters.add(new Gson().fromJson(element, Sitter.class));
+                        userIds.add(new Gson().fromJson(element, Sitter.class).getSitUserId());
+                    }
+
+                    User.GetAllById(userIds, new User.GetAllByIdResponse() {
+                        @Override
+                        public void response(ArrayList<User> users) {
+                            response.response(users, sitters);
+                        }
+                    });
+
+                } catch (Exception e) {
+                    Log.e("Sitter.GetSitters", e.toString());
+                }
+            }
+        });
+        thread.start();
     }
 
     public void register(User user, RegisterResponse response) {
@@ -137,6 +173,10 @@ public class Sitter implements Serializable {
         this.sitResponseRate = sitResponseRate;
     }
 
+
+    public interface GetSittersResponse{
+        public void response(ArrayList<User> users, ArrayList<Sitter> sitters);
+    }
 
     public interface RegisterResponse{
         public void response();

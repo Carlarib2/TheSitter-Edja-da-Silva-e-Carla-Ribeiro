@@ -31,22 +31,30 @@ public class Parent_home extends AppCompatActivity {
 
     public void startBooking(View view){
         Intent intent = new Intent(this, Parent_booking_1.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
 
     public void startProfileP(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startRequests8(View view){
         Intent intent = new Intent(this, Parent_requests.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startHome8(View view){
         Intent intent = new Intent(this, Parent_home.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 

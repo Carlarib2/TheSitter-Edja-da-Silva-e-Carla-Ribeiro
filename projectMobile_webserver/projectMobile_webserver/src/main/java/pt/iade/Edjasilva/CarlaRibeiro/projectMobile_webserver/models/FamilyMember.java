@@ -33,10 +33,9 @@ public class FamilyMember {
     private String faGender;
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="fa_cli_id")
-    @JsonManagedReference("familyMember-client")
-    private Client client;
+ 
+    @Column(name="fa_cli_id")
+    private int faCliId;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn (name="fa_cre_id", referencedColumnName = "cre_id")
@@ -54,67 +53,101 @@ public class FamilyMember {
         return faId;
     }
 
+
+
     public String getFaName() {
         return faName;
     }
+
+
 
     public void setFaName(String faName) {
         this.faName = faName;
     }
 
+
+
     public LocalDate getFaBdate() {
         return faBdate;
     }
+
+
 
     public void setFaBdate(LocalDate faBdate) {
         this.faBdate = faBdate;
     }
 
+
+
     public String getFaSchool() {
         return faSchool;
     }
+
+
 
     public void setFaSchool(String faSchool) {
         this.faSchool = faSchool;
     }
 
+
+
     public String getFaAllergies() {
         return faAllergies;
     }
+
+
 
     public void setFaAllergies(String faAllergies) {
         this.faAllergies = faAllergies;
     }
 
+
+
     public String getFaAboutMe() {
         return faAboutMe;
     }
+
+
 
     public void setFaAboutMe(String faAboutMe) {
         this.faAboutMe = faAboutMe;
     }
 
+
+
     public String getFaGender() {
         return faGender;
     }
+
+
 
     public void setFaGender(String faGender) {
         this.faGender = faGender;
     }
 
-    public Client getClient() {
-        return client;
+
+
+    public int getFaCliId() {
+        return faCliId;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+
+
+    public void setFaCliId(int faCliId) {
+        this.faCliId = faCliId;
     }
+
+
 
     public Creatures getCreatures() {
         return creatures;
     }
 
+
+
     public void setCreatures(Creatures creatures) {
         this.creatures = creatures;
     }
+
+    
 }

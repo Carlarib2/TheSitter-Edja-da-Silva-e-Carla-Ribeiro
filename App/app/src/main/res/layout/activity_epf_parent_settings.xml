@@ -65,18 +65,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-medium"
-            android:hint="@string/mario"
+            android:textSize="26sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/profile1_imageView_epf"
-            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider13_epf" />
+            app:layout_constraintTop_toTopOf="@+id/profile1_imageView_epf"
+            tools:text="@string/mario" />
 
         <TextView
             android:id="@+id/parent1_textView_epf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="@string/classic"
+            android:text="@string/ep_parent"
+            android:textSize="16sp"
+            android:textColor="@color/light_text"
             app:layout_constraintStart_toStartOf="@+id/parent_textView_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_textView_epf" />
 
@@ -262,14 +266,15 @@
         <ImageButton
             android:id="@+id/home_imageButton_epf"
             android:layout_width="64dp"
-            android:layout_height="52dp"
+            android:layout_height="64dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_profile"
             android:contentDescription="@string/home_icon"
             android:onClick="startHomeP5"
             app:layout_constraintStart_toStartOf="@+id/parent_settings_divider34_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
-            app:srcCompat="@drawable/home_icon" />
+            app:srcCompat="@drawable/ic_home" />
 
         <Switch
             android:id="@+id/profile_switch_epf"
@@ -294,39 +299,27 @@
         <ImageButton
             android:id="@+id/settings_request_imageButton_epf"
             android:layout_width="64dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="64dp"
             android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_profile"
             android:contentDescription="@string/requests"
             android:onClick="startRequestsP4"
+            app:layout_constraintEnd_toStartOf="@+id/setings_profile_imageButton3_epf"
             app:layout_constraintStart_toEndOf="@+id/home_imageButton_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
-            app:srcCompat="@drawable/event_icon" />
-
-        <ImageButton
-            android:id="@+id/settings_messages_imageButton2_epf"
-            android:layout_width="64dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/email_icon"
-            android:onClick="startMessagesP7"
-            app:layout_constraintStart_toEndOf="@+id/settings_request_imageButton_epf"
-            app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
-            app:srcCompat="@drawable/mail_icon" />
+            app:srcCompat="@drawable/ic_check_list" />
 
         <ImageButton
             android:id="@+id/setings_profile_imageButton3_epf"
             android:layout_width="64dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="64dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_text_profile"
             android:contentDescription="@string/person_icon"
             android:onClick="startProfileP5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/settings_messages_imageButton2_epf"
             app:layout_constraintTop_toBottomOf="@+id/parent_settings_divider34_epf"
-            app:srcCompat="@drawable/person_icon" />
+            app:srcCompat="@drawable/ic_account" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

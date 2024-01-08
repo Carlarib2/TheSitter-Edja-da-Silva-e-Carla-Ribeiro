@@ -1,4 +1,8 @@
 package pt.iade.Edjasilva.CarlaRibeiro.projectMobile_webserver.controllers;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +38,21 @@ public class UserController {
         return userRepository.findByUserId(id);
     }
 
+    @PostMapping(path = "/allbyid", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ArrayList<User> getAllById(@RequestBody ArrayList<Integer> userIds) {
+        logger.info("Sending users list by id");
+        ArrayList<User> users = new ArrayList<User>();
+        
+        for (Integer userId : userIds){
+            User user = userRepository.findByUserId(userId);
+            users.add(user);
+        }
+
+        return users;
+    }
 
 
-    @DeleteMapping(path="/id" ,produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(path="/id" , produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> deleteByUserId(@RequestParam(name = "userId") int id) {
         logger.info("Attempting to delete user with id: " + id);
 

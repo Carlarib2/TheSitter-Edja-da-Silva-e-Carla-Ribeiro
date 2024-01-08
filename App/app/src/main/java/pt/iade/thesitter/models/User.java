@@ -3,12 +3,16 @@ package pt.iade.thesitter.models;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 
 import java.io.Serializable;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 import pt.iade.thesitter.utilities.DateJsonAdapter;
 
@@ -45,6 +49,32 @@ public class User implements Serializable{
         this.userUploadIm=userUploadIm;
     }
 
+
+    public static void GetAllById(ArrayList<Integer> userIds, GetAllByIdResponse response) {
+        ArrayList<User> users = new ArrayList<User>();
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users/allbyid"));
+                    String resp = request.performPostRequest(userIds);
+
+                    JsonArray array = new Gson().fromJson(resp, JsonArray.class);
+
+                    for (JsonElement element : array) {
+                        users.add(new Gson().fromJson(element, User.class));
+                    }
+
+                    response.response(users);
+
+                } catch (Exception e) {
+                    Log.e("Sitter.GetAllById", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
 
     public void register (RegisterResponse response) {
         Thread thread = new Thread(new Runnable() {
@@ -167,6 +197,9 @@ public class User implements Serializable{
         this.userUploadDc = userUploadDc;
     }
 
+    public interface GetAllByIdResponse{
+        public void response(ArrayList<User> users);
+    }
 
     public interface LoginResponse {
         public void response(User user);

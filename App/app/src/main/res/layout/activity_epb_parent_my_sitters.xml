@@ -75,52 +75,41 @@
     <ImageButton
         android:id="@+id/my_sitters_home_imageButton_ep"
         android:layout_width="64dp"
-        android:layout_height="52dp"
+        android:layout_height="64dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/home_icon"
         android:onClick="startHomeP2"
         app:layout_constraintStart_toStartOf="@+id/my_sitter_divider45_ep"
         app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
-        app:srcCompat="@drawable/home_icon" />
+        app:srcCompat="@drawable/ic_home" />
 
     <ImageButton
         android:id="@+id/my_sittersR_imageButton2_ep"
         android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
+        android:layout_height="64dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/requests"
         android:onClick="startRequestsP2"
+        app:layout_constraintEnd_toStartOf="@+id/my_sittersP_imageButton5_ep"
         app:layout_constraintStart_toEndOf="@+id/my_sitters_home_imageButton_ep"
         app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
-        app:srcCompat="@drawable/event_icon" />
-
-    <ImageButton
-        android:id="@+id/my_sittersM_imageButton3_ep"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/email_icon"
-        android:onClick="startMessagesP4"
-        app:layout_constraintStart_toEndOf="@+id/my_sittersR_imageButton2_ep"
-        app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
-        app:srcCompat="@drawable/mail_icon" />
+        app:srcCompat="@drawable/ic_check_list" />
 
     <ImageButton
         android:id="@+id/my_sittersP_imageButton5_ep"
         android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
+        android:layout_height="64dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/my_sittersM_imageButton3_ep"
         app:layout_constraintTop_toBottomOf="@+id/my_sitter_divider45_ep"
-        app:srcCompat="@drawable/person_icon" />
+        app:srcCompat="@drawable/ic_account" />
 
 
 

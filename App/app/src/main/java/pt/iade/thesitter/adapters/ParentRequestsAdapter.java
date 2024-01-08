@@ -30,7 +30,7 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
     @Override
     public ParentRequestsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.parent_requests_view, parent, false);
+        View view = inflater.inflate(R.layout.row_parent_requests, parent, false);
         return new ParentRequestsAdapter.ViewHolder(view);
     }
 
@@ -60,10 +60,10 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            parent_requests_image = itemView.findViewById(R.id.parent_requests_image);
+            //parent_requests_image = itemView.findViewById(R.id.parent_requests_image);
             parent_requests_name = itemView.findViewById(R.id.parent_requests_name);
-            parent_requests_gender = itemView.findViewById(R.id.parent_requests_gender);
-            parent_requests_mobile = itemView.findViewById(R.id.parent_requests_mobile);
+            parent_requests_gender = itemView.findViewById(R.id.parent_requests_email);
+            parent_requests_mobile = itemView.findViewById(R.id.parent_requests_status);
 
 
         }

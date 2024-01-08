@@ -18,25 +18,21 @@ public class Booking {
     @Column(name = "boo_address")
     private String booAddress;
 
-    @Column(name = "boo_data")
+    @Column(name = "boo_date")
     private LocalDate booDate;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "boo_cli_id", referencedColumnName = "cli_id")
-    @JsonBackReference("client-booking")
-    private Client client;
+    @Column(name = "boo_cli_id")
+    private int booCliId;
 
     @Column(name = "boo_endTime")
     private String booEndTime;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "boo_status")
-    private BookingStatus status;
+    private BookingStatus booStatus;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "boo_sit_id", referencedColumnName = "sit_id")
-    @JsonBackReference("sitter-booking")
-    private Sitter sitter;
+    @Column(name = "boo_sit_id")
+    private int booSitId;
 
 
     @Column(name = "boo_startTime")
@@ -51,68 +47,111 @@ public class Booking {
 
     }
 
+
+
     public int getBooId() {
         return booId;
     }
 
-    public void setBooAddress(String booAddress) {
-        this.booAddress = booAddress;
-    }
+
 
     public String getBooAddress() {
         return booAddress;
     }
 
+
+
+    public void setBooAddress(String booAddress) {
+        this.booAddress = booAddress;
+    }
+
+
+
     public LocalDate getBooDate() {
         return booDate;
     }
+
+
 
     public void setBooDate(LocalDate booDate) {
         this.booDate = booDate;
     }
 
-    public Client getClient() {
-        return client;
+
+
+    public int getBooCliId() {
+        return booCliId;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+
+
+    public void setBooCliId(int booCliId) {
+        this.booCliId = booCliId;
     }
+
+
 
     public String getBooEndTime() {
         return booEndTime;
     }
 
+
+
     public void setBooEndTime(String booEndTime) {
         this.booEndTime = booEndTime;
     }
 
-    public BookingStatus getStatus() {
-        return status;
+
+
+    public BookingStatus getBooStatus() {
+        return booStatus;
     }
 
-    public void setStatus(BookingStatus status) {
-        this.status = status;
+
+
+    public void setBooStatus(BookingStatus booStatus) {
+        this.booStatus = booStatus;
     }
 
-    public Sitter getSitter() {
-        return sitter;
+
+
+    public int getBooSitId() {
+        return booSitId;
     }
 
-    public void setSitter(Sitter sitter) {
-        this.sitter = sitter;
+
+
+    public void setBooSitId(int booSitId) {
+        this.booSitId = booSitId;
     }
+
+
 
     public String getBooStartTime() {
         return booStartTime;
     }
 
+
+
     public void setBooStartTime(String booStartTime) {
         this.booStartTime = booStartTime;
     }
 
+
+
     public String getBooMore() {
         return booMore;
     }
+
+
+
+    public void setBooMore(String booMore) {
+        this.booMore = booMore;
+    }
+
+
+
+
+
 }
 

@@ -25,6 +25,8 @@ public class BookingController {
         logger.info("Sending all chats");
         return bookingRepository.findAll();
     }
+
+
     @PostMapping(path= "", produces=MediaType.APPLICATION_JSON_VALUE)
     public Booking saveBooking(@RequestBody Booking booking){
 
@@ -34,8 +36,9 @@ public class BookingController {
         return savedBooking;
     }
 
+
     @GetMapping(path="/id", produces=MediaType.APPLICATION_JSON_VALUE)
-    public Booking ids(@RequestParam (name= "booId") int id){
+    public Booking getById(@RequestParam (name= "booId") int id){
         logger.info("Sending booking with id:" + id);
         return bookingRepository.findByBooId(id);
     }
@@ -56,27 +59,33 @@ public class BookingController {
     }
 
 
-        @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-        public ResponseEntity<?> updateBooking(@PathVariable("id") int id, @RequestBody Booking updatedBooking) {
-            logger.info("Attempting to update Booking with id: " + id);
+    @PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> updateBooking(@PathVariable("id") int id, @RequestBody Booking updatedBooking) {
+        logger.info("Attempting to update Booking with id: " + id);
 
-            if (bookingRepository.existsById(id)) {
-                Booking existingBooking = bookingRepository.findById(id).get();
+        if (bookingRepository.existsById(id)) {
+            Booking existingBooking = bookingRepository.findById(id).get();
 
-                existingBooking.setBooDate(updatedBooking.getBooDate());
-                existingBooking.setBooEndTime(updatedBooking.getBooEndTime());
-                existingBooking.setBooStartTime(updatedBooking.getBooStartTime());
+            existingBooking.setBooAddress(updatedBooking.getBooAddress());
+            existingBooking.setBooDate(updatedBooking.getBooDate());
+            existingBooking.setBooEndTime(updatedBooking.getBooEndTime());
+            existingBooking.setBooStartTime(updatedBooking.getBooStartTime());
+            existingBooking.setBooMore(updatedBooking.getBooMore());
+            existingBooking.setBooSitId(updatedBooking.getBooSitId());
+            existingBooking.setBooCliId(updatedBooking.getBooCliId());
 
-                bookingRepository.save(existingBooking);
+            bookingRepository.save(existingBooking);
 
-                logger.info("Updated Booking with id: " + id);
-                return ResponseEntity.ok(existingBooking);
-            } else {
-                logger.info("Booking with id " + id + " not found.");
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Booking with id " + id + " not found.");
-            }
+            logger.info("Updated Booking with id: " + id);
+            return ResponseEntity.ok(existingBooking);
+
+        } else {
+
+            logger.info("Booking with id " + id + " not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Booking with id " + id + " not found.");
         }
     }
+}
 
 
 

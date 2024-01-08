@@ -26,6 +26,13 @@ public class FamilyMemberController {
         return familyMemberRepository.findAll();
     }
 
+    @GetMapping(path="/idCli/{cliId}", produces=MediaType.APPLICATION_JSON_VALUE)
+    Iterable<FamilyMember> getByParentId(@PathVariable int cliId ){
+        logger.info("Sending all family member");
+        return familyMemberRepository.findByFaCliId(cliId);
+
+    }
+
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public FamilyMember saveFamilyMember(@RequestBody FamilyMember familyMember){
         FamilyMember savedFamilyMember = familyMemberRepository.save(familyMember);

@@ -64,38 +64,28 @@
         app:layout_constraintTop_toBottomOf="@+id/recyclerView_myFamily" />
 
     <ImageButton
-        android:id="@+id/message_imageButton_epg"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/email_icon"
-        android:onClick="startMessages8"
-        android:src="@drawable/mail_icon"
-        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_epg"
-        app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg" />
-
-    <ImageButton
         android:id="@+id/requests_imageBfutton_epg"
         android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
+        android:layout_height="64dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/requests"
         android:onClick="startRequests7"
-        android:src="@drawable/event_icon"
+        android:src="@drawable/ic_check_list"
+        app:layout_constraintEnd_toStartOf="@+id/profile_imageButton_epg"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_epg"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg" />
 
     <ImageButton
         android:id="@+id/home_imageButton_epg"
         android:layout_width="64dp"
-        android:layout_height="52dp"
+        android:layout_height="64dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/home_icon"
         android:onClick="startHome7"
-        android:src="@drawable/home_icon"
+        android:src="@drawable/ic_home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg" />
 
@@ -128,16 +118,15 @@
     <ImageButton
         android:id="@+id/profile_imageButton_epg"
         android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
+        android:layout_height="64dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfile6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/message_imageButton_epg"
         app:layout_constraintTop_toBottomOf="@+id/my_family_divider33_epg"
-        app:srcCompat="@drawable/person_icon" />
+        app:srcCompat="@drawable/ic_account" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_myFamily"

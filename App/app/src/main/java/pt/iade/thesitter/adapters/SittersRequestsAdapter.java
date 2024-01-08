@@ -62,7 +62,7 @@ public class SittersRequestsAdapter extends RecyclerView.Adapter<SittersRequests
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            sitter_requests_image = itemView.findViewById(R.id.sitter_requests_image);
+            //sitter_requests_image = itemView.findViewById(R.id.sitter_requests_image);
             sitter_requests_name = itemView.findViewById(R.id.sitter_requests_name);
             sitter_requests_yes = itemView.findViewById(R.id.sitter_requests_yes);
             sitter_requests_no = itemView.findViewById(R.id.sitter_requests_no);

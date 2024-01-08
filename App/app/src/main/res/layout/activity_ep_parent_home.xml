@@ -13,157 +13,11 @@
       android:layout_width="150dp"
       android:layout_height="150dp"
       android:layout_marginStart="24dp"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="20dp"
       android:contentDescription="@string/Andre"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/parent_textView_ep"
       app:srcCompat="@drawable/parent_image" />
-
-  <View
-      android:id="@+id/divider1"
-      android:layout_width="5dp"
-      android:layout_height="99dp"
-      android:layout_marginStart="76dp"
-      android:layout_marginTop="8dp"
-      android:background="?android:attr/listDivider"
-      app:layout_constraintStart_toEndOf="@+id/textView"
-      app:layout_constraintTop_toBottomOf="@+id/divider3" />
-
-  <View
-      android:id="@+id/divider2"
-      android:layout_width="match_parent"
-      android:layout_height="2dp"
-      android:layout_marginTop="30dp"
-      android:background="?android:attr/listDivider"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_imageView_ep" />
-
-  <View
-      android:id="@+id/divider3"
-      android:layout_width="match_parent"
-      android:layout_height="2dp"
-      android:layout_marginTop="80dp"
-      android:background="?android:attr/listDivider"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-  <View
-      android:id="@+id/divider4"
-      android:layout_width="match_parent"
-      android:layout_height="2dp"
-      android:layout_marginTop="116dp"
-      android:background="?android:attr/listDivider"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider3" />
-
-  <Button
-      android:id="@+id/button_booking_p"
-      style="@style/Widget.AppCompat.Button.Borderless"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:background="@drawable/button3"
-      android:backgroundTint="#000000"
-      android:onClick="startBooking"
-      android:shadowColor="#1e1e1e"
-      android:text="@string/booking"
-      android:textColor="@color/black"
-      android:textStyle="bold"
-      app:backgroundTint="#000000"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.45"
-      app:layout_constraintStart_toEndOf="@+id/messag_button_ep"
-      app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-  <Button
-      android:id="@+id/messag_button_ep"
-      style="@style/Widget.AppCompat.Button.Borderless"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="50dp"
-      android:layout_marginTop="20dp"
-      android:background="@drawable/button3"
-      android:shadowColor="#1e1e1e"
-      android:text="@string/Messages"
-      android:textColor="@color/black"
-      android:textStyle="bold"
-      app:backgroundTint="#000000"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-  <TextView
-      android:id="@+id/textView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="50dp"
-      android:layout_marginTop="20dp"
-      android:text="@string/my_sitters."
-      android:textSize="16sp"
-      android:textStyle="bold"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider3" />
-
-  <TextView
-      android:id="@+id/textView5"
-      android:layout_width="141dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="30dp"
-      android:text="@string/number_family"
-      android:textAlignment="center"
-      android:textSize="16sp"
-      android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider3" />
-
-  <TextView
-      android:id="@+id/textView12"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15dp"
-      android:hint="@string/one_"
-      app:layout_constraintEnd_toEndOf="@+id/textView"
-      app:layout_constraintStart_toStartOf="@+id/textView"
-      app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-  <TextView
-      android:id="@+id/textView13"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
-      android:hint="@string/one"
-      app:layout_constraintEnd_toEndOf="@+id/textView5"
-      app:layout_constraintHorizontal_bias="0.545"
-      app:layout_constraintStart_toStartOf="@+id/textView5"
-      app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-  <View
-      android:id="@+id/parent_home_divider37_ep"
-      android:layout_width="409dp"
-      android:layout_height="1dp"
-      android:layout_marginTop="40dp"
-      android:background="?android:attr/listDivider"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView17"
-      tools:ignore="MissingConstraints" />
-
-  <TextView
-      android:id="@+id/textView18"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      android:text="@string/mobile_"
-      android:textSize="20sp"
-      android:textStyle="bold"
-      app:layout_constraintStart_toStartOf="@+id/textView19"
-      app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
   <TextView
       android:id="@+id/textView17"
@@ -192,12 +46,23 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
-      android:layout_marginTop="32dp"
+      android:layout_marginTop="50dp"
       android:text="@string/birthday"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/divider4" />
+      app:layout_constraintTop_toBottomOf="@+id/button_booking_p" />
+
+  <TextView
+      android:id="@+id/textView18"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="@string/mobile_"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/textView19"
+      app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
   <TextView
       android:id="@+id/address_textView_ep"
@@ -225,6 +90,46 @@
       android:textSize="20sp"
       app:layout_constraintStart_toStartOf="@+id/birthday_textView_ep"
       app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+  <ImageButton
+      android:id="@+id/home_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="63dp"
+      android:layout_marginStart="72dp"
+      android:layout_marginTop="8dp"
+      android:background="@drawable/edit_text_profile"
+      android:contentDescription="@string/home_icon"
+      android:onClick="startHome8"
+      android:src="@drawable/ic_home"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+  <ImageButton
+      android:id="@+id/requests_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/edit_text_profile"
+      android:contentDescription="@string/requests"
+      android:onClick="startRequests8"
+      android:src="@drawable/ic_check_list"
+      app:layout_constraintEnd_toStartOf="@+id/profile_imageButton_ep"
+      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
+      app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+  <ImageButton
+      android:id="@+id/profile_imageButton_ep"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginTop="10dp"
+
+      android:layout_marginEnd="30dp"
+      android:background="@drawable/edit_text_profile"
+      android:contentDescription="@string/person_icon"
+      android:onClick="startProfileP"
+      android:src="@drawable/ic_account"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/divider" />
 
   <TextView
       android:id="@+id/birthday_textView_ep"
@@ -273,52 +178,33 @@
       app:layout_constraintStart_toStartOf="@+id/name_textView_ep"
       app:layout_constraintTop_toBottomOf="@+id/name_textView_ep" />
 
-  <ImageButton
-      android:id="@+id/home_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/home_icon"
-      android:onClick="startHome8"
-      android:src="@drawable/home_icon"
+  <Button
+      android:id="@+id/button_booking_p"
+      style="@style/Widget.AppCompat.Button.Borderless"
+      android:layout_width="399dp"
+      android:layout_height="55dp"
+      android:layout_marginTop="64dp"
+      android:background="@drawable/button3"
+      android:backgroundTint="#000000"
+      android:onClick="startBooking"
+      android:shadowColor="#1e1e1e"
+      android:text="@string/booking"
+      android:textColor="@color/black"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:backgroundTint="#000000"
+      app:iconSize="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
+      app:layout_constraintTop_toBottomOf="@+id/parent_imageView_ep" />
 
-  <ImageButton
-      android:id="@+id/requests_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/requests"
-      android:onClick="startRequests8"
-      app:layout_constraintStart_toEndOf="@+id/home_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep"
-      app:srcCompat="@drawable/event_icon" />
-
-  <ImageButton
-      android:id="@+id/message_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/email_icon"
-      android:onClick="startMessagesP"
-      android:src="@drawable/mail_icon"
-      app:layout_constraintStart_toEndOf="@+id/requests_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
-
-  <ImageButton
-      android:id="@+id/profile_imageButton_ep"
-      android:layout_width="64dp"
-      android:layout_height="52dp"
-      android:layout_marginStart="30dp"
-      android:layout_marginTop="10dp"
-      android:contentDescription="@string/person_icon"
-      android:onClick="startProfileP"
-      android:src="@drawable/person_icon"
-      app:layout_constraintStart_toEndOf="@+id/message_imageButton_ep"
-      app:layout_constraintTop_toBottomOf="@+id/parent_home_divider37_ep" />
+  <View
+      android:id="@+id/divider"
+      android:layout_width="409dp"
+      android:layout_height="5dp"
+      android:layout_marginTop="100dp"
+      android:background="?android:attr/listDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/myFamily_selected"
                 app:layout_constraintTop_toBottomOf="@+id/myFamily_selected"
-                android:src="@drawable/babyImage"/>
+                android:src="@drawable/baby_image"/>
 
             <TextView
                 android:id="@+id/my_Family_name"

@@ -1,4 +1,4 @@
-package pt.iade.thesitter.adapters;
+/*package pt.iade.thesitter.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -24,8 +24,8 @@ public class MySittersAdapter extends RecyclerView.Adapter<MySittersAdapter.View
         this.items = items;
         this.context = context;
         clickListener = null;
-    }
-
+    }*/
+/*
     @NonNull
     @Override
     public MySittersAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -79,5 +79,5 @@ public class MySittersAdapter extends RecyclerView.Adapter<MySittersAdapter.View
     public interface ItemClickListener{
         public void onItemClick(View view, int position);
     }
-}
+}*/
 

@@ -38,10 +38,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/light_text"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/sitter_allRequests_name"
                 app:layout_constraintTop_toBottomOf="@+id/sitter_allRequests_name"
-                tools:text="Ana Rashelle" />
+                tools:text="Member:Ana Rashelle" />
 
             <TextView
                 android:id="@+id/textView22"

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,7 +45,7 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
         FamilyMember user = items.get(position);
 
         holder.my_Family_Name.setText(user.getFaName());
-       // holder.my_Family_Bdate.setLocalDate(user.getFaBdate());// to be fixed!!
+        holder.my_Family_Bdate.setText(user.getFaBdate().toString());// to be fixed!!
         holder.my_Family_Image.setImageResource(R.drawable.drake);
         holder.my_Family_Button.setImageResource(R.drawable.edit_pen_icon);
     }
@@ -56,7 +57,7 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView my_Family_Image;
-        EditText my_Family_Name, my_Family_Bdate;
+        TextView my_Family_Name, my_Family_Bdate;
         ImageButton my_Family_Button;
         View rowDivider;
         public ViewHolder(@NonNull View itemView) {

@@ -110,30 +110,10 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_imageView5_es" />
 
     <Button
-        android:id="@+id/message_button_ep"
-        android:layout_width="141dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="50dp"
-        android:background="@drawable/button3"
-        android:contentDescription="@string/Save"
-        android:onClick="startMessages"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="2"
-        android:text="@string/Messages"
-        android:textColor="#050505"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/requests_button_es"
-        app:layout_constraintTop_toTopOf="@+id/requests_button_es" />
-
-    <Button
         android:id="@+id/requests_button_es"
-        android:layout_width="141dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="400dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button3"
         android:backgroundTint="#000000"
         android:contentDescription="@string/Save"
@@ -143,8 +123,11 @@
         android:shadowRadius="2"
         android:text="@string/requests"
         android:textColor="#090909"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_home_divider2_ep" />
 
@@ -177,8 +160,6 @@
         android:layout_height="5dp"
         android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="@+id/message_button_ep"
-        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="@+id/requests_button_es"
         app:layout_constraintTop_toBottomOf="@+id/requests_button_es" />
 
@@ -357,50 +338,40 @@
     <ImageButton
         android:id="@+id/home_imageButton_es"
         android:layout_width="64dp"
-        android:layout_height="52dp"
+        android:layout_height="64dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/home_icon"
-        android:src="@drawable/home_icon"
+        android:src="@drawable/ic_home"
         app:layout_constraintStart_toStartOf="@+id/profile_divider38_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider38_es" />
 
     <ImageButton
         android:id="@+id/requests_imageBfutton_es"
         android:layout_width="64dp"
-        android:layout_height="52dp"
+        android:layout_height="64dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/requests"
         android:onClick="startRequests2"
-        android:src="@drawable/event_icon"
+        android:src="@drawable/ic_check_list"
+        app:layout_constraintEnd_toStartOf="@+id/profile_imageButton_es"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_es"
-        app:layout_constraintTop_toBottomOf="@+id/profile_divider38_es" />
-
-    <ImageButton
-        android:id="@+id/message_imageButton_es"
-        android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/email_icon"
-        android:onClick="startMessages3"
-        android:src="@drawable/mail_icon"
-        app:layout_constraintStart_toEndOf="@+id/requests_imageBfutton_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider38_es" />
 
     <ImageButton
         android:id="@+id/profile_imageButton_es"
         android:layout_width="64dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="30dp"
+        android:layout_height="64dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfile2"
-        android:src="@drawable/person_icon"
+        android:src="@drawable/ic_account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/message_imageButton_es"
         app:layout_constraintTop_toBottomOf="@+id/profile_divider38_es" />
 
     <TextView
@@ -411,6 +382,7 @@
         android:layout_marginEnd="40dp"
         android:fontFamily="sans-serif-medium"
         android:hint="@string/six"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider7" />
 

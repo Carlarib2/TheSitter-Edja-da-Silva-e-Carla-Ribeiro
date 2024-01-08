@@ -8,59 +8,19 @@
     android:background="@drawable/gradient"
     tools:context=".Requests_view">
 
-    <EditText
-        android:id="@+id/declined_editText_epe"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="426dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:autofillHints="@string/declined"
-        android:textAlignment="center"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/declined_textView_ep" />
-
-    <EditText
-        android:id="@+id/accepted_editText_epe"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="418dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:autofillHints="@string/accepted"
-        android:textAlignment="center"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/accepted_textView_ep"
-        app:layout_constraintStart_toStartOf="@+id/accepted_textView_ep"
-        app:layout_constraintTop_toBottomOf="@+id/accepted_textView_ep" />
-
-    <EditText
-        android:id="@+id/pending_editText_epe"
-        style="@style/Edit_Text_Profile"
-        android:layout_width="416dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:autofillHints="@string/pending"
-        android:textAlignment="center"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/pending_textView_epe"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/pending_textView_epe"
-        app:layout_constraintTop_toBottomOf="@+id/pending_textView_epe" />
-
     <TextView
         android:id="@+id/declined_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/declined"
+
         android:textAlignment="textStart"
         android:textSize="24sp"
-
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/accepted_editText_epe"
-        app:layout_constraintTop_toBottomOf="@+id/accepted_editText_epe" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView3_sitter_accepted" />
 
     <TextView
         android:id="@+id/requests_textView31_esa"
@@ -159,7 +119,7 @@
         android:id="@+id/pending_textView_epe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/pending"
         android:textAlignment="center"
@@ -172,14 +132,14 @@
         android:id="@+id/accepted_textView_ep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/accepted"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pending_editText_epe"
-        app:layout_constraintTop_toBottomOf="@+id/pending_editText_epe" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_sitter_pending" />
 
     <TextView
         android:id="@+id/parent_textView_epe"
@@ -207,12 +167,12 @@
         android:id="@+id/parent_requests_divider18_epe"
         android:layout_width="413dp"
         android:layout_height="1dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="5dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/declined_editText_epe" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView4_sitter_declined" />
 
     <TextView
         android:id="@+id/requests_textView52_esa"
@@ -267,14 +227,30 @@
         app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider18_epe"
         app:srcCompat="@drawable/ic_account" />
 
-    <Button
-        android:id="@+id/request_test_button_esa"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:onClick="startPending"
-        app:layout_constraintBottom_toBottomOf="@+id/pending_editText_epe"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_sitter_pending"
+        android:layout_width="408dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pending_editText_epe"
-        app:layout_constraintTop_toTopOf="@+id/pending_editText_epe" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pending_textView_epe" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView3_sitter_accepted"
+        android:layout_width="407dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepted_textView_ep" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView4_sitter_declined"
+        android:layout_width="400dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/declined_textView_ep" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

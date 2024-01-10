@@ -37,10 +37,14 @@ public class FamilyMember {
     @Column(name="fa_cli_id")
     private int faCliId;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    /*@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn (name="fa_cre_id", referencedColumnName = "cre_id")
     @JsonManagedReference("familyMember-creatures")
-    private Creatures creatures;
+    private Creatures creatures;*/
+
+    @Column(name="fa_cre_id")
+    private int faCreiId;
+
 
 
     public FamilyMember(){
@@ -138,16 +142,11 @@ public class FamilyMember {
     }
 
 
-
-    public Creatures getCreatures() {
-        return creatures;
+    public int getFaCreiId() {
+        return faCreiId;
     }
 
-
-
-    public void setCreatures(Creatures creatures) {
-        this.creatures = creatures;
+    public void setFaCreiId(int faCreiId) {
+        this.faCreiId = faCreiId;
     }
-
-    
 }

@@ -147,6 +147,10 @@ public class Register extends AppCompatActivity {
             newUser.setUserPassword(passwordEditText.getText().toString());
             newUser.setUserBdate(birtDate);
             newUser.setUserMobile(mobileEditText.getText().toString());
+            newUser.setUserAddress(addressEditText.getText().toString());
+            newUser.setUserGender(gender.getSelectedItem().toString());
+
+
         }
 
     }

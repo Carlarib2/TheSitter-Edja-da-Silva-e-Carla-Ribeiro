@@ -8,6 +8,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.time.LocalDate;
@@ -17,7 +18,7 @@ import java.util.HashMap;
 import pt.iade.thesitter.utilities.DateJsonAdapter;
 import pt.iade.thesitter.utilities.WebRequest;
 
-public class FamilyMember {
+public class FamilyMember implements Serializable {
 
 
 
@@ -85,21 +86,21 @@ public class FamilyMember {
     }
 
 
-    public static void Login(String name, String birthday, String school, String allergies, String aboutMe , FamilyMember.CreateResponse response){
+    public void create (CreateResponse response) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
                     WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/familyMembers"));
+                    String resp = request.performPostRequest(FamilyMember.this);
 
+                    FamilyMember familyMember = new Gson().fromJson(resp, FamilyMember.class);
 
-                    String resp = request.performGetRequest();
-                    User user = new Gson().fromJson(resp, User.class);
-
-                    response.response(user);
+                    faId = familyMember.getFaId();
+                    response.response();
 
                 } catch (Exception e){
-                    Log.e("User.Login", e.toString());
+                    Log.e("FamilyMember.create", e.toString());
                 }
             }
         });

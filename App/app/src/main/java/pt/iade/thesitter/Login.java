@@ -85,6 +85,10 @@ public class Login extends AppCompatActivity {
         });
 
     }
+    public void startRegister3(View view){
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+    }
 
 }
 

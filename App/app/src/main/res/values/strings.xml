@@ -159,6 +159,7 @@
     <string name="cancels">0 cancels of 0</string>
     <string name="friday">Friday, November 30th</string>
     <string name="saturday">Saturday, December 20th</string>
+    <string name="es_sitter">\u0040Sitter</string>
     <string name="six">6 / $301.12</string>
 
     <!--Activity_esa_requests_view-->

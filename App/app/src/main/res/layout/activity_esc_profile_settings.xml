@@ -85,9 +85,10 @@
         android:id="@+id/parent1_textView_epf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/advance"
+        android:hint="@string/es_sitter"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/parent_textView_epf"
         app:layout_constraintTop_toBottomOf="@+id/parent_textView_epf" />
 

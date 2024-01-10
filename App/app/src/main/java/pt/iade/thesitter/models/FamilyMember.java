@@ -1,12 +1,14 @@
 package pt.iade.thesitter.models;
 
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.time.LocalDate;
@@ -16,7 +18,7 @@ import java.util.HashMap;
 import pt.iade.thesitter.utilities.DateJsonAdapter;
 import pt.iade.thesitter.utilities.WebRequest;
 
-public class FamilyMember {
+public class FamilyMember implements Serializable {
 
 
 
@@ -37,6 +39,7 @@ public class FamilyMember {
     private int faCliId;
 
     private int faCreId;
+
 
 
     public FamilyMember(){
@@ -81,6 +84,29 @@ public class FamilyMember {
         thread.start();
 
     }
+
+
+    public void create (CreateResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/familyMembers"));
+                    String resp = request.performPostRequest(FamilyMember.this);
+
+                    FamilyMember familyMember = new Gson().fromJson(resp, FamilyMember.class);
+
+                    faId = familyMember.getFaId();
+                    response.response();
+
+                } catch (Exception e){
+                    Log.e("FamilyMember.create", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
+
 
     public int getFaId() {
         return faId;
@@ -154,5 +180,9 @@ public class FamilyMember {
 
     public interface GetAllByParentIdResponse{
         public void response(ArrayList<FamilyMember> familyMembers);
+    }
+
+    public interface CreateResponse{
+        public void response();
     }
 }

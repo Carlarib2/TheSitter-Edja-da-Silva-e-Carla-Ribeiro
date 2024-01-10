@@ -1,6 +1,7 @@
 package pt.iade.thesitter.models;
 
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -37,6 +38,7 @@ public class FamilyMember {
     private int faCliId;
 
     private int faCreId;
+
 
 
     public FamilyMember(){
@@ -81,6 +83,29 @@ public class FamilyMember {
         thread.start();
 
     }
+
+
+    public static void Login(String name, String birthday, String school, String allergies, String aboutMe , FamilyMember.CreateResponse response){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/familyMembers"));
+
+
+                    String resp = request.performGetRequest();
+                    User user = new Gson().fromJson(resp, User.class);
+
+                    response.response(user);
+
+                } catch (Exception e){
+                    Log.e("User.Login", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
+
 
     public int getFaId() {
         return faId;
@@ -154,5 +179,9 @@ public class FamilyMember {
 
     public interface GetAllByParentIdResponse{
         public void response(ArrayList<FamilyMember> familyMembers);
+    }
+
+    public interface CreateResponse{
+        public void response();
     }
 }

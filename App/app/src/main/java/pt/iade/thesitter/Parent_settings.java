@@ -17,6 +17,7 @@ public class Parent_settings extends AppCompatActivity {
     Client client;
     TextView parentTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,8 @@ public class Parent_settings extends AppCompatActivity {
     }
 
     public void setupComponents(){
-
+        parentTextView=findViewById(R.id.parent_textView_epf);
+        populateViews();
     }
 
 
@@ -42,6 +44,8 @@ public class Parent_settings extends AppCompatActivity {
 
     public void startHomeP5(View view){
         Intent intent = new Intent(this, Parent_home.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
@@ -52,16 +56,22 @@ public class Parent_settings extends AppCompatActivity {
 
     public void startRequestsP4(View view){
         Intent intent = new Intent(this, Parent_requests.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startProfileP5(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startCalendar2(View view){
         Intent intent = new Intent(this, Calendar.class);
+        intent.putExtra("user", user);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 

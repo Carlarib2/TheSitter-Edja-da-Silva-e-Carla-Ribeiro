@@ -5,49 +5,42 @@
     android:id="@+id/register_background_d"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
     android:background="@drawable/gradient"
     android:contentDescription="@string/lock_icon"
     tools:context=".Register">
 
-    <TextView
-        android:id="@+id/app_textView_d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/app_logo"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/register_divider11_d"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginTop="7dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
-
     <ScrollView
-        android:layout_width="406dp"
-        android:layout_height="828dp"
+        android:layout_width="427dp"
+        android:layout_height="920dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_divider11_d">
+        app:layout_constraintTop_toTopOf="parent" >
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/username"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/app_textView_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_logo"
+                    android:textSize="34sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Switch
                     android:id="@+id/sitter_switch_d"
@@ -71,9 +64,9 @@
                     android:text="@string/app_text1"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintEnd_toEndOf="@+id/app_textView_d"
+                    app:layout_constraintStart_toStartOf="@+id/app_textView_d"
+                    app:layout_constraintTop_toBottomOf="@+id/app_textView_d" />
 
                 <ImageView
                     android:id="@+id/register_imageView6_d"
@@ -92,7 +85,7 @@
                     style="@style/Edit_Text"
                     android:layout_width="315dp"
                     android:layout_height="74dp"
-                    android:layout_marginTop="130dp"
+                    android:layout_marginTop="300dp"
                     android:layout_marginBottom="30dp"
                     android:autofillHints="@string/app_contentDescription1"
                     android:hint="@string/app_user"
@@ -412,5 +405,7 @@
 
         </LinearLayout>
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,7 @@ public class Profile extends AppCompatActivity {
         setupComponents();
     }
 
-    public void startSave(View view){
+  public void startSave(View view){
         Intent intent = new Intent(this, The_profile_1.class);
         startActivity(intent);
     }

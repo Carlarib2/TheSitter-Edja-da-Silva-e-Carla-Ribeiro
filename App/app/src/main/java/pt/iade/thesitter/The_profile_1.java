@@ -56,28 +56,22 @@ public class The_profile_1 extends AppCompatActivity {
         setupComponents();
     }
 
-    public void startRequests(View view){
+   /* public void startRequests(View view){
         Intent intent = new Intent(this, Requests_view.class);
         startActivity(intent);
-    }
-
-    /*public void startMessages(View view){
-        Intent intent = new Intent(this, Messages.class);
-        startActivity(intent);
     }*/
 
-    /*public void startMessages3(View view){
-        Intent intent = new Intent(this, Messages.class);
-        startActivity(intent);
-    }*/
-
-    public void startProfile2(View view){
+    public void startProfile(View view){
         Intent intent = new Intent(this, Profile_settings.class);
+        intent.putExtra("user", user);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
     public void startRequests2(View view){
         Intent intent = new Intent(this, Requests_view.class);
+        intent.putExtra("user", user);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 

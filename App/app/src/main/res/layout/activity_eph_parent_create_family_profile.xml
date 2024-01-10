@@ -9,6 +9,26 @@
     tools:context=".Parent_create_family_profile">
 
     <EditText
+        android:id="@+id/gender_editTex_eph2"
+        style="@style/Edit_Text_Profile"
+        android:layout_width="384dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="@string/Address"
+        android:firstBaselineToTopHeight="5dp"
+        android:hint="@string/Gender"
+        android:inputType="text"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/school_editTex_eph"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/school_editTex_eph"
+        app:layout_constraintTop_toBottomOf="@+id/school_editTex_eph" />
+
+    <EditText
         android:id="@+id/allergies_editTex_eph"
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
@@ -24,14 +44,15 @@
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/school_editTex_eph"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/school_editTex_eph"
-        app:layout_constraintTop_toBottomOf="@+id/school_editTex_eph" />
+        app:layout_constraintTop_toBottomOf="@+id/gender_editTex_eph2" />
 
     <EditText
         android:id="@+id/notes_editTex_eph"
         style="@style/Edit_Text_Profile"
-        android:layout_width="382dp"
-        android:layout_height="110dp"
+        android:layout_width="384dp"
+        android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
@@ -43,6 +64,7 @@
         android:textAllCaps="false"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/allergies_editTex_eph"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="@+id/allergies_editTex_eph"
         app:layout_constraintTop_toBottomOf="@+id/allergies_editTex_eph" />
 
@@ -89,7 +111,7 @@
         style="@style/Edit_Text_Profile"
         android:layout_width="384dp"
         android:layout_height="65dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:autofillHints="@string/Address"
         android:firstBaselineToTopHeight="5dp"
         android:hint="@string/name"
@@ -157,7 +179,7 @@
         android:id="@+id/save_button_eph"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"

@@ -14,20 +14,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import pt.iade.thesitter.models.Client;
+import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class Profile_settings extends AppCompatActivity {
 
     User user;
     Client client;
+    Sitter sitter;
     TextView sitterTextView;
     protected Switch profileOnSwitch;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esc_profile_settings);
 
         Intent intent = getIntent();
+        sitter=(Sitter) intent.getSerializableExtra("sitter");
         user= (User)intent.getSerializableExtra("user");
         client=(Client) intent.getSerializableExtra("client");
 
@@ -35,7 +41,7 @@ public class Profile_settings extends AppCompatActivity {
     }
     public void setupComponents(){
         sitterTextView= findViewById(R.id.parent_textView_epf);
-        populateViews();
+
 
         profileOnSwitch = (Switch) findViewById(R.id.profile_switch_epf);
         profileOnSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -54,8 +60,13 @@ public class Profile_settings extends AppCompatActivity {
     }
 
 
-    public void populateViews(){
-        sitterTextView.setText(user.getUserName());
+    public void populateViews() {
+        if (user != null) {
+            sitterTextView.setText(user.getUserName());
+        } else {
+            Toast.makeText(this, "Erro: Usuário não disponível.", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
 
@@ -63,6 +74,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, The_profile_1.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
@@ -75,6 +87,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, Parent_settings.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
@@ -82,6 +95,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, Requests_view.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
@@ -89,6 +103,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, Calendar.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
@@ -96,6 +111,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, My_rate.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 
@@ -103,6 +119,7 @@ public class Profile_settings extends AppCompatActivity {
         Intent intent = new Intent(this, My_experience.class);
         intent.putExtra("user", user);
         intent.putExtra("client", client);
+        intent.putExtra("sitter", sitter);
         startActivity(intent);
     }
 

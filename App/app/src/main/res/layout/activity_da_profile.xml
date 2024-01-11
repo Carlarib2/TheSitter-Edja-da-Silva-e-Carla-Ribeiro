@@ -75,6 +75,7 @@
         android:background="@drawable/buttonshape"
         android:contentDescription="@string/Save"
         android:fontFamily="@font/allerta_stencil"
+        android:onClick="startSave"
         android:shadowColor="#F3E5F5"
         android:shadowDx="2"
         android:shadowDy="2"

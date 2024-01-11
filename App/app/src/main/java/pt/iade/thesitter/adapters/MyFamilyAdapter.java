@@ -66,7 +66,7 @@ public class MyFamilyAdapter extends RecyclerView.Adapter<MyFamilyAdapter.ViewHo
             my_Family_Image = itemView.findViewById(R.id.my_Family_image);
             my_Family_Name = itemView.findViewById(R.id.my_Family_name);
             my_Family_Bdate = itemView.findViewById(R.id.my_Family_Bdate);
-            my_Family_Button = itemView.findViewById(R.id.my_Family_button);
+           my_Family_Button = itemView.findViewById(R.id.my_Family_button);
 
 
         }

@@ -42,7 +42,7 @@ public class Profile extends AppCompatActivity {
         aboutMeEditText = (EditText) findViewById(R.id.about_editText_da);
         saveButton = (Button) findViewById(R.id.save_button_da);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
+      /*  saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(educationEditText.getText())){
@@ -60,7 +60,7 @@ public class Profile extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override

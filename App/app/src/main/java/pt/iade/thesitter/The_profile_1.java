@@ -82,6 +82,7 @@ public class The_profile_1 extends AppCompatActivity {
     }
 
     private void populateViews() {
+
         name_textView.setText(user.getUserName());
     }
 }

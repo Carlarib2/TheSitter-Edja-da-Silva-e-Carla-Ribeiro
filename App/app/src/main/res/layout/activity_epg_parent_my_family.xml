@@ -94,7 +94,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="#0C0C0C"
         android:clickable="true"
         android:contentDescription="@string/plu_icon"
         android:onClick="startAdd"

@@ -1,6 +1,7 @@
 package pt.iade.thesitter.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,17 @@ import java.util.ArrayList;
 
 import pt.iade.thesitter.R;
 import pt.iade.thesitter.models.Booking;
+import pt.iade.thesitter.models.Client;
+import pt.iade.thesitter.models.Sitter;
+import pt.iade.thesitter.models.User;
 
 public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAdapter.ViewHolder> {
     ArrayList<Booking> items;
     Context context;
+    User user;
+    Client client;
+     Sitter sitter;
+
     ParentRequestsAdapter.ItemClickListener clickListener;
 
     public ParentRequestsAdapter(ArrayList<Booking> items, Context context) {
@@ -42,10 +50,29 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
     public void onBindViewHolder(@NonNull ParentRequestsAdapter.ViewHolder holder, int position) {
         Booking booking = items.get(position);
 
-        holder.sitter_requests_name.setText(booking.getSitter().getUser().getUserName());
-        holder.sitter_requests_email.setText(booking.getSitter().getUser().getUserEmail());
+        if (booking == null) {
+            // Trate o caso em que Booking é null
+            holder.sitter_requests_name.setText("Dados Indisponíveis");
+            holder.sitter_requests_email.setText("Dados Indisponíveis");
+            holder.sitter_requests_status.setText("Status Indisponível");
+            return; // Sai do método se booking é null
+        }
+
+        // Se Booking não é null, mas Sitter ou User são null
+        if (booking.getSitter() == null || booking.getSitter().getUser() == null) {
+            holder.sitter_requests_name.setText("Nome Indisponível");
+            holder.sitter_requests_email.setText("Email Indisponível");
+        } else {
+            // Se nem Booking, nem Sitter, nem User são null
+            holder.sitter_requests_name.setText(booking.getSitter().getUser().getUserName());
+            holder.sitter_requests_email.setText(booking.getSitter().getUser().getUserEmail());
+        }
+
+        // Definir o status do booking, que deve estar sempre disponível se Booking não for null
         holder.sitter_requests_status.setText(booking.getBooStatus().toString());
     }
+
+
 
     @Override
     public int getItemCount() {

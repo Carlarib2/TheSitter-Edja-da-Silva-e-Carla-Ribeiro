@@ -20,18 +20,18 @@
             android:layout_height="match_parent">
 
             <CheckBox
-                android:id="@+id/sitter_requests_yes"
+                android:id="@+id/parent_requests_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/Yes"
                 android:textColor="@color/ACCEPTED"
-                app:layout_constraintEnd_toStartOf="@+id/sitter_requests_no"
+                app:layout_constraintEnd_toStartOf="@+id/parent_requests_no"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
-                android:id="@+id/sitter_requests_no"
+                android:id="@+id/parent_requests_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/sitter_requests_name"
+                android:id="@+id/parent_requests_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
@@ -55,7 +55,7 @@
                 tools:text="Felizarda Gaspar" />
 
             <TextView
-                android:id="@+id/sitter_requests_family"
+                android:id="@+id/parent_requests_family"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -63,8 +63,8 @@
                 android:textColor="@color/light_text"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/sitter_requests_name"
-                app:layout_constraintTop_toBottomOf="@+id/sitter_requests_name"
+                app:layout_constraintStart_toStartOf="@+id/parent_requests_name"
+                app:layout_constraintTop_toBottomOf="@+id/parent_requests_name"
                 tools:text="Member: Ana Rashelle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

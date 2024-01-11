@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,7 +46,7 @@ public class SittersRequestsAdapter extends RecyclerView.Adapter<SittersRequests
         //holder.sitter_requests_name.setText(user.getBooName());
         //holder.sitter_requests_yes.set(user.get());// to be fixed!!
        // holder.sitter_requests_no.setImageResource(R.drawable.drake);
-        holder.sitter_requests_image.setImageResource(R.drawable.ic_launcher_background);
+        //holder.parent_requests_image.setImageResource(R.drawable.ic_launcher_background);
     }
 
     @Override
@@ -55,17 +55,17 @@ public class SittersRequestsAdapter extends RecyclerView.Adapter<SittersRequests
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        ImageView sitter_requests_image;
-        EditText sitter_requests_name;
-        CheckBox sitter_requests_yes, sitter_requests_no;
+        ImageView parent_requests_image;
+        TextView parent_requests_name;
+        CheckBox parent_requests_yes, parent_requests_no;
         View rowDivider;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //sitter_requests_image = itemView.findViewById(R.id.sitter_requests_image);
-            sitter_requests_name = itemView.findViewById(R.id.sitter_requests_name);
-            sitter_requests_yes = itemView.findViewById(R.id.sitter_requests_yes);
-            sitter_requests_no = itemView.findViewById(R.id.sitter_requests_no);
+            parent_requests_name = itemView.findViewById(R.id.parent_requests_name);
+            parent_requests_yes = itemView.findViewById(R.id.parent_requests_yes);
+            parent_requests_no = itemView.findViewById(R.id.parent_requests_no);
 
 
         }

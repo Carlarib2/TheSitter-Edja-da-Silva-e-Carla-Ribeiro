@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/parent_requests_name"
+                android:id="@+id/sitter_requests_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
@@ -33,7 +33,7 @@
                 tools:text="Dalinela Bastos" />
 
             <TextView
-                android:id="@+id/parent_requests_email"
+                android:id="@+id/sitter_requests_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -41,13 +41,13 @@
                 android:layout_marginTop="8dp"
                 android:textColor="@color/light_text"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/parent_requests_name"
-                app:layout_constraintStart_toStartOf="@+id/parent_requests_name"
-                app:layout_constraintTop_toBottomOf="@+id/parent_requests_name"
+                app:layout_constraintEnd_toEndOf="@+id/sitter_requests_name"
+                app:layout_constraintStart_toStartOf="@+id/sitter_requests_name"
+                app:layout_constraintTop_toBottomOf="@+id/sitter_requests_name"
                 tools:text="dalinela@gmail.com" />
 
             <TextView
-                android:id="@+id/parent_requests_status"
+                android:id="@+id/sitter_requests_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -57,9 +57,9 @@
                 android:textColor="@color/PENDING"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/parent_requests_email"
-                app:layout_constraintStart_toStartOf="@+id/parent_requests_email"
-                app:layout_constraintTop_toBottomOf="@+id/parent_requests_email"
+                app:layout_constraintEnd_toEndOf="@+id/sitter_requests_email"
+                app:layout_constraintStart_toStartOf="@+id/sitter_requests_email"
+                app:layout_constraintTop_toBottomOf="@+id/sitter_requests_email"
                 tools:text="PENDING" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

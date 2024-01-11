@@ -4,8 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import pt.iade.thesitter.R;
-import pt.iade.thesitter.models.User;
+import pt.iade.thesitter.models.Booking;
 
 public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAdapter.ViewHolder> {
-    ArrayList<User> items;
+    ArrayList<Booking> items;
     Context context;
     ParentRequestsAdapter.ItemClickListener clickListener;
 
-    public ParentRequestsAdapter(ArrayList<User> items, Context context) {
+    public ParentRequestsAdapter(ArrayList<Booking> items, Context context) {
         this.items = items;
         this.context = context;
         clickListener = null;
@@ -31,6 +30,7 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
     public ParentRequestsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.row_parent_requests, parent, false);
+
         return new ParentRequestsAdapter.ViewHolder(view);
     }
 
@@ -40,12 +40,11 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
 
     @Override
     public void onBindViewHolder(@NonNull ParentRequestsAdapter.ViewHolder holder, int position) {
-        User user = items.get(position);
+        Booking booking = items.get(position);
 
-        holder.parent_requests_name.setText(user.getUserName());
-        holder.parent_requests_mobile.setText(user.getUserMobile());
-        holder.parent_requests_gender.setText(user.getUserGender());
-        holder.parent_requests_image.setImageResource(R.drawable.drake);
+        holder.sitter_requests_name.setText(booking.getSitter().getUser().getUserName());
+        holder.sitter_requests_email.setText(booking.getSitter().getUser().getUserEmail());
+        holder.sitter_requests_status.setText(booking.getBooStatus().toString());
     }
 
     @Override
@@ -54,16 +53,15 @@ public class ParentRequestsAdapter extends RecyclerView.Adapter<ParentRequestsAd
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        ImageView parent_requests_image;
-        EditText parent_requests_name, parent_requests_gender, parent_requests_mobile;
+        TextView sitter_requests_name, sitter_requests_email, sitter_requests_status;
         View rowDivider;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //parent_requests_image = itemView.findViewById(R.id.parent_requests_image);
-            parent_requests_name = itemView.findViewById(R.id.parent_requests_name);
-            parent_requests_gender = itemView.findViewById(R.id.parent_requests_email);
-            parent_requests_mobile = itemView.findViewById(R.id.parent_requests_status);
+            sitter_requests_name = itemView.findViewById(R.id.sitter_requests_name);
+            sitter_requests_email = itemView.findViewById(R.id.sitter_requests_email);
+            sitter_requests_status = itemView.findViewById(R.id.sitter_requests_status);
 
 
         }

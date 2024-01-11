@@ -9,46 +9,6 @@
     tools:context=".Requests_view">
 
     <TextView
-        android:id="@+id/declined_textView_ep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/declined"
-        android:textAlignment="textStart"
-
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2_parent_accepted" />
-
-    <TextView
-        android:id="@+id/pending_textView_epe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/pending"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider3_epe" />
-
-    <TextView
-        android:id="@+id/accepted_textView_ep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/accepted"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView_parent_pending" />
-
-    <TextView
         android:id="@+id/parent_textView_epe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,81 +30,118 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_textView_epe" />
 
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider3_epe">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pending_textView_epe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pending"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_parent_pending"
+                android:layout_width="414dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/accepted_textView_ep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/accepted"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView2_parent_accepted"
+                android:layout_width="410dp"
+                android:layout_height="138dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/declined_textView_ep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/declined"
+                android:textAlignment="textStart"
+
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView3_parent_declined"
+                android:layout_width="408dp"
+                android:layout_height="136dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
     <View
         android:id="@+id/parent_requests_divider18_epe"
         android:layout_width="413dp"
         android:layout_height="1dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="8dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/home_imageButton_epe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView3_parent_declined" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/home_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/home_icon"
         android:onClick="startHome9"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/parent_requests_divider18_epe"
-        app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider18_epe"
         app:srcCompat="@drawable/ic_home" />
 
     <ImageButton
         android:id="@+id/requests_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/requests"
         android:onClick="startRequests9"
+        app:layout_constraintBottom_toBottomOf="@+id/home_imageButton_epe"
         app:layout_constraintEnd_toStartOf="@+id/profile_imageButton_epe"
         app:layout_constraintStart_toEndOf="@+id/home_imageButton_epe"
-        app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider18_epe"
         app:srcCompat="@drawable/ic_check_list" />
 
     <ImageButton
         android:id="@+id/profile_imageButton_epe"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/edit_text_profile"
         android:contentDescription="@string/person_icon"
         android:onClick="startProfile8"
+        app:layout_constraintBottom_toBottomOf="@+id/requests_imageButton_epe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_requests_divider18_epe"
         app:srcCompat="@drawable/ic_account" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_parent_pending"
-        android:layout_width="414dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pending_textView_epe" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2_parent_accepted"
-        android:layout_width="410dp"
-        android:layout_height="138dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accepted_textView_ep" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView3_parent_declined"
-        android:layout_width="408dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/declined_textView_ep" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

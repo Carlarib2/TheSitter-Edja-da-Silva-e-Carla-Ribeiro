@@ -21,7 +21,6 @@ import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class Parent_selectSitters extends AppCompatActivity {
-    ArrayList<User> sitUserList;
     ArrayList<Sitter> sittersList;
     RecyclerView listView;
     SelectSitterRowAdapter selectSitterRowAdapter;
@@ -81,11 +80,10 @@ public class Parent_selectSitters extends AppCompatActivity {
 
         Sitter.GetSitters(new Sitter.GetSittersResponse() {
             @Override
-            public void response(ArrayList<User> users, ArrayList<Sitter> sitters) {
-                sitUserList = users;
+            public void response(ArrayList<Sitter> sitters) {
                 sittersList = sitters;
 
-                selectSitterRowAdapter = new SelectSitterRowAdapter(sitUserList, Parent_selectSitters.this);
+                selectSitterRowAdapter = new SelectSitterRowAdapter(sittersList, Parent_selectSitters.this);
                 selectSitterRowAdapter.setOnClickListener(new SelectSitterRowAdapter.ItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
@@ -110,7 +108,7 @@ public class Parent_selectSitters extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                booking.setBooSitId(sittersList.get(sitPosition).getSitId());
+                booking.setSitter(sittersList.get(sitPosition));
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("booking", booking);
                 setResult(AppCompatActivity.RESULT_OK, returnIntent);

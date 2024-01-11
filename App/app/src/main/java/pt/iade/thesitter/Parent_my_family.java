@@ -20,7 +20,6 @@ public class Parent_my_family extends AppCompatActivity {
     protected ArrayList<FamilyMember> familyMemberList;
     protected RecyclerView my_Family_listView;
     MyFamilyAdapter myFamilyAdapter;
-    User user;
     Client client;
 
     @Override
@@ -29,30 +28,23 @@ public class Parent_my_family extends AppCompatActivity {
         setContentView(R.layout.activity_epg_parent_my_family);
 
         Intent intent= getIntent();
-        user= (User)intent.getSerializableExtra("user");
         client=(Client)intent.getSerializableExtra("client");
 
         setUpComponent();
-
     }
 
     private void setUpComponent() {
         my_Family_listView =(RecyclerView) findViewById(R.id.recyclerView_myFamily);
         my_Family_listView.setLayoutManager(new LinearLayoutManager(this));
 
-        FamilyMember.GetAllByParentId(client.getCliId(), new FamilyMember.GetAllByParentIdResponse() {
+        familyMemberList = client.getFamilyMembers();
+
+        myFamilyAdapter = new MyFamilyAdapter(familyMemberList, Parent_my_family.this);
+
+        runOnUiThread(new Runnable() {
             @Override
-            public void response(ArrayList<FamilyMember> familyMembers) {
-                 familyMemberList=familyMembers;
-
-                 myFamilyAdapter=new MyFamilyAdapter(familyMemberList, Parent_my_family.this);
-
-                 runOnUiThread(new Runnable() {
-                     @Override
-                     public void run() {
-                         my_Family_listView.setAdapter(myFamilyAdapter);
-                     }
-                 });
+            public void run() {
+                my_Family_listView.setAdapter(myFamilyAdapter);
             }
         });
 
@@ -60,27 +52,32 @@ public class Parent_my_family extends AppCompatActivity {
 
     public void startHome7(View view){
         Intent intent = new Intent(this, Parent_home.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startRequests7(View view){
         Intent intent = new Intent(this, Parent_requests.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
 
     public void startProfile6(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startAdd(View view){
         Intent intent = new Intent(this, Parent_create_family_profile.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startSave3(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 

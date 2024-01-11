@@ -29,7 +29,6 @@ public class Register extends AppCompatActivity {
     protected Spinner day, month, year, gender;
     protected Switch confirmSitter;
 
-
     User newUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,67 +62,62 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Username is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(emailEditText.getText())){
+                else if (TextUtils.isEmpty(emailEditText.getText())){
                     emailEditText.setError("Email is Required");
                     Toast.makeText(getApplicationContext(), "Email is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty((passwordEditText.getText()))){
+                else if (TextUtils.isEmpty((passwordEditText.getText()))){
                     passwordEditText.setError("Password is Required");
                     Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(confirmPassEditText.getText())){
+                else if (TextUtils.isEmpty(confirmPassEditText.getText())){
                     confirmPassEditText.setError("Password is Required");
                     Toast.makeText(getApplicationContext(), "Password is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(addressEditText.getText())){
+                else if (TextUtils.isEmpty(addressEditText.getText())){
                     addressEditText.setError("Address is Required");
                     Toast.makeText(getApplicationContext(), "Address is Required", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(mobileEditText.getText())){
+                else if (TextUtils.isEmpty(mobileEditText.getText())){
                     mobileEditText.setError("Phone Number is Required");
                     Toast.makeText(getApplicationContext(), "Phone Number is Required", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
 
+                else {
+                    newUser = new User();
+                    commitViews();
 
+                    if (confirmSitter.isChecked()) {
+                        Sitter sitter = new Sitter();
+                        sitter.setUser(newUser);
 
-        register.setOnClickListener(new View.OnClickListener() {
+                        Intent intent = new Intent(Register.this, Profile.class);
+                        intent.putExtra("sitter", sitter);
 
-            @Override
-            public void onClick(View view) {
-                newUser = new User();
-                commitViews();
+                        startActivity(intent);
 
-                if (confirmSitter.isChecked()) {
-                    Intent intent = new Intent(Register.this, Profile.class);
+                    } else {
+                        Client client = new Client();
+                        client.setUser(newUser);
 
-                    intent.putExtra("user", newUser);
-                    intent.putExtra("sitter", new Sitter());
+                        client.register(new Client.RegisterResponse() {
+                            @Override
+                            public void response() {
+                                Intent intent = new Intent(Register.this, Parent_home.class);
+                                intent.putExtra("client", client);
 
-                    startActivity(intent);
-
-                } else {
-                    Client client = new Client();
-
-                    client.register(newUser, new Client.RegisterResponse() {
-                        @Override
-                        public void response() {
-                            Intent intent = new Intent(Register.this, Parent_home.class);
-                            intent.putExtra("user", newUser);
-                            intent.putExtra("client", client);
-
-                            startActivity(intent);
-                        }
-                    });
+                                startActivity(intent);
+                            }
+                        });
+                    }
                 }
-
             }
         });
+
     }
 
     public void commitViews() {

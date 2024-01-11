@@ -15,7 +15,7 @@ import pt.iade.thesitter.utilities.WebRequest;
 
 public class Sitter implements Serializable {
     private int sitId;
-    private int sitUserId;
+    private User user;
     private String sitExperience;
     private String sitEducation;
     private String sitAboutMe;
@@ -25,20 +25,25 @@ public class Sitter implements Serializable {
 
     private int sitResponseRate;
 
-    public Sitter(){
+    private ArrayList<Booking> bookings;
 
+    public Sitter(){
+        this(0, null, "", "", "", 0,0,0, new ArrayList<Booking>());
     }
 
-    public Sitter(int sitId, int sitUserId, String sitExperience, String sitEducation, String sitAboutMe, int sitBooId, int sitReliability, int sitResponseTime, int sitResponseRate) {
+    public Sitter(int sitId, User user, String sitExperience, String sitEducation, String sitAboutMe,
+                  int sitReliability, int sitResponseTime, int sitResponseRate, ArrayList<Booking> bookings) {
         this.sitId = sitId;
-        this.sitUserId = sitUserId;
+        this.user = user;
         this.sitExperience = sitExperience;
         this.sitEducation = sitEducation;
         this.sitAboutMe = sitAboutMe;
         this.sitReliability = sitReliability;
         this.sitResponseTime = sitResponseTime;
         this.sitResponseRate = sitResponseRate;
+        this.bookings = bookings;
     }
+
 
     public static void GetSitters(GetSittersResponse response) {
         ArrayList<Sitter> sitters = new ArrayList<Sitter>();
@@ -51,19 +56,12 @@ public class Sitter implements Serializable {
 
                     JsonArray array = new Gson().fromJson(resp, JsonArray.class);
 
-                    ArrayList<Integer> userIds = new ArrayList<Integer>();
 
                     for (JsonElement element : array) {
                         sitters.add(new Gson().fromJson(element, Sitter.class));
-                        userIds.add(new Gson().fromJson(element, Sitter.class).getSitUserId());
                     }
 
-                    User.GetAllById(userIds, new User.GetAllByIdResponse() {
-                        @Override
-                        public void response(ArrayList<User> users) {
-                            response.response(users, sitters);
-                        }
-                    });
+                    response.response(sitters);
 
                 } catch (Exception e) {
                     Log.e("Sitter.GetSitters", e.toString());
@@ -73,116 +71,134 @@ public class Sitter implements Serializable {
         thread.start();
     }
 
-    public void register(User user, RegisterResponse response) {
+    public static void Login(String userEmail, String userPassword, LoginResponse response){
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                user.register(new User.RegisterResponse() {
-                    @Override
-                    public void response() {
-                        sitUserId = user.getUserId();
-                        try {
-                            WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters"));
-                            String resp = request.performPostRequest(Sitter.this);
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters"));
 
-                            Sitter sitter = new Gson().fromJson(resp, Sitter.class);
+                    HashMap<String, String> params = new HashMap<String, String>();
+                    params.put("userPassword", userPassword);
+                    params.put("userEmail", userEmail);
 
-                            sitId = sitter.getSitId();
-                            response.response();
-
-                        } catch (Exception e){
-                            Log.e("Sitter.register", e.toString());
-                        }
-                    }
-                });
-            }
-        });
-        thread.start();
-    }
-
-    public static void GetByUserId(int userId, GetByUserIdResponse response) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters/user/"+userId));
-                    String resp = request.performGetRequest();
-
+                    String resp = request.performGetRequest(params);
                     Sitter sitter = new Gson().fromJson(resp, Sitter.class);
 
                     response.response(sitter);
 
                 } catch (Exception e){
-                    Log.e("Sitter.GetByUserId", e.toString());
+                    Log.e("Sitter.Login", e.toString());
                 }
             }
         });
         thread.start();
     }
 
-    public int getSitId() {return sitId;}
+    public void register(RegisterResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/sitters"));
+                    String resp = request.performPostRequest(Sitter.this);
 
-    public int getSitUserId() {return sitUserId;}
+                    Sitter sitter = new Gson().fromJson(resp, Sitter.class);
 
-    public String getSitExperience() {return sitExperience;}
+                    sitId = sitter.getSitId();
+                    response.response();
 
-    public String getSitEducation() {return sitEducation;}
-
-    public String getSitAboutMe() {return sitAboutMe;}
-
-
-
-    public int getSitReliability() {
-        return sitReliability;
+                } catch (Exception e){
+                    Log.e("Sitter.register", e.toString());
+                }
+            }
+        });
+        thread.start();
     }
 
-    public int getSitResponseTime() {
-        return sitResponseTime;
+
+    public int getSitId() {
+        return sitId;
     }
 
-    public int getSitResponseRate() {
-        return sitResponseRate;
+    public void setSitId(int sitId) {
+        this.sitId = sitId;
     }
 
-    public void setSitUserId(int sitUserId) {
-        this.sitUserId = sitUserId;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getSitExperience() {
+        return sitExperience;
     }
 
     public void setSitExperience(String sitExperience) {
         this.sitExperience = sitExperience;
     }
 
+    public String getSitEducation() {
+        return sitEducation;
+    }
+
     public void setSitEducation(String sitEducation) {
         this.sitEducation = sitEducation;
+    }
+
+    public String getSitAboutMe() {
+        return sitAboutMe;
     }
 
     public void setSitAboutMe(String sitAboutMe) {
         this.sitAboutMe = sitAboutMe;
     }
 
+    public int getSitReliability() {
+        return sitReliability;
+    }
 
     public void setSitReliability(int sitReliability) {
         this.sitReliability = sitReliability;
+    }
+
+    public int getSitResponseTime() {
+        return sitResponseTime;
     }
 
     public void setSitResponseTime(int sitResponseTime) {
         this.sitResponseTime = sitResponseTime;
     }
 
+    public int getSitResponseRate() {
+        return sitResponseRate;
+    }
+
     public void setSitResponseRate(int sitResponseRate) {
         this.sitResponseRate = sitResponseRate;
     }
 
+    public ArrayList<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(ArrayList<Booking> bookings) {
+        this.bookings = bookings;
+    }
+
 
     public interface GetSittersResponse{
-        public void response(ArrayList<User> users, ArrayList<Sitter> sitters);
+        public void response(ArrayList<Sitter> sitters);
     }
 
     public interface RegisterResponse{
         public void response();
     }
 
-    public interface GetByUserIdResponse{
+    public interface LoginResponse{
         public void response(Sitter returnedSitter);
     }
 }

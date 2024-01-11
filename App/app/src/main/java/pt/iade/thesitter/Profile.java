@@ -18,7 +18,6 @@ import pt.iade.thesitter.models.User;
 public class Profile extends AppCompatActivity {
     EditText educationEditText, experienceEditText, aboutMeEditText;
     Button saveButton;
-    User user;
     Sitter sitter;
 
     @Override
@@ -27,7 +26,6 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_da_profile);
 
         Intent intent = getIntent();
-        user = (User) intent.getSerializableExtra("user");
         sitter = (Sitter) intent.getSerializableExtra("sitter");
 
         setupComponents();
@@ -68,11 +66,10 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 commitViews();
-                sitter.register(user, new Sitter.RegisterResponse() {
+                sitter.register(new Sitter.RegisterResponse() {
                     @Override
                     public void response() {
                         Intent intent = new Intent(Profile.this, The_profile_1.class);
-                        intent.putExtra("user", user);
                         intent.putExtra("sitter", sitter);
 
                         startActivity(intent);

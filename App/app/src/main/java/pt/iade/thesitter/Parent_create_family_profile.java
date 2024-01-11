@@ -25,11 +25,14 @@ public class Parent_create_family_profile extends AppCompatActivity {
 
     FamilyMember newFamilyMember;
 
-
+    Client client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eph_parent_create_family_profile);
+
+        Intent intent = getIntent();
+        client = (Client) intent.getSerializableExtra("client");
 
         setupComponents();
     }
@@ -53,60 +56,55 @@ public class Parent_create_family_profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                newFamilyMember = new FamilyMember();
 
-                    newFamilyMember = new FamilyMember();
-                     commitViews();
+                commitViews();
 
-                        Client client = new Client();
+                newFamilyMember.create(new FamilyMember.CreateResponse() {
+                    @Override
+                    public void response() {
+                        client.getFamilyMembers().add(newFamilyMember);
 
-                            newFamilyMember.create(new FamilyMember.CreateResponse() {
-                            @Override
-                            public void response() {
-                                Intent intent = new Intent(Parent_create_family_profile.this, Parent_my_family.class);
-                                intent.putExtra("familyMember", newFamilyMember);
+                        Intent intent = new Intent(Parent_create_family_profile.this, Parent_my_family.class);
+                        intent.putExtra("client", client);
 
 
-                                startActivity(intent);
-                            }
-                        });
+                        startActivity(intent);
                     }
+                });
+            }
 
-
-
-
-
-
-
-            });
+        });
 
     }
 
     public void startHomeP6(View view){
         Intent intent = new Intent(this, Parent_home.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startRequestsP5(View view){
         Intent intent = new Intent(this, Parent_requests.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
-    /*public void startMessagesP8(View view){
-        Intent intent = new Intent(this, Parent_messages.class);
-        startActivity(intent);
-    }*/
-
     public void startProfileP6(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startSaveP(View view){
         Intent intent = new Intent(this, Parent_settings.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void commitViews() {
+        newFamilyMember.setClient(client);
+
         newFamilyMember.setFaName(createFaNAme.getText().toString());
         newFamilyMember.setFaBdate(LocalDate.now());
         newFamilyMember.setFaSchool(createFaSchool.getText().toString());

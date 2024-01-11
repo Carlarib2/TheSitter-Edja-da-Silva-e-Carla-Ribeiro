@@ -19,7 +19,6 @@ public class Login extends AppCompatActivity {
     protected Button login_button_c, sae_button_epb;
     EditText username_editView, password_editView;
     protected Switch confirmSitter;
-    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,43 +47,37 @@ public class Login extends AppCompatActivity {
                 } else if (password.equals("")) {
                     password_editView.setError("Email is Required");
                 } else {
-                    User.Login(username, password, new User.LoginResponse() {
-                        @Override
-                        public void response(User returnedUser) {
 
-                            if (confirmSitter.isChecked()) {
-                                Sitter.GetByUserId(returnedUser.getUserId(), new Sitter.GetByUserIdResponse() {
-                                    @Override
-                                    public void response(Sitter returnedSitter) {
-                                        Intent intent = new Intent(Login.this, The_profile_1.class);
-                                        intent.putExtra("user", returnedUser);
-                                        intent.putExtra("sitter", returnedSitter);
-                                        startActivity(intent);
-                                    }
-                                });
-
-
-                            } else {
-                                Client.GetByUserId(returnedUser.getUserId(), new Client.GetByUserIdResponse() {
-                                    @Override
-                                    public void response(Client returnedClient) {
-                                        Intent intent = new Intent(Login.this, Parent_home.class);
-                                        intent.putExtra("user", returnedUser);
-                                        intent.putExtra("client", returnedClient);
-                                        startActivity(intent);
-                                    }
-                                });
+                    if (confirmSitter.isChecked()) {
+                        Sitter.Login(username, password, new Sitter.LoginResponse() {
+                            @Override
+                            public void response(Sitter returnedSitter) {
+                                Intent intent = new Intent(Login.this, The_profile_1.class);
+                                intent.putExtra("sitter", returnedSitter);
+                                startActivity(intent);
                             }
+                        });
 
-                        }
 
-                    });
+                    } else {
+                        Client.Login(username, password, new Client.LoginResponse() {
+                            @Override
+                            public void response(Client returnedClient) {
+                                Intent intent = new Intent(Login.this, Parent_home.class);
+                                intent.putExtra("client", returnedClient);
+                                startActivity(intent);
+                            }
+                        });
+
+                    }
                 }
 
             }
         });
 
     }
+
+
     public void startRegister3(View view){
         Intent intent = new Intent(this, Register.class);
         startActivity(intent);

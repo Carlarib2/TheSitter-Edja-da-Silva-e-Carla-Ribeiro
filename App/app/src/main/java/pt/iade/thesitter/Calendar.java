@@ -11,14 +11,19 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import pt.iade.thesitter.models.Client;
+
 public class Calendar extends AppCompatActivity {
     List<String> datasSelecionadas = new ArrayList<>();
+    Client client;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar);
 
-
+        Intent intent = getIntent();
+        client = (Client) intent.getSerializableExtra("client");
 
         CalendarView calendarView = findViewById(R.id.calendarView_cal);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -36,27 +41,22 @@ public class Calendar extends AppCompatActivity {
 
     public void startHomeS3(View view){
         Intent intent = new Intent(this, The_profile_1.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startRequestsS3(View view){
         Intent intent = new Intent(this, Requests_view.class);
+        intent.putExtra("client", client);
         startActivity(intent);
     }
 
-    /*public void startMessagesS3(View view){
-        Intent intent = new Intent(this, Messages.class);
-        startActivity(intent);
-    }*/
 
     public void startProfileS3(View view){
         finish();
-        //Intent intent = new Intent(this, profile_settings.class);
-        //startActivity(intent);
     }
 
     public void startSaveS3(View view){
-        Intent intent = new Intent(this, Profile_settings.class);
         finish();
     }
 }

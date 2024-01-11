@@ -43,7 +43,7 @@ public class SittersRequestsAdapter extends RecyclerView.Adapter<SittersRequests
     public void onBindViewHolder(@NonNull SittersRequestsAdapter.ViewHolder holder, int position) {
         Booking user = items.get(position);
 
-        holder.sitter_requests_name.setText(user.getBooName());
+        //holder.sitter_requests_name.setText(user.getBooName());
         //holder.sitter_requests_yes.set(user.get());// to be fixed!!
        // holder.sitter_requests_no.setImageResource(R.drawable.drake);
         holder.sitter_requests_image.setImageResource(R.drawable.ic_launcher_background);

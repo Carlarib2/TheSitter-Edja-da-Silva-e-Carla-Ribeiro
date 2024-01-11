@@ -6,65 +6,72 @@ import com.google.gson.Gson;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import pt.iade.thesitter.Register;
 import pt.iade.thesitter.utilities.WebRequest;
 
 public class Client implements Serializable {
     private int cliId;
-    private int cliUserId;
+    private User user;
+    private int cliSitNum;
+    ArrayList<Booking> bookings;
+    ArrayList<FamilyMember> familyMembers;
 
     public Client(){
-        this(0, 0);
+        this(0, null, 0, new ArrayList<Booking>(), new ArrayList<FamilyMember>());
     }
 
-    public Client(int cliId, int cliUserId) {
+    public Client(int cliId, User user, int cliSitNum, ArrayList<Booking> bookings,
+                  ArrayList<FamilyMember> familyMembers) {
         this.cliId = cliId;
-        this.cliUserId = cliUserId;
-
+        this.user = user;
+        this.cliSitNum = cliSitNum;
+        this.bookings = bookings;
+        this.familyMembers = familyMembers;
     }
 
-    public void register(User user, RegisterResponse response) {
+
+    public static void Login(String userEmail, String userPassword, LoginResponse response){
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                user.register(new User.RegisterResponse() {
-                    @Override
-                    public void response() {
-                        cliUserId = user.getUserId();
-                        try {
-                            WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients"));
-                            String resp = request.performPostRequest(Client.this);
+                try{
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients"));
 
-                            Client client = new Gson().fromJson(resp, Client.class);
+                    HashMap<String, String> params = new HashMap<String, String>();
+                    params.put("userPassword", userPassword);
+                    params.put("userEmail", userEmail);
 
-                            cliId = client.getCliId();
-                            response.response();
-
-                        } catch (Exception e){
-                            Log.e("Client.register", e.toString());
-                        }
-                    }
-                });
-            }
-        });
-        thread.start();
-    }
-
-    public static void GetByUserId(int userId, GetByUserIdResponse response) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients/user/"+userId));
-                    String resp = request.performGetRequest();
-
+                    String resp = request.performGetRequest(params);
                     Client client = new Gson().fromJson(resp, Client.class);
 
                     response.response(client);
 
                 } catch (Exception e){
-                    Log.e("Client.GetByUserId", e.toString());
+                    Log.e("Client.Login", e.toString());
+                }
+            }
+        });
+        thread.start();
+    }
+
+    public void register(RegisterResponse response) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/clients"));
+                    String resp = request.performPostRequest(Client.this);
+
+                    Client client = new Gson().fromJson(resp, Client.class);
+
+                    cliId = client.getCliId();
+                    response.response();
+
+                } catch (Exception e){
+                    Log.e("Client.register", e.toString());
                 }
             }
         });
@@ -75,12 +82,40 @@ public class Client implements Serializable {
         return cliId;
     }
 
-    public int getCliUserId() {
-        return cliUserId;
+    public void setCliId(int cliId) {
+        this.cliId = cliId;
     }
 
-    public void setCliUserId(int cliUserId) {
-        this.cliUserId = cliUserId;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public int getCliSitNum() {
+        return cliSitNum;
+    }
+
+    public void setCliSitNum(int cliSitNum) {
+        this.cliSitNum = cliSitNum;
+    }
+
+    public ArrayList<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(ArrayList<Booking> bookings) {
+        this.bookings = bookings;
+    }
+
+    public ArrayList<FamilyMember> getFamilyMembers() {
+        return familyMembers;
+    }
+
+    public void setFamilyMembers(ArrayList<FamilyMember> familyMembers) {
+        this.familyMembers = familyMembers;
     }
 
 
@@ -88,7 +123,7 @@ public class Client implements Serializable {
         public void response();
     }
 
-    public interface GetByUserIdResponse{
+    public interface LoginResponse{
         public void response(Client returnedClient);
     }
 }

@@ -15,35 +15,33 @@ import pt.iade.thesitter.utilities.WebRequest;
 
 public class Booking implements Serializable {
     private int booId;
-    private int booCliId;
     private String booAddress;
     @JsonAdapter(DateJsonAdapter.class)
     private LocalDate booDate;
+    private Client client;
     private String booEndTime;
     private BookingStatus booStatus;
+    private Sitter sitter;
     private String booStartTime;
     private String booMore;
-    private int booSitId;
-    private String booName;
 
     public Booking(){
-
+        this(0, "", LocalDate.now(), null, "", BookingStatus.PENDING, null, "", "");
     }
 
-    public Booking(int booId, int booCliId, String booAddress, LocalDate booDate,
-                   String booEndTime, BookingStatus booStatus, String booStartTime,
-                   String booMore, int booSitId) {
-
+    public Booking(int booId, String booAddress, LocalDate booDate, Client client, String booEndTime,
+                   BookingStatus booStatus, Sitter sitter, String booStartTime, String booMore) {
         this.booId = booId;
-        this.booCliId = booCliId;
         this.booAddress = booAddress;
         this.booDate = booDate;
+        this.client = client;
         this.booEndTime = booEndTime;
         this.booStatus = booStatus;
+        this.sitter = sitter;
         this.booStartTime = booStartTime;
         this.booMore = booMore;
-        this.booSitId = booSitId;
     }
+
 
     public void save (SaveResponse response) {
         Thread thread = new Thread(new Runnable() {
@@ -82,14 +80,6 @@ public class Booking implements Serializable {
         this.booId = booId;
     }
 
-    public int getBooCliId() {
-        return booCliId;
-    }
-
-    public void setBooCliId(int booCliId) {
-        this.booCliId = booCliId;
-    }
-
     public String getBooAddress() {
         return booAddress;
     }
@@ -104,6 +94,14 @@ public class Booking implements Serializable {
 
     public void setBooDate(LocalDate booDate) {
         this.booDate = booDate;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public String getBooEndTime() {
@@ -122,6 +120,14 @@ public class Booking implements Serializable {
         this.booStatus = booStatus;
     }
 
+    public Sitter getSitter() {
+        return sitter;
+    }
+
+    public void setSitter(Sitter sitter) {
+        this.sitter = sitter;
+    }
+
     public String getBooStartTime() {
         return booStartTime;
     }
@@ -136,22 +142,6 @@ public class Booking implements Serializable {
 
     public void setBooMore(String booMore) {
         this.booMore = booMore;
-    }
-
-    public int getBooSitId() {
-        return booSitId;
-    }
-
-    public void setBooSitId(int booSitId) {
-        this.booSitId = booSitId;
-    }
-
-    public String getBooName() {
-        return booName;
-    }
-
-    public void setBooName(String booName) {
-        this.booName = booName;
     }
 
 

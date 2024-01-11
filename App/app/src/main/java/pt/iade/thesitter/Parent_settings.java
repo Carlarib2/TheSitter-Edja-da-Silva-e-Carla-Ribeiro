@@ -13,10 +13,8 @@ import pt.iade.thesitter.models.Client;
 import pt.iade.thesitter.models.User;
 
 public class Parent_settings extends AppCompatActivity {
-    User user;
     Client client;
     TextView parentTextView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +22,6 @@ public class Parent_settings extends AppCompatActivity {
         setContentView(R.layout.activity_epf_parent_settings);
 
         Intent intent= getIntent();
-        user= (User) intent.getSerializableExtra("user");
         client=(Client) intent.getSerializableExtra("client");
 
         setupComponents();
@@ -37,47 +34,37 @@ public class Parent_settings extends AppCompatActivity {
 
 
     public void populateViews(){
-        parentTextView.setText(user.getUserName());
+        parentTextView.setText(client.getUser().getUserName());
 
     }
 
 
     public void startHomeP5(View view){
         Intent intent = new Intent(this, Parent_home.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
-    /*public void startMessagesP7(View view){
-        Intent intent = new Intent(this, Parent_messages.class);
-        startActivity(intent);
-    }*/
-
     public void startRequestsP4(View view){
         Intent intent = new Intent(this, Parent_requests.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startProfileP5(View view){
         Intent intent = new Intent(this, Parent_settings.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startCalendar2(View view){
         Intent intent = new Intent(this, Calendar.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startMyFamily(View view){
         Intent intent = new Intent(this, Parent_my_family.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
 

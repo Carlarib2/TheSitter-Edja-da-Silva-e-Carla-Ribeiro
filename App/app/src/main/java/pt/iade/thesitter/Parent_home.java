@@ -15,7 +15,6 @@ import pt.iade.thesitter.models.User;
 
 public class Parent_home extends AppCompatActivity {
     TextView nameTextView, bDateTextView, genderTextView, mobileTextView, addressTextView;
-    User user;
     Client client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class Parent_home extends AppCompatActivity {
         setContentView(R.layout.activity_ep_parent_home);
 
         Intent intent = getIntent();
-        user = (User) intent.getSerializableExtra("user");
         client = (Client) intent.getSerializableExtra("client");
 
         setupComponents();
@@ -31,7 +29,6 @@ public class Parent_home extends AppCompatActivity {
 
     public void startBooking(View view){
         Intent intent = new Intent(this, Parent_booking_1.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
@@ -39,21 +36,18 @@ public class Parent_home extends AppCompatActivity {
 
     public void startProfileP(View view){
         Intent intent = new Intent(this, Parent_settings.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startRequests8(View view){
         Intent intent = new Intent(this, Parent_requests.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
 
     public void startHome8(View view){
         Intent intent = new Intent(this, Parent_home.class);
-        intent.putExtra("user", user);
         intent.putExtra("client", client);
         startActivity(intent);
     }
@@ -70,10 +64,10 @@ public class Parent_home extends AppCompatActivity {
     }
 
     private void populateViews() {
-        nameTextView.setText(user.getUserName());
-        bDateTextView.setText(user.getUserBdate().toString());
-        genderTextView.setText(user.getUserGender());
-        mobileTextView.setText(user.getUserMobile());
-        addressTextView.setText(user.getUserAddress());
+        nameTextView.setText(client.getUser().getUserName());
+        bDateTextView.setText(client.getUser().getUserBdate().toString());
+        genderTextView.setText(client.getUser().getUserGender());
+        mobileTextView.setText(client.getUser().getUserMobile());
+        addressTextView.setText(client.getUser().getUserAddress());
     }
 }

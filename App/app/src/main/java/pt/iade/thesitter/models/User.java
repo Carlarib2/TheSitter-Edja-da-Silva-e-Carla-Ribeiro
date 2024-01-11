@@ -76,50 +76,7 @@ public class User implements Serializable{
         thread.start();
     }
 
-    public void register (RegisterResponse response) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
-                    String resp = request.performPostRequest(User.this);
 
-                    User user = new Gson().fromJson(resp, User.class);
-
-                    userId = user.getUserId();
-                    response.response();
-
-                } catch (Exception e){
-                    Log.e("User.register", e.toString());
-                }
-            }
-        });
-        thread.start();
-    }
-
-    public static void Login(String userEmail, String userPassword, LoginResponse response){
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    WebRequest request = new WebRequest(new URL(WebRequest.LOCALHOST+"/api/users"));
-
-                    HashMap<String, String> params = new HashMap<String, String>();
-                    params.put("userPassword", userPassword);
-                    params.put("userEmail", userEmail);
-
-                    String resp = request.performGetRequest(params);
-                    User user = new Gson().fromJson(resp, User.class);
-
-                    response.response(user);
-
-                } catch (Exception e){
-                    Log.e("User.Login", e.toString());
-                }
-            }
-        });
-        thread.start();
-    }
 
     public int getUserId() {
         return userId;

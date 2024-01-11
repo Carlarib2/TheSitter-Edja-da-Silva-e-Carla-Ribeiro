@@ -15,14 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import pt.iade.thesitter.R;
+import pt.iade.thesitter.models.Sitter;
 import pt.iade.thesitter.models.User;
 
 public class SelectSitterRowAdapter extends RecyclerView.Adapter<SelectSitterRowAdapter.ViewHolder> {
-    ArrayList<User> items;
+    ArrayList<Sitter> items;
     Context context;
     ItemClickListener clickListener;
 
-    public SelectSitterRowAdapter(ArrayList<User> items, Context context) {
+    public SelectSitterRowAdapter(ArrayList<Sitter> items, Context context) {
         this.items = items;
         this.context = context;
         clickListener = null;
@@ -43,14 +44,14 @@ public class SelectSitterRowAdapter extends RecyclerView.Adapter<SelectSitterRow
 
     @Override
     public void onBindViewHolder(@NonNull SelectSitterRowAdapter.ViewHolder holder, int position) {
-        User user = items.get(position);
+        Sitter sitter = items.get(position);
 
         holder.selectedButton.setChecked(false);
         holder.sitterImage.setImageResource(R.drawable.sitter);
-        holder.selectSitters_Name.setText(user.getUserName());
-        holder.selectSitters_Email.setText(user.getUserEmail());
-        holder.selectSitters_Mobile.setText(user.getUserMobile());
-        holder.selectSitters_Gender.setText(user.getUserGender());
+        holder.selectSitters_Name.setText(sitter.getUser().getUserName());
+        holder.selectSitters_Email.setText(sitter.getUser().getUserEmail());
+        holder.selectSitters_Mobile.setText(sitter.getUser().getUserMobile());
+        holder.selectSitters_Gender.setText(sitter.getUser().getUserGender());
         holder.sitterImage.setImageResource(R.drawable.drake);
     }
 

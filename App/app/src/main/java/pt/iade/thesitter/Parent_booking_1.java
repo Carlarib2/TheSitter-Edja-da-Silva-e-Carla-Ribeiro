@@ -23,7 +23,6 @@ public class Parent_booking_1 extends AppCompatActivity {
     EditText addressBooking, dateTextView, moreTextView;
     Spinner startDateSpinner, endDateSpinner;
     Button sendMySitters, selectSitters;
-    User user;
     Client client;
     Booking booking;
 
@@ -35,7 +34,6 @@ public class Parent_booking_1 extends AppCompatActivity {
         setContentView(R.layout.activity_epa_parent_booking_1);
 
         Intent intent = getIntent();
-        user = (User) intent.getSerializableExtra("user");
         client = (Client) intent.getSerializableExtra("client");
         booking = (Booking) intent.getSerializableExtra("booking");
 
@@ -52,7 +50,7 @@ public class Parent_booking_1 extends AppCompatActivity {
                 assert data != null;
                 Booking updateBooking = (Booking) data.getSerializableExtra("booking");
                 assert updateBooking != null;
-                booking.setBooSitId(updateBooking.getBooSitId());
+                booking.setSitter(updateBooking.getSitter());
             }
         }
     }
@@ -73,7 +71,6 @@ public class Parent_booking_1 extends AppCompatActivity {
                 commitViews();
 
                 Intent intent = new Intent(Parent_booking_1.this, Parent_selectSitters.class);
-                intent.putExtra("user", user);
                 intent.putExtra("client", client);
                 intent.putExtra("booking", booking);
 
@@ -84,19 +81,18 @@ public class Parent_booking_1 extends AppCompatActivity {
         sendMySitters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (booking == null) {
-                    booking = new Booking();
-                    commitViews();
-                }
-                booking.setBooCliId(client.getCliId());
-                booking.setBooStatus(BookingStatus.PENDING);
+                if (booking != null) {
 
-                booking.save(new Booking.SaveResponse() {
-                    @Override
-                    public void response() {
-                        finish();
-                    }
-                });
+                    booking.setClient(client);
+                    booking.setBooStatus(BookingStatus.PENDING);
+
+                    booking.save(new Booking.SaveResponse() {
+                        @Override
+                        public void response() {
+                            finish();
+                        }
+                    });
+                }
             }
         });
 
